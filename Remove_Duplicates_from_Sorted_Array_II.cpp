@@ -2,32 +2,32 @@
 //		Project:		MyLeetCode
 //
 //		Author:		YanShicong
-//		Date:			2014/11/1
+//		Date:			2014/11/4
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
-
-Do not allocate extra space for another array, you must do this in place with constant memory.
+Follow up for "Remove Duplicates":
+What if duplicates are allowed at most twice?
 
 For example,
-Given input array A = [1,1,2],
+Given sorted array A = [1,1,1,2,2,3],
 
-Your function should return length = 2, and A is now [1,2].
+Your function should return length = 5, and A is now [1,1,2,2,3].
 //--------------------------------------------------------------------------------------------------------------*/
+// My Way
 class Solution {
 public:
 	int removeDuplicates(int A[], int n) {
-		set<int> exist_value;
-		int index = 0;
-		int i = 0;
+		map<int, int> existed;
+		int index(0), i(0);
 		while (index < n)
 		{
-			if (exist_value.find(A[index]) != exist_value.end())
+			if ( existed.find(A[index]) != existed.end() && existed[A[index]] >= 2 )
 			{
 				++index;
 			}else
 			{
-				exist_value.insert(A[index]);
+				if (existed.find(A[index]) == existed.end()) {existed.insert(make_pair(A[index], 1));}
+				else {existed[A[index]] += 1;}
 				A[i] = A[index];
 				++i;
 				++index;
@@ -37,18 +37,25 @@ public:
 	}
 };
 
-// 没有仔细审题，是已经排序过的数组。
+// 未审清题，是已排序的数组。
 // 更切题的方法。
 class Solution {
 public:
 	int removeDuplicates(int A[], int n) {
 		if (!n) {return 0;}
+		int count(1);
 		int index(0);
 		for (int i = 1; i < n; ++i)
 		{
+			if (A[index] == A[i] && count < 2)
+			{
+				A[++index] = A[i];
+				++count;
+			}
 			if (A[index] != A[i])
 			{
 				A[++index] = A[i];
+				count = 1;
 			}
 		}
 		return index + 1;
