@@ -14,6 +14,7 @@ The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
 Your algorithm should run in O(n) complexity.
 //--------------------------------------------------------------------------------------------------------------*/
 // Learned Way
+// Important
 // 一看到O(n)，就想起来哈希表。
 // 可是我标准库不熟，没想起来unordered_map。
 class Solution {
