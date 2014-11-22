@@ -9,37 +9,20 @@ Given an integer, convert it to a roman numeral.
 
 Input is guaranteed to be within the range from 1 to 3999.
 //--------------------------------------------------------------------------------------------------------------*/
-// My Way
+// Learned Way
+// 一定要注意优化，减法简直不能忍，应该每次就去掉一个数量级才对。
 class Solution {
 public:
 	string intToRoman(int num) {
 		string result;
-		map<int, string, greater<int> > digit_rome_map;
-		digit_rome_map.insert(make_pair(1000, "M"));
-		digit_rome_map.insert(make_pair(500, "D"));
-		digit_rome_map.insert(make_pair(100, "C"));
-		digit_rome_map.insert(make_pair(50, "L"));
-		digit_rome_map.insert(make_pair(10, "X"));
-		digit_rome_map.insert(make_pair(5, "V"));
-		digit_rome_map.insert(make_pair(1, "I"));
-		digit_rome_map.insert(make_pair(900, "CM"));
-		digit_rome_map.insert(make_pair(400, "CD"));
-		digit_rome_map.insert(make_pair(90, "XC"));
-		digit_rome_map.insert(make_pair(40, "XL"));
-		digit_rome_map.insert(make_pair(9, "IX"));
-		digit_rome_map.insert(make_pair(4, "IV"));
+		const int radix[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+		const string symbol[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
-		while (num)
+		for (size_t i = 0; num > 0; ++i)
 		{
-			for (map<int, string, greater<int> >::iterator it = digit_rome_map.begin(); it != digit_rome_map.end(); ++it)
-			{
-				if (num >= (*it).first)
-				{
-					num -= (*it).first;
-					result += (*it).second;
-					break;
-				}
-			}
+			int count = num / radix[i];
+			num %= radix[i];
+			for (; count > 0; --count) {result += symbol[i];}
 		}
 		return result;
 	}
