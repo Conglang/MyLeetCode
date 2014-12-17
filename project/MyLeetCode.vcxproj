@@ -62,6 +62,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\3Sum.cpp" />
+    <ClCompile Include="..\Subsets.cpp" />
+    <ClCompile Include="..\Subsets_II.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

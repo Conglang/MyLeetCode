@@ -38,12 +38,12 @@ public:
 				else if (num[l] + num[r] > twoSum) {r--;}
 				else
 				{
-#ifdef Eleven_SUPPORT
-					res.push_back({num[i], num[l], num[r]}); // Not Support by VS2010
-#else
+#if __cplusplus < 201103L
 					int tmp[3] = {num[i], num[l], num[r]};
 					vector<int> temp(tmp, tmp+3);
-					res.push_back(temp);
+					res.push_back(temp);			
+#else
+					res.push_back({num[i], num[l], num[r]}); // Not Support by VS2010
 #endif
 					do { l++; }while (l < r && num[l - 1] == num[l]);	// 注意此处优化。先右移，判断和自己之前的相同否。
 					do { r--; }while (l < r && num[r + 1] == num[r]);	// 优化。
