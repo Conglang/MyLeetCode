@@ -110,7 +110,7 @@ public:
 };
 #endif
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("Subsets", "[Subsets]"){
+TEST_CASE("Subsets", "[Brute Force]"){
 	Solution s;
 	SECTION("Empty Vector"){
 		vector<int> num;

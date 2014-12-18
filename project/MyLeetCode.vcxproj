@@ -62,6 +62,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\3Sum.cpp" />
+    <ClCompile Include="..\Combinations.cpp" />
+    <ClCompile Include="..\Letter_Combinations_of_Phone_Number.cpp" />
+    <ClCompile Include="..\Permutations.cpp" />
+    <ClCompile Include="..\Permutations_II.cpp" />
     <ClCompile Include="..\Subsets.cpp" />
     <ClCompile Include="..\Subsets_II.cpp" />
     <ClCompile Include="main.cpp" />

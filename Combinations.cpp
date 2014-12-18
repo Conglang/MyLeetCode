@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/11
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
@@ -19,6 +19,7 @@ If n = 4 and k = 2, a solution is:
   [1,4],
 ]
 //--------------------------------------------------------------------------------------------------------------*/
+#include "project/include.h"
 // Learned Way
 // 递归法。时间复杂度O(n!)，空间复杂度O(n)
 class Solution {
@@ -47,3 +48,46 @@ private:
 		}
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Combinations", "[Brute Force]"){
+	Solution s;
+	SECTION("Empty Input"){
+		vector<int> temp;
+		vector<vector<int> > result(1, temp);
+		REQUIRE(s.combine(0,0) == result);
+	}
+	SECTION("One Input"){
+		vector<int> temp(1, 1);
+		vector<vector<int> > result(1, temp);
+		REQUIRE(s.combine(1, 1) == result);
+	}
+	SECTION("Invalid Input"){
+		vector<vector<int> > result;
+		REQUIRE(s.combine(1, 2) == result);
+	}
+	SECTION("Normal Input"){
+		vector<int> a;
+		a.push_back(2); a.push_back(4);
+		vector<int> b;
+		b.push_back(3); b.push_back(4);
+		vector<int> c;
+		c.push_back(2); c.push_back(3);
+		vector<int> d;
+		d.push_back(1); d.push_back(2);
+		vector<int> e;
+		e.push_back(1); e.push_back(3);
+		vector<int> f;
+		f.push_back(1); f.push_back(4);
+		vector<vector<int> > result;
+		result.push_back(a);
+		result.push_back(b);
+		result.push_back(c);
+		result.push_back(d);
+		result.push_back(e);
+		result.push_back(f);
+		vector<vector<int> > my(s.combine(4, 2));
+		sort(my.begin(), my.end());
+		sort(result.begin(), result.end());
+		REQUIRE(my == result);
+	}
+}

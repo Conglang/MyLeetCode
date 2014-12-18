@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/10
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
@@ -11,12 +11,14 @@ For example,
 [1,1,2] have the following unique permutations:
 [1,1,2], [1,2,1], and [2,1,1].
 //--------------------------------------------------------------------------------------------------------------*/
+#include "project/include.h"
 // Learned Way
 // 和Permutations解法一样。
 class Solution {
 public:
 	vector<vector<int> > permuteUnique(vector<int> &num) {
 		vector<vector<int> > result;
+		if (num.empty()) return result;
 		sort(num.begin(), num.end());
 		do {
 			result.push_back(num);
@@ -57,3 +59,52 @@ private:
 		return true;
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Permutations II", "[Brute Force]"){
+	Solution s;
+	SECTION("Empty Vector"){
+		vector<int> num;
+		REQUIRE(s.permuteUnique(num).empty());
+	}
+	SECTION("One Element Vector"){
+		vector<int> num(1, 1);
+		vector<vector<int> > result(1, num);
+		REQUIRE(s.permuteUnique(num) == result);
+	}
+	SECTION("Normal Vector"){
+		int temp[3] = {1, 2, 3};
+		vector<int> sum(temp, temp+3);
+		vector<int> a;
+		a.push_back(1);
+		a.push_back(2);
+		a.push_back(3);
+		vector<int> b;
+		b.push_back(1);
+		b.push_back(3);
+		b.push_back(2);
+		vector<int> c;
+		c.push_back(2);
+		c.push_back(1);
+		c.push_back(3);
+		vector<int> d;
+		d.push_back(2);
+		d.push_back(3);
+		d.push_back(1);
+		vector<int> e;
+		e.push_back(3);
+		e.push_back(1);
+		e.push_back(2);
+		vector<int> f;
+		f.push_back(3);
+		f.push_back(2);
+		f.push_back(1);
+		vector<vector<int> > result;
+		result.push_back(a);
+		result.push_back(b);
+		result.push_back(c);
+		result.push_back(d);
+		result.push_back(e);
+		result.push_back(f);
+		REQUIRE(s.permuteUnique(sum) == result);
+	}
+}

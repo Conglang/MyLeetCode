@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/11
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
@@ -26,6 +26,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 Note:
 Although the above answer is in lexicographical order, your answer could be in any order you want.
 //--------------------------------------------------------------------------------------------------------------*/
+#include "project/include.h"
 // My Way
 class Solution {
 public:
@@ -56,11 +57,38 @@ private:
 		}
 		char cur_char(digits.at(cur));
 		string cor_str(correspond.find(cur_char)->second);
+#if __cplusplus < 201103L
+		for (size_t i = 0; i < cor_str.size(); ++i)
+		{
+			char elem = cor_str.at(i);
+#else
 		for (char elem : cor_str)
 		{
+#endif
 			path += elem;
 			dfs(digits, cur+1, correspond, path, result);
 			path.pop_back();
 		}
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Letter Combination of a Phone Number", "[Brute Force]"){
+	Solution s;
+	SECTION("Empty Input"){
+		vector<string> result(1,"");
+		REQUIRE(s.letterCombinations("") == result);
+	}
+	SECTION("Normal Input"){
+		vector<string> result;
+		result.push_back("ad");
+		result.push_back("ae");
+		result.push_back("af");
+		result.push_back("bd");
+		result.push_back("be");
+		result.push_back("bf");
+		result.push_back("cd");
+		result.push_back("ce");
+		result.push_back("cf");
+		REQUIRE(s.letterCombinations("23") == result);
+	}
+}
