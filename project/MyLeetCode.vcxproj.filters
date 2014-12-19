@@ -32,6 +32,9 @@
     <ClCompile Include="..\Letter_Combinations_of_Phone_Number.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\Search_for_a_Range.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">

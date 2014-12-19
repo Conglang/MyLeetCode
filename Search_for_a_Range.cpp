@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/7
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
@@ -15,6 +15,10 @@ For example,
 Given [5, 7, 7, 8, 8, 10] and target value 8,
 return [3, 4].
 //--------------------------------------------------------------------------------------------------------------*/
+#include "project/include.h"
+#define  W3
+
+#ifdef W1
 // My Way
 // 时间复杂度O(n)，空间复杂度O(1)
 // 改进空间：二分。
@@ -40,7 +44,9 @@ public:
 		return result;
 	}
 };
+#endif
 
+#ifdef W2
 // Learned Way
 // 偷懒的做法，使用 STL
 // 时间复杂度 O(logn)，空间复杂度 O(1)
@@ -55,7 +61,9 @@ public:
 			return vector<int> { l, u };
 	}
 };
+#endif
 
+#ifdef W3
 // Learned Way 1
 // 重新实现 lower_bound 和 upper_bound
 // 时间复杂度 O(logn) ，空间复杂度 O(1)
@@ -65,9 +73,22 @@ public:
 		auto lower = lower_bound(A, A + n, target);
 		auto uppper = upper_bound(lower, A + n, target);
 		if (lower == A + n || *lower != target)
+#if __cplusplus < 201103L
+			return vector<int>(2, -1);
+#else
 			return vector<int> { -1, -1 };
+#endif
 		else
+#if __cplusplus < 201103L
+		{
+			vector<int> temp;
+			temp.push_back(distance(A, lower));
+			temp.push_back(distance(A, prev(uppper)));
+			return temp;
+		}	
+#else
 			return vector<int> {distance(A, lower), distance(A, prev(uppper))};
+#endif
 	}
 	template<typename ForwardIterator, typename T>
 	ForwardIterator lower_bound (ForwardIterator first, ForwardIterator last, T value)
@@ -92,3 +113,24 @@ public:
 			return first;
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Search for a range", "[Search]"){
+	Solution s;
+	SECTION("Empty Input"){
+		vector<int> result(2, -1);
+		REQUIRE(s.searchRange(NULL, 0, 0) == result);
+	}
+	SECTION("Single Input"){
+		vector<int> result(2, 1);
+		int A[3] = {0, 1, 2};
+		REQUIRE(s.searchRange(A, 3, 1) == result);
+	}
+	SECTION("Normal Input"){
+		vector<int> result;
+		result.push_back(1);
+		result.push_back(5);
+		int A[6] = {0, 5, 5, 5, 5, 5};
+		REQUIRE(s.searchRange(A, 6, 5) == result);
+	}
+}
