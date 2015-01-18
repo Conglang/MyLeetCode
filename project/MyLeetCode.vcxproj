@@ -66,7 +66,9 @@
     <ClCompile Include="..\Letter_Combinations_of_Phone_Number.cpp" />
     <ClCompile Include="..\Permutations.cpp" />
     <ClCompile Include="..\Permutations_II.cpp" />
+    <ClCompile Include="..\Pow(x, n).cpp" />
     <ClCompile Include="..\Search_for_a_Range.cpp" />
+    <ClCompile Include="..\Sqrt(x).cpp" />
     <ClCompile Include="..\Subsets.cpp" />
     <ClCompile Include="..\Subsets_II.cpp" />
     <ClCompile Include="main.cpp" />

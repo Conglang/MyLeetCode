@@ -35,6 +35,12 @@
     <ClCompile Include="..\Search_for_a_Range.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\Pow(x, n).cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sqrt(x).cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
