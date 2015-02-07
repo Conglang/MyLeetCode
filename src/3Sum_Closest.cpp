@@ -1,17 +1,19 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/9
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-
-For example, given array S = {-1 2 1 -4}, and target = 1.
-
-The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+* Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+* 
+* For example, given array S = {-1 2 1 -4}, and target = 1.
+* 
+* The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 //--------------------------------------------------------------------------------------------------------------*/
-// My way
+#include "../project/include.h"
+// 时间复杂度O(n^2)，空间复杂度O(1)。
+// 先排序，通过遍历让三个数求和变成两个数求和，然后从两侧向中间逼近。
 class Solution {
 public:
 	int threeSumClosest(vector<int> &num, int target) {
@@ -43,3 +45,16 @@ public:
 		return close_sum;
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("3Sum_Closest", "[Arrays]"){
+	Solution s;
+	SECTION("Empty Vector"){
+		vector<int> num;
+		REQUIRE(s.threeSumClosest(num, 0) == 0);
+	}
+	SECTION("Normal Vector"){
+		int S[4] = {-1, 2, 1, -4};
+		vector<int> num(S,S+4);
+		REQUIRE(s.threeSumClosest(num,1) == 2);
+	}
+}

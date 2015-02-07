@@ -1,45 +1,24 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/1
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a non-negative number represented as an array of digits, plus one to the number.
-
-The digits are stored such that the most significant digit is at the head of the list.
+* Given a non-negative number represented as an array of digits, plus one to the number.
+* 
+* The digits are stored such that the most significant digit is at the head of the list.
 //--------------------------------------------------------------------------------------------------------------*/
-// My way，特化+1的方法
-class Solution {
-public:
-	vector<int> plusOne(vector<int> &digits) {
-		bool exceed = false;
-		vector<int> result;
-		for (vector<int>::reverse_iterator it = digits.rbegin(); it != digits.rend(); ++it)
-		{
-			int this_num = *it;
-			if (it == digits.rbegin() || exceed)
-			{
-				exceed = this_num + 1 > 9;
-				result.push_back(exceed ? 0 : this_num + 1);
-				continue;
-			}else
-			{
-				result.push_back(this_num);
-			}
-		}
-		if (exceed) {result.push_back(1);}
-		reverse(result.begin(), result.end());
-		return result;
-	}
-};
-// My Way, 加多少数都可以的方法
+#include "../project/include.h"
+// 时间复杂度O(n)，空间复杂度O(1)
+// 不止1，加多少数都可以的方法。高精度加法。
 class Solution {
 public:
 	vector<int> add_num(vector<int>& digits, int num)
 	{
-		int plus = num;
 		vector<int> result;
+		if (digits.empty() || !num) {return digits;}
+		int plus = num;
 		for (vector<int>::reverse_iterator it = digits.rbegin(); it != digits.rend(); ++it)
 		{
 			int cur = *it + plus;
@@ -54,3 +33,22 @@ public:
 		return add_num(digits, 1);
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Plus_One", "[Arrays]"){
+	Solution s;
+	vector<int> digits;
+	vector<int> result;
+	SECTION("Empty Input"){
+		REQUIRE(s.plusOne(digits) == result);
+	}
+	SECTION("Normal Input"){
+		digits.assign(3,9);
+		result.assign(4,0);
+		result[0] = 1;
+		REQUIRE(s.plusOne(digits) == result);
+		digits.assign(3,1);
+		result.assign(3,1);
+		result[2] = 2;
+		REQUIRE(s.plusOne(digits) == result);
+	}
+}

@@ -5,19 +5,19 @@
 //		Date:			2014/11/8
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
-
-Note:
-Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ≤ b ≤ c)
-The solution set must not contain duplicate triplets.
-For example, given array S = {-1 0 1 2 -1 -4},
-
-A solution set is:
-(-1, 0, 1)
-(-1, -1, 2)
+* Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+* 
+* Note:
+* Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ≤ b ≤ c)
+* The solution set must not contain duplicate triplets.
+* For example, given array S = {-1 0 1 2 -1 -4},
+* 
+* A solution set is:
+* (-1, 0, 1)
+* (-1, -1, 2)
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-// Learned Way
+#include "../project/include.h"
+// 时间复杂度O(n^2)，空间复杂度O(1)。
 // 先排序，然后从两侧向中心逼近。
 // 注意防止重复做的优化：排序后如果下一个和自己的值一样，就没有必要再对其重复自己做过的一切了。
 // 如果不做这个优化会Time Limit Exceed.
@@ -31,8 +31,8 @@ public:
 		for (int i = 0; i < num.size() - 2;)
 		{
 			int l = i + 1, r = num.size() - 1;
-			twoSum = 0 - num[i];
-			while (l < r)
+			twoSum = 0 - num[i];	// 减去当前数字值，求的剩下两数之和
+			while (l < r)	// 两边逼近
 			{
 				if (num[l] + num[r] < twoSum) {l++;}
 				else if (num[l] + num[r] > twoSum) {r--;}
@@ -43,7 +43,7 @@ public:
 					vector<int> temp(tmp, tmp+3);
 					res.push_back(temp);			
 #else
-					res.push_back({num[i], num[l], num[r]}); // Not Support by VS2010
+					res.push_back({num[i], num[l], num[r]}); // Not Supported by VS2010
 #endif
 					do { l++; }while (l < r && num[l - 1] == num[l]);	// 注意此处优化。先右移，判断和自己之前的相同否。
 					do { r--; }while (l < r && num[r + 1] == num[r]);	// 优化。
@@ -57,7 +57,7 @@ public:
 };
 
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("3Sum", "[3Sum]"){
+TEST_CASE("3Sum", "[Arrays]"){
 	Solution s;
 	SECTION("Empty Vector"){
 		vector<int> num;

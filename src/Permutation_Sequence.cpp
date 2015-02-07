@@ -1,43 +1,56 @@
 ﻿//////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/10
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-The set [1,2,3,…,n] contains a total of n! unique permutations.
-
-By listing and labeling all of the permutations in order,
-We get the following sequence (ie, for n = 3):
-
-"123"
-"132"
-"213"
-"231"
-"312"
-"321"
-Given n and k, return the kth permutation sequence.
-
-Note: Given n will be between 1 and 9 inclusive.
+* The set [1,2,3,…,n] contains a total of n! unique permutations.
+* 
+* By listing and labeling all of the permutations in order,
+* We get the following sequence (ie, for n = 3):
+* 
+* "123"
+* "132"
+* "213"
+* "231"
+* "312"
+* "321"
+* Given n and k, return the kth permutation sequence.
+* 
+* Note: Given n will be between 1 and 9 inclusive.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
 // 康托编码
 /*
-	利用康托编码的思路，假设有n个不重复的元素，第k个排列是 a(1) , a(2) , a(3) , ..., a(n)，那么a(1)是哪一个位置呢？
-	我们把a1去掉，那么剩下的排列为 a(2) , a(3) , ..., a(n), 共计n − 1个元素，n − 1个元素共有(n − 1)!个排列，于是就可以知道 a(1) = k/( n − 1)!。
-	同理， a(2) , a(3) , ..., a(n)的值推导如下：
-	k(2) = k % (n − 1)!
-	a(2) = k(2) / (n − 2)!
-	...
-	k(n − 1) = k(n − 2) % 2!
-	a(n − 1) = k(n − 1) / 1!
-	a(n) = 0
+*	编码：
+*	举例：{1,2,3} 按从小到大排列一共6个：123 132 213 231 312 321。想知道321是{1,2,3}中第几个大的数。
+*	第一位是3，小于3的数有1、2 。所以有2*2!个。
+*	第二位是2，小于2的数只有1。所以有1*1!=1个。
+*	所以小于32的{1,2,3}排列数有2*2!+1*1!=5个。
+*	所以321是第6个大的数。2*2!+1*1!是康托展开。
+*	解码：
+*	举例：如何找出第16个（按字典序的）{1,2,3,4,5}的全排列？
+*	1. 首先用16-1得到15
+*	2. 用15去除4! 得到0余15
+*	3. 用15去除3! 得到2余3
+*	4. 用3去除2! 得到1余1
+*	5. 用1去除1! 得到1余0
+*	有0个数比它小的数是1，所以第一位是1
+*	有2个数比它小的数是3，但1已经在之前出现过了所以是4
+*	有1个数比它小的数是2，但1已经在之前出现过了所以是3
+*	有1个数比它小的数是2，但1,3,4都出现过了所以是5
+*	最后一个数只能是2
+*	所以排列为1 4 3 5 2
 */
+// 时间复杂度O(n)，空间复杂度O(1)
 class Solution {
 public:
 	string getPermutation(int n, int k) {
+		if (!n) {return "";}
 		string s(n, '0');
 		string result;
+		// 生成输入序列
 		for (int i = 0; i < n; ++i)
 		{
 			s[i] += i+1;
@@ -73,3 +86,13 @@ private:
 		return result;
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Permutation_Sequence", "[Arrays]"){
+	Solution s;
+	SECTION("Empty Input"){
+		REQUIRE(s.getPermutation(0,0) == "");
+	}
+	SECTION("Normal Input"){
+		REQUIRE(s.getPermutation(5,16) == "14352");
+	}
+}

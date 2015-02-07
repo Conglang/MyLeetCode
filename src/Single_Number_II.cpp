@@ -1,17 +1,25 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/14
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an array of integers, every element appears three times except for one. Find that single one.
-
-Note:
-Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+* Given an array of integers, every element appears three times except for one. Find that single one.
+* 
+* Note:
+* Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way 1
-// 创建一个长度为 sizeof(int) 的数组 count[sizeof(int)] ， count[i] 表示在在 i 位出现的 1 的次数。如果 count[i] 是 3 的整数倍，则忽略；否则就把该位取出来组成答案。
+#include "../project/include.h"
+#define W2
+#ifdef W1
+/*
+*	创建一个长度为sizeof(int)的数组count[sizeof(int)], 
+*	count[i]表示在在i位出现的1的次数。
+*	如果count[i]是3的整数倍，则忽略；
+*	否则就把该位取出来组成答案。
+*/
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int singleNumber(int A[], int n) {
@@ -34,12 +42,15 @@ public:
 		return result;
 	}
 };
-// Learned Way 2
+#endif
+
+#ifdef W2
+// 时间复杂度O(n)，空间复杂度O(1)。
 /*
-用 one 记录到当前处理的元素为止，二进制 1 出现“1 次”（mod 3 之后的 1）的有哪
-些二进制位；用 two 记录到当前计算的变量为止，二进制 1 出现“2 次”（mod 3 之后的 2）的有哪
-些二进制位。当 one 和 two 中的某一位同时为 1 时表示该二进制位上 1 出现了 3 次，此时需要清
-零。即用二进制模拟三进制运算。最终 one 记录的是最终结果。
+用one记录到当前处理的元素为止，二进制1出现"1次"（mod 3之后的1）的有哪些二进制位；
+用two记录到当前计算的变量为止，二进制1出现"2次"（mod 3之后的2）的有哪些二进制位。
+当one和two中的某一位同时为1时表示该二进制位上1出现了3次，此时需要清零。
+即用二进制模拟三进制运算。最终one记录的是最终结果。
 */
 class Solution {
 public:
@@ -55,3 +66,16 @@ public:
 		return one;
 	}
 };
+#endif
+
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Single_Number_II", "[Arrays]"){
+	Solution s;
+	SECTION("Empty Input"){
+		REQUIRE(s.singleNumber(NULL,0) == 0);
+	}
+	SECTION("Normal Input"){
+		int A[8] = {1,1,1,2,2,3,3,3};
+		REQUIRE(s.singleNumber(A,8) == 2);
+	}
+}

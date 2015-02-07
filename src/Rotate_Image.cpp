@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/11
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,8 @@ Rotate the image by 90 degrees (clockwise).
 Follow up:
 Could you do this in-place?
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
+// 时间复杂度O(n^2)，空间复杂度O(1)
 // 首先沿着副对角线翻转一次，然后沿着水平中线翻转一次。
 class Solution {
 public:
@@ -34,3 +35,29 @@ public:
 		}
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Rotate_Image", "[Arrays]"){
+	Solution s;
+	vector<vector<int> > matrix;
+	vector<vector<int> > result;
+	SECTION("Empty"){
+		s.rotate(matrix);
+		REQUIRE(matrix == result);
+	}
+	SECTION("Normal"){
+		vector<int> temp(2,1);
+		temp[1] = 2;
+		matrix.push_back(temp);
+		temp.assign(2,3);
+		temp[1] = 4;
+		matrix.push_back(temp);
+		temp.assign(2,3);
+		temp[1] = 1;
+		result.push_back(temp);
+		temp.assign(2,4);
+		temp[1] = 2;
+		result.push_back(temp);
+		s.rotate(matrix);
+		REQUIRE(matrix == result);
+	}
+}

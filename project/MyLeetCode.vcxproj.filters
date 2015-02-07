@@ -8,29 +8,101 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Source\Brute Force">
+      <UniqueIdentifier>{854a9466-33d5-4f67-8c64-39a3e13c48a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Arrays">
+      <UniqueIdentifier>{8952d48b-6142-4136-9dd9-c8f0c854d7c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\src\Combinations.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Permutations.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Permutations_II.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Subsets.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Brute Force</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Subsets_II.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp">
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Permutations.cpp">
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Permutations_II.cpp">
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Subsets.cpp">
+      <Filter>Source\Brute Force</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Next_Permutation.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Search_In_Rotated_Sorted_Array.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Search_In_Rotated_Sorted_Array_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Longest_Consecutive_Sequence.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Two_Sum.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\3Sum.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\3Sum_Closest.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\4Sum.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Remove_Element.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Permutation_Sequence.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Valid_Sudoku.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Trapping_Rain_Water.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Rotate_Image.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Plus_One.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Climbing_Stairs.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Gray_Code.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Set_Matrix_Zeroes.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Gas_Station.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Candy.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Single_Number.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Single_Number_II.cpp">
+      <Filter>Source\Arrays</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

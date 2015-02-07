@@ -1,30 +1,53 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/1
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an array and a value, remove all instances of that value in place and return the new length.
-
-The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+* Given an array and a value, remove all instances of that value in place and return the new length.
+* 
+* The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 //--------------------------------------------------------------------------------------------------------------*/
-// My way
+#include "../project/include.h"
+#define W1
+
+#ifdef W1
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int removeElement(int A[], int n, int elem) {
-		int i = 0;
 		int index = 0;
-		while (index < n)
+		for (int i = 0; i < n; ++i)
 		{
-			if (A[index] == elem)
+			if (A[i] != elem)
 			{
-				++index;
-			}else
-			{
-				A[i++] = A[index++];
+				A[index++] = A[i];
 			}
 		}
-		return i;
+		return index;
 	}
 };
+#endif
+
+#ifdef W2
+// 使用 remove()，时间复杂度O(n)，空间复杂度O(1)
+class Solution {
+public:
+	int removeElement(int A[], int n, int elem) {
+		return distance(A, remove(A, A+n, elem));
+	}
+};
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Remove_Element", "[Arrays]"){
+	Solution s;
+	SECTION("Empty Input"){
+		REQUIRE(s.removeElement(NULL,0,0) == 0);
+	}
+	SECTION("Normal Input"){
+		int A[5] = {2,1,3,1,5};
+		REQUIRE(s.removeElement(A,5,1) == 3);
+		REQUIRE(s.removeElement(A,5,4) == 5);
+	}
+}
