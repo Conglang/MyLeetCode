@@ -61,16 +61,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\3Sum.cpp" />
-    <ClCompile Include="..\Combinations.cpp" />
-    <ClCompile Include="..\Letter_Combinations_of_Phone_Number.cpp" />
-    <ClCompile Include="..\Permutations.cpp" />
-    <ClCompile Include="..\Permutations_II.cpp" />
-    <ClCompile Include="..\Pow(x, n).cpp" />
-    <ClCompile Include="..\Search_for_a_Range.cpp" />
-    <ClCompile Include="..\Sqrt(x).cpp" />
-    <ClCompile Include="..\Subsets.cpp" />
-    <ClCompile Include="..\Subsets_II.cpp" />
+    <ClCompile Include="..\src\Combinations.cpp" />
+    <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp" />
+    <ClCompile Include="..\src\Next_Permutation.cpp" />
+    <ClCompile Include="..\src\Permutations.cpp" />
+    <ClCompile Include="..\src\Permutations_II.cpp" />
+    <ClCompile Include="..\src\Subsets.cpp" />
+    <ClCompile Include="..\src\Subsets_II.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

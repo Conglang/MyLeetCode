@@ -5,62 +5,28 @@
 //		Date:			2014/12/9
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a collection of integers that might contain duplicates, S, return all possible subsets.
-
-Note:
-Elements in a subset must be in non-descending order.
-The solution set must not contain duplicate subsets.
-For example,
-If S = [1,2,2], a solution is:
-
-[
-  [2],
-  [1],
-  [1,2,2],
-  [2,2],
-  [1,2],
-  []
-]
+* Given a collection of integers that might contain duplicates, S, return all possible subsets.
+* 
+* Note:
+* Elements in a subset must be in non-descending order.
+* The solution set must not contain duplicate subsets.
+* For example,
+* If S = [1,2,2], a solution is:
+* 
+* [
+*   [2],
+*   [1],
+*   [1,2,2],
+*   [2,2],
+*   [1,2],
+*   []
+* ]
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-#define W3
+#include "../project/include.h"
+#define W1
 
 #ifdef W1
-// My Way
-// 如果和上一个元素相同，就把上一个元素开始时之前的已有结果全部排除掉。
-class Solution {
-public:
-	vector<vector<int> > subsetsWithDup(vector<int> &S) {
-		sort(S.begin(), S.end());
-
-		vector<vector<int> > result;
-		result.push_back(vector<int>{});
-		int last_elem{INT_MIN};
-		int last_2_result = 0;
-		int last_result = result.size();
-		for (auto elem : S)
-		{
-			vector<vector<int> > acopy;
-			if (elem != last_elem)  {acopy.assign(result.begin(),								result.end());}
-			else									{acopy.assign(result.begin() + last_2_result,	result.end());}
-
-			for (auto prev : acopy)
-			{
-				prev.push_back(elem);
-				result.push_back(prev);
-			}
-			last_elem = elem;
-			last_2_result = last_result;
-			last_result = result.size();
-		}
-		return result;
-	}
-};
-#endif
-
-#ifdef W2
-// Learned Way 1
-// 写法简练。时间复杂度 O(2^n) ，空间复杂度 O(1)
+// 写法简练。时间复杂度O(2^n)，空间复杂度O(1)
 class Solution {
 public:
 	vector<vector<int> > subsetsWithDup(vector<int> &S) {
@@ -70,6 +36,7 @@ public:
 		for (size_t i = 0; i < S.size(); ++i) {
 			const size_t size = result.size();
 			for (size_t j = 0; j < size; ++j) {
+				// 要么是初始状态，要么与前一个元素不重复，要么排除掉上一个元素生成之前的部分。
 				if (i == 0 || S[i] != S[i-1] || j >= previous_size) {
 					result.push_back(result[j]);
 					result.back().push_back(S[i]);
@@ -82,8 +49,7 @@ public:
 };
 #endif
 
-#ifdef W3
-// Learned Way 2
+#ifdef W2
 // 二进制法。时间复杂度 O(2^n) ，空间复杂度 O(1)
 class Solution {
 public:
@@ -108,7 +74,7 @@ public:
 };
 #endif
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("Subsets II", "[Brute Force]"){
+TEST_CASE("Subsets_II", "[Brute Force]"){
 	Solution s;
 	SECTION("Empty Vector"){
 		vector<int> num;

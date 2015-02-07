@@ -5,35 +5,17 @@
 //		Date:			2014/12/10
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a collection of numbers, return all possible permutations.
-
-For example,
-[1,2,3] have the following permutations:
-[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
+* Given a collection of numbers, return all possible permutations.
+* 
+* For example,
+* [1,2,3] have the following permutations:
+* [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-#define W2
+#include "../project/include.h"
 
-#ifdef W1
-// Learned Way 1
-// 标准库方法next_permutation()直接用的话。
-// 时间复杂度 O(n!) ，空间复杂度 O(1)
-class Solution {
-public:
-	vector<vector<int> > permute(vector<int> &num) {
-		vector<vector<int> > result;
-		sort(num.begin(), num.end());
-		do {
-			result.push_back(num);
-		} while(next_permutation(num.begin(), num.end()));
-		return result;
-	}
-};
-#endif
-
-#ifdef W2
-// Learned Way 2
+// 标准库提供了方法next_permutation()，此处自己实现。
 // 自己实现next_permutation()，参看Next_Permutation。
+// 时间复杂度O(n!)，空间复杂度O(1)。
 class Solution {
 public:
 	vector<vector<int> > permute(vector<int> &num) {
@@ -79,7 +61,6 @@ private:
 		return true;
 	}
 };
-#endif
 
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Permutations", "[Brute Force]"){

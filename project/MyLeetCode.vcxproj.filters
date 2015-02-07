@@ -10,35 +10,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\3Sum.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\Subsets.cpp">
+    <ClCompile Include="..\src\Combinations.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Subsets_II.cpp">
+    <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Permutations.cpp">
+    <ClCompile Include="..\src\Permutations.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Permutations_II.cpp">
+    <ClCompile Include="..\src\Permutations_II.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Combinations.cpp">
+    <ClCompile Include="..\src\Subsets.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Letter_Combinations_of_Phone_Number.cpp">
+    <ClCompile Include="..\src\Subsets_II.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Search_for_a_Range.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Pow(x, n).cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Sqrt(x).cpp">
+    <ClCompile Include="..\src\Next_Permutation.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

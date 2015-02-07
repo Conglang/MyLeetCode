@@ -5,65 +5,30 @@
 //		Date:			2014/12/9
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a set of distinct integers, S, return all possible subsets.
-
-Note:
-Elements in a subset must be in non-descending order.
-The solution set must not contain duplicate subsets.
-For example,
-If S = [1,2,3], a solution is:
-
-[
-  [3],
-  [1],
-  [2],
-  [1,2,3],
-  [1,3],
-  [2,3],
-  [1,2],
-  []
-]
+* Given a set of distinct integers, S, return all possible subsets.
+* 
+* Note:
+* Elements in a subset must be in non-descending order.
+* The solution set must not contain duplicate subsets.
+* For example,
+* If S = [1,2,3], a solution is:
+* 
+* [
+*   [3],
+*   [1],
+*   [2],
+*   [1,2,3],
+*   [1,3],
+*   [2,3],
+*   [1,2],
+*   []
+* ]
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-#define W1
+#include "../project/include.h"
+#define W2
 
 #ifdef W1
-// My Way，时间复杂度O(n^2)，空间复杂度O(1)
-class Solution {
-public:
-	vector<vector<int> > subsets(vector<int> &S) {
-		sort(S.begin(), S.end());
-		vector<vector<int> > result;
-#if __cplusplus < 201103L
-		vector<int> temp;
-		result.push_back(temp);
-		for (vector<int>::iterator it = S.begin(); it != S.end(); ++it)
-		{
-			int elem = *it;
-			vector<vector<int> > acopy(result);
-			for (vector<vector<int> >::iterator i = acopy.begin(); i != acopy.end(); ++i)
-			{
-				vector<int> prev = *i;
-#else
-		result.push_back(vector<int>{});
-		for (auto elem : S)
-		{
-			vector<vector<int> > acopy(result);
-			for (auto prev : acopy)
-			{
-#endif
-				prev.push_back(elem);
-				result.push_back(prev);
-			}
-		}
-		return result;
-	}
-};
-#endif
-
-#ifdef W2
-// Learned Way 1
-// 更好的写法，时间复杂度O(n^2)，空间复杂度O(1)
+// 复制result前一半元素，然后插入新数字。时间复杂度O(n^2)，空间复杂度O(1)
 class Solution {
 public:
 	vector<vector<int> > subsets(vector<int> &S) {
@@ -82,8 +47,7 @@ public:
 };
 #endif
 
-#ifdef W3
-// Learned Way 2
+#ifdef W2
 // 二进制法，时间复杂度O(n^2)，空间复杂度O(1)
 /*
 集合的元素不超过int位数。用一个int整数表示位向量，第i位为1，则表示

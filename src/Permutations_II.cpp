@@ -5,15 +5,15 @@
 //		Date:			2014/12/10
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a collection of numbers that might contain duplicates, return all possible unique permutations.
-
-For example,
-[1,1,2] have the following unique permutations:
-[1,1,2], [1,2,1], and [2,1,1].
+* Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+* 
+* For example,
+* [1,1,2] have the following unique permutations:
+* [1,1,2], [1,2,1], and [2,1,1].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-// Learned Way
+#include "../project/include.h"
 // 和Permutations解法一样。
+// 时间复杂度O(n!)，空间复杂度O(1)。
 class Solution {
 public:
 	vector<vector<int> > permuteUnique(vector<int> &num) {
@@ -60,7 +60,7 @@ private:
 	}
 };
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("Permutations II", "[Brute Force]"){
+TEST_CASE("Permutations_II", "[Brute Force]"){
 	Solution s;
 	SECTION("Empty Vector"){
 		vector<int> num;
