@@ -14,6 +14,9 @@
     <Filter Include="Source\Arrays">
       <UniqueIdentifier>{8952d48b-6142-4136-9dd9-c8f0c854d7c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Strings">
+      <UniqueIdentifier>{d471385b-f545-49b5-a943-f9c51eaa7718}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -103,6 +106,18 @@
     </ClCompile>
     <ClCompile Include="..\src\Single_Number_II.cpp">
       <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Valid_Palindrome.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Implement_strStr().cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\String_to_Interger(atoi).cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Add_Binary.cpp">
+      <Filter>Source\Strings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

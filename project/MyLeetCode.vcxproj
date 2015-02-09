@@ -64,11 +64,13 @@
     <ClCompile Include="..\src\3Sum.cpp" />
     <ClCompile Include="..\src\3Sum_Closest.cpp" />
     <ClCompile Include="..\src\4Sum.cpp" />
+    <ClCompile Include="..\src\Add_Binary.cpp" />
     <ClCompile Include="..\src\Candy.cpp" />
     <ClCompile Include="..\src\Climbing_Stairs.cpp" />
     <ClCompile Include="..\src\Combinations.cpp" />
     <ClCompile Include="..\src\Gas_Station.cpp" />
     <ClCompile Include="..\src\Gray_Code.cpp" />
+    <ClCompile Include="..\src\Implement_strStr().cpp" />
     <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp" />
     <ClCompile Include="..\src\Longest_Consecutive_Sequence.cpp" />
     <ClCompile Include="..\src\Next_Permutation.cpp" />
@@ -85,10 +87,12 @@
     <ClCompile Include="..\src\Set_Matrix_Zeroes.cpp" />
     <ClCompile Include="..\src\Single_Number.cpp" />
     <ClCompile Include="..\src\Single_Number_II.cpp" />
+    <ClCompile Include="..\src\String_to_Interger(atoi).cpp" />
     <ClCompile Include="..\src\Subsets.cpp" />
     <ClCompile Include="..\src\Subsets_II.cpp" />
     <ClCompile Include="..\src\Trapping_Rain_Water.cpp" />
     <ClCompile Include="..\src\Two_Sum.cpp" />
+    <ClCompile Include="..\src\Valid_Palindrome.cpp" />
     <ClCompile Include="..\src\Valid_Sudoku.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
