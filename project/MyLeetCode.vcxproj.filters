@@ -119,6 +119,39 @@
     <ClCompile Include="..\src\Add_Binary.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Longest_Palindromic_Substring.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Regular_Expression_Matching.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Wildcard_Matching.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Longest_Common_Prefix.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Valid_Number.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integer_to_Roman.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Roman_to_Integer.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Count_and_Say.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Anagrams.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Simplify_Path.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Length_of_Last_Word.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
