@@ -7,6 +7,8 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <bitset>
+#include <stack>
+#include <queue>
 using namespace std;
 
 #include "../catch/catch.hpp"

@@ -1,19 +1,21 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/23
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
-
-For "(()", the longest valid parentheses substring is "()", which has length = 2.
-
-Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
+* Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+* 
+* For "(()", the longest valid parentheses substring is "()", which has length = 2.
+* 
+* Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
 //--------------------------------------------------------------------------------------------------------------*/
+#include "../project/include.h"
 // 关键是注意到失败方式有两种，一种是(多，一种是)多。
+#define W2
 
-// Learned Way 1
+#ifdef W1
 // 用栈，时间复杂度O(n)，空间复杂度O(n)
 class Solution {
 public:
@@ -34,10 +36,10 @@ public:
 				}else
 				{
 					lefts.pop();
-					if (lefts.empty())	// 如果没有多余的(，那就是怪)咯，从它开始算账
+					if (lefts.empty())	// 如果没有多余的(，就不怪(，从当前位置到开头的距离
 					{
 						max_len = max(max_len, i - last);
-					}else	// 有多余的(，那就怪它，从栈顶最近的那个开始算
+					}else	// 有多余的(，那就怪它，从当前位置到栈顶最近的那个(的距离
 					{
 						max_len = max(max_len, i - lefts.top());
 					}
@@ -47,15 +49,16 @@ public:
 		return max_len;
 	}
 };
+#endif
 
-// Learned Way 2
-// 两遍扫描
+#ifdef W2
+// 两遍扫描，时间复杂度O(n)，空间复杂度O(1)
 class Solution {
 public:
 	int longestValidParentheses(string s) {
 		if (s.size() < 2) {return 0;}
 		int answer = 0, depth = 0, start = -1;
-		// from left to right, on condition ( is more than )
+		// from left to right, on condition ) is more than (
 		for (int i = 0; i < s.size(); ++i)
 		{
 			if (s[i] == '(')
@@ -74,7 +77,7 @@ public:
 				}
 			}
 		}
-		// from right to left, on condition ) is more than (
+		// from right to left, on condition ( is more than )
 		depth = 0;
 		start = s.size();
 		for (int i = s.size() - 1; i > -1; --i)
@@ -98,3 +101,15 @@ public:
 		return answer;
 	}
 };
+#endif
+TEST_CASE("Longest_Valid_Parentheses", "[Stacks]"){
+	Solution sln;
+	SECTION("Empty Input"){
+		REQUIRE(sln.longestValidParentheses("") == 0);
+	}
+	SECTION("Normal Input"){
+		REQUIRE(sln.longestValidParentheses("(()") == 2);
+		REQUIRE(sln.longestValidParentheses(")()())") == 4);
+		REQUIRE(sln.longestValidParentheses("(()))))") == 4);
+	}
+}

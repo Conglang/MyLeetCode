@@ -1,46 +1,53 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/1
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-
-The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+* Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+* 
+* The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 //--------------------------------------------------------------------------------------------------------------*/
-// My way
+#include "../project/include.h"
+// 时间复杂度O(n)，空间复杂度O(n)。
 class Solution {
 public:
 	bool isValid(string s) {
-		stack<char> opt;
-		map<char, char> opt_map;
-		opt_map.insert(make_pair('(',')'));
-		opt_map.insert(make_pair('[',']'));
-		opt_map.insert(make_pair('{','}'));
-		while (!s.empty())
+		if (s.empty()) {return true;}
+		string left = "([{";
+		string right = ")]}";
+		stack<char> stk;
+#if __cplusplus < 201103L
+		for (auto it = s.begin(); it != s.end(); ++it)
 		{
-			char this_char = *s.begin();
-			s.erase(s.begin());
-			if (this_char == '(' || this_char == '[' || this_char == '{')
+			char c = *it;
+#else
+		for (auto c : s)
+		{
+#endif
+			if (left.find(c) != string::npos)
 			{
-				opt.push(opt_map[this_char]);
-			}
-			else if (this_char == ')' || this_char == ']' || this_char == '}')
+				stk.push(c);
+			}else
 			{
-				if (opt.empty()) {return false;}
-				if (this_char != opt.top())
-				{
-					return false;
-				}
-				opt.pop();
-			}
-			else if (this_char != ',')
-			{
-				return false;
+				if (stk.empty() || stk.top() != left[right.find(c)])
+				{return false;}
+				else {stk.pop();}
 			}
 		}
-		if (!opt.empty()) {return false;}
-		return true;
+		return stk.empty();
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Valid_Parentheses", "[Stacks]"){
+	Solution sln;
+	SECTION("Empty Input"){
+		REQUIRE(sln.isValid("") == true);
+	}
+	SECTION("Normal Input"){
+		REQUIRE(sln.isValid("([{}])()[]{}") == true);
+		REQUIRE(sln.isValid("((()()[}]})") == false);
+		REQUIRE(sln.isValid("(()))))") == false);
+	}
+}

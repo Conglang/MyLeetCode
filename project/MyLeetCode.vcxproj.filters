@@ -20,6 +20,12 @@
     <Filter Include="Source\Linked Lists">
       <UniqueIdentifier>{d79336b3-d0b2-49f6-8e0a-8c0b3f8f77a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Stacks">
+      <UniqueIdentifier>{195e2923-283f-4939-b3b9-fd9753c1d195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Detail">
+      <UniqueIdentifier>{90563b8b-f7d6-4b69-a41f-55ad342a5ed7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -197,6 +203,33 @@
     </ClCompile>
     <ClCompile Include="..\src\LRU_Cache.cpp">
       <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Valid_Parentheses.cpp">
+      <Filter>Source\Stacks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Longest_Valid_Parentheses.cpp">
+      <Filter>Source\Stacks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Largest_Rectangle_in_Histogram.cpp">
+      <Filter>Source\Stacks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Evaluate_Reverse_Polish_Notation.cpp">
+      <Filter>Source\Stacks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reverse_Integer.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Palindrome_Number.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Pascal%27s_Triangle.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Pascal%27s_Triangle_II.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ZigZag_Conversion.cpp">
+      <Filter>Source\Detail</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
