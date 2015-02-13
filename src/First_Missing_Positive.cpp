@@ -1,20 +1,23 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/6
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an unsorted integer array, find the first missing positive integer.
-
-For example,
-Given [1,2,0] return 3,
-and [3,4,-1,1] return 2.
-
-Your algorithm should run in O(n) time and uses constant space.
+* Given an unsorted integer array, find the first missing positive integer.
+* 
+* For example,
+* Given [1,2,0] return 3,
+* and [3,4,-1,1] return 2.
+* 
+* Your algorithm should run in O(n) time and uses constant space.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
-// 桶排序 bucket sort，每当A[i] != i+1时，将A[i]与A[A[i]-1]交换，知道无法交换为止，终止条件是A[i] == A[A[i]-1]。
+#include "../project/include.h"
+// 桶排序bucket sort，每当A[i] != i+1时，将A[i]与A[A[i]-1]交换，
+// 直到无法交换为止，终止条件是A[i] == A[A[i]-1]。
+// 比如拿到数字5就把它放到从1数第5个位置上，如此排序。然后看看那个位置上的数字不正确即可。
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int firstMissingPositive(int A[], int n) {
@@ -42,3 +45,16 @@ private:
 		}
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("First_Missing_Positive", "[Sorting]"){
+	Solution sln;
+	SECTION("Empty Input"){
+		REQUIRE(sln.firstMissingPositive(NULL,0) == 1);
+	}
+	SECTION("Normal Input"){
+		int A1[3] = {1,2,0};
+		int A2[4] = {3,4,-1,1};
+		REQUIRE(sln.firstMissingPositive(A1,3) == 3);
+		REQUIRE(sln.firstMissingPositive(A2,4) == 2);
+	}
+}

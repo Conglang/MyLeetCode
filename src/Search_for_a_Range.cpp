@@ -5,21 +5,20 @@
 //		Date:			2014/12/7
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a sorted array of integers, find the starting and ending position of a given target value.
-
-Your algorithm's runtime complexity must be in the order of O(log n).
-
-If the target is not found in the array, return [-1, -1].
-
-For example,
-Given [5, 7, 7, 8, 8, 10] and target value 8,
-return [3, 4].
+* Given a sorted array of integers, find the starting and ending position of a given target value.
+* 
+* Your algorithm's runtime complexity must be in the order of O(log n).
+* 
+* If the target is not found in the array, return [-1, -1].
+* 
+* For example,
+* Given [5, 7, 7, 8, 8, 10] and target value 8,
+* return [3, 4].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
+#include "../project/include.h"
 #define  W3
 
 #ifdef W1
-// My Way
 // 时间复杂度O(n)，空间复杂度O(1)
 // 改进空间：二分。
 class Solution {
@@ -47,7 +46,6 @@ public:
 #endif
 
 #ifdef W2
-// Learned Way
 // 偷懒的做法，使用 STL
 // 时间复杂度 O(logn)，空间复杂度 O(1)
 class Solution {
@@ -64,9 +62,8 @@ public:
 #endif
 
 #ifdef W3
-// Learned Way 1
-// 重新实现 lower_bound 和 upper_bound
-// 时间复杂度 O(logn) ，空间复杂度 O(1)
+// 重新实现lower_bound和upper_bound
+// 时间复杂度O(logn)，空间复杂度O(1)。
 class Solution {
 public:
 	vector<int> searchRange (int A[], int n, int target) {
@@ -115,7 +112,7 @@ public:
 };
 #endif
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("Search for a range", "[Search]"){
+TEST_CASE("Search for a range", "[Searching]"){
 	Solution s;
 	SECTION("Empty Input"){
 		vector<int> result(2, -1);

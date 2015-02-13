@@ -21,3 +21,4 @@ struct ListNode {
 };
 
 vector<int> get_nodes_val(ListNode* head);
+vector<int> array_to_vector(int* A, int n);

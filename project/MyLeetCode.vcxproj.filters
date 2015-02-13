@@ -26,6 +26,12 @@
     <Filter Include="Source\Detail">
       <UniqueIdentifier>{90563b8b-f7d6-4b69-a41f-55ad342a5ed7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Searching">
+      <UniqueIdentifier>{1cbe9fee-c248-4d8c-992c-97f87481a553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sorting">
+      <UniqueIdentifier>{cb06a75e-f59b-4b78-9ee8-f54f7f7ccb49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -230,6 +236,39 @@
     </ClCompile>
     <ClCompile Include="..\src\ZigZag_Conversion.cpp">
       <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Insert_Interval.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Search_for_a_Range.cpp">
+      <Filter>Source\Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Search_Insert_Position.cpp">
+      <Filter>Source\Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Search_a_2D_Matrix.cpp">
+      <Filter>Source\Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Merge_Sorted_Array.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Merge_Two_Sorted_Lists.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Insertion_Sort_List.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sort_List.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\First_Missing_Positive.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sort_Colors.cpp">
+      <Filter>Source\Sorting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

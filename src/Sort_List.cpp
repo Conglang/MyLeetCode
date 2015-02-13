@@ -1,14 +1,14 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/6
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Sort a linked list in O(n log n) time using constant space complexity.
+* Sort a linked list in O(n log n) time using constant space complexity.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
-// 常数空间，空间复杂度O(nlogn)，单链表适合用归并排序，双向链表适合用快速排序。
+#include "../project/include.h"
+// (!)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -17,6 +17,8 @@ Sort a linked list in O(n log n) time using constant space complexity.
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+// 常数空间，空间复杂度O(nlogn)，单链表适合用归并排序，双向链表适合用快速排序。
+// 归并排序。利用快慢指针把链表分为两部分。然后递归利用归并排序。
 class Solution {
 public:
     ListNode *sortList(ListNode *head) {
@@ -53,3 +55,34 @@ private:
         return dummy.next;
     }
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Sort_List", "[Sorting]"){
+	Solution sln;
+	SECTION("Empty Input"){
+		REQUIRE(sln.sortList(NULL) == NULL);
+	}
+	SECTION("Normal Input"){
+		ListNode a1(1);
+		ListNode a2(2);
+		ListNode a3(3);
+		ListNode a4(4);
+		ListNode a5(5);
+		ListNode a6(6);
+		ListNode a7(7);
+		ListNode a8(8);
+		ListNode a9(9);
+		ListNode a10(10);
+		a1.next = &a3;
+		a3.next = &a5;
+		a5.next = &a2;
+		a2.next = &a4;
+		a4.next = &a8;
+		a8.next = &a10;
+		a10.next = &a6;
+		a6.next = &a7;
+		a7.next = &a9;
+		int temp[10] = {1,2,3,4,5,6,7,8,9,10};
+		vector<int> result(temp,temp+10);
+		REQUIRE(get_nodes_val(sln.sortList(&a1)) == result);
+	}
+}

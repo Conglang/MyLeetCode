@@ -1,51 +1,17 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/5
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+* Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
-// 复用mergeTwoLists，不可，会TLE
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode *mergeKLists(vector<ListNode *> &lists) {
-        if (lists.empty()) return NULL;
-        ListNode* l1 = lists[0];
-        for (int i = 1; i < lists.size(); ++i)
-        {
-            l1 = mergeTwoLists(l1, lists[i]);
-        }
-        return l1;
-    }
-private:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
-    {
-        if (!l1) return l2;
-        if (!l2) return l1;
-        ListNode dummy(-1);
-        ListNode* p = &dummy;
-        for (; l1 && l2; p = p->next)
-        {
-            if (l1->val > l2->val) {p->next = l2; l2 = l2->next;}
-            else {p->next = l1; l1 = l1->next;}
-        }
-        p->next = l1 ? l1 : l2;
-        return dummy.next;
-    }
-};
+#include "../project/include.h"
 
-// Learned Way，using heaps O(n*logk)
+// 如果采用复用mergeTwoLists的方法，会超时。
+
+// 使用heap，时间复杂度O(n*logk)，空间复杂度O(n)。
 // 从列表中每个的第一个开始形成一个堆，不断把最小元素弹出，把其下一位推进去，持续维护这个堆。
 /**
  * Definition for singly-linked list.
@@ -98,3 +64,36 @@ private:
        }
    };
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Merge_k_Sorted_Lists", "[Sorting]"){
+	Solution sln;
+	vector<ListNode *> lists;
+	ListNode a1(1);
+	ListNode a2(2);
+	ListNode a3(3);
+	ListNode a4(4);
+	ListNode a5(5);
+	ListNode a6(6);
+	ListNode a7(7);
+	ListNode a8(8);
+	ListNode a9(9);
+	ListNode a10(10);
+	a1.next = &a3;//1,3,5
+	a3.next = &a5;
+	a2.next = &a4;//2,4,8,10
+	a4.next = &a8;
+	a8.next = &a10;
+	a6.next = &a7;//6,7,9
+	a7.next = &a9;
+	SECTION("Empty Input"){
+		REQUIRE(sln.mergeKLists(lists) == NULL);
+	}
+	SECTION("Normal Input"){
+		lists.push_back(&a1);
+		lists.push_back(&a2);
+		lists.push_back(&a6);
+		int temp[10] = {1,2,3,4,5,6,7,8,9,10};
+		vector<int> result(temp,temp+10);
+		REQUIRE(get_nodes_val(sln.mergeKLists(lists)) == result);
+	}
+}
