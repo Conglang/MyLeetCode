@@ -32,6 +32,12 @@
     <Filter Include="Source\Sorting">
       <UniqueIdentifier>{cb06a75e-f59b-4b78-9ee8-f54f7f7ccb49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graph">
+      <UniqueIdentifier>{5f89e0cb-f9dc-4072-9d54-fd6d366b924a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Greedy Technique">
+      <UniqueIdentifier>{ccf9e60e-e6e4-4b28-a07b-f0e4a45d381d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -269,6 +275,27 @@
     </ClCompile>
     <ClCompile Include="..\src\Sort_Colors.cpp">
       <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clone_Graph.cpp">
+      <Filter>Source\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Jump_Game.cpp">
+      <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Jump_Game_II.cpp">
+      <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock.cpp">
+      <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp">
+      <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Longest_Substring_Without_Repeating_Characters.cpp">
+      <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Container_With_Most_Water.cpp">
+      <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

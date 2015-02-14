@@ -67,9 +67,13 @@
     <ClCompile Include="..\src\Add_Binary.cpp" />
     <ClCompile Include="..\src\Add_Two_Numbers.cpp" />
     <ClCompile Include="..\src\Anagrams.cpp" />
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock.cpp" />
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp" />
     <ClCompile Include="..\src\Candy.cpp" />
     <ClCompile Include="..\src\Climbing_Stairs.cpp" />
+    <ClCompile Include="..\src\Clone_Graph.cpp" />
     <ClCompile Include="..\src\Combinations.cpp" />
+    <ClCompile Include="..\src\Container_With_Most_Water.cpp" />
     <ClCompile Include="..\src\Copy_List_with_Random_Pointer.cpp" />
     <ClCompile Include="..\src\Count_and_Say.cpp" />
     <ClCompile Include="..\src\Evaluate_Reverse_Polish_Notation.cpp" />
@@ -80,6 +84,8 @@
     <ClCompile Include="..\src\Insertion_Sort_List.cpp" />
     <ClCompile Include="..\src\Insert_Interval.cpp" />
     <ClCompile Include="..\src\Integer_to_Roman.cpp" />
+    <ClCompile Include="..\src\Jump_Game.cpp" />
+    <ClCompile Include="..\src\Jump_Game_II.cpp" />
     <ClCompile Include="..\src\Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="..\src\Length_of_Last_Word.cpp" />
     <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp" />
@@ -88,6 +94,7 @@
     <ClCompile Include="..\src\Longest_Common_Prefix.cpp" />
     <ClCompile Include="..\src\Longest_Consecutive_Sequence.cpp" />
     <ClCompile Include="..\src\Longest_Palindromic_Substring.cpp" />
+    <ClCompile Include="..\src\Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="..\src\Longest_Valid_Parentheses.cpp" />
     <ClCompile Include="..\src\LRU_Cache.cpp" />
     <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp" />
