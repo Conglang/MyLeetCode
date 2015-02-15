@@ -97,11 +97,13 @@
     <ClCompile Include="..\src\Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="..\src\Longest_Valid_Parentheses.cpp" />
     <ClCompile Include="..\src\LRU_Cache.cpp" />
+    <ClCompile Include="..\src\Maximum_Subarray.cpp" />
     <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp" />
     <ClCompile Include="..\src\Merge_Sorted_Array.cpp" />
     <ClCompile Include="..\src\Merge_Two_Sorted_Lists.cpp" />
     <ClCompile Include="..\src\Next_Permutation.cpp" />
     <ClCompile Include="..\src\Palindrome_Number.cpp" />
+    <ClCompile Include="..\src\Palindrome_Partitioning_II.cpp" />
     <ClCompile Include="..\src\Partition_List.cpp" />
     <ClCompile Include="..\src\Pascal%27s_Triangle.cpp" />
     <ClCompile Include="..\src\Pascal%27s_Triangle_II.cpp" />
@@ -139,6 +141,7 @@
     <ClCompile Include="..\src\Subsets_II.cpp" />
     <ClCompile Include="..\src\Swap_Nodes_in_Pairs.cpp" />
     <ClCompile Include="..\src\Trapping_Rain_Water.cpp" />
+    <ClCompile Include="..\src\Triangle.cpp" />
     <ClCompile Include="..\src\Two_Sum.cpp" />
     <ClCompile Include="..\src\Valid_Number.cpp" />
     <ClCompile Include="..\src\Valid_Palindrome.cpp" />

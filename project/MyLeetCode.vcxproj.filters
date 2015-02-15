@@ -38,6 +38,9 @@
     <Filter Include="Source\Greedy Technique">
       <UniqueIdentifier>{ccf9e60e-e6e4-4b28-a07b-f0e4a45d381d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Dynamic Programming">
+      <UniqueIdentifier>{f87d76f7-56cd-45b6-bbda-440322b49cf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -296,6 +299,15 @@
     </ClCompile>
     <ClCompile Include="..\src\Container_With_Most_Water.cpp">
       <Filter>Source\Greedy Technique</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Triangle.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Maximum_Subarray.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Palindrome_Partitioning_II.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
