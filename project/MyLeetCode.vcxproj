@@ -69,6 +69,7 @@
     <ClCompile Include="..\src\Anagrams.cpp" />
     <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock.cpp" />
     <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp" />
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp" />
     <ClCompile Include="..\src\Candy.cpp" />
     <ClCompile Include="..\src\Climbing_Stairs.cpp" />
     <ClCompile Include="..\src\Clone_Graph.cpp" />
@@ -97,6 +98,7 @@
     <ClCompile Include="..\src\Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="..\src\Longest_Valid_Parentheses.cpp" />
     <ClCompile Include="..\src\LRU_Cache.cpp" />
+    <ClCompile Include="..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\src\Maximum_Subarray.cpp" />
     <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp" />
     <ClCompile Include="..\src\Merge_Sorted_Array.cpp" />

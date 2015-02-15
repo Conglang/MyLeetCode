@@ -309,6 +309,12 @@
     <ClCompile Include="..\src\Palindrome_Partitioning_II.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Maximal_Rectangle.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
