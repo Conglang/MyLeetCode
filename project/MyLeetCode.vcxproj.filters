@@ -315,6 +315,18 @@
     <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Interleaving_String.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Minimum_Path_Sum.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Edit_Distance.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decode_Ways.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
