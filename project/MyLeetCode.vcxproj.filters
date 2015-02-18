@@ -327,6 +327,15 @@
     <ClCompile Include="..\src\Decode_Ways.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Distinct_Subsequences.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Word_Break.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Word_Break_II.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">

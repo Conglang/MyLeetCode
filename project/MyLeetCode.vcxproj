@@ -78,6 +78,7 @@
     <ClCompile Include="..\src\Copy_List_with_Random_Pointer.cpp" />
     <ClCompile Include="..\src\Count_and_Say.cpp" />
     <ClCompile Include="..\src\Decode_Ways.cpp" />
+    <ClCompile Include="..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\src\Evaluate_Reverse_Polish_Notation.cpp" />
     <ClCompile Include="..\src\First_Missing_Positive.cpp" />
@@ -154,6 +155,8 @@
     <ClCompile Include="..\src\Valid_Parentheses.cpp" />
     <ClCompile Include="..\src\Valid_Sudoku.cpp" />
     <ClCompile Include="..\src\Wildcard_Matching.cpp" />
+    <ClCompile Include="..\src\Word_Break.cpp" />
+    <ClCompile Include="..\src\Word_Break_II.cpp" />
     <ClCompile Include="..\src\ZigZag_Conversion.cpp" />
     <ClCompile Include="include.cpp" />
     <ClCompile Include="main.cpp" />
