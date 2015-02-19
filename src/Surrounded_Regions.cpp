@@ -1,27 +1,28 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/13
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.
-
-A region is captured by flipping all 'O's into 'X's in that surrounded region.
-
-For example,
-X X X X
-X O O X
-X X O X
-X O X X
-After running your function, the board should be:
-
-X X X X
-X X X X
-X X X X
-X O X X
+* Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.
+* 
+* A region is captured by flipping all 'O's into 'X's in that surrounded region.
+* 
+* For example,
+* X X X X
+* X O O X
+* X X O X
+* X O X X
+* After running your function, the board should be:
+* 
+* X X X X
+* X X X X
+* X X X X
+* X O X X
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
+// 广度优先搜索。时间复杂度O(n)，空间复杂度O(n)。
 /*
 1. Find all O on the edge of the grid
 2. For each of the above, do BFS traversal (note, recursion will give for large tests) replacing 'O' with 'o' - marking free 'O' cells
@@ -61,10 +62,10 @@ public:
 		}
 	}
 
-	void mark_free(vector<vector<char>> &board, int ii, int ij)
+	void mark_free(vector<vector<char> > &board, int ii, int ij)
 	{
 		// first find all O on the edge of the grid.
-		stack<pair<int, int>> items;
+		stack<pair<int, int> > items;
 		items.push(make_pair(ii,ij));
 		while (!items.empty())
 		{
@@ -85,3 +86,35 @@ public:
 		}
 	}
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Surrounded_Regions", "[Breadth-First Search]"){
+	Solution sln;
+	vector<vector<char> > board;
+	vector<vector<char> > result;
+	SECTION("Empty Input") {
+		sln.solve(board);
+		REQUIRE(board == result);
+	}
+	SECTION("Normal Input1") {
+		int r1[4] = {'O','X','O','O'};
+		int r2[4] = {'O','O','X','X'};
+		board.push_back(vector<char>(r1,r1+4));
+		board.push_back(vector<char>(r2,r2+4));
+		result = board;
+		sln.solve(board);
+		REQUIRE(board == result);
+	}
+	SECTION("Normal Input2") {
+		board.push_back(vector<char>(4,'X'));
+		board.push_back(vector<char>(4,'X'));
+		board.push_back(vector<char>(4,'X'));
+		board.push_back(vector<char>(4,'X'));
+		board[3][1] = 'O';
+		result = board;
+		board[1][1] = 'O';
+		board[1][2] = 'O';
+		board[2][2] = 'O';
+		sln.solve(board);
+		REQUIRE(board == result);
+	}
+}

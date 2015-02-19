@@ -118,6 +118,7 @@
     <ClCompile Include="..\src\Permutations_II.cpp" />
     <ClCompile Include="..\src\Permutation_Sequence.cpp" />
     <ClCompile Include="..\src\Plus_One.cpp" />
+    <ClCompile Include="..\src\Pow(x, n).cpp" />
     <ClCompile Include="..\src\Regular_Expression_Matching.cpp" />
     <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array.cpp" />
     <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array_II.cpp" />
@@ -132,6 +133,7 @@
     <ClCompile Include="..\src\Roman_to_Integer.cpp" />
     <ClCompile Include="..\src\Rotate_Image.cpp" />
     <ClCompile Include="..\src\Rotate_List.cpp" />
+    <ClCompile Include="..\src\Scramble_String.cpp" />
     <ClCompile Include="..\src\Search_a_2D_Matrix.cpp" />
     <ClCompile Include="..\src\Search_for_a_Range.cpp" />
     <ClCompile Include="..\src\Search_Insert_Position.cpp" />
@@ -143,9 +145,11 @@
     <ClCompile Include="..\src\Single_Number_II.cpp" />
     <ClCompile Include="..\src\Sort_Colors.cpp" />
     <ClCompile Include="..\src\Sort_List.cpp" />
+    <ClCompile Include="..\src\Sqrt(x).cpp" />
     <ClCompile Include="..\src\String_to_Interger(atoi).cpp" />
     <ClCompile Include="..\src\Subsets.cpp" />
     <ClCompile Include="..\src\Subsets_II.cpp" />
+    <ClCompile Include="..\src\Surrounded_Regions.cpp" />
     <ClCompile Include="..\src\Swap_Nodes_in_Pairs.cpp" />
     <ClCompile Include="..\src\Trapping_Rain_Water.cpp" />
     <ClCompile Include="..\src\Triangle.cpp" />
@@ -157,6 +161,8 @@
     <ClCompile Include="..\src\Wildcard_Matching.cpp" />
     <ClCompile Include="..\src\Word_Break.cpp" />
     <ClCompile Include="..\src\Word_Break_II.cpp" />
+    <ClCompile Include="..\src\Word_Ladder.cpp" />
+    <ClCompile Include="..\src\Word_Ladder_II.cpp" />
     <ClCompile Include="..\src\ZigZag_Conversion.cpp" />
     <ClCompile Include="include.cpp" />
     <ClCompile Include="main.cpp" />

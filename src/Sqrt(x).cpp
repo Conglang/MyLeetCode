@@ -5,13 +5,12 @@
 //		Date:			2015/1/18
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Implement int sqrt(int x).
-
-Compute and return the square root of x.
+* Implement int sqrt(int x).
+* 
+* Compute and return the square root of x.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "project/include.h"
-// Learned Way
-// 二分法
+#include "../project/include.h"
+// 二分法。时间复杂度O(logn)，空间复杂度O(1)。
 class Solution {
 public:
 	int sqrt(int x) {
