@@ -108,8 +108,11 @@
     <ClCompile Include="..\src\Merge_Sorted_Array.cpp" />
     <ClCompile Include="..\src\Merge_Two_Sorted_Lists.cpp" />
     <ClCompile Include="..\src\Minimum_Path_Sum.cpp" />
+    <ClCompile Include="..\src\N-Queens.cpp" />
+    <ClCompile Include="..\src\N-Queens_II.cpp" />
     <ClCompile Include="..\src\Next_Permutation.cpp" />
     <ClCompile Include="..\src\Palindrome_Number.cpp" />
+    <ClCompile Include="..\src\Palindrome_Partitioning.cpp" />
     <ClCompile Include="..\src\Palindrome_Partitioning_II.cpp" />
     <ClCompile Include="..\src\Partition_List.cpp" />
     <ClCompile Include="..\src\Pascal%27s_Triangle.cpp" />
@@ -127,6 +130,7 @@
     <ClCompile Include="..\src\Remove_Element.cpp" />
     <ClCompile Include="..\src\Remove_Nth_Node_From_End_of_List.cpp" />
     <ClCompile Include="..\src\Reorder_List.cpp" />
+    <ClCompile Include="..\src\Restore_IP_Addresses.cpp" />
     <ClCompile Include="..\src\Reverse_Integer.cpp" />
     <ClCompile Include="..\src\Reverse_Linked_List_II.cpp" />
     <ClCompile Include="..\src\Reverse_Nodes_in_k-Group.cpp" />
@@ -154,6 +158,8 @@
     <ClCompile Include="..\src\Trapping_Rain_Water.cpp" />
     <ClCompile Include="..\src\Triangle.cpp" />
     <ClCompile Include="..\src\Two_Sum.cpp" />
+    <ClCompile Include="..\src\Unique_Paths.cpp" />
+    <ClCompile Include="..\src\Unique_Paths_II.cpp" />
     <ClCompile Include="..\src\Valid_Number.cpp" />
     <ClCompile Include="..\src\Valid_Palindrome.cpp" />
     <ClCompile Include="..\src\Valid_Parentheses.cpp" />

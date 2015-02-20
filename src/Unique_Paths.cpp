@@ -1,23 +1,28 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/15
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
-
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
-
-How many possible unique paths are there?
-
-
-Above is a 3 x 7 grid. How many possible unique paths are there?
-
-Note: m and n will be at most 100.
+* A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+* 
+* The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+* 
+* How many possible unique paths are there?
+* 
+* S . . . . . .
+* . . . . . . .
+* . . . . . . F
+* 
+* Above is a 3 x 7 grid. How many possible unique paths are there?
+* 
+* Note: m and n will be at most 100.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way 1
-// 会超时。时间复杂度O(n^4)，空间复杂度O(n)
+#include "../project/include.h"
+#define W3
+#ifdef W1
+// 递归。会超时。时间复杂度O(n^4)，空间复杂度O(n)
 class Solution
 {
 public:
@@ -28,13 +33,16 @@ public:
 		return uniquePaths(m - 1, n) + uniquePaths(m, n - 1);
 	}
 };
+#endif
 
-// Learned Way 2
-// 深度搜索 + 缓存，备忘录法。
+#ifdef W2
+// 深度搜索 + 缓存，备忘录法。存储可能用到的中间计算。
 // 时间复杂度O(n^2)，空间复杂度O(n^2)
 class Solution {
 public:
 	int uniquePaths(int m, int n) {
+		if (m < 1 || n < 1) return 0;
+		if (m == 1 && n == 1) return 1;
 		m_memory.assign(m+1, vector<int>(n+1, 0));	// 0行和0列未使用
 		return dfs(m, n);
 	}
@@ -54,15 +62,18 @@ private:
 		else return m_memory[x][y] = dfs(x, y);
 	}
 };
+#endif
 
-// Learned Way 3
+#ifdef W3
 // 既然可以用备忘录法自顶向下解决，也一定可以用动规自底向上解决。
-// 设状态为f[i][j]，表示从起点(1 , 1)到达( i, j )的路线条数，则状态转移方程为：
-// f[i][j]=f[i-1][j]+f[i][j-1]
-// 时间复杂度O(n^2) ，空间复杂度O(n)
+// 设状态为f[i][j]，表示从起点(1,1)到达(i,j)的路线条数，则状态转移方程为：
+// f[i][j] = f[i-1][j]+f[i][j-1]
+// 时间复杂度O(n^2)，空间复杂度O(n)。
 class Solution {
 public:
 	int uniquePaths(int m, int n) {
+		if (m < 1 || n < 1) return 0;
+		if (m == 1 && n == 1) return 1;
 		vector<int> f(n, 0);
 		f[0] = 1;
 		for (int i = 0; i < m; ++i)
@@ -77,3 +88,15 @@ public:
 		return f[n-1];
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Unique_Paths", "[Depth-First Search]"){
+	Solution sln;
+	SECTION("Empty Input") {
+		REQUIRE(sln.uniquePaths(0,0) == 0);
+		REQUIRE(sln.uniquePaths(1,1) == 1);
+	}
+	SECTION("Normal Input") {
+		REQUIRE(sln.uniquePaths(3,7) == 28);
+	}
+}

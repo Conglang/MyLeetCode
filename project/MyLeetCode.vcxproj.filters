@@ -47,6 +47,9 @@
     <Filter Include="Source\Breadth-First Search">
       <UniqueIdentifier>{32bcad58-4a7a-41ab-b4be-97f07109e199}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Depth-First Search">
+      <UniqueIdentifier>{836967b6-d96c-449b-980a-d8aa74d81afa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -359,6 +362,24 @@
     </ClCompile>
     <ClCompile Include="..\src\Surrounded_Regions.cpp">
       <Filter>Source\Breadth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Palindrome_Partitioning.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Unique_Paths.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Unique_Paths_II.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\N-Queens.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\N-Queens_II.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Restore_IP_Addresses.cpp">
+      <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

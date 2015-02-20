@@ -1,29 +1,32 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/15
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Follow up for "Unique Paths":
-
-Now consider if some obstacles are added to the grids. How many unique paths would there be?
-
-An obstacle and empty space is marked as 1 and 0 respectively in the grid.
-
-For example,
-There is one obstacle in the middle of a 3x3 grid as illustrated below.
-
-[
-[0,0,0],
-[0,1,0],
-[0,0,0]
-]
-The total number of unique paths is 2.
-
-Note: m and n will be at most 100.
+* Follow up for "Unique Paths":
+* 
+* Now consider if some obstacles are added to the grids. How many unique paths would there be?
+* 
+* An obstacle and empty space is marked as 1 and 0 respectively in the grid.
+* 
+* For example,
+* There is one obstacle in the middle of a 3x3 grid as illustrated below.
+* 
+* [
+*   [0,0,0],
+*   [0,1,0],
+*   [0,0,0]
+* ]
+* The total number of unique paths is 2.
+* 
+* Note: m and n will be at most 100.
 //--------------------------------------------------------------------------------------------------------------*/
-// My Way
+#include "../project/include.h"
+#define W2
+
+#ifdef W1
 // 备忘录法。时间复杂度O(n^2)，空间复杂度O(n^2)
 class Solution {
 public:
@@ -39,7 +42,6 @@ private:
 
 	int dfs(const vector<vector<int> >& obstacleGrid, int m, int n)
 	{
-		bool is_left(true), is_up(true);
 		if (m < 0 || n < 0) return 0;
 		if (obstacleGrid[m][n]) return 0;
 		if (m == 0 && n == 0) return 1;
@@ -53,12 +55,14 @@ private:
 		else return m_memory[x][y] = dfs(obstacleGrid, x, y);
 	}
 };
+#endif
 
-// Learned Way 1
+#ifdef W2
 // 动态规划。时间复杂度O(n^2)，空间复杂度O(n)
 class Solution {
 public:
 	int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {
+		if (obstacleGrid.empty()) return 0;
 		const int m = obstacleGrid.size();
 		const int n = obstacleGrid[0].size();
 		if (obstacleGrid[0][0] || obstacleGrid[m-1][n-1]) return 0;
@@ -70,3 +74,25 @@ public:
 		return f[n - 1];
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Unique_Paths_II", "[Depth-First Search]"){
+	Solution sln;
+	vector<vector<int> > obstacle_grid;
+	SECTION("Empty Input") {
+		REQUIRE(sln.uniquePathsWithObstacles(obstacle_grid) == 0);
+	}
+	SECTION("One Obstacle") {
+		obstacle_grid.assign(1, vector<int>(1,1));
+		REQUIRE(sln.uniquePathsWithObstacles(obstacle_grid) == 0);
+	}
+	SECTION("One Space") {
+		obstacle_grid.assign(1, vector<int>(1,0));
+		REQUIRE(sln.uniquePathsWithObstacles(obstacle_grid) == 1);
+	}
+	SECTION("Normal Input3") {
+		obstacle_grid.assign(3,vector<int>(3,0));
+		obstacle_grid[1][1] = 1;
+		REQUIRE(sln.uniquePathsWithObstacles(obstacle_grid) == 2);
+	}
+}
