@@ -381,6 +381,21 @@
     <ClCompile Include="..\src\Restore_IP_Addresses.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
+    <ClCompile Include="Combination_Sum.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Combination_Sum_II.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Generate_Parentheses.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sudoku_Solver.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Word_Search.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
