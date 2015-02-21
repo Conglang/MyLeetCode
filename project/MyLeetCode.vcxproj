@@ -74,6 +74,7 @@
     <ClCompile Include="..\src\Climbing_Stairs.cpp" />
     <ClCompile Include="..\src\Clone_Graph.cpp" />
     <ClCompile Include="..\src\Combinations.cpp" />
+    <ClCompile Include="..\src\Combination_Sum.cpp" />
     <ClCompile Include="..\src\Combination_Sum_II.cpp" />
     <ClCompile Include="..\src\Container_With_Most_Water.cpp" />
     <ClCompile Include="..\src\Copy_List_with_Random_Pointer.cpp" />
@@ -174,7 +175,6 @@
     <ClCompile Include="..\src\Word_Ladder_II.cpp" />
     <ClCompile Include="..\src\Word_Search.cpp" />
     <ClCompile Include="..\src\ZigZag_Conversion.cpp" />
-    <ClCompile Include="Combination_Sum.cpp" />
     <ClCompile Include="include.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
