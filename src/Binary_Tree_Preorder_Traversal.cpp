@@ -1,22 +1,26 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/25
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a binary tree, return the preorder traversal of its nodes' values.
-
-For example:
-Given binary tree {1,#,2,3},
-1
-	\
-		2
-	/
-3
-return [1,2,3].
-Note: Recursive solution is trivial, could you do it iteratively?
+* Given a binary tree, return the preorder traversal of its nodes' values.
+* 
+* For example:
+* Given binary tree {1,#,2,3},
+* 	1
+* 	 \
+* 	  2
+* 	 /
+* 	3
+* return [1,2,3].
+* Note: Recursive solution is trivial, could you do it iteratively?
 //--------------------------------------------------------------------------------------------------------------*/
+#include "../project/include.h"
+#define W3
+
+#ifdef W1
 // 没什么难度的递归方法
 /**
  * Definition for binary tree
@@ -44,7 +48,9 @@ private:
         preorder_traverse(node->right, num);
     }
 };
+#endif
 
+#ifdef W2
 // 迭代法，时间复杂度O(n)，空间复杂度O(n)
 // My Way
 /**
@@ -89,7 +95,10 @@ public:
     }
 };
 
-// Cleaner Way
+#endif
+
+#ifdef W3
+// 另一种更整洁的迭代方法。
 // 使用栈，时间复杂度 O(n) ，空间复杂度 O(n)
 class Solution {
 public:
@@ -110,3 +119,22 @@ public:
 		return result;
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Binary_Tree_Preorder_Traversal", "[Tree_Traverse]"){
+	Solution sln;
+	vector<int> result;
+	SECTION("Empty Input") {
+		REQUIRE(sln.preorderTraversal(NULL) == result);
+	}
+	SECTION("Normal Input") {
+		TreeNode t1(1);
+		TreeNode t2(2);
+		TreeNode t3(3);
+		t1.right = &t2;
+		t2.left = &t3;
+		int r[3] = {1,2,3};
+		result.assign(r,r+3);
+		REQUIRE(sln.preorderTraversal(&t1) == result);
+	}
+}

@@ -1,25 +1,28 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/26
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a binary tree, return the postorder traversal of its nodes' values.
-
-For example:
-Given binary tree {1,#,2,3},
-1
-	\
-	2
-	/
-3
-return [3,2,1].
-
-Note: Recursive solution is trivial, could you do it iteratively?
+* Given a binary tree, return the postorder traversal of its nodes' values.
+* 
+* For example:
+* Given binary tree {1,#,2,3},
+* 	1
+* 	 \
+* 	  2
+* 	 /
+* 	3
+* return [3,2,1].
+* 
+* Note: Recursive solution is trivial, could you do it iteratively?
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)
+// 有左节点时持续访问左结点，并将父节点入栈。
+// 当没有左节点时，取出栈顶一个元素，如果其右节点已被访问，访问该栈顶元素。
+// 如果右节点未被访问，栈顶元素重新入栈。从其右节点开始重复进行上述过程。
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -65,3 +68,21 @@ public:
         return result;
     }
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Binary_Tree_Postorder_Traversal", "[Tree_Traverse]"){
+	Solution sln;
+	vector<int> result;
+	SECTION("Empty Input") {
+		REQUIRE(sln.postorderTraversal(NULL) == result);
+	}
+	SECTION("Normal Input") {
+		TreeNode t1(1);
+		TreeNode t2(2);
+		TreeNode t3(3);
+		t1.right = &t2;
+		t2.left = &t3;
+		int r[3] = {3,2,1};
+		result.assign(r,r+3);
+		REQUIRE(sln.postorderTraversal(&t1) == result);
+	}
+}

@@ -1,39 +1,43 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/28
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a binary tree, flatten it to a linked list in-place.
-
-For example,
-Given
-
-		1
-       / \
-	 2   5
-	/ \    \
-  3   4    6
-The flattened tree should look like:
-1
-	\
-		2
-			\
-				3
-					\
-						4
-							\
-								5
-									\
-										6
-click to show hints.
-
-Hints:
-If you notice carefully in the flattened tree, each node's right child points to the next node of a pre-order traversal.
+* Given a binary tree, flatten it to a linked list in-place.
+* 
+* For example,
+* Given
+* 
+*          1
+*         / \
+*        2   5
+*       / \   \
+*      3   4   6
+* The flattened tree should look like:
+*    1
+*     \
+*      2
+*       \
+*        3
+*         \
+*          4
+*           \
+*            5
+*             \
+*              6
+* click to show hints.
+* 
+* Hints:
+* If you notice carefully in the flattened tree, each node's right child points to the next node of a pre-order traversal.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
+#define W1
+
+#ifdef W1
 // 迭代法。时间复杂度O(n)，空间复杂度O(logn)。
+// 用栈进行先序遍历。
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -66,7 +70,10 @@ public:
         }
     }
 };
-// 递归法1
+#endif
+
+#ifdef W2
+// 递归法
 class Solution {
 public:
 	void flatten(TreeNode *root) {
@@ -82,3 +89,20 @@ public:
 		root->left = nullptr;
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Flatten_Binary_Tree_to_Linked_List", "[Tree_Traverse]"){
+	Solution sln;
+	SECTION("Empty Input") {
+		sln.flatten(NULL);
+	}
+	SECTION("Normal Input") {
+		TreeNode t1(1),t2(2),t3(3),t4(4),t5(5);
+		t1.left = &t2;
+		t1.right = &t3;
+		t2.left = &t4;
+		t3.right = &t5;
+		sln.flatten(&t1);
+		REQUIRE(serialize_tree(&t1) == "1,#,2,#,4,#,3,#,5,#,#");
+	}
+}

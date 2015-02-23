@@ -42,3 +42,26 @@ std::string serialize_graph( UndirectedGraphNode* node )
 	}
 	return result;
 }
+
+std::string serialize_tree( TreeNode* root )
+{
+	string result;
+	if(!root) return result;
+	queue<TreeNode*> tree_stack;
+	tree_stack.push(root);
+	TreeNode* node(NULL);
+	while (!tree_stack.empty())
+	{
+		node = tree_stack.front();
+		tree_stack.pop();
+		result += node ? to_string((_LONGLONG)node->val) : "#";
+		result += ",";
+		if (node)
+		{
+			tree_stack.push(node->left);
+			tree_stack.push(node->right);
+		}
+	}
+	result.resize(result.size()-1);
+	return result;
+}

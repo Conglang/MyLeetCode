@@ -50,6 +50,15 @@
     <Filter Include="Source\Depth-First Search">
       <UniqueIdentifier>{836967b6-d96c-449b-980a-d8aa74d81afa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Tree">
+      <UniqueIdentifier>{cbaeec8f-3123-4953-88ef-c32486faacdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Tree\Construct">
+      <UniqueIdentifier>{71ad79eb-0e6b-4095-8d55-1c6849cbc2f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Tree\Traverse">
+      <UniqueIdentifier>{ba8fd530-3811-4635-aa39-3fcd26778240}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -395,6 +404,51 @@
     </ClCompile>
     <ClCompile Include="..\src\Combination_Sum.cpp">
       <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cpp">
+      <Filter>Source\Tree\Construct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.cpp">
+      <Filter>Source\Tree\Construct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Preorder_Traversal.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Inorder_Traversal.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Postorder_Traversal.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Level_Order_Traversal.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Level_Order_Traversal_II.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Zigzag_Level_Order_Traversal.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Recover_Binary_Search_Tree.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Same_Tree.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Symmetric_Tree.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Balanced_Binary_Tree.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flatten_Binary_Tree_to_Linked_List.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Populating_Next_Right_Pointers_in_Each_Node.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Populating_Next_Right_Pointers_in_Each_Node_II.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

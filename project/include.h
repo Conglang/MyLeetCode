@@ -31,3 +31,20 @@ struct UndirectedGraphNode {
 };
 
 string serialize_graph(UndirectedGraphNode* node);
+
+// For BinaryTree
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+string serialize_tree(TreeNode* node);
+
+// Definition for binary tree with next pointer.
+struct TreeLinkNode {
+	int val;
+	TreeLinkNode *left, *right, *next;
+	TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
+};

@@ -1,27 +1,30 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/11/27
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
-
-For example:
-Given binary tree {3,9,20,#,#,15,7},
-	   3
-	  / \
-	9  20
-		/  \
-	 15   7
-return its zigzag level order traversal as:
-[
-	[3],
-	[20,9],
-	[15,7]
-]
+* Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+* 
+* For example:
+* Given binary tree {3,9,20,#,#,15,7},
+* 	   3
+* 	  / \
+* 	 9  20
+* 	   /  \
+* 	  15   7
+* return its zigzag level order traversal as:
+* [
+* 	[3],
+* 	[20,9],
+* 	[15,7]
+* ]
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
+#include "../project/include.h"
+#define W1
+
+#ifdef W1
 // 广度优先遍历，用一个bool记录方向，每一层结束就翻转一下。
 
 // 迭代法。空间复杂度O(n)，时间复杂度O(n)。
@@ -69,17 +72,19 @@ public:
         return result;
     }
 };
+#endif
 
+#ifdef W2
 // 递归法。空间复杂度O(n)，时间复杂度O(n)。
 class Solution {
 public:
 	vector<vector<int> > zigzagLevelOrder(TreeNode *root) {
-		vector<vector<int>> result;
+		vector<vector<int> > result;
 		traverse(root, 1, result, true);
 		return result;
 	}
-	void traverse(TreeNode *root, size_t level, vector<vector<int>> &result,
-		bool left_to_right) {
+	void traverse(TreeNode *root, size_t level, vector<vector<int>> &result, bool left_to_right)
+	{
 			if (!root) return;
 			if (level > result.size())
 				result.push_back(vector<int>());
@@ -91,3 +96,25 @@ public:
 			traverse(root->right, level+1, result, !left_to_right);
 	}
 };
+#endif
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Binary_Tree_Zigzag_Level_Order_Traversal", "[Tree_Traverse]"){
+	Solution sln;
+	vector<vector<int> > result;
+	SECTION("Empty Input") {
+		REQUIRE(sln.zigzagLevelOrder(NULL) == result);
+	}
+	SECTION("Normal Input") {
+		TreeNode n1(3),n2(9),n3(20),n4(15),n5(7);
+		n1.left = &n2;
+		n1.right = &n3;
+		n3.left = &n4;
+		n3.right = &n5;
+		int r1[2] = {15,7};
+		int r2[2] = {20,9};
+		result.push_back(vector<int>(1,3));
+		result.push_back(vector<int>(r2,r2+2));
+		result.push_back(vector<int>(r1,r1+2));
+		REQUIRE(sln.zigzagLevelOrder(&n1) == result);
+	}
+}
