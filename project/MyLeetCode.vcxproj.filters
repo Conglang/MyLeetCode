@@ -489,6 +489,9 @@
     <ClCompile Include="..\src\Sum_Root_to_Leaf_Numbers.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Max_Points_on_a_Line.cpp">
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">

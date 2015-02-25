@@ -121,6 +121,7 @@
     <ClCompile Include="..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\src\Maximum_Depth_of_Binary_Tree.cpp" />
     <ClCompile Include="..\src\Maximum_Subarray.cpp" />
+    <ClCompile Include="..\src\Max_Points_on_a_Line.cpp" />
     <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp" />
     <ClCompile Include="..\src\Merge_Sorted_Array.cpp" />
     <ClCompile Include="..\src\Merge_Two_Sorted_Lists.cpp" />
