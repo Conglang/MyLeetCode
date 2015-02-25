@@ -1,24 +1,24 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/10/28
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
-
-For example:
-Given the below binary tree and sum = 22,
-          5
-         / \
-       4   8
-      /     / \
-   11  13  4
-  /  \      \
-7    2      1
-return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+* Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+* 
+* For example:
+* Given the below binary tree and sum = 22,
+*              5
+*             / \
+*            4   8
+*           /   / \
+*          11  13  4
+*         /  \      \
+*        7    2      1
+* return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 //--------------------------------------------------------------------------------------------------------------*/
-// My way
+#include "../project/include.h"
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -30,23 +30,26 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  */
 class Solution {
 public:
-    bool tranverse(TreeNode* node, int& cal, int sum)
-    {
-        bool result(false);
-        if (!node) {return false;}
-        cal += node->val;
-        if (!node->left && !node->right)
-        {
-            result = cal == sum;
-        }else
-        {
-            result = tranverse(node->left, cal, sum) || tranverse(node->right, cal, sum);
-        }
-        cal -= node->val;
-        return result;
-    }
     bool hasPathSum(TreeNode *root, int sum) {
-        int result(0);
-        return tranverse(root, result, sum);
+        if (root == NULL) return false;
+		if (root->left == NULL && root->right == NULL)	// leaf
+		{
+			return sum == root->val;
+		}
+		return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
     }
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Path_Sum", "[Tree_Recursion]"){
+	Solution sln;
+	SECTION("Empty Input") {
+		REQUIRE(sln.hasPathSum(NULL,10) == false);
+	}
+	SECTION("Normal Input") {
+		TreeNode a1(1),a2(2),a3(3);
+		a1.right = &a3;
+		a3.left = &a2;
+		REQUIRE(sln.hasPathSum(&a1,6) == true);
+		REQUIRE(sln.hasPathSum(&a1,5) == false);
+	}
+}

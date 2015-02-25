@@ -59,6 +59,12 @@
     <Filter Include="Source\Tree\Traverse">
       <UniqueIdentifier>{ba8fd530-3811-4635-aa39-3fcd26778240}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Tree\Binary Search Tree">
+      <UniqueIdentifier>{22a430f7-7b4b-48bc-9edf-0f9cc246f21f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Tree\Recursion">
+      <UniqueIdentifier>{a1b8ed57-0aaf-405b-9c21-6c6498762ea1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -449,6 +455,39 @@
     </ClCompile>
     <ClCompile Include="..\src\Populating_Next_Right_Pointers_in_Each_Node_II.cpp">
       <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Unique_Binary_Search_Trees.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Unique_Binary_Search_Trees_II.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Validate_Binary_Search_Tree.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Convert_Sorted_Array_to_Binary_Search_Tree.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Convert_Sorted_List_to_Binary_Search_Tree.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Maximum_Depth_of_Binary_Tree.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Minimum_Depth_of_Binary_Tree.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Path_Sum.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Path_Sum_II.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Binary_Tree_Maximum_Path_Sum.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sum_Root_to_Leaf_Numbers.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

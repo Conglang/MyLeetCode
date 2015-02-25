@@ -1,15 +1,15 @@
 //////////////////////////////////////////////////////
 //		Project:		MyLeetCode
 //
-//		Author:		YanShicong
+//		Author:			YanShicong
 //		Date:			2014/12/3
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+* Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 //--------------------------------------------------------------------------------------------------------------*/
-// Learned Way
-// 分治法，自底向上。
-// 时间复杂度O(n)，空间复杂度O(logn)
+#include "../project/include.h"
+// 分治法，自底向上。(!)
+// 时间复杂度O(n)，空间复杂度O(logn)。
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -52,3 +52,15 @@ private:
         return parent;	// 于是这是中序遍历的样子，也就是构造平衡二叉树的顺序。
     }
 };
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Convert_Sorted_List_to_Binary_Search_Tree", "[Binary Search Tree]"){
+	Solution sln;
+	SECTION("Empty Input") {
+		REQUIRE(sln.sortedListToBST(NULL) == NULL);
+	}
+	SECTION("Normal Input") {
+		ListNode a1(1),a2(2),a3(3);
+		a1.next = &a2; a2.next = &a3;
+		REQUIRE(serialize_tree(sln.sortedListToBST(&a1)) == "2,1,3,#,#,#,#");
+	}
+}
