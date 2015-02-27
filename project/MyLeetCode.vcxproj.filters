@@ -492,6 +492,9 @@
     <ClCompile Include="..\src\Max_Points_on_a_Line.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Reverse_Words_in_a_String.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\catch\catch.hpp">
