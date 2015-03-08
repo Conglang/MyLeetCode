@@ -9,7 +9,7 @@
 * 
 * The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 /**
  * Definition for binary tree
  * struct TreeNode {

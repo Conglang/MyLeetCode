@@ -22,7 +22,7 @@
 * ]
 * confused what "{1,#,2,3}" means? > read more on how binary tree is serialized on OJ.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 可以用上一题的迭代版，反转一下答案。或者：
 
 // 递归版，时间复杂度O(n)，空间复杂度O(n)。

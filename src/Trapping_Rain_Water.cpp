@@ -16,7 +16,7 @@
 * 
 * The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)
 /* 
 	对于每个柱子，找到其左右两边最高的柱子，该柱子能容纳的面积就是 min(max_left, max_right) - height。所以，

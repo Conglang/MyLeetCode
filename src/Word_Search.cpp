@@ -21,7 +21,7 @@
 * word = "SEE", -> returns true,
 * word = "ABCB", -> returns false.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 深搜，递归
 // 时间复杂度O(n^2*m^2)，空间复杂度O(n^2)。
 class Solution {

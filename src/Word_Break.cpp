@@ -13,7 +13,7 @@
 * 
 * Return true because "leetcode" can be segmented as "leet code".
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 动态规划，时间复杂度O(n^2)，空间复杂度O(n)。
 class Solution {
 public:

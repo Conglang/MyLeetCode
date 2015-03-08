@@ -11,7 +11,7 @@
 * 
 * Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 关键是注意到失败方式有两种，一种是(多，一种是)多。
 #define W2
 

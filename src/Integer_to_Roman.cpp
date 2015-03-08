@@ -9,7 +9,7 @@
 * 
 * Input is guaranteed to be within the range from 1 to 3999.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 一定要注意优化，减法简直不能忍，应该每次就去掉一个数量级才对。
 // 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {

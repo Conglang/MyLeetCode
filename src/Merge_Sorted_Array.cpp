@@ -10,7 +10,7 @@
 * Note:
 * You may assume that A has enough space (size that is greater or equal to m + n) to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(m+n)，空间复杂度O(1)。
 // 从右向左，AB都有元素时，将A和B中较大的元素复制到A中最右端空闲的位置。
 // 如果B中还有剩余，继续复制；如果A中有剩余则不用处理，因为它们已经在应该的位置上了。

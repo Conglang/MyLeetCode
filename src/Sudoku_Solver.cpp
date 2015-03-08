@@ -34,7 +34,7 @@
 * 
 * ...and its solution numbers marked in red.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(9^4)，空间复杂度 O(1)
 class Solution {
 public:

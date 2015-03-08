@@ -21,7 +21,7 @@
 * 
 * Throw an exception? Good, but what if throwing an exception is not an option? You would then have to re-design the function (ie, add an extra parameter).
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(logn)，空间复杂度O(1)。
 class Solution {
 public:

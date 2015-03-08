@@ -16,7 +16,7 @@
 * 
 * The minimum number of jumps to reach the last index is 2. (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W2
 #ifdef W1
 // 从左向右，每次从可跳范围的左端到右端遍历，找到能跳到最远的距离，然后把左端移到上一次的右端后一位。

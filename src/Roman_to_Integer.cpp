@@ -9,7 +9,7 @@
 * 
 * Input is guaranteed to be within the range from 1 to 3999.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 
 class Solution {
 public:

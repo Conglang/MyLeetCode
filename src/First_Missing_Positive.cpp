@@ -13,7 +13,7 @@
 * 
 * Your algorithm should run in O(n) time and uses constant space.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 桶排序bucket sort，每当A[i] != i+1时，将A[i]与A[A[i]-1]交换，
 // 直到无法交换为止，终止条件是A[i] == A[A[i]-1]。
 // 比如拿到数字5就把它放到从1数第5个位置上，如此排序。然后看看那个位置上的数字不正确即可。

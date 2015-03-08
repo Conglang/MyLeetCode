@@ -24,7 +24,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(1)。
 // 设两个指针p,q，让p先走n步，然后p和q一起走，直到p走到尾节点，删除q->next 即可。
 class Solution {

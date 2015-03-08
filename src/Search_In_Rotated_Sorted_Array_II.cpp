@@ -12,7 +12,7 @@
 * 
 * Write a function to determine if a given target is in the array.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(logn)，空间复杂度O(1)。
 // 二分查找
 // 当A[l] == A[m]，无法确定方向时，单纯++l;

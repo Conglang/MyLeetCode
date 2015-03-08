@@ -13,7 +13,7 @@
 * Note:
 * Could you optimize your algorithm to use only O(k) extra space?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n^2)，空间复杂度O(n)。
 // 从右向左轮换数值。
 class Solution {

@@ -33,7 +33,7 @@
  * };
  */
 //---------------------------------------------------
-#include "../project/include.h"
+#include "../include/include.h"
 #define W1
 
 #ifdef W1

@@ -9,7 +9,7 @@
 * 
 * Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 /**
  * Definition for binary tree
  * struct TreeNode {

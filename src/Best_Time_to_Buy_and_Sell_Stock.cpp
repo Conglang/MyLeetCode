@@ -9,7 +9,7 @@
 * 
 * If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 贪心。找到最小价格的一天和最大价格的一天，注意最小价格那天要在最大价格那天前面。
 // 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {

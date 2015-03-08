@@ -22,7 +22,7 @@
 * 
 * For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 格雷码
 // 不断增加最高位新前缀，与之前的所有已有结果或一遍。
 // 内部的或循环注意是逆序的，这样才满足题目中顺序的要求。

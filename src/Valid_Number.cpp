@@ -15,7 +15,7 @@
 * "2e10" => true
 * Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W2
 #ifdef W1
 // 要考虑到所有情况比较麻烦。

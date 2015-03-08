@@ -14,7 +14,7 @@
 * Input: numbers={2, 7, 11, 15}, target=9
 * Output: index1=1, index2=2
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)。
 class Solution {
 public:

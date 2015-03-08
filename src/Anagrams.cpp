@@ -15,7 +15,7 @@
 *	回文构词法有一个特点：单词里的字母的种类和数目没有改变，只是改变了字母的排列顺序。
 *	因此，将几个单词按照字母顺序排序后，若它们相等，则它们属于同一组anagrams。
 */
-#include "../project/include.h"
+#include "../include/include.h"
 // 每个string排序后作为key，自己自身作为value，写入到一个哈希表里。
 class Solution {
 public:
@@ -51,6 +51,9 @@ TEST_CASE("Anagrams", "[Strings]"){
 		string output[4] = {"dirtyroom","dormitory","tea","eat"};
 		strs.assign(input, input+6);
 		result.assign(output, output+4);
-		REQUIRE(s.anagrams(strs) == result);
+		sort(result.begin(),result.end());
+		vector<string> cal_res(s.anagrams(strs));
+		sort(cal_res.begin(), cal_res.end());
+		REQUIRE(cal_res == result);
 	}
 }

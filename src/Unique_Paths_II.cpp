@@ -23,7 +23,7 @@
 * 
 * Note: m and n will be at most 100.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W2
 
 #ifdef W1

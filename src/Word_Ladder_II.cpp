@@ -24,7 +24,7 @@
 * All words have the same length.
 * All words contain only lowercase alphabetic characters.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 广度优先遍历的同时把经过路径的父亲存在一棵树里，然后深度优先遍历生成路径。
 // 时间复杂度O(n)，空间复杂度O(n)。
 class Solution {

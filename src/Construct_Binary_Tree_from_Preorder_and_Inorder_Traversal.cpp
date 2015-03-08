@@ -10,7 +10,7 @@
 * Note:
 * You may assume that duplicates do not exist in the tree.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 递归。时间复杂度O(n)，空间复杂度O(logn)
 /**
  * Definition for binary tree

@@ -9,7 +9,7 @@
 * 
 * The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W1
 
 #ifdef W1

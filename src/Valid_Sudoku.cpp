@@ -24,7 +24,7 @@
 * Note:
 * A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n^2)，空间复杂度O(1)
 // 细节实现，检查行、检查列、检查子格。
 class Solution {

@@ -8,7 +8,7 @@
 * Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", 
 * which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 记录每段可行字符的start和cur，每次遇到重复时，start就置为该重复字符上一次出现处的后一个位置。
 // 如果不用start和cur两个来管理，而是每次返回前面位置重新处理的话会超时，应当重复利用之前判断过的非重字符串的成果。
 // 时间复杂度O(n)，空间复杂度O(n)。

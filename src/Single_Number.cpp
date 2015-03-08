@@ -10,7 +10,7 @@
 * Note:
 * Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 异或操作可以清除偶数次出现的情况
 // 时间复杂度O(n)，空间复杂度O(1)。
 #define W2

@@ -11,7 +11,7 @@
 * [1,1,2] have the following unique permutations:
 * [1,1,2], [1,2,1], and [2,1,1].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 和Permutations解法一样。
 // 时间复杂度O(n!)，空间复杂度O(1)。
 class Solution {

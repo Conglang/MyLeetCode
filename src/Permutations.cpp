@@ -11,7 +11,7 @@
 * [1,2,3] have the following permutations:
 * [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 
 // 标准库提供了方法next_permutation()，此处自己实现。
 // 自己实现next_permutation()，参看Next_Permutation。

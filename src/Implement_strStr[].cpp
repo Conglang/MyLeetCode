@@ -9,7 +9,7 @@
 * 
 * Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 
 // 时间复杂度O(n*m)，空间复杂度O(1)
 // 蛮力字符串匹配。先知道两者的长度才能在后面查找的时候做终止优化。

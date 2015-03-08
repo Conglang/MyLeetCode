@@ -16,7 +16,7 @@
 * 
 * For the purpose of this problem, we define empty string as valid palindrome.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W2
 #ifdef W1
 // 时间复杂度O(n)，空间复杂度O(n)
@@ -52,7 +52,7 @@ class Solution {
 public:
 	bool isPalindrome(string s) {
 		if (s.empty()) {return true;}
-		transform(s.begin(), s.end(), s.begin(), tolower);
+		transform(s.begin(), s.end(), s.begin(), static_cast<int (*)(int)>(std::toupper));
 		string::iterator left = s.begin(), right = prev(s.end());
 		while (left < right) {
 			if (!::isalnum(*left)) ++left;

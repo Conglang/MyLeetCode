@@ -9,7 +9,7 @@
 * 
 * Note: You can only move either down or right at any point in time.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 动态规划，时间复杂度O(n^2)，空间复杂度O(n)。
 // 对于i行j列的位置，其经过的路程长度的递推关系式为：f[i,j] = min(f[i-1,j], f[i,j-1]) + grid[i][j]。
 // 起始条件为f[0,0] = grid[0][0]

@@ -9,7 +9,7 @@
 * 
 * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 /*
 *	分析
 *	设f(n)表示爬n阶楼梯的不同方法数，为了爬到第n阶楼梯，有两个选择：

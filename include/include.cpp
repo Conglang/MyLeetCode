@@ -27,7 +27,15 @@ std::string serialize_graph( UndirectedGraphNode* node )
 	{
 		UndirectedGraphNode* node = nodes.front();
 		nodes.pop();
-		result += to_string((_LONGLONG)node->label);
+		string tmp(to_string((long double)node->label));
+		if (tmp.find(".") != string::npos)
+		{
+			result += tmp.substr(0,tmp.find("."));
+		}else
+		{
+			result += tmp;
+		}
+		
 		for (auto it = node->neighbors.begin(); it != node->neighbors.end(); ++it)
 		{
 			UndirectedGraphNode* neighbor = *it;
@@ -36,7 +44,15 @@ std::string serialize_graph( UndirectedGraphNode* node )
 				nodes.push(neighbor);
 				visited.insert(neighbor);
 			}
-			result += "," + to_string((_LONGLONG)neighbor->label);
+			string temp(to_string((long double)neighbor->label));
+			if (temp.find(".") != string::npos)
+			{
+				result += "," + temp.substr(0,temp.find("."));
+			}else
+			{
+				result += "," + temp;
+			}
+			
 		}
 		result += "#";
 	}
@@ -54,7 +70,15 @@ std::string serialize_tree( TreeNode* root )
 	{
 		node = tree_stack.front();
 		tree_stack.pop();
-		result += node ? to_string((_LONGLONG)node->val) : "#";
+		string temp(node ? to_string((long double)node->val) : "");
+		if (temp.find(".") != string::npos)
+		{
+			result += node ? temp.substr(0,temp.find(".")) : "#";
+		}else
+		{
+			result += node ? temp : "#";
+		}
+		
 		result += ",";
 		if (node)
 		{

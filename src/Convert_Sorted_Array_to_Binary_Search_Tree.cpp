@@ -7,7 +7,7 @@
 /*--------------------------------------------------------------------------------------------------------------
 * Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 /**
  * Definition for binary tree
  * struct TreeNode {

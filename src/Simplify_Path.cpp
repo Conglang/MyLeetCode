@@ -18,7 +18,7 @@
 * Another corner case is the path might contain multiple slashes '/' together, such as "/home//foo/".
 * In this case, you should ignore redundant slashes and return "/home/foo".
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)
 // 相对路径的化简，注意.和..的意义。一定要注意代码的健壮性。
 // 考虑为一个栈，每次把//之间的非.和空输入压入栈，如果遇到..就弹出。

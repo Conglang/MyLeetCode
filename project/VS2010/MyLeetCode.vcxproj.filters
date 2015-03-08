@@ -67,439 +67,439 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\src\Combinations.cpp">
+    <ClCompile Include="..\..\src\Combinations.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Subsets_II.cpp">
+    <ClCompile Include="..\..\src\Subsets_II.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Letter_Combinations_of_Phone_Number.cpp">
+    <ClCompile Include="..\..\src\Letter_Combinations_of_Phone_Number.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Permutations.cpp">
+    <ClCompile Include="..\..\src\Permutations.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Permutations_II.cpp">
+    <ClCompile Include="..\..\src\Permutations_II.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Subsets.cpp">
+    <ClCompile Include="..\..\src\Subsets.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Next_Permutation.cpp">
+    <ClCompile Include="..\..\src\Next_Permutation.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array_II.cpp">
+    <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_Array_II.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_Array.cpp">
+    <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_Array.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Search_In_Rotated_Sorted_Array.cpp">
+    <ClCompile Include="..\..\src\Search_In_Rotated_Sorted_Array.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Search_In_Rotated_Sorted_Array_II.cpp">
+    <ClCompile Include="..\..\src\Search_In_Rotated_Sorted_Array_II.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Longest_Consecutive_Sequence.cpp">
+    <ClCompile Include="..\..\src\Longest_Consecutive_Sequence.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Two_Sum.cpp">
+    <ClCompile Include="..\..\src\Two_Sum.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\3Sum.cpp">
+    <ClCompile Include="..\..\src\3Sum.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\3Sum_Closest.cpp">
+    <ClCompile Include="..\..\src\3Sum_Closest.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\4Sum.cpp">
+    <ClCompile Include="..\..\src\4Sum.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Remove_Element.cpp">
+    <ClCompile Include="..\..\src\Remove_Element.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Permutation_Sequence.cpp">
+    <ClCompile Include="..\..\src\Permutation_Sequence.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Valid_Sudoku.cpp">
+    <ClCompile Include="..\..\src\Valid_Sudoku.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Trapping_Rain_Water.cpp">
+    <ClCompile Include="..\..\src\Trapping_Rain_Water.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Rotate_Image.cpp">
+    <ClCompile Include="..\..\src\Rotate_Image.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Plus_One.cpp">
+    <ClCompile Include="..\..\src\Plus_One.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Climbing_Stairs.cpp">
+    <ClCompile Include="..\..\src\Climbing_Stairs.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Gray_Code.cpp">
+    <ClCompile Include="..\..\src\Gray_Code.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Set_Matrix_Zeroes.cpp">
+    <ClCompile Include="..\..\src\Set_Matrix_Zeroes.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Gas_Station.cpp">
+    <ClCompile Include="..\..\src\Gas_Station.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Candy.cpp">
+    <ClCompile Include="..\..\src\Candy.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Single_Number.cpp">
+    <ClCompile Include="..\..\src\Single_Number.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Single_Number_II.cpp">
+    <ClCompile Include="..\..\src\Single_Number_II.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Valid_Palindrome.cpp">
+    <ClCompile Include="..\..\src\Valid_Palindrome.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Implement_strStr().cpp">
+    <ClCompile Include="..\..\src\Add_Binary.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\String_to_Interger(atoi).cpp">
+    <ClCompile Include="..\..\src\Longest_Palindromic_Substring.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Add_Binary.cpp">
+    <ClCompile Include="..\..\src\Regular_Expression_Matching.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Longest_Palindromic_Substring.cpp">
+    <ClCompile Include="..\..\src\Wildcard_Matching.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Regular_Expression_Matching.cpp">
+    <ClCompile Include="..\..\src\Longest_Common_Prefix.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Wildcard_Matching.cpp">
+    <ClCompile Include="..\..\src\Valid_Number.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Longest_Common_Prefix.cpp">
+    <ClCompile Include="..\..\src\Integer_to_Roman.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Valid_Number.cpp">
+    <ClCompile Include="..\..\src\Roman_to_Integer.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Integer_to_Roman.cpp">
+    <ClCompile Include="..\..\src\Count_and_Say.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Roman_to_Integer.cpp">
+    <ClCompile Include="..\..\src\Anagrams.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Count_and_Say.cpp">
+    <ClCompile Include="..\..\src\Simplify_Path.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Anagrams.cpp">
+    <ClCompile Include="..\..\src\Length_of_Last_Word.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Simplify_Path.cpp">
-      <Filter>Source\Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Length_of_Last_Word.cpp">
-      <Filter>Source\Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Add_Two_Numbers.cpp">
+    <ClCompile Include="..\..\src\Add_Two_Numbers.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Reverse_Linked_List_II.cpp">
+    <ClCompile Include="..\..\src\Reverse_Linked_List_II.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Partition_List.cpp">
+    <ClCompile Include="..\..\src\Partition_List.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="include.cpp" />
-    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_List.cpp">
+    <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_List.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Remove_Duplicates_from_Sorted_List_II.cpp">
+    <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_List_II.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Rotate_List.cpp">
+    <ClCompile Include="..\..\src\Rotate_List.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Remove_Nth_Node_From_End_of_List.cpp">
+    <ClCompile Include="..\..\src\Remove_Nth_Node_From_End_of_List.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Swap_Nodes_in_Pairs.cpp">
+    <ClCompile Include="..\..\src\Swap_Nodes_in_Pairs.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Reverse_Nodes_in_k-Group.cpp">
+    <ClCompile Include="..\..\src\Reverse_Nodes_in_k-Group.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Copy_List_with_Random_Pointer.cpp">
+    <ClCompile Include="..\..\src\Copy_List_with_Random_Pointer.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Linked_List_Cycle.cpp">
+    <ClCompile Include="..\..\src\Linked_List_Cycle.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Linked_List_Cycle_II.cpp">
+    <ClCompile Include="..\..\src\Linked_List_Cycle_II.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Reorder_List.cpp">
+    <ClCompile Include="..\..\src\Reorder_List.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\LRU_Cache.cpp">
+    <ClCompile Include="..\..\src\LRU_Cache.cpp">
       <Filter>Source\Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Valid_Parentheses.cpp">
+    <ClCompile Include="..\..\src\Valid_Parentheses.cpp">
       <Filter>Source\Stacks</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Longest_Valid_Parentheses.cpp">
+    <ClCompile Include="..\..\src\Longest_Valid_Parentheses.cpp">
       <Filter>Source\Stacks</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Largest_Rectangle_in_Histogram.cpp">
+    <ClCompile Include="..\..\src\Largest_Rectangle_in_Histogram.cpp">
       <Filter>Source\Stacks</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Evaluate_Reverse_Polish_Notation.cpp">
+    <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp">
       <Filter>Source\Stacks</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Reverse_Integer.cpp">
+    <ClCompile Include="..\..\src\Reverse_Integer.cpp">
       <Filter>Source\Detail</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Palindrome_Number.cpp">
+    <ClCompile Include="..\..\src\Palindrome_Number.cpp">
       <Filter>Source\Detail</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Pascal%27s_Triangle.cpp">
+    <ClCompile Include="..\..\src\ZigZag_Conversion.cpp">
       <Filter>Source\Detail</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Pascal%27s_Triangle_II.cpp">
+    <ClCompile Include="..\..\src\Insert_Interval.cpp">
       <Filter>Source\Detail</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ZigZag_Conversion.cpp">
-      <Filter>Source\Detail</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Insert_Interval.cpp">
-      <Filter>Source\Detail</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Search_for_a_Range.cpp">
+    <ClCompile Include="..\..\src\Search_for_a_Range.cpp">
       <Filter>Source\Searching</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Search_Insert_Position.cpp">
+    <ClCompile Include="..\..\src\Search_Insert_Position.cpp">
       <Filter>Source\Searching</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Search_a_2D_Matrix.cpp">
+    <ClCompile Include="..\..\src\Search_a_2D_Matrix.cpp">
       <Filter>Source\Searching</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Merge_Sorted_Array.cpp">
+    <ClCompile Include="..\..\src\Merge_Sorted_Array.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Merge_Two_Sorted_Lists.cpp">
+    <ClCompile Include="..\..\src\Merge_Two_Sorted_Lists.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Merge_k_Sorted_Lists.cpp">
+    <ClCompile Include="..\..\src\Merge_k_Sorted_Lists.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Insertion_Sort_List.cpp">
+    <ClCompile Include="..\..\src\Insertion_Sort_List.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Sort_List.cpp">
+    <ClCompile Include="..\..\src\Sort_List.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\First_Missing_Positive.cpp">
+    <ClCompile Include="..\..\src\First_Missing_Positive.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Sort_Colors.cpp">
+    <ClCompile Include="..\..\src\Sort_Colors.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Clone_Graph.cpp">
+    <ClCompile Include="..\..\src\Clone_Graph.cpp">
       <Filter>Source\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Jump_Game.cpp">
+    <ClCompile Include="..\..\src\Jump_Game.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Jump_Game_II.cpp">
+    <ClCompile Include="..\..\src\Jump_Game_II.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock.cpp">
+    <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp">
+    <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Longest_Substring_Without_Repeating_Characters.cpp">
+    <ClCompile Include="..\..\src\Longest_Substring_Without_Repeating_Characters.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Container_With_Most_Water.cpp">
+    <ClCompile Include="..\..\src\Container_With_Most_Water.cpp">
       <Filter>Source\Greedy Technique</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Triangle.cpp">
+    <ClCompile Include="..\..\src\Triangle.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Maximum_Subarray.cpp">
+    <ClCompile Include="..\..\src\Maximum_Subarray.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Palindrome_Partitioning_II.cpp">
+    <ClCompile Include="..\..\src\Palindrome_Partitioning_II.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Maximal_Rectangle.cpp">
+    <ClCompile Include="..\..\src\Maximal_Rectangle.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp">
+    <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Interleaving_String.cpp">
+    <ClCompile Include="..\..\src\Interleaving_String.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Minimum_Path_Sum.cpp">
+    <ClCompile Include="..\..\src\Minimum_Path_Sum.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Edit_Distance.cpp">
+    <ClCompile Include="..\..\src\Edit_Distance.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Decode_Ways.cpp">
+    <ClCompile Include="..\..\src\Decode_Ways.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Distinct_Subsequences.cpp">
+    <ClCompile Include="..\..\src\Distinct_Subsequences.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Word_Break.cpp">
+    <ClCompile Include="..\..\src\Word_Break.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Word_Break_II.cpp">
+    <ClCompile Include="..\..\src\Word_Break_II.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Pow(x, n).cpp">
-      <Filter>Source\Devide and Conquer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Sqrt(x).cpp">
-      <Filter>Source\Devide and Conquer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Scramble_String.cpp">
+    <ClCompile Include="..\..\src\Scramble_String.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Word_Ladder.cpp">
+    <ClCompile Include="..\..\src\Word_Ladder.cpp">
       <Filter>Source\Breadth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Word_Ladder_II.cpp">
+    <ClCompile Include="..\..\src\Word_Ladder_II.cpp">
       <Filter>Source\Breadth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Surrounded_Regions.cpp">
+    <ClCompile Include="..\..\src\Surrounded_Regions.cpp">
       <Filter>Source\Breadth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Palindrome_Partitioning.cpp">
+    <ClCompile Include="..\..\src\Palindrome_Partitioning.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Unique_Paths.cpp">
+    <ClCompile Include="..\..\src\Unique_Paths.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Unique_Paths_II.cpp">
+    <ClCompile Include="..\..\src\Unique_Paths_II.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\N-Queens.cpp">
+    <ClCompile Include="..\..\src\N-Queens.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\N-Queens_II.cpp">
+    <ClCompile Include="..\..\src\N-Queens_II.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Restore_IP_Addresses.cpp">
+    <ClCompile Include="..\..\src\Restore_IP_Addresses.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Combination_Sum_II.cpp">
+    <ClCompile Include="..\..\src\Combination_Sum_II.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Generate_Parentheses.cpp">
+    <ClCompile Include="..\..\src\Generate_Parentheses.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Sudoku_Solver.cpp">
+    <ClCompile Include="..\..\src\Sudoku_Solver.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Word_Search.cpp">
+    <ClCompile Include="..\..\src\Word_Search.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Combination_Sum.cpp">
+    <ClCompile Include="..\..\src\Combination_Sum.cpp">
       <Filter>Source\Depth-First Search</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cpp">
+    <ClCompile Include="..\..\src\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cpp">
       <Filter>Source\Tree\Construct</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.cpp">
+    <ClCompile Include="..\..\src\Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.cpp">
       <Filter>Source\Tree\Construct</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Preorder_Traversal.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Preorder_Traversal.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Inorder_Traversal.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Inorder_Traversal.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Postorder_Traversal.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Postorder_Traversal.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Level_Order_Traversal.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Level_Order_Traversal.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Level_Order_Traversal_II.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Level_Order_Traversal_II.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Zigzag_Level_Order_Traversal.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Zigzag_Level_Order_Traversal.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Recover_Binary_Search_Tree.cpp">
+    <ClCompile Include="..\..\src\Recover_Binary_Search_Tree.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Same_Tree.cpp">
+    <ClCompile Include="..\..\src\Same_Tree.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Symmetric_Tree.cpp">
+    <ClCompile Include="..\..\src\Symmetric_Tree.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Balanced_Binary_Tree.cpp">
+    <ClCompile Include="..\..\src\Balanced_Binary_Tree.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Flatten_Binary_Tree_to_Linked_List.cpp">
+    <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Populating_Next_Right_Pointers_in_Each_Node.cpp">
+    <ClCompile Include="..\..\src\Populating_Next_Right_Pointers_in_Each_Node.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Populating_Next_Right_Pointers_in_Each_Node_II.cpp">
+    <ClCompile Include="..\..\src\Populating_Next_Right_Pointers_in_Each_Node_II.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Unique_Binary_Search_Trees.cpp">
+    <ClCompile Include="..\..\src\Unique_Binary_Search_Trees.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Unique_Binary_Search_Trees_II.cpp">
+    <ClCompile Include="..\..\src\Unique_Binary_Search_Trees_II.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Validate_Binary_Search_Tree.cpp">
+    <ClCompile Include="..\..\src\Validate_Binary_Search_Tree.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Convert_Sorted_Array_to_Binary_Search_Tree.cpp">
+    <ClCompile Include="..\..\src\Convert_Sorted_Array_to_Binary_Search_Tree.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Convert_Sorted_List_to_Binary_Search_Tree.cpp">
+    <ClCompile Include="..\..\src\Convert_Sorted_List_to_Binary_Search_Tree.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Maximum_Depth_of_Binary_Tree.cpp">
+    <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Minimum_Depth_of_Binary_Tree.cpp">
+    <ClCompile Include="..\..\src\Minimum_Depth_of_Binary_Tree.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Path_Sum.cpp">
+    <ClCompile Include="..\..\src\Path_Sum.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Path_Sum_II.cpp">
+    <ClCompile Include="..\..\src\Path_Sum_II.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Binary_Tree_Maximum_Path_Sum.cpp">
+    <ClCompile Include="..\..\src\Binary_Tree_Maximum_Path_Sum.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Sum_Root_to_Leaf_Numbers.cpp">
+    <ClCompile Include="..\..\src\Sum_Root_to_Leaf_Numbers.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Max_Points_on_a_Line.cpp">
+    <ClCompile Include="..\..\src\Max_Points_on_a_Line.cpp">
       <Filter>Source\Brute Force</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Reverse_Words_in_a_String.cpp">
+    <ClCompile Include="..\..\src\Reverse_Words_in_a_String.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\catch\main.cpp" />
+    <ClCompile Include="..\..\include\include.cpp" />
+    <ClCompile Include="..\..\src\Pascal_s_Triangle.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Pascal_s_Triangle_II.cpp">
+      <Filter>Source\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Pow[x_n].cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sqrt[x].cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Implement_strStr[].cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\String_to_Interger[atoi].cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\catch\catch.hpp">
+    <ClInclude Include="..\..\include\include.h" />
+    <ClInclude Include="..\..\catch\catch.hpp">
       <Filter>Catch</Filter>
     </ClInclude>
-    <ClInclude Include="include.h" />
   </ItemGroup>
 </Project>

@@ -14,7 +14,7 @@
 * ["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9
 * ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(logn)。
 class Solution {
 public:
@@ -42,7 +42,7 @@ public:
 				else if (token[0] == '-') { x -= y;}
 				else if (token[0] == '*') { x *= y;}
 				else if (token[0] == '/') { x /= y;}
-				cal_stack.push(to_string((_Longlong)x));	// to_string
+				cal_stack.push(to_string((long double)x));	// to_string
 			}
 		}
 		return stoi(cal_stack.top());

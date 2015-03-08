@@ -19,7 +19,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-#include "../project/include.h"
+#include "../include/include.h"
 // 迭代。时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:

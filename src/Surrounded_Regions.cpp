@@ -21,7 +21,7 @@
 * X X X X
 * X O X X
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 广度优先搜索。时间复杂度O(n)，空间复杂度O(n)。
 /*
 1. Find all O on the edge of the grid

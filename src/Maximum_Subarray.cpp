@@ -15,7 +15,7 @@
 * More practice:
 * If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W1
 #ifdef W1
 // 动态规划，时间复杂度O(n)，空间复杂度O(1)。

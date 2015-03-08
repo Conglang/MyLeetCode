@@ -24,7 +24,7 @@
 * How about multiple spaces between two words?
 *	Reduce them to a single space in the reversed string.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(1)。
 // 先将整个字符串反转，再去掉多余的空格，再将每个单词依次反转。
 class Solution {

@@ -13,7 +13,7 @@
 * b) Delete a character
 * c) Replace a character
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 动态规划，时间复杂度O(n*m)，空间复杂度O(n*m)。
 /*
 *	设状态为f[i][j]，表示word1[0,i]和word2[0,j]之间的最小编辑距离。

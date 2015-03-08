@@ -13,7 +13,7 @@
 * A solution using O(n) space is pretty straight forward. Could you devise a constant space solution?
 * confused what "{1,#,2,3}" means? > read more on how binary tree is serialized on OJ.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 普通方法要用中序遍历，需要栈。从前往后找第一处逆序，再从后往前找第二处逆序，交换。
 
 // 如果不用栈。Morris中序遍历。时间复杂度O(n)，空间复杂度O(1)。

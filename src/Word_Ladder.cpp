@@ -23,7 +23,7 @@
 * 	All words have the same length.
 * 	All words contain only lowercase alphabetic characters.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 广度遍历算法。时间复杂度O(n)，空间复杂度O(n)。
 class Solution {
 public:

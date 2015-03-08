@@ -19,7 +19,7 @@
 * Note:
 * Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 动态规划。时间复杂度O(nlogn)，空间复杂度O(n)。
 /*
 *	0

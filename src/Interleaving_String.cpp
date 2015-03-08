@@ -15,7 +15,7 @@
 * When s3 = "aadbbcbcac", return true.
 * When s3 = "aadbbbaccc", return false.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W2
 #ifdef W1
 /*

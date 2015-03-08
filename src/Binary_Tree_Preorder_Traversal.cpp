@@ -17,7 +17,7 @@
 * return [1,2,3].
 * Note: Recursive solution is trivial, could you do it iteratively?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W3
 
 #ifdef W1

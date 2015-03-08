@@ -20,7 +20,7 @@
 * 
 * Could you come up with an one-pass algorithm using only constant space?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W3
 
 #ifdef W1

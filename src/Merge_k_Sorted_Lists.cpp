@@ -7,7 +7,7 @@
 /*--------------------------------------------------------------------------------------------------------------
 * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 
 // 如果采用复用mergeTwoLists的方法，会超时。
 

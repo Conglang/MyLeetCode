@@ -12,7 +12,7 @@
 * For example, given s = "aab",
 * Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 /*
 *	定义状态f(i, j)表示区间[i, j]之间最小的cut数，则状态转移方程为：
 *	f(i, j) = min {f(i, k) + f(k + 1, j)}, i <=k<=j, 0 <=i<=j<n

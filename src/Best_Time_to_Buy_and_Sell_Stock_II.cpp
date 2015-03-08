@@ -10,7 +10,7 @@
 * Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). 
 * However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 贪婪算法。只要第二天比今天的贵，就今天买进，明天卖出。
 // 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {

@@ -14,7 +14,7 @@
 * 
 * Your function should return length = 2, and A is now [1,2].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W1
 // 时间复杂度O(n)，空间复杂度O(1)。
 // 是已经排序过的数组。

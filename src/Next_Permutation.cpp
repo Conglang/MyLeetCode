@@ -16,7 +16,7 @@
 * 3,2,1 ¡ú 1,2,3
 * 1,1,5 ¡ú 1,5,1
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // http://fisherlei.blogspot.com/2012/12/leetcode-next-permutation.html
 /*
 *	Example		 6	 8	 7	4	3	2

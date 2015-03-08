@@ -13,7 +13,7 @@
 * 
 * Your function should return length = 5, and A is now [1,1,2,2,3].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(1)。
 // 是已排序的数组。
 class Solution {

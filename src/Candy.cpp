@@ -13,7 +13,7 @@
 * Children with a higher rating get more candies than their neighbors.
 * What is the minimum candies you must give?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 #define W1
 
 // 两者的核心思想都是从左到右，从右到左各扫描一次。

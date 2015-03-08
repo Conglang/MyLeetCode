@@ -11,7 +11,7 @@
 * 
 * Note: You may not slant the container.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 贪心法，两边逼近，计算面积。每次从最低的那段向中间逼近。
 // 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {

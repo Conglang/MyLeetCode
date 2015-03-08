@@ -19,7 +19,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(1)。
 // 先遍历一遍，得到链表长度len。尾节点next指向首节点，形成环，接着跑len-k%len步。这之后就是新的首节点。
 class Solution {

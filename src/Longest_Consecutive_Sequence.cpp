@@ -13,7 +13,7 @@
 * 
 * Your algorithm should run in O(n) complexity.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)。
 // 一看到O(n)，就想起来哈希表。如果要排序，至少要O(nlogn)，所以不能排序。
 class Solution {

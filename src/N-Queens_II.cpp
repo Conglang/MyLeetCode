@@ -21,7 +21,7 @@
 *	   a b c d e f g h
 * One solution to the eight queens puzzle.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 只要求数量，沿用上题算法。但是一定有更简单的解法。
 // 深搜+剪枝。时间复杂度O(n!)，空间复杂度O(n)。
 class Solution {

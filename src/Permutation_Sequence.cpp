@@ -20,7 +20,7 @@
 * 
 * Note: Given n will be between 1 and 9 inclusive.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 康托编码
 /*
 *	编码：

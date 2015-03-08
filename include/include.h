@@ -9,8 +9,12 @@
 #include <bitset>
 #include <stack>
 #include <queue>
-using namespace std;
+#include <cstring>
+#include <cctype>
 
+using namespace std;
+#define INT_MIN     (-2147483647 - 1) /* minimum (signed) int value */
+#define INT_MAX       2147483647    /* maximum (signed) int value */
 #include "../catch/catch.hpp"
 //---------------------------------------------------
 // For Linked List

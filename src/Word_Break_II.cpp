@@ -15,7 +15,7 @@
 * 
 * A solution is ["cats and dog", "cat sand dog"].
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 在前一题Word_Break的基础上，增加记录所有可行区间的数组。
 class Solution {
 public:

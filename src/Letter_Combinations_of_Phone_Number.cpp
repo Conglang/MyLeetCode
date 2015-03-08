@@ -26,7 +26,7 @@
 * Note:
 * Although the above answer is in lexicographical order, your answer could be in any order you want.
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(3^n)，空间复杂度O(n)。
 class Solution {
 public:

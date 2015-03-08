@@ -18,7 +18,7 @@
 * 
 * Note: Recursive solution is trivial, could you do it iteratively?
 //--------------------------------------------------------------------------------------------------------------*/
-#include "../project/include.h"
+#include "../include/include.h"
 // 时间复杂度O(n)，空间复杂度O(n)
 // 有左节点时持续访问左结点，并将父节点入栈。
 // 当没有左节点时，取出栈顶一个元素，如果其右节点已被访问，访问该栈顶元素。
