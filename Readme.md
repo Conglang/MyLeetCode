@@ -41,7 +41,7 @@ All codes tested on platform Windows 7 (VS2010) and Ubuntu 14.04 (GCC) using [Ca
 
 The index of my notes on [algorithm](http://conglang.github.io/2014/12/25/algorithms/) and [data structure](http://conglang.github.io/2014/12/25/data-structures/) in [my blog](http://conglang.github.io/).
 
-Reference:<br>
+**Reference**:<br>
 [1] https://leetcode.com/<br>
 [2] https://github.com/soulmachine/leetcode<br>
 [3] Introduction to the Design and Analysis of Algorithms
