@@ -1,9 +1,11 @@
-My practice on leetcode. <br>
-Including 000 of 111 problems.<br>
+#MyLeetCode
 
-All codes tested on platform Windows 7(Microsoft Visual Studio 2010) and Ubuntu 14.04(GCC) using [Catch](https://github.com/philsquared/Catch).
+**My practice on leetcode including 142 of 197 problems.**
 
-Structure:
+All codes tested on platform Windows 7 (VS2010) and Ubuntu 14.04 (GCC) using [Catch](https://github.com/philsquared/Catch).
+
+**Structure**:
+```
 + root
 |
 +--+ catch/		// main() and header for Catch Test
@@ -17,8 +19,9 @@ Structure:
 |  +--+ g++/		// makefile for GCC
 |
 /--+ src/		// algorithm and test of problems on leetcode
+```
 
-Problems are assorted into 15 groups:<br>
+**Problems are assorted into 15 groups**:<br>
 (Links lead to my notes on each topic in Simplified Chinese. You can also find the classification in the VS2010 solution.)<br>
 + [Bit Manipulation](http://conglang.github.io/2014/12/24/bit-manipulation/)
 + [Arrays](http://conglang.github.io/2015/01/05/arrays/)
