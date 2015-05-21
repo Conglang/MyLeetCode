@@ -8,7 +8,7 @@ All codes tested on platform Windows 7 (VS2010) and Ubuntu 14.04 (GCC) using [Ca
 ```
 + root
 |
-+--+ catch/		// main() and header for Catch Test
++--+ catch/			// main() and header for Catch Test
 |
 +--+ include/		// declarations and helper functions
 |
@@ -18,7 +18,7 @@ All codes tested on platform Windows 7 (VS2010) and Ubuntu 14.04 (GCC) using [Ca
 |  | 
 |  +--+ g++/		// makefile for GCC
 |
-/--+ src/		// algorithm and test of problems on leetcode
+/--+ src/			// algorithm and test of problems on leetcode
 ```
 
 **Problems are assorted into 15 groups**:<br>
