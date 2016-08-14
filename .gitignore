@@ -1,5 +1,6 @@
 /project/VS2010/Debug
 
+/project/VS2010/ipch
 *.ipch
 *.sdf
 *.opensdf
