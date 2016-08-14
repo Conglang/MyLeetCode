@@ -1,0 +1,7 @@
+/project/VS2010/Debug
+
+*.ipch
+*.sdf
+*.opensdf
+*.suo
+

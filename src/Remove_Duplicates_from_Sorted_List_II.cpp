@@ -5,7 +5,8 @@
 //		Date:			2014/11/16
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+* Given a sorted linked list, delete all nodes that have duplicate numbers,
+* leaving only distinct numbers from the original list.
 * 
 * For example,
 * Given 1->2->3->3->4->4->5, return 1->2->5.
@@ -50,7 +51,9 @@ public:
         }
         return dummy.next;
     }
-};TEST_CASE("Remove_Duplicates_from_Sorted_list_II", "[Linked Lists]"){
+};
+//--------------------------------------------------------------------------------------------------------------
+TEST_CASE("Remove_Duplicates_from_Sorted_list_II", "[Linked Lists]"){
 	Solution sln;
 	SECTION("Empty Input"){
 		REQUIRE(sln.deleteDuplicates2(NULL) == NULL);

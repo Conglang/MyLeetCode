@@ -94,6 +94,7 @@
     <ClCompile Include="..\..\src\Copy_List_with_Random_Pointer.cpp" />
     <ClCompile Include="..\..\src\Count_and_Say.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />
+    <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
@@ -107,6 +108,7 @@
     <ClCompile Include="..\..\src\Insert_Interval.cpp" />
     <ClCompile Include="..\..\src\Integer_to_Roman.cpp" />
     <ClCompile Include="..\..\src\Interleaving_String.cpp" />
+    <ClCompile Include="..\..\src\Intersection_of_Two_Linked_Lists.cpp" />
     <ClCompile Include="..\..\src\Jump_Game.cpp" />
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
     <ClCompile Include="..\..\src\Largest_Rectangle_in_Histogram.cpp" />
@@ -122,16 +124,22 @@
     <ClCompile Include="..\..\src\LRU_Cache.cpp" />
     <ClCompile Include="..\..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp" />
+    <ClCompile Include="..\..\src\Maximum_Product_Subarray.cpp" />
     <ClCompile Include="..\..\src\Maximum_Subarray.cpp" />
     <ClCompile Include="..\..\src\Max_Points_on_a_Line.cpp" />
+    <ClCompile Include="..\..\src\Median_of_Two_Sorted_Arrays.cpp" />
     <ClCompile Include="..\..\src\Merge_k_Sorted_Lists.cpp" />
     <ClCompile Include="..\..\src\Merge_Sorted_Array.cpp" />
     <ClCompile Include="..\..\src\Merge_Two_Sorted_Lists.cpp" />
     <ClCompile Include="..\..\src\Minimum_Depth_of_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Minimum_Path_Sum.cpp" />
+    <ClCompile Include="..\..\src\Minimum_Size_Subarray_Sum.cpp" />
+    <ClCompile Include="..\..\src\Minimum_Window_Substring.cpp" />
     <ClCompile Include="..\..\src\N-Queens.cpp" />
     <ClCompile Include="..\..\src\N-Queens_II.cpp" />
     <ClCompile Include="..\..\src\Next_Permutation.cpp" />
+    <ClCompile Include="..\..\src\Odd_Even_Linked_List.cpp" />
+    <ClCompile Include="..\..\src\Palindrome_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Palindrome_Number.cpp" />
     <ClCompile Include="..\..\src\Palindrome_Partitioning.cpp" />
     <ClCompile Include="..\..\src\Palindrome_Partitioning_II.cpp" />
@@ -146,6 +154,7 @@
     <ClCompile Include="..\..\src\Plus_One.cpp" />
     <ClCompile Include="..\..\src\Populating_Next_Right_Pointers_in_Each_Node.cpp" />
     <ClCompile Include="..\..\src\Populating_Next_Right_Pointers_in_Each_Node_II.cpp" />
+    <ClCompile Include="..\..\src\Power_of_Four.cpp" />
     <ClCompile Include="..\..\src\Pow[x_n].cpp" />
     <ClCompile Include="..\..\src\Recover_Binary_Search_Tree.cpp" />
     <ClCompile Include="..\..\src\Regular_Expression_Matching.cpp" />
@@ -154,10 +163,12 @@
     <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_List.cpp" />
     <ClCompile Include="..\..\src\Remove_Duplicates_from_Sorted_List_II.cpp" />
     <ClCompile Include="..\..\src\Remove_Element.cpp" />
+    <ClCompile Include="..\..\src\Remove_Linked_List_Elements.cpp" />
     <ClCompile Include="..\..\src\Remove_Nth_Node_From_End_of_List.cpp" />
     <ClCompile Include="..\..\src\Reorder_List.cpp" />
     <ClCompile Include="..\..\src\Restore_IP_Addresses.cpp" />
     <ClCompile Include="..\..\src\Reverse_Integer.cpp" />
+    <ClCompile Include="..\..\src\Reverse_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Reverse_Linked_List_II.cpp" />
     <ClCompile Include="..\..\src\Reverse_Nodes_in_k-Group.cpp" />
     <ClCompile Include="..\..\src\Reverse_Words_in_a_String.cpp" />
@@ -181,6 +192,7 @@
     <ClCompile Include="..\..\src\String_to_Interger[atoi].cpp" />
     <ClCompile Include="..\..\src\Subsets.cpp" />
     <ClCompile Include="..\..\src\Subsets_II.cpp" />
+    <ClCompile Include="..\..\src\Substring_with_Concatenation_of_All_Words.cpp" />
     <ClCompile Include="..\..\src\Sudoku_Solver.cpp" />
     <ClCompile Include="..\..\src\Sum_Root_to_Leaf_Numbers.cpp" />
     <ClCompile Include="..\..\src\Surrounded_Regions.cpp" />

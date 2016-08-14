@@ -495,6 +495,42 @@
     <ClCompile Include="..\..\src\String_to_Interger[atoi].cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Median_of_Two_Sorted_Arrays.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Power_of_Four.cpp">
+      <Filter>Source\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Maximum_Product_Subarray.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Intersection_of_Two_Linked_Lists.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Remove_Linked_List_Elements.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Reverse_Linked_List.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Odd_Even_Linked_List.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Palindrome_Linked_List.cpp">
+      <Filter>Source\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Minimum_Window_Substring.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Substring_with_Concatenation_of_All_Words.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Minimum_Size_Subarray_Sum.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

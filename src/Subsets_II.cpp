@@ -51,6 +51,7 @@ public:
 
 #ifdef W2
 // 二进制法。时间复杂度 O(2^n) ，空间复杂度 O(1)
+// 用set去重就比较没意思了。
 class Solution {
 public:
 	vector<vector<int> > subsetsWithDup(vector<int> &S) {

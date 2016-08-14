@@ -26,7 +26,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// 先得到起点前一顶点head2，时刻维护head2/prev/cur三个顶点间的关系。
+// 先得到起点前一顶点head2，不断迭代向后，每一个动态都是平衡的，时刻维护head2/prev/cur三个顶点间的关系。
 // prev的next指向cur的next，head2的next指向cur，cur的next指向prev，cur每次向后前进一位。
 // 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {

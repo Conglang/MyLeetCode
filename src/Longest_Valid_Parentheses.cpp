@@ -5,7 +5,8 @@
 //		Date:			2014/11/23
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+* Given a string containing just the characters '(' and ')',
+* find the length of the longest valid (well-formed) parentheses substring.
 * 
 * For "(()", the longest valid parentheses substring is "()", which has length = 2.
 * 
@@ -13,7 +14,7 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // 关键是注意到失败方式有两种，一种是(多，一种是)多。
-#define W2
+#define W3
 
 #ifdef W1
 // 用栈，时间复杂度O(n)，空间复杂度O(n)
@@ -102,6 +103,44 @@ public:
 	}
 };
 #endif
+
+#ifdef W3
+// 沿用Valid_Parentheses的方法，只不过遇到错误时不是直接返回，而是将计数清零。
+// 时间复杂度O(n)，空间复杂度O(1)
+class Solution {
+public:
+	int longestValidParentheses(string s) {
+		if (s.empty())
+			return 0;
+		string left = "([{";
+		string right = ")]}";
+		stack<char> stk;
+		int max_len(0);
+		int cur_len(0);
+		for (auto it = s.begin(); it != s.end(); ++it)
+		{
+			char c = *it;
+			if (left.find(c) != string::npos)
+			{
+				stk.push(c);
+			}else
+			{
+				if (stk.empty() || left[right.find(c)] != stk.top())
+				{
+					cur_len = 0;
+				}else
+				{
+					stk.pop();
+					cur_len += 2;
+				}
+			}
+			max_len = max(max_len, cur_len);
+		}
+		return max_len;
+	}
+};
+#endif
+//--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Longest_Valid_Parentheses", "[Stacks]"){
 	Solution sln;
 	SECTION("Empty Input"){

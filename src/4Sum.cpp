@@ -5,7 +5,8 @@
 //		Date:			2014/11/9
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
+* Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target?
+* Find all unique quadruplets in the array which gives the sum of target.
 * 
 * Note:
 * Elements in a quadruplet (a,b,c,d) must be in non-descending order. (ie, a ¡Ü b ¡Ü c ¡Ü d)
@@ -46,8 +47,7 @@ public:
 					{
 #if __cplusplus < 201103L
 						int temp[4] = {*a, *b, *c, *d};
-						vector<int> t(temp, temp+4);
-						result.push_back(t);
+						result.push_back(vector<int>(temp, temp+4));
 #else
 						result.push_back({*a, *b, *c, *d});
 #endif

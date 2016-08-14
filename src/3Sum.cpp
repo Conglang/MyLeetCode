@@ -5,7 +5,8 @@
 //		Date:			2014/11/8
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+* Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0?
+* Find all unique triplets in the array which gives the sum of zero.
 * 
 * Note:
 * Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ¡Ü b ¡Ü c)
@@ -40,8 +41,7 @@ public:
 				{
 #if __cplusplus < 201103L
 					int tmp[3] = {num[i], num[l], num[r]};
-					vector<int> temp(tmp, tmp+3);
-					res.push_back(temp);			
+					res.push_back(vector<int>(tmp, tmp+3));			
 #else
 					res.push_back({num[i], num[l], num[r]}); // Not Supported by VS2010
 #endif
@@ -67,11 +67,9 @@ TEST_CASE("3Sum", "[Arrays]"){
 		int tmp[6] = {-1,0,1,2,-1,-4};
 		int result1[3] = {-1, 0, 1};
 		int result2[3] = {-1, -1, 2};
-		vector<int> r1(result1, result1+3);
-		vector<int> r2(result2, result2+3);
 		vector<vector<int> > result;
-		result.push_back(r1);
-		result.push_back(r2);
+		result.push_back(vector<int>(result1, result1+3));
+		result.push_back(vector<int>(result2, result2+3));
 		vector<int> num(tmp, tmp+6);
 		vector<vector<int> > my(s.threeSum(num));
 		sort(my.begin(), my.end());

@@ -13,7 +13,8 @@
 * "abc" => false
 * "1 a" => false
 * "2e10" => true
-* Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one.
+* Note: It is intended for the problem statement to be ambiguous.
+* You should gather all requirements up front before implementing one.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 #define W2
@@ -116,6 +117,18 @@ TEST_CASE("Valid_Number", "[Strings]"){
 		REQUIRE(s.isNumber('\0') == false);
 	}
 	SECTION("Normal Input"){
-		// TODO
+		REQUIRE(s.isNumber("1") == true);
+		REQUIRE(s.isNumber("0.1") == true);
+		REQUIRE(s.isNumber("-3") == true);
+		REQUIRE(s.isNumber("   5") == true);
+		REQUIRE(s.isNumber("1 a") == false);
+		REQUIRE(s.isNumber("2e10") == true);
+		REQUIRE(s.isNumber("a") == false);
+		REQUIRE(s.isNumber("++1") == false);
+		REQUIRE(s.isNumber("..6") == false);
+		REQUIRE(s.isNumber("2e0.2") == false);
+		REQUIRE(s.isNumber("2e-2") == true);
+		REQUIRE(s.isNumber("  10  ") == true);
+		REQUIRE(s.isNumber("0123") == true);
 	}
 }
