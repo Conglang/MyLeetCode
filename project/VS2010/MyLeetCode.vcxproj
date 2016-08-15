@@ -135,6 +135,7 @@
     <ClCompile Include="..\..\src\Minimum_Path_Sum.cpp" />
     <ClCompile Include="..\..\src\Minimum_Size_Subarray_Sum.cpp" />
     <ClCompile Include="..\..\src\Minimum_Window_Substring.cpp" />
+    <ClCompile Include="..\..\src\Move_Zeros.cpp" />
     <ClCompile Include="..\..\src\N-Queens.cpp" />
     <ClCompile Include="..\..\src\N-Queens_II.cpp" />
     <ClCompile Include="..\..\src\Next_Permutation.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="..\..\src\Reverse_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Reverse_Linked_List_II.cpp" />
     <ClCompile Include="..\..\src\Reverse_Nodes_in_k-Group.cpp" />
+    <ClCompile Include="..\..\src\Reverse_String.cpp" />
     <ClCompile Include="..\..\src\Reverse_Words_in_a_String.cpp" />
     <ClCompile Include="..\..\src\Roman_to_Integer.cpp" />
     <ClCompile Include="..\..\src\Rotate_Image.cpp" />
