@@ -537,6 +537,15 @@
     <ClCompile Include="..\..\src\Reverse_String.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Intersection_of_Two_Arrays_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Intersection_of_Two_Arrays.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Reverse_Vowels_of_a_String.cpp">
+      <Filter>Source\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
