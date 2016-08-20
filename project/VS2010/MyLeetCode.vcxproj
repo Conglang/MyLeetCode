@@ -98,6 +98,7 @@
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
+    <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
     <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Gas_Station.cpp" />
@@ -206,11 +207,13 @@
     <ClCompile Include="..\..\src\Trapping_Rain_Water.cpp" />
     <ClCompile Include="..\..\src\Triangle.cpp" />
     <ClCompile Include="..\..\src\Two_Sum.cpp" />
+    <ClCompile Include="..\..\src\Two_Sum_II_Input_Array_is_Sorted.cpp" />
     <ClCompile Include="..\..\src\Unique_Binary_Search_Trees.cpp" />
     <ClCompile Include="..\..\src\Unique_Binary_Search_Trees_II.cpp" />
     <ClCompile Include="..\..\src\Unique_Paths.cpp" />
     <ClCompile Include="..\..\src\Unique_Paths_II.cpp" />
     <ClCompile Include="..\..\src\Validate_Binary_Search_Tree.cpp" />
+    <ClCompile Include="..\..\src\Valid_Anagram.cpp" />
     <ClCompile Include="..\..\src\Valid_Number.cpp" />
     <ClCompile Include="..\..\src\Valid_Palindrome.cpp" />
     <ClCompile Include="..\..\src\Valid_Parentheses.cpp" />

@@ -546,6 +546,15 @@
     <ClCompile Include="..\..\src\Reverse_Vowels_of_a_String.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Two_Sum_II_Input_Array_is_Sorted.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Valid_Anagram.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
