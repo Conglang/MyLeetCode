@@ -114,6 +114,7 @@
     <ClCompile Include="..\..\src\Intersection_of_Two_Linked_Lists.cpp" />
     <ClCompile Include="..\..\src\Jump_Game.cpp" />
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
+    <ClCompile Include="..\..\src\Largest_Number.cpp" />
     <ClCompile Include="..\..\src\Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="..\..\src\Length_of_Last_Word.cpp" />
     <ClCompile Include="..\..\src\Letter_Combinations_of_Phone_Number.cpp" />
@@ -131,6 +132,7 @@
     <ClCompile Include="..\..\src\Maximum_Subarray.cpp" />
     <ClCompile Include="..\..\src\Max_Points_on_a_Line.cpp" />
     <ClCompile Include="..\..\src\Median_of_Two_Sorted_Arrays.cpp" />
+    <ClCompile Include="..\..\src\Merge_Intervals.cpp" />
     <ClCompile Include="..\..\src\Merge_k_Sorted_Lists.cpp" />
     <ClCompile Include="..\..\src\Merge_Sorted_Array.cpp" />
     <ClCompile Include="..\..\src\Merge_Two_Sorted_Lists.cpp" />

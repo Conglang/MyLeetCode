@@ -15,14 +15,14 @@ class Solution {
 public:
 	int sqrt(int x) {
 		if (x == 0 || x == 1) return x;
-		int start(1), end(x/2);
+		int start(1), end(x/2+1);
 		int last_mid(start);
-		while (start <= end)
+		while (start < end)
 		{
 			int mid(start+(end-start)/2);
 			int val(x / mid);
 			if (mid < val) {start = mid+1;last_mid = mid;}
-			else if (mid > val) {end = mid-1;}
+			else if (mid > val) {end = mid;}
 			else {return mid;}
 		}
 		return last_mid;

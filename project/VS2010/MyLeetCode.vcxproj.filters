@@ -256,9 +256,6 @@
     <ClCompile Include="..\..\src\ZigZag_Conversion.cpp">
       <Filter>Source\Detail</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Insert_Interval.cpp">
-      <Filter>Source\Detail</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Search_for_a_Range.cpp">
       <Filter>Source\Searching</Filter>
     </ClCompile>
@@ -553,6 +550,15 @@
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Valid_Anagram.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Merge_Intervals.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Insert_Interval.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Largest_Number.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
   </ItemGroup>
