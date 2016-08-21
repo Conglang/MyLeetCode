@@ -561,6 +561,9 @@
     <ClCompile Include="..\..\src\Largest_Number.cpp">
       <Filter>Source\Sorting</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Maximum_Gap.cpp">
+      <Filter>Source\Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

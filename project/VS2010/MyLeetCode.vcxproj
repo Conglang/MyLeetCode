@@ -128,6 +128,7 @@
     <ClCompile Include="..\..\src\LRU_Cache.cpp" />
     <ClCompile Include="..\..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp" />
+    <ClCompile Include="..\..\src\Maximum_Gap.cpp" />
     <ClCompile Include="..\..\src\Maximum_Product_Subarray.cpp" />
     <ClCompile Include="..\..\src\Maximum_Subarray.cpp" />
     <ClCompile Include="..\..\src\Max_Points_on_a_Line.cpp" />
