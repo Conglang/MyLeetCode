@@ -73,12 +73,14 @@
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp" />
+    <ClCompile Include="..\..\src\Binary_Search_Tree_Iterator.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Inorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Level_Order_Traversal.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Level_Order_Traversal_II.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Maximum_Path_Sum.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Postorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Preorder_Traversal.cpp" />
+    <ClCompile Include="..\..\src\Binary_Tree_Right_Side_View.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Zigzag_Level_Order_Traversal.cpp" />
     <ClCompile Include="..\..\src\Candy.cpp" />
     <ClCompile Include="..\..\src\Climbing_Stairs.cpp" />
@@ -93,6 +95,7 @@
     <ClCompile Include="..\..\src\Convert_Sorted_List_to_Binary_Search_Tree.cpp" />
     <ClCompile Include="..\..\src\Copy_List_with_Random_Pointer.cpp" />
     <ClCompile Include="..\..\src\Count_and_Say.cpp" />
+    <ClCompile Include="..\..\src\Count_Complete_Tree_Nodes.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />
     <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
@@ -113,6 +116,7 @@
     <ClCompile Include="..\..\src\Intersection_of_Two_Arrays.cpp" />
     <ClCompile Include="..\..\src\Intersection_of_Two_Arrays_II.cpp" />
     <ClCompile Include="..\..\src\Intersection_of_Two_Linked_Lists.cpp" />
+    <ClCompile Include="..\..\src\Invert_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Jump_Game.cpp" />
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
     <ClCompile Include="..\..\src\Largest_Number.cpp" />

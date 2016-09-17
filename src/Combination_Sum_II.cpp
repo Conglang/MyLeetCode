@@ -5,7 +5,8 @@
 //		Date:			2015/2/21
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
+* Given a collection of candidate numbers (C) and a target number (T),
+* find all unique combinations in C where the candidate numbers sums to T.
 * 
 * Each number in C may only be used once in the combination.
 * 
@@ -44,7 +45,7 @@ public:
 		int previous = -1;
 		for (int i = start; i < candidates.size(); ++i)	// 扩展状态。
 		{
-			// 如果上一轮循环没有选nums[i]，则本次循环就不能再选nums[i]，
+			// 如果上一轮循环选了nums[i]，则本次循环就不能再选nums[i]，
 			// 确保nums[i]最多只用一次。
 			if (previous == candidates[i]) continue;
 			if (gap < candidates[i]) return;	// 剪枝。

@@ -13,7 +13,8 @@
 * click to show more practice.
 * 
 * More practice:
-* If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+* If you have figured out the O(n) solution,
+* try coding another solution using the divide and conquer approach, which is more subtle.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 #define W1

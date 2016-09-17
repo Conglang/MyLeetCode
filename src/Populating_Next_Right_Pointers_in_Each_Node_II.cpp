@@ -50,7 +50,7 @@ public:
     void connect2(TreeLinkNode *root) {
         // Every level
         if (!root) {return;}
-        TreeLinkNode dummy(-1); // Record the head of this level
+        TreeLinkNode dummy(-1); // Record the head of next level
         for (TreeLinkNode* cur = root, *prev = &dummy; cur; cur = cur->next)		// The level cur in is already processed
         {
             if (cur->left) { prev->next = cur->left; prev = prev->next;}	// Processed it's next level

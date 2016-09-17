@@ -14,7 +14,8 @@
 * 
 * If you are thinking of converting the integer to string, note the restriction of using extra space.
 * 
-* You could also try reversing an integer. However, if you have solved the problem "Reverse Integer", you know that the reversed integer might overflow. How would you handle such case?
+* You could also try reversing an integer. However, if you have solved the problem "Reverse Integer",
+* you know that the reversed integer might overflow. How would you handle such case?
 * 
 * There is a more generic way of solving this problem.
 //--------------------------------------------------------------------------------------------------------------*/
@@ -25,7 +26,7 @@
 class Solution {
 public:
 	bool isPalindrome(int x) {
-		if (x < 0)		{return false;}	// 负数不是回文数
+		if (x < 0)	{return false;}		// 负数不是回文数
 		if (x < 10)	{return true;}		// 一位数是回文数
 		int divisor(1);
 		while (x / divisor >= 10)		// 得到为了得到最高位数字的除数

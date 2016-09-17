@@ -5,7 +5,8 @@
 //		Date:			2015/2/20
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+* Given a string containing only digits, restore it by returning all possible valid
+* IP address combinations.
 * 
 * For example:
 * Given "25525511135",

@@ -5,7 +5,8 @@
 //		Date:			2015/2/18
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+* Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated
+* sequence of one or more dictionary words.
 * 
 * For example, given
 * s = "leetcode",
@@ -25,7 +26,8 @@ public:
 		{
 			for (int j = i - 1; j >= 0; --j)
 			{
-				if (f[j] && dict.find(s.substr(j, i-j)) != dict.end())	// j前是否是可行词，j~i这个字符串是否是单词。均是才能构成下一个可行词。
+				// j前是否是可行词，j~i这个字符串是否是单词。均是才能构成下一个可行词。
+				if (f[j] && dict.find(s.substr(j, i-j)) != dict.end())
 				{
 					f[i] = true;
 					break;

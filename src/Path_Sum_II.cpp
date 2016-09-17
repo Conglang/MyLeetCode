@@ -32,6 +32,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+// DFS
 class Solution {
 public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {

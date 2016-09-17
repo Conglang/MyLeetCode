@@ -96,7 +96,7 @@ public:
 					const string palindrome = s.substr(i, j - i + 1);
 					if (j + 1 < n)
 					{
-						// 本回文串起点i出的sub_palis[i]，是本回文串终点j后一位处sub_pailis[j+1]里的每一段添加本回文串。
+						// 本回文串起点i处的sub_palis[i]，是本回文串终点j后一位处sub_pailis[j+1]里的每一段添加本回文串。
 						for (auto v : sub_palis[j + 1])
 						{
 							v.insert(v.begin(), palindrome);

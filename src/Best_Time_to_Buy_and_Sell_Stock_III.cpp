@@ -10,7 +10,8 @@
 * Design an algorithm to find the maximum profit. You may complete at most two transactions.
 * 
 * Note:
-* You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+* You may not engage in multiple transactions at the same time
+* (ie, you must sell the stock before you buy again).
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // 动态规划。相当于求两个区间各自最大利润的最大和。即要确定区间如何划分使两部分的最大利润的和最大。

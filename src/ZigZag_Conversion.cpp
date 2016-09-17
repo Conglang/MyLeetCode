@@ -5,7 +5,8 @@
 //		Date:			2014/10/31
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+* The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+* (you may want to display this pattern in a fixed font for better legibility)
 * 
 * P   A   H   N
 * A P L S I I G
@@ -21,7 +22,7 @@
 /*
 *	n = 4:
 *	P     I     N
-*	A   L s   i G
+*	A   L S   i G
 *	Y A   H R
 *	P     I
 *	

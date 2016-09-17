@@ -41,8 +41,9 @@ private:
 		dfs(result,sequence,n,cur+1,balance_factor);
 		--balance_factor;
 		sequence.pop_back();
-		--balance_factor;
+		
 		sequence.push_back(')');	// ≥¢ ‘”“¿®∫≈°£
+		--balance_factor;
 		dfs(result,sequence,n,cur+1,balance_factor);
 		++balance_factor;
 		sequence.pop_back();

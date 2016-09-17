@@ -40,9 +40,13 @@ class Solution {
 public:
 	bool solveSudoku(vector<vector<char> > &board) {
 		for (int i = 0; i < 9; ++i)
-			for (int j = 0; j < 9; ++j) {
-				if (board[i][j] == '.') {
-					for (int k = 0; k < 9; ++k) {
+		{
+			for (int j = 0; j < 9; ++j)
+			{
+				if (board[i][j] == '.')
+				{
+					for (int k = 0; k < 9; ++k)
+					{
 						board[i][j] = '1' + k;
 						if (isValid(board, i, j) && solveSudoku(board))
 							return true;
@@ -51,6 +55,7 @@ public:
 					return false;
 				}
 			}
+		}
 			return true;
 	}
 private:
