@@ -582,6 +582,12 @@
     <ClCompile Include="..\..\src\Invert_Binary_Tree.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Kth_Smallest_Element_in_a_BST.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Lowest_Common_Ancestor_of_a_Binary_Search_Tree.cpp">
+      <Filter>Source\Tree\Binary Search Tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

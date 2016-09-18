@@ -119,6 +119,7 @@
     <ClCompile Include="..\..\src\Invert_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Jump_Game.cpp" />
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
+    <ClCompile Include="..\..\src\Kth_Smallest_Element_in_a_BST.cpp" />
     <ClCompile Include="..\..\src\Largest_Number.cpp" />
     <ClCompile Include="..\..\src\Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="..\..\src\Length_of_Last_Word.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="..\..\src\Longest_Palindromic_Substring.cpp" />
     <ClCompile Include="..\..\src\Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="..\..\src\Longest_Valid_Parentheses.cpp" />
+    <ClCompile Include="..\..\src\Lowest_Common_Ancestor_of_a_Binary_Search_Tree.cpp" />
     <ClCompile Include="..\..\src\LRU_Cache.cpp" />
     <ClCompile Include="..\..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp" />
