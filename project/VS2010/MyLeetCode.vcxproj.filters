@@ -588,6 +588,12 @@
     <ClCompile Include="..\..\src\Lowest_Common_Ancestor_of_a_Binary_Search_Tree.cpp">
       <Filter>Source\Tree\Binary Search Tree</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Lowest_Common_Ancestor_of_a_Binary_Tree.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Binary_Tree_Paths.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
