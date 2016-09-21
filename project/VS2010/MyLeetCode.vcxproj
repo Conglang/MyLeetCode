@@ -200,6 +200,7 @@
     <ClCompile Include="..\..\src\Search_Insert_Position.cpp" />
     <ClCompile Include="..\..\src\Search_In_Rotated_Sorted_Array.cpp" />
     <ClCompile Include="..\..\src\Search_In_Rotated_Sorted_Array_II.cpp" />
+    <ClCompile Include="..\..\src\Serialize_and_Deserialize_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Set_Matrix_Zeroes.cpp" />
     <ClCompile Include="..\..\src\Simplify_Path.cpp" />
     <ClCompile Include="..\..\src\Single_Number.cpp" />

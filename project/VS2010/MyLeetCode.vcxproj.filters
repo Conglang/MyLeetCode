@@ -594,6 +594,9 @@
     <ClCompile Include="..\..\src\Binary_Tree_Paths.cpp">
       <Filter>Source\Tree\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Serialize_and_Deserialize_Binary_Tree.cpp">
+      <Filter>Source\Tree\Traverse</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
