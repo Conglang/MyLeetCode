@@ -597,6 +597,12 @@
     <ClCompile Include="..\..\src\Serialize_and_Deserialize_Binary_Tree.cpp">
       <Filter>Source\Tree\Traverse</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Majority_Element.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Kth_Largest_Element_in_an_Array.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
