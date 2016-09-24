@@ -99,6 +99,7 @@
     <ClCompile Include="..\..\src\Count_Complete_Tree_Nodes.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />
     <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
+    <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
@@ -198,6 +199,7 @@
     <ClCompile Include="..\..\src\Same_Tree.cpp" />
     <ClCompile Include="..\..\src\Scramble_String.cpp" />
     <ClCompile Include="..\..\src\Search_a_2D_Matrix.cpp" />
+    <ClCompile Include="..\..\src\Search_a_2D_Matrix_II.cpp" />
     <ClCompile Include="..\..\src\Search_for_a_Range.cpp" />
     <ClCompile Include="..\..\src\Search_Insert_Position.cpp" />
     <ClCompile Include="..\..\src\Search_In_Rotated_Sorted_Array.cpp" />

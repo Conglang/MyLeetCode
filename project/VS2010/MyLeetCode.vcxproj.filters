@@ -603,6 +603,12 @@
     <ClCompile Include="..\..\src\Kth_Largest_Element_in_an_Array.cpp">
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Search_a_2D_Matrix_II.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
