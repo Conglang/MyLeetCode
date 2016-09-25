@@ -609,6 +609,12 @@
     <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp">
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Expression_Add_Operators.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Burst_Balloons.cpp">
+      <Filter>Source\Devide and Conquer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

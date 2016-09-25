@@ -83,6 +83,7 @@
     <ClCompile Include="..\..\src\Binary_Tree_Preorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Right_Side_View.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Zigzag_Level_Order_Traversal.cpp" />
+    <ClCompile Include="..\..\src\Burst_Balloons.cpp" />
     <ClCompile Include="..\..\src\Candy.cpp" />
     <ClCompile Include="..\..\src\Climbing_Stairs.cpp" />
     <ClCompile Include="..\..\src\Clone_Graph.cpp" />
@@ -103,6 +104,7 @@
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
+    <ClCompile Include="..\..\src\Expression_Add_Operators.cpp" />
     <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
     <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp" />
