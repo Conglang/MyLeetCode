@@ -98,6 +98,7 @@
     <ClCompile Include="..\..\src\Copy_List_with_Random_Pointer.cpp" />
     <ClCompile Include="..\..\src\Count_and_Say.cpp" />
     <ClCompile Include="..\..\src\Count_Complete_Tree_Nodes.cpp" />
+    <ClCompile Include="..\..\src\Count_of_Range_Sum.cpp" />
     <ClCompile Include="..\..\src\Count_of_Smaller_Numbers_After_Self.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />
     <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
