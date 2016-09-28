@@ -215,6 +215,8 @@
     <ClCompile Include="..\..\src\Single_Number_II.cpp" />
     <ClCompile Include="..\..\src\Sort_Colors.cpp" />
     <ClCompile Include="..\..\src\Sort_List.cpp" />
+    <ClCompile Include="..\..\src\Spiral_Matrix.cpp" />
+    <ClCompile Include="..\..\src\Spiral_Matrix_II.cpp" />
     <ClCompile Include="..\..\src\Sqrt[x].cpp" />
     <ClCompile Include="..\..\src\String_to_Interger[atoi].cpp" />
     <ClCompile Include="..\..\src\Subsets.cpp" />

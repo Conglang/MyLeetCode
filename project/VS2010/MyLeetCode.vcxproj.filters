@@ -621,6 +621,12 @@
     <ClCompile Include="..\..\src\Count_of_Range_Sum.cpp">
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Spiral_Matrix.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Spiral_Matrix_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
