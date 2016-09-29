@@ -5,17 +5,17 @@
 //		Date:			2016/09/28
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
-
-For example,
-Given n = 3,
-
-You should return the following matrix:
-[
- [ 1, 2, 3 ],
- [ 8, 9, 4 ],
- [ 7, 6, 5 ]
-]
+* Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
+* 
+* For example,
+* Given n = 3,
+* 
+* You should return the following matrix:
+* [
+*  [ 1, 2, 3 ],
+*  [ 8, 9, 4 ],
+*  [ 7, 6, 5 ]
+* ]
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 class Solution {
@@ -59,11 +59,11 @@ public:
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Spiral_Matrix_II", "[Arrays]"){
 	Solution s;
-	SECTION("Empty Vector"){
+	SECTION("Empty Input"){
 		vector<vector<int>> num;
 		REQUIRE(s.generateMatrix(0) == num);
 	}
-	SECTION("Normal Vector1"){
+	SECTION("Normal Input"){
 		int l1[3] = {1,2,3};
 		int l2[3] = {8,9,4};
 		int l3[3] = {7,6,5};

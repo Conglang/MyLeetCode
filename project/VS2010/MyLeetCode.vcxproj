@@ -107,6 +107,8 @@
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
     <ClCompile Include="..\..\src\Expression_Add_Operators.cpp" />
+    <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array.cpp" />
+    <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array_II.cpp" />
     <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
     <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp" />

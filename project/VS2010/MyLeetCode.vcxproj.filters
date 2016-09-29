@@ -627,6 +627,12 @@
     <ClCompile Include="..\..\src\Spiral_Matrix_II.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
