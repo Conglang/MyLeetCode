@@ -639,6 +639,15 @@
     <ClCompile Include="..\..\src\Rotate_Array.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Combination_Sum_III.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Contains_Duplicate.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Contains_Duplicate_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
