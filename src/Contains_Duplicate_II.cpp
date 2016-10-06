@@ -10,6 +10,11 @@
 * the difference between i and j is at most k.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
+// Time complexity O(n), Space complexity O(n).
+// hash table
+#define W1
+
+#ifdef W1
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
@@ -26,6 +31,25 @@ public:
         return false;
     }
 };
+#endif
+
+#ifdef W2
+class Solution {
+public:
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        unordered_set<int> counts;
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            if (i > k)
+                counts.erase(nums[i-k-1]);
+            if (counts.count(nums[i]))
+                return true;
+            counts.insert(nums[i]);
+        }
+        return false;
+    }
+};
+#endif
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Contains_Duplicate_II", "[Arrays]"){
 	Solution s;

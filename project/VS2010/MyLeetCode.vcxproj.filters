@@ -648,6 +648,12 @@
     <ClCompile Include="..\..\src\Contains_Duplicate_II.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Summary_Ranges.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Majority_Element_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

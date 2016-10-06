@@ -148,6 +148,7 @@
     <ClCompile Include="..\..\src\Lowest_Common_Ancestor_of_a_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\LRU_Cache.cpp" />
     <ClCompile Include="..\..\src\Majority_Element.cpp" />
+    <ClCompile Include="..\..\src\Majority_Element_II.cpp" />
     <ClCompile Include="..\..\src\Maximal_Rectangle.cpp" />
     <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Maximum_Gap.cpp" />
@@ -230,6 +231,7 @@
     <ClCompile Include="..\..\src\Subsets_II.cpp" />
     <ClCompile Include="..\..\src\Substring_with_Concatenation_of_All_Words.cpp" />
     <ClCompile Include="..\..\src\Sudoku_Solver.cpp" />
+    <ClCompile Include="..\..\src\Summary_Ranges.cpp" />
     <ClCompile Include="..\..\src\Sum_Root_to_Leaf_Numbers.cpp" />
     <ClCompile Include="..\..\src\Surrounded_Regions.cpp" />
     <ClCompile Include="..\..\src\Swap_Nodes_in_Pairs.cpp" />
