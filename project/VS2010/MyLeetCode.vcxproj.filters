@@ -660,6 +660,12 @@
     <ClCompile Include="..\..\src\Missing_Number.cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Game_of_Life.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

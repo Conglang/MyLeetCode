@@ -116,12 +116,14 @@
     <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
     <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp" />
+    <ClCompile Include="..\..\src\Game_of_Life.cpp" />
     <ClCompile Include="..\..\src\Gas_Station.cpp" />
     <ClCompile Include="..\..\src\Generate_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Gray_Code.cpp" />
     <ClCompile Include="..\..\src\H-Index.cpp" />
     <ClCompile Include="..\..\src\Implement_strStr[].cpp" />
     <ClCompile Include="..\..\src\Insertion_Sort_List.cpp" />
+    <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp" />
     <ClCompile Include="..\..\src\Insert_Interval.cpp" />
     <ClCompile Include="..\..\src\Integer_to_Roman.cpp" />
     <ClCompile Include="..\..\src\Interleaving_String.cpp" />
