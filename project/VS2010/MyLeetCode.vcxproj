@@ -124,6 +124,7 @@
     <ClCompile Include="..\..\src\Implement_strStr[].cpp" />
     <ClCompile Include="..\..\src\Insertion_Sort_List.cpp" />
     <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp" />
+    <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1)_Duplicates_allowed.cpp" />
     <ClCompile Include="..\..\src\Insert_Interval.cpp" />
     <ClCompile Include="..\..\src\Integer_to_Roman.cpp" />
     <ClCompile Include="..\..\src\Interleaving_String.cpp" />
@@ -208,6 +209,7 @@
     <ClCompile Include="..\..\src\Reverse_String.cpp" />
     <ClCompile Include="..\..\src\Reverse_Vowels_of_a_String.cpp" />
     <ClCompile Include="..\..\src\Reverse_Words_in_a_String.cpp" />
+    <ClCompile Include="..\..\src\Roatate_Function.cpp" />
     <ClCompile Include="..\..\src\Roman_to_Integer.cpp" />
     <ClCompile Include="..\..\src\Rotate_Array.cpp" />
     <ClCompile Include="..\..\src\Rotate_Image.cpp" />

@@ -666,6 +666,12 @@
     <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp">
       <Filter>Source\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1)_Duplicates_allowed.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Roatate_Function.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
