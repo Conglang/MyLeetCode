@@ -65,6 +65,9 @@
     <Filter Include="Source\Tree\Recursion">
       <UniqueIdentifier>{a1b8ed57-0aaf-405b-9c21-6c6498762ea1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Devide and Conquer\Binary_Search">
+      <UniqueIdentifier>{26f3d411-b6d6-49bb-9654-50d5f6be4f7a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Combinations.cpp">
@@ -671,6 +674,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\Roatate_Function.cpp">
       <Filter>Source\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Divide_Two_Integers.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Dungeon_Game.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

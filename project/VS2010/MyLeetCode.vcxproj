@@ -107,6 +107,8 @@
     <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
+    <ClCompile Include="..\..\src\Divide_Two_Integers.cpp" />
+    <ClCompile Include="..\..\src\Dungeon_Game.cpp" />
     <ClCompile Include="..\..\src\Edit_Distance.cpp" />
     <ClCompile Include="..\..\src\Evaluate_Reverse_Polish_Notation.cpp" />
     <ClCompile Include="..\..\src\Expression_Add_Operators.cpp" />
