@@ -687,6 +687,12 @@
     <ClCompile Include="..\..\src\Longest_Increasing_Subsequence.cpp">
       <Filter>Source\Devide and Conquer\Binary_Search</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\H-Index_II.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Russian_Doll_Envelopes.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

@@ -124,6 +124,7 @@
     <ClCompile Include="..\..\src\Generate_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Gray_Code.cpp" />
     <ClCompile Include="..\..\src\H-Index.cpp" />
+    <ClCompile Include="..\..\src\H-Index_II.cpp" />
     <ClCompile Include="..\..\src\Implement_strStr[].cpp" />
     <ClCompile Include="..\..\src\Insertion_Sort_List.cpp" />
     <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp" />
@@ -218,6 +219,7 @@
     <ClCompile Include="..\..\src\Rotate_Array.cpp" />
     <ClCompile Include="..\..\src\Rotate_Image.cpp" />
     <ClCompile Include="..\..\src\Rotate_List.cpp" />
+    <ClCompile Include="..\..\src\Russian_Doll_Envelopes.cpp" />
     <ClCompile Include="..\..\src\Same_Tree.cpp" />
     <ClCompile Include="..\..\src\Scramble_String.cpp" />
     <ClCompile Include="..\..\src\Search_a_2D_Matrix.cpp" />
