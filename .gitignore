@@ -1,8 +1,9 @@
 /project/VS2010/Debug
-
 /project/VS2010/ipch
+/project/VS2010/enc_temp_folder
 *.ipch
 *.sdf
 *.opensdf
 *.suo
+*.tmp
 
