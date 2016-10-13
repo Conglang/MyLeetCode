@@ -693,6 +693,9 @@
     <ClCompile Include="..\..\src\Russian_Doll_Envelopes.cpp">
       <Filter>Source\Devide and Conquer\Binary_Search</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
