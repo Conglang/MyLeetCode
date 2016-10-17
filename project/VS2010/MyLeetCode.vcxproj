@@ -141,6 +141,7 @@
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
     <ClCompile Include="..\..\src\Kth_Largest_Element_in_an_Array.cpp" />
     <ClCompile Include="..\..\src\Kth_Smallest_Element_in_a_BST.cpp" />
+    <ClCompile Include="..\..\src\Kth_Smallest_Element_in_a_Sorted_Matrix.cpp" />
     <ClCompile Include="..\..\src\Largest_Number.cpp" />
     <ClCompile Include="..\..\src\Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="..\..\src\Length_of_Last_Word.cpp" />
