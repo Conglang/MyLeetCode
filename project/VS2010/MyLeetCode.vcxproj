@@ -137,6 +137,7 @@
     <ClCompile Include="..\..\src\Intersection_of_Two_Arrays_II.cpp" />
     <ClCompile Include="..\..\src\Intersection_of_Two_Linked_Lists.cpp" />
     <ClCompile Include="..\..\src\Invert_Binary_Tree.cpp" />
+    <ClCompile Include="..\..\src\Is_Subsequence.cpp" />
     <ClCompile Include="..\..\src\Jump_Game.cpp" />
     <ClCompile Include="..\..\src\Jump_Game_II.cpp" />
     <ClCompile Include="..\..\src\Kth_Largest_Element_in_an_Array.cpp" />

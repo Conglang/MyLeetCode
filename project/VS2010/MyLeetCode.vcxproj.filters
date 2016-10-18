@@ -705,6 +705,9 @@
     <ClCompile Include="..\..\src\Kth_Smallest_Element_in_a_Sorted_Matrix.cpp">
       <Filter>Source\Devide and Conquer\Binary_Search</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Is_Subsequence.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
