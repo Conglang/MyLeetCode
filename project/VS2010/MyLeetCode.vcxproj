@@ -241,6 +241,7 @@
     <ClCompile Include="..\..\src\Sort_List.cpp" />
     <ClCompile Include="..\..\src\Spiral_Matrix.cpp" />
     <ClCompile Include="..\..\src\Spiral_Matrix_II.cpp" />
+    <ClCompile Include="..\..\src\Split_Array_Largest_Sum.cpp" />
     <ClCompile Include="..\..\src\Sqrt[x].cpp" />
     <ClCompile Include="..\..\src\String_to_Interger[atoi].cpp" />
     <ClCompile Include="..\..\src\Subsets.cpp" />
