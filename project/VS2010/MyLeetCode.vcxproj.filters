@@ -711,6 +711,9 @@
     <ClCompile Include="..\..\src\Split_Array_Largest_Sum.cpp">
       <Filter>Source\Devide and Conquer\Binary_Search</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Find_Right_Interval.cpp">
+      <Filter>Source\Devide and Conquer\Binary_Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

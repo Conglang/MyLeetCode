@@ -115,6 +115,7 @@
     <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array.cpp" />
     <ClCompile Include="..\..\src\Find_Minimum_in_Rotated_Sorted_Array_II.cpp" />
     <ClCompile Include="..\..\src\Find_Peak_Element.cpp" />
+    <ClCompile Include="..\..\src\Find_Right_Interval.cpp" />
     <ClCompile Include="..\..\src\Find_the_Duplicate_Number.cpp" />
     <ClCompile Include="..\..\src\First_Bad_Version.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
