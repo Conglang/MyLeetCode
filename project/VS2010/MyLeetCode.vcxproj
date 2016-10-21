@@ -69,6 +69,7 @@
     <ClCompile Include="..\..\src\Add_Binary.cpp" />
     <ClCompile Include="..\..\src\Add_Two_Numbers.cpp" />
     <ClCompile Include="..\..\src\Anagrams.cpp" />
+    <ClCompile Include="..\..\src\Arranging_Coins.cpp" />
     <ClCompile Include="..\..\src\Balanced_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp" />
