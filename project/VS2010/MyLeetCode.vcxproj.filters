@@ -717,6 +717,9 @@
     <ClCompile Include="..\..\src\Arranging_Coins.cpp">
       <Filter>Source\Devide and Conquer\Binary_Search</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\House_Robber.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

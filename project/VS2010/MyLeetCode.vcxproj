@@ -128,6 +128,7 @@
     <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower.cpp" />
     <ClCompile Include="..\..\src\H-Index.cpp" />
     <ClCompile Include="..\..\src\H-Index_II.cpp" />
+    <ClCompile Include="..\..\src\House_Robber.cpp" />
     <ClCompile Include="..\..\src\Implement_strStr[].cpp" />
     <ClCompile Include="..\..\src\Insertion_Sort_List.cpp" />
     <ClCompile Include="..\..\src\Insert_Delete_GetRandom_O(1).cpp" />
