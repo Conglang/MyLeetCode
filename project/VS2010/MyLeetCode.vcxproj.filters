@@ -723,6 +723,9 @@
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_IV.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\House_Robber_II.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
