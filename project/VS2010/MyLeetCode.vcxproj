@@ -166,6 +166,7 @@
     <ClCompile Include="..\..\src\Majority_Element.cpp" />
     <ClCompile Include="..\..\src\Majority_Element_II.cpp" />
     <ClCompile Include="..\..\src\Maximal_Rectangle.cpp" />
+    <ClCompile Include="..\..\src\Maximal_Square.cpp" />
     <ClCompile Include="..\..\src\Maximum_Depth_of_Binary_Tree.cpp" />
     <ClCompile Include="..\..\src\Maximum_Gap.cpp" />
     <ClCompile Include="..\..\src\Maximum_Product_Subarray.cpp" />
