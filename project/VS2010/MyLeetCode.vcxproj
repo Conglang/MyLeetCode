@@ -263,6 +263,7 @@
     <ClCompile Include="..\..\src\Triangle.cpp" />
     <ClCompile Include="..\..\src\Two_Sum.cpp" />
     <ClCompile Include="..\..\src\Two_Sum_II_Input_Array_is_Sorted.cpp" />
+    <ClCompile Include="..\..\src\Ugly_Number_II.cpp" />
     <ClCompile Include="..\..\src\Unique_Binary_Search_Trees.cpp" />
     <ClCompile Include="..\..\src\Unique_Binary_Search_Trees_II.cpp" />
     <ClCompile Include="..\..\src\Unique_Paths.cpp" />
