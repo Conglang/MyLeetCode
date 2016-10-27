@@ -197,6 +197,7 @@
     <ClCompile Include="..\..\src\Pascal_s_Triangle_II.cpp" />
     <ClCompile Include="..\..\src\Path_Sum.cpp" />
     <ClCompile Include="..\..\src\Path_Sum_II.cpp" />
+    <ClCompile Include="..\..\src\Perfect_Squares.cpp" />
     <ClCompile Include="..\..\src\Permutations.cpp" />
     <ClCompile Include="..\..\src\Permutations_II.cpp" />
     <ClCompile Include="..\..\src\Permutation_Sequence.cpp" />
