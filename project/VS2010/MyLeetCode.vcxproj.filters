@@ -735,6 +735,9 @@
     <ClCompile Include="..\..\src\Perfect_Squares.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Range_Sum_Query_Immutable.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
