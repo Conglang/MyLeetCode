@@ -207,6 +207,7 @@
     <ClCompile Include="..\..\src\Power_of_Four.cpp" />
     <ClCompile Include="..\..\src\Pow[x_n].cpp" />
     <ClCompile Include="..\..\src\Product_of_Array_Except_Self.cpp" />
+    <ClCompile Include="..\..\src\Range_Sum_Query_2D_Immutable.cpp" />
     <ClCompile Include="..\..\src\Range_Sum_Query_Immutable.cpp" />
     <ClCompile Include="..\..\src\Recover_Binary_Search_Tree.cpp" />
     <ClCompile Include="..\..\src\Regular_Expression_Matching.cpp" />
