@@ -75,6 +75,7 @@
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_II.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_III.cpp" />
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_IV.cpp" />
+    <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_with_Cooldown.cpp" />
     <ClCompile Include="..\..\src\Binary_Search_Tree_Iterator.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Inorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Binary_Tree_Level_Order_Traversal.cpp" />
