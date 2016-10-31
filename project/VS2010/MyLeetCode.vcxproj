@@ -90,6 +90,7 @@
     <ClCompile Include="..\..\src\Candy.cpp" />
     <ClCompile Include="..\..\src\Climbing_Stairs.cpp" />
     <ClCompile Include="..\..\src\Clone_Graph.cpp" />
+    <ClCompile Include="..\..\src\Coin_Change.cpp" />
     <ClCompile Include="..\..\src\Combinations.cpp" />
     <ClCompile Include="..\..\src\Combination_Sum.cpp" />
     <ClCompile Include="..\..\src\Combination_Sum_II.cpp" />

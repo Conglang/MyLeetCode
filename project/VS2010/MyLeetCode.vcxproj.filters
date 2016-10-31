@@ -744,6 +744,9 @@
     <ClCompile Include="..\..\src\Best_Time_to_Buy_and_Sell_Stock_with_Cooldown.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Coin_Change.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
