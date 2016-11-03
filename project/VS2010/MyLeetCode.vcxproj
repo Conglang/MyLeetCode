@@ -106,6 +106,7 @@
     <ClCompile Include="..\..\src\Counting_Bits.cpp" />
     <ClCompile Include="..\..\src\Count_and_Say.cpp" />
     <ClCompile Include="..\..\src\Count_Complete_Tree_Nodes.cpp" />
+    <ClCompile Include="..\..\src\Count_Numbers_with_Unique_Digits.cpp" />
     <ClCompile Include="..\..\src\Count_of_Range_Sum.cpp" />
     <ClCompile Include="..\..\src\Count_of_Smaller_Numbers_After_Self.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />

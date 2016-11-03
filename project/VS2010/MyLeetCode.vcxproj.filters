@@ -753,6 +753,9 @@
     <ClCompile Include="..\..\src\Integer_Break.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Count_Numbers_with_Unique_Digits.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
