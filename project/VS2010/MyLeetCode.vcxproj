@@ -131,6 +131,7 @@
     <ClCompile Include="..\..\src\Generate_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Gray_Code.cpp" />
     <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower.cpp" />
+    <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower_II.cpp" />
     <ClCompile Include="..\..\src\H-Index.cpp" />
     <ClCompile Include="..\..\src\H-Index_II.cpp" />
     <ClCompile Include="..\..\src\House_Robber.cpp" />

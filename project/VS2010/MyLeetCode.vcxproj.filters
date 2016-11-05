@@ -759,6 +759,9 @@
     <ClCompile Include="..\..\src\Largest_Divisible_Subset.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower_II.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
