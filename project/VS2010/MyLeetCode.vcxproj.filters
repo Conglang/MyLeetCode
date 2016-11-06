@@ -762,6 +762,9 @@
     <ClCompile Include="..\..\src\Guess_Number_Higher_or_Lower_II.cpp">
       <Filter>Source\Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Wiggle_Subsequence.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />

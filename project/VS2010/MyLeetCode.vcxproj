@@ -286,6 +286,7 @@
     <ClCompile Include="..\..\src\Valid_Perfect_Square.cpp" />
     <ClCompile Include="..\..\src\Valid_Sudoku.cpp" />
     <ClCompile Include="..\..\src\Wiggle_Sort_II.cpp" />
+    <ClCompile Include="..\..\src\Wiggle_Subsequence.cpp" />
     <ClCompile Include="..\..\src\Wildcard_Matching.cpp" />
     <ClCompile Include="..\..\src\Word_Break.cpp" />
     <ClCompile Include="..\..\src\Word_Break_II.cpp" />
