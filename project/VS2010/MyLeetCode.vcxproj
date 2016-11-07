@@ -95,6 +95,7 @@
     <ClCompile Include="..\..\src\Combination_Sum.cpp" />
     <ClCompile Include="..\..\src\Combination_Sum_II.cpp" />
     <ClCompile Include="..\..\src\Combination_Sum_III.cpp" />
+    <ClCompile Include="..\..\src\Combination_Sum_IV.cpp" />
     <ClCompile Include="..\..\src\Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cpp" />
     <ClCompile Include="..\..\src\Container_With_Most_Water.cpp" />
