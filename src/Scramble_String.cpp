@@ -76,7 +76,7 @@ private:
 /*
 *	设状态为f[n][i][j]，表示长度为n，起点为s1[i]和起点为s2[j]两个字符串是否互为scramble，
 *	则状态转移方程为：
-*	f[n][i][j] = (f[k][i][j] && f[n-k)[i+k][j+k]) || (f[k][i][j+n-k] && f[n-k][i+k][j])
+*	f[n][i][j] = (f[k][i][j] && f[n-k][i+k][j+k]) || (f[k][i][j+n-k] && f[n-k][i+k][j])
 */
 class Solution {
 public:

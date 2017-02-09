@@ -19,7 +19,9 @@
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/33738/share-my-solution
 /*
-First of all, let's look at the naive solution. Preprocess to calculate the prefix sums S[i] = S(0, i), then S(i, j) = S[j] - S[i]. Note that here we define S(i, j) as the sum of range [i, j) where j exclusive and j > i. With these prefix sums, it is trivial to see that with O(n^2) time we can find all S(i, j) in the range [lower, upper]
+First of all, let's look at the naive solution. Preprocess to calculate the prefix sums S[i] = S(0, i), 
+then S(i, j) = S[j] - S[i]. Note that here we define S(i, j) as the sum of range [i, j) where j exclusive and j > i. 
+With these prefix sums, it is trivial to see that with O(n^2) time we can find all S(i, j) in the range [lower, upper]
 
 Java - Naive Solution
 
@@ -46,15 +48,21 @@ Here, after we did the preprocess, we need to solve the problem
 
 count[i] = count of a <= S[j] - S[i] <= b with j > i
 ans = sum(count[:])
-Therefore the two problems are almost the same. We can use the same technique used in that problem to solve this problem. One solution is merge sort based; another one is Balanced BST based. The time complexity are both O(n log n).
+Therefore the two problems are almost the same. We can use the same technique used in that problem to solve this problem. 
+One solution is merge sort based; another one is Balanced BST based. The time complexity are both O(n log n).
 
-The merge sort based solution counts the answer while doing the merge. During the merge stage, we have already sorted the left half [start, mid) and right half [mid, end). We then iterate through the left half with index i. For each i, we need to find two indices k and j in the right half where
+The merge sort based solution counts the answer while doing the merge. During the merge stage, 
+we have already sorted the left half [start, mid) and right half [mid, end).
+We then iterate through the left half with index i. For each i, we need to find two indices k and j in the right half where
 
 j is the first index satisfy sums[j] - sums[i] > upper and
 k is the first index satisfy sums[k] - sums[i] >= lower.
-Then the number of sums in [lower, upper] is j-k. We also use another index t to copy the elements satisfy sums[t] < sums[i] to a cache in order to complete the merge sort.
+Then the number of sums in [lower, upper] is j-k. We also use another index t to copy the elements satisfy
+sums[t] < sums[i] to a cache in order to complete the merge sort.
 
-Despite the nested loops, the time complexity of the "merge & count" stage is still linear. Because the indices k, j, t will only increase but not decrease, each of them will only traversal the right half once at most. The total time complexity of this divide and conquer solution is then O(n log n).
+Despite the nested loops, the time complexity of the "merge & count" stage is still linear.
+Because the indices k, j, t will only increase but not decrease, each of them will only traversal the right half once at most.
+The total time complexity of this divide and conquer solution is then O(n log n).
 
 One other concern is that the sums may overflow integer. So we use long instead.
 */

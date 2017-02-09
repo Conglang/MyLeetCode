@@ -28,6 +28,8 @@
 * Output: [-34, -14, -10, -10, 10]
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
+// 首先想到了树，然后想到了递归，数的关键节点处也就是递归分裂的地方。
+// Time Complexity O(nlogn)
 class Solution {
 public:
     vector<int> diffWaysToCompute(string input) {

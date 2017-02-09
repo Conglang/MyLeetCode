@@ -24,7 +24,6 @@
 Actually here we are counting the longest increasing sequence as well except there are two dimensions
 we need to consider. And also we should remember the o(nlogn) solution in LIS,
 where the essential greedy concept is trying to
-
 make the all the elements in the collector as small as possible,
 especially the last one which is the gate to control the size of the collector - the longest length;
 append the bigger ones to the collector;

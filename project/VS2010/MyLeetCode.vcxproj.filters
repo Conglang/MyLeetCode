@@ -612,9 +612,6 @@
     <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp">
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Expression_Add_Operators.cpp">
-      <Filter>Source\Devide and Conquer</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Burst_Balloons.cpp">
       <Filter>Source\Devide and Conquer</Filter>
     </ClCompile>
@@ -767,6 +764,18 @@
     </ClCompile>
     <ClCompile Include="..\..\src\Combination_Sum_IV.cpp">
       <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Frog_Jump.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Expression_Add_Operators.cpp">
+      <Filter>Source\Depth-First Search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Most_Frequent_Subtre_Sum.cpp">
+      <Filter>Source\Tree\Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Multiply_Strings.cpp">
+      <Filter>Source\Strings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

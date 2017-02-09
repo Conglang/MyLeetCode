@@ -106,7 +106,7 @@ public:
 		return result;
 	}
 private:
-	void generate_path(unordered_map<string, vector<string> > &father, vector<string> &path, const string &start, const string &word,		vector<vector<string> > &result)
+	void generate_path(unordered_map<string, vector<string> > &father, vector<string> &path, const string &start, const string &word, vector<vector<string> > &result)
 	{
 		path.push_back(word);
 		if (word == start) {

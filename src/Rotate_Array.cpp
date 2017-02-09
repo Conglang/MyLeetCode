@@ -42,9 +42,12 @@ public:
 #ifdef W2
 // Ref: https://leetcode.com/articles/rotate-array/#approach-3-using-cyclic-replacements-accepted
 /*
-This approach is based on the fact that when we rotate the array k times, k%n elements from the back end of the array come to the front and the rest of the elements from the front shift backwards.
+This approach is based on the fact that when we rotate the array k times,
+k%n elements from the back end of the array come to the front 
+and the rest of the elements from the front shift backwards.
 
-In this approach, we firstly reverse all the elements of the array. Then, reversing the first k elements followed by reversing the rest n-k elements gives us the required result.
+In this approach, we firstly reverse all the elements of the array.
+Then, reversing the first k elements followed by reversing the rest n-k elements gives us the required result.
 
 Let n=7 and k=3.
 

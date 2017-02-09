@@ -127,6 +127,7 @@
     <ClCompile Include="..\..\src\First_Bad_Version.cpp" />
     <ClCompile Include="..\..\src\First_Missing_Positive.cpp" />
     <ClCompile Include="..\..\src\Flatten_Binary_Tree_to_Linked_List.cpp" />
+    <ClCompile Include="..\..\src\Frog_Jump.cpp" />
     <ClCompile Include="..\..\src\Game_of_Life.cpp" />
     <ClCompile Include="..\..\src\Gas_Station.cpp" />
     <ClCompile Include="..\..\src\Generate_Parentheses.cpp" />
@@ -191,7 +192,9 @@
     <ClCompile Include="..\..\src\Minimum_Size_Subarray_Sum.cpp" />
     <ClCompile Include="..\..\src\Minimum_Window_Substring.cpp" />
     <ClCompile Include="..\..\src\Missing_Number.cpp" />
+    <ClCompile Include="..\..\src\Most_Frequent_Subtre_Sum.cpp" />
     <ClCompile Include="..\..\src\Move_Zeros.cpp" />
+    <ClCompile Include="..\..\src\Multiply_Strings.cpp" />
     <ClCompile Include="..\..\src\N-Queens.cpp" />
     <ClCompile Include="..\..\src\N-Queens_II.cpp" />
     <ClCompile Include="..\..\src\Next_Permutation.cpp" />

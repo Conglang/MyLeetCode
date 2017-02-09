@@ -58,7 +58,7 @@ public:
     }
 };
 //--------------------------------------------------------------------------------------------------------------
-TEST_CASE("Expression_Add_Operators", "[Devide and Conquer]") {
+TEST_CASE("Expression_Add_Operators", "[Depth-First Search]") {
 	Solution s;
 	SECTION("Normal Input") {
 		vector<string> result;
