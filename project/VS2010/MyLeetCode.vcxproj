@@ -166,6 +166,7 @@
     <ClCompile Include="..\..\src\Longest_Common_Prefix.cpp" />
     <ClCompile Include="..\..\src\Longest_Consecutive_Sequence.cpp" />
     <ClCompile Include="..\..\src\Longest_Increasing_Subsequence.cpp" />
+    <ClCompile Include="..\..\src\Longest_Palindromic_Subsequence.cpp" />
     <ClCompile Include="..\..\src\Longest_Palindromic_Substring.cpp" />
     <ClCompile Include="..\..\src\Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="..\..\src\Longest_Valid_Parentheses.cpp" />
@@ -197,6 +198,7 @@
     <ClCompile Include="..\..\src\Multiply_Strings.cpp" />
     <ClCompile Include="..\..\src\N-Queens.cpp" />
     <ClCompile Include="..\..\src\N-Queens_II.cpp" />
+    <ClCompile Include="..\..\src\Next_Greater_Element_II.cpp" />
     <ClCompile Include="..\..\src\Next_Permutation.cpp" />
     <ClCompile Include="..\..\src\Odd_Even_Linked_List.cpp" />
     <ClCompile Include="..\..\src\Palindrome_Linked_List.cpp" />

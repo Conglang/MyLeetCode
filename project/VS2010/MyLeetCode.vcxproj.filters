@@ -777,6 +777,12 @@
     <ClCompile Include="..\..\src\Multiply_Strings.cpp">
       <Filter>Source\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Longest_Palindromic_Subsequence.cpp">
+      <Filter>Source\Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Next_Greater_Element_II.cpp">
+      <Filter>Source\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\include.h" />
