@@ -112,6 +112,7 @@
     <ClCompile Include="..\..\src\Count_of_Smaller_Numbers_After_Self.cpp" />
     <ClCompile Include="..\..\src\Decode_Ways.cpp" />
     <ClCompile Include="..\..\src\Delete_Node_in_a_Linked_List.cpp" />
+    <ClCompile Include="..\..\src\Diagnal_Traverse.cpp" />
     <ClCompile Include="..\..\src\Different_Ways_to_Add_Parentheses.cpp" />
     <ClCompile Include="..\..\src\Distinct_Subsequences.cpp" />
     <ClCompile Include="..\..\src\Divide_Two_Integers.cpp" />
