@@ -276,6 +276,7 @@
     <ClCompile Include="..\..\src\Surrounded_Regions.cpp" />
     <ClCompile Include="..\..\src\Swap_Nodes_in_Pairs.cpp" />
     <ClCompile Include="..\..\src\Symmetric_Tree.cpp" />
+    <ClCompile Include="..\..\src\Teemo_Attacking.cpp" />
     <ClCompile Include="..\..\src\Trapping_Rain_Water.cpp" />
     <ClCompile Include="..\..\src\Triangle.cpp" />
     <ClCompile Include="..\..\src\Two_Sum.cpp" />
