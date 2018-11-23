@@ -23,7 +23,7 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/48875/accepted-c-codes-with-explanation-and-references
-// ¶ÔÁĞÁ½¶Ë¸÷Ö¸¶¨lºÍr±ß½ç£¬ÔÚÕâ¸ö·¶Î§ÄÚ£¬Çó³öÃ¿¸örowµÄsum(¶¯Ì¬¹æ»®)£¬È»ºó¿´·ûºÏÌõ¼şµÄ×î´óÁ½¸ösum¼äµÄ²îÖµÊÇ¶àÉÙ¡£
+// å¯¹åˆ—ä¸¤ç«¯å„æŒ‡å®šlå’Œrè¾¹ç•Œï¼Œåœ¨è¿™ä¸ªèŒƒå›´å†…ï¼Œæ±‚å‡ºæ¯ä¸ªrowçš„sum(åŠ¨æ€è§„åˆ’)ï¼Œç„¶åçœ‹ç¬¦åˆæ¡ä»¶çš„æœ€å¤§ä¸¤ä¸ªsumé—´çš„å·®å€¼æ˜¯å¤šå°‘ã€‚
 class Solution {
 public:
 	int maxSumSubmatrix(vector<vector<int>>& matrix, int k) {

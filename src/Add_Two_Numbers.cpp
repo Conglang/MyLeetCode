@@ -22,7 +22,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// Ê±¼ä¸´ÔÓ¶ÈO(m+n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(m+n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
@@ -39,8 +39,8 @@ public:
             this_node->val = sum % 10;
             plus = sum / 10;
             start->next = this_node;
-            node1 = node1 ? node1->next : NULL;
-            node2 = node2 ? node2->next : NULL;
+            node1 = node1 ? node1->next : nullptr;
+            node2 = node2 ? node2->next : nullptr;
             start = start->next;
         }
         if (plus) {start->next = new ListNode(plus);}

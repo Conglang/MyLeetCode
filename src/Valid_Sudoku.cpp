@@ -25,8 +25,8 @@
 * A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// Ï¸½ÚÊµÏÖ£¬¼ì²éĞĞ¡¢¼ì²éÁĞ¡¢¼ì²é×Ó¸ñ¡£
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// ç»†èŠ‚å®ç°ï¼Œæ£€æŸ¥è¡Œã€æ£€æŸ¥åˆ—ã€æ£€æŸ¥å­æ ¼ã€‚
 class Solution {
 public:
 	bool check_valid_9(vector<char> nums)

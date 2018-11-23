@@ -19,7 +19,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// й╠╪Д╦╢тс╤хO(n)ё╛©у╪Д╦╢тс╤хO(logn)║ё
+// Ф≈╤И≈╢Е╓█Ф²┌Е╨╕O(n)О╪▄Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(logn)Ц─┌
 class Solution {
 public:
     bool isSameTree(TreeNode *p, TreeNode *q) {

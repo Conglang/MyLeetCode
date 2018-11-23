@@ -21,7 +21,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// Ê±¼ä¸´ÔÓ¶ÈO(m+n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(m+n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
     ListNode *deleteDuplicates2(ListNode *head) {
@@ -32,18 +32,18 @@ public:
         bool in_suc = false;
         while (node)
         {
-            if (!node->next || node->val != node->next->val)	// Óöµ½Ò»¸öÓëÖ®ºóÖµ²»Í¬µÄÖµ
+            if (!node->next || node->val != node->next->val)	// é‡åˆ°ä¸€ä¸ªä¸ä¹‹åå€¼ä¸åŒçš„å€¼
             {
-                if (!in_suc)	// Ö®Ç°²»ÊÇÁ¬Ğø£¬´ËÖµ¶ÀÌØ£¬Òª¡£
+                if (!in_suc)	// ä¹‹å‰ä¸æ˜¯è¿ç»­ï¼Œæ­¤å€¼ç‹¬ç‰¹ï¼Œè¦ã€‚
                 {
                     prev->next = node;
                     prev = node;
-                }else	// Ö®Ç°ÊÇÁ¬Ğø£¬´ËÖµ²»Òª¡£
+                }else	// ä¹‹å‰æ˜¯è¿ç»­ï¼Œæ­¤å€¼ä¸è¦ã€‚
                 {
-                    prev->next = NULL;
+                    prev->next = nullptr;
                 }
                 in_suc = false;
-            }else	// ´ËÖµÓëÖ®ºóÖµÏàÍ¬£¬±ê¼ÇÎªÁ¬Ğø¡£
+            }else	// æ­¤å€¼ä¸ä¹‹åå€¼ç›¸åŒï¼Œæ ‡è®°ä¸ºè¿ç»­ã€‚
             {
                 in_suc = true;
             }
@@ -56,7 +56,7 @@ public:
 TEST_CASE("Remove_Duplicates_from_Sorted_list_II", "[Linked Lists]"){
 	Solution sln;
 	SECTION("Empty Input"){
-		REQUIRE(sln.deleteDuplicates2(NULL) == NULL);
+		REQUIRE(sln.deleteDuplicates2(nullptr) == nullptr);
 	}
 	SECTION("Normal Input1"){
 		ListNode a1(1),a2(2),a3(3),a4(3),a5(4),a6(4),a7(5);

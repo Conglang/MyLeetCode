@@ -22,7 +22,7 @@ Note:
 The total number of elements of the given matrix will not exceed 10,000.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÏÈ»¯¼òÎª´Ó×óÏÂ½ÇÒÀ´ÎÍùÓÒÉÏ½Ç±éÀúµÄÎÊÌâ£¬È»ºóÔÚ±éÀúµÄ¹ı³ÌÖĞÍ¨¹ıÒ»¸öflag·´Ïò¡£
+// å…ˆåŒ–ç®€ä¸ºä»å·¦ä¸‹è§’ä¾æ¬¡å¾€å³ä¸Šè§’éå†çš„é—®é¢˜ï¼Œç„¶ååœ¨éå†çš„è¿‡ç¨‹ä¸­é€šè¿‡ä¸€ä¸ªflagåå‘ã€‚
 class Solution {
 public:
 	vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {

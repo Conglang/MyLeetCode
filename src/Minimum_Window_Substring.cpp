@@ -19,7 +19,7 @@
 * If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)
+// 时间复杂度O(n)，空间复杂度O(1)
 // Ref: https://discuss.leetcode.com/topic/30941/here-is-a-10-line-template-that-can-solve-most-substring-problems/2
 // For most substring problem, we are given a string and need to find a substring of it which satisfy some restrictions.
 // A general way is to use a hashmap assisted with two pointers.
@@ -65,6 +65,7 @@ public:
 			map[c]++;
 		}
         int counter = t.size(), begin = 0, end = 0, d = INT_MAX, head = 0;
+		// 在循环中，没满足情况就 end++，满足情况就 begin++
         while(end < s.size())
 		{
             if(map[s[end++]]-- > 0)
@@ -73,7 +74,7 @@ public:
 			{ //valid
                 if(end - begin < d)
 					d = end - (head=begin);
-                if(map[s[begin++]]++ == 0)	// ��ȥbegin��Ӱ��
+                if(map[s[begin++]]++ == 0)	// 除去begin的影响
 					counter++;  //make it invalid
             }  
         }

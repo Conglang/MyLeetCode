@@ -22,22 +22,22 @@
 #define W1
 
 #ifdef W1
-// ´Ó×óµ½ÓÒ
-// ÏÂÒ»ĞĞµÚÒ»¸öÔªËØºÍ×îºóÒ»¸öÔªËØ¸³ÖµÎª1£¬ÖĞ¼äµÄÃ¿¸öÔªËØ£¬µÈÓÚÉÏÒ»ĞĞµÄ×óÉÏ½ÇºÍÓÒÉÏ½ÇÔªËØÖ®ºÍ¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// ä»å·¦åˆ°å³
+// ä¸‹ä¸€è¡Œç¬¬ä¸€ä¸ªå…ƒç´ å’Œæœ€åä¸€ä¸ªå…ƒç´ èµ‹å€¼ä¸º1ï¼Œä¸­é—´çš„æ¯ä¸ªå…ƒç´ ï¼Œç­‰äºä¸Šä¸€è¡Œçš„å·¦ä¸Šè§’å’Œå³ä¸Šè§’å…ƒç´ ä¹‹å’Œã€‚
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<vector<int> > generate(int numRows) {
 		vector<vector<int> > result;
 		if (numRows == 0) return result;
-		result.push_back(vector<int>(1,1));	// µÚÒ»ĞĞ
+		result.push_back(vector<int>(1,1));	// ç¬¬ä¸€è¡Œ
 		for (int i = 2; i <= numRows; ++i)
 		{
-			vector<int> current(i,1);	// ±¾ĞĞ
-			const vector<int>& prev = result[i-2];	// ÉÏÒ»ĞĞ
+			vector<int> current(i,1);	// æœ¬è¡Œ
+			const vector<int>& prev = result[i-2];	// ä¸Šä¸€è¡Œ
 			for (int j = 1; j < i-1; ++j)
 			{
-				current[j] = prev[j-1] + prev[j];	// ×óÉÏ½ÇºÍÓÒÉÏ½ÇÖ®ºÍ
+				current[j] = prev[j-1] + prev[j];	// å·¦ä¸Šè§’å’Œå³ä¸Šè§’ä¹‹å’Œ
 			}
 			result.push_back(current);
 		}
@@ -47,8 +47,8 @@ public:
 #endif
 
 #ifdef W2
-// ´ÓÓÒµ½×ó
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// ä»å³åˆ°å·¦
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<vector<int> > generate(int numRows) {
@@ -59,10 +59,10 @@ public:
 		{
 			for (int j = i-2; j > 0; --j)
 			{
-				// ´ÓÓÒÏò×ó£¬¸²¸Ç´¦ÀíÊı×é¡£²»ĞŞ¸ÄµÚ0Î»µÄ1£¬²»°üÀ¨ĞÂÔöµÄ×îºóÒ»Î»µÄ¡£
+				// ä»å³å‘å·¦ï¼Œè¦†ç›–å¤„ç†æ•°ç»„ã€‚ä¸ä¿®æ”¹ç¬¬0ä½çš„1ï¼Œä¸åŒ…æ‹¬æ–°å¢çš„æœ€åä¸€ä½çš„ã€‚
 				array[j] = array[j-1] + array[j];
 			}
-			array.push_back(1);	// ĞÂÔö×îºóÒ»Î»1¡£
+			array.push_back(1);	// æ–°å¢æœ€åä¸€ä½1ã€‚
 			result.push_back(array);
 		}
 		return result;

@@ -22,18 +22,19 @@
 #include "../include/include.h"
 #define W1
 #ifdef W1
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)
+// 时间复杂度O(n)，空间复杂度O(1)
 /* 
-	����ÿ�����ӣ��ҵ�������������ߵ����ӣ������������ɵ�������� min(max_left, max_right) - height�����ԣ�
-	1. ɨ��һ�飬�ҵ���ߵ����ӣ�������ӽ������Ϊ���룻
-	2. �������һ�룻
-	3. �����ұ�һ�롣
+	对于每个柱子，找到其左右两边最高的柱子，该柱子能容纳的面积就是 min(max_left, max_right) - height。所以，
+	1. 扫描一遍，找到最高的柱子，这个柱子将数组分为两半；
+	2. 处理左边一半；
+	3. 处理右边一半。
 */
 class Solution {
 public:
 	int trap(int A[], int n) {
 		int water(0);
-		if (n < 2) {return 0;}
+		if (n < 2) 
+			{return 0;}
 		int max_index(0);
 		for (int i = 0; i < n; ++i)
 		{
@@ -58,8 +59,8 @@ public:
 #endif
 
 #ifdef W2
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)
-// ��������ɨһ�飬���������ұ����ӱȽϸߵĴ�ˮ����Ȼ���ٴ��ҵ���ɨһ�顣��������W1��
+// 时间复杂度O(n)，空间复杂度O(1)
+// 从左向右扫一遍，计算所有右边柱子比较高的存水区域。然后再从右到左扫一遍。方法不如W1。
 class Solution {
 public:
 	int trap(int A[], int n) {

@@ -12,7 +12,7 @@
 * 
 * Note:
 * All numbers (including target) will be positive integers.
-* Elements in a combination (a1, a2, ¡­ , ak) must be in non-descending order. (ie, a1 ¡Ü a2 ¡Ü ¡­ ¡Ü ak).
+* Elements in a combination (a1, a2, â€¦ , ak) must be in non-descending order. (ie, a1 â‰¤ a2 â‰¤ â€¦ â‰¤ ak).
 * The solution set must not contain duplicate combinations.
 * For example, given candidate set 2,3,6,7 and target 7, 
 * A solution set is: 
@@ -20,31 +20,31 @@
 * [2, 2, 3] 
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÉîËÑ¡£Ê±¼ä¸´ÔÓ¶ÈO(n!)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ·±æœã€‚æ—¶é—´å¤æ‚åº¦O(n!)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-		vector<vector<int> > result;	// ×îÖÕ½á¹û¡£
+		vector<vector<int> > result;	// æœ€ç»ˆç»“æœã€‚
 		if (candidates.empty() || target < 1) return result;
 		sort(candidates.begin(),candidates.end());	
-		vector<int> sequence;	// Ò»¸ö¿ÉĞĞÅÅÁĞ¡£
+		vector<int> sequence;	// ä¸€ä¸ªå¯è¡Œæ’åˆ—ã€‚
 		dfs(result,sequence,0,target,candidates);
 		return result;
 	}
 	void dfs(vector<vector<int> >& result, vector<int>& sequence, int start, int gap, const vector<int> &candidates)
 	{
-		if (gap == 0)	// ÕÒµ½Ò»¸öºÏ·¨½â¡£
+		if (gap == 0)	// æ‰¾åˆ°ä¸€ä¸ªåˆæ³•è§£ã€‚
 		{
 			//sort(sequence.begin(),sequence.end());
 			result.push_back(sequence);
 			return;
 		}
-		for (int i = start; i < candidates.size(); ++i)	// À©Õ¹×´Ì¬¡£
+		for (int i = start; i < candidates.size(); ++i)	// æ‰©å±•çŠ¶æ€ã€‚
 		{
-			if (gap < candidates[i]) return;	// ¼ôÖ¦¡£
+			if (gap < candidates[i]) return;	// å‰ªæã€‚
 			sequence.push_back(candidates[i]);
-			dfs(result,sequence,i,gap-candidates[i],candidates);	// À©Õ¹¡£
-			sequence.pop_back();	// ³·Ïú¶¯×÷¡£
+			dfs(result,sequence,i,gap-candidates[i],candidates);	// æ‰©å±•ã€‚
+			sequence.pop_back();	// æ’¤é”€åŠ¨ä½œã€‚
 		}
 	}
 };

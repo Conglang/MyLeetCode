@@ -19,8 +19,8 @@ What if nums1's size is small compared to nums2's size? Which algorithm is bette
 What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÏÈÅÅĞò£¬È»ºóTwo Pointers×÷±È½Ï¡£Ê±¼ä¸´ÔÓ¶ÈO(nlogn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
-// ÁíÒ»ÖÖ½â·¨ÊÇÓÃÒ»¸öunordered_map¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// å…ˆæ’åºï¼Œç„¶åTwo Pointersä½œæ¯”è¾ƒã€‚æ—¶é—´å¤æ‚åº¦O(nlogn)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
+// å¦ä¸€ç§è§£æ³•æ˜¯ç”¨ä¸€ä¸ªunordered_mapã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {

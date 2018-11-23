@@ -26,42 +26,42 @@
 * All words contain only lowercase alphabetic characters.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¹ã¶ÈÓÅÏÈ±éÀúµÄÍ¬Ê±°Ñ¾­¹ıÂ·¾¶µÄ¸¸Ç×´æÔÚÒ»¿ÃÊ÷Àï£¬È»ºóÉî¶ÈÓÅÏÈ±éÀúÉú³ÉÂ·¾¶¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// å¹¿åº¦ä¼˜å…ˆéå†çš„åŒæ—¶æŠŠç»è¿‡è·¯å¾„çš„çˆ¶äº²å­˜åœ¨ä¸€æ£µæ ‘é‡Œï¼Œç„¶åæ·±åº¦ä¼˜å…ˆéå†ç”Ÿæˆè·¯å¾„ã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<vector<string>> findLadders(string start, string end, unordered_set<string> &dict) {
-		unordered_set<string> current, next;	// µ±Ç°²ã£¬ÏÂÒ»²ã£¬ÓÃ¼¯ºÏÊÇÎªÁËÈ¥ÖØ
-		unordered_set<string> visited;	// ÅĞÖØ
-		unordered_map<string, vector<string> > father;	// Ê÷
-		bool found = false;	// ÊÇ·ñ×ßµ½Ä¿±êµ¥´Ê
+		unordered_set<string> current, next;	// å½“å‰å±‚ï¼Œä¸‹ä¸€å±‚ï¼Œç”¨é›†åˆæ˜¯ä¸ºäº†å»é‡
+		unordered_set<string> visited;	// åˆ¤é‡
+		unordered_map<string, vector<string> > father;	// æ ‘
+		bool found = false;	// æ˜¯å¦èµ°åˆ°ç›®æ ‡å•è¯
 
-		auto state_is_target = [&](const string &s) {return s == end;};	// ÅĞ¶ÏÊÇ·ñÊÇÄ¿±êµ¥´ÊµÄlambdaº¯Êı
-		auto state_extend = [&](const string &s)->unordered_set<string> {	// ´Óµ±Ç°´ÊÕÒµ½ÏÂÒ»¸öËùÓĞ¿ÉĞĞ´ÊµÄlambdaº¯Êı
-			unordered_set<string> result;	// ÓÃsetÈ¥ÖØ¡£
+		auto state_is_target = [&](const string &s) {return s == end;};	// åˆ¤æ–­æ˜¯å¦æ˜¯ç›®æ ‡å•è¯çš„lambdaå‡½æ•°
+		auto state_extend = [&](const string &s)->unordered_set<string> {	// ä»å½“å‰è¯æ‰¾åˆ°ä¸‹ä¸€ä¸ªæ‰€æœ‰å¯è¡Œè¯çš„lambdaå‡½æ•°
+			unordered_set<string> result;	// ç”¨setå»é‡ã€‚
 
-			for (size_t i = 0; i < s.size(); ++i)	// ¶ÔÓÚµ±Ç°´ÊµÄÃ¿Ò»¸ö×Ö·û
+			for (size_t i = 0; i < s.size(); ++i)	// å¯¹äºå½“å‰è¯çš„æ¯ä¸€ä¸ªå­—ç¬¦
 			{
 				string new_word(s);
 				for (char c = 'a'; c <= 'z'; ++c)
 				{
 					if (c == new_word[i]) continue;
-					swap(c, new_word[i]);	// ´Óaµ½c£¬Èç¹ûÓëµ±Ç°×Ö·û²»Ò»Ñù£¬¾Í·Åµ½ĞÂ´Ê¸ÃÎ»ÖÃ
+					swap(c, new_word[i]);	// ä»aåˆ°cï¼Œå¦‚æœä¸å½“å‰å­—ç¬¦ä¸ä¸€æ ·ï¼Œå°±æ”¾åˆ°æ–°è¯è¯¥ä½ç½®
 
 					if ((dict.count(new_word) > 0 || new_word == end) && !visited.count(new_word))
 					{
-						result.insert(new_word);	// ¼ÇÂ¼¸ÃĞÂ´Êµ½ĞÂ´Ê±í
+						result.insert(new_word);	// è®°å½•è¯¥æ–°è¯åˆ°æ–°è¯è¡¨
 					}
-					swap(c, new_word[i]);	// °ÑÕâ¸ö´Ê»»»ØÈ¥£¬ÒòÎªÒ»´ÎÖ»ÄÜ¸Ä±äÒ»¸ö×ÖÄ¸
+					swap(c, new_word[i]);	// æŠŠè¿™ä¸ªè¯æ¢å›å»ï¼Œå› ä¸ºä¸€æ¬¡åªèƒ½æ”¹å˜ä¸€ä¸ªå­—æ¯
 				}
 			}
-			return result;	// ·µ»Øµ±Ç°´ÊËùÓĞ¿ÉÄÜµÄÏÂÒ»´Ê
+			return result;	// è¿”å›å½“å‰è¯æ‰€æœ‰å¯èƒ½çš„ä¸‹ä¸€è¯
 		};
 
-		current.insert(start);	// µÚÒ»²ãÖ»ÓĞÆğÊ¼´Ê
+		current.insert(start);	// ç¬¬ä¸€å±‚åªæœ‰èµ·å§‹è¯
 		while (!current.empty() && !found)
 		{
-			// ÏÈ½«±¾²ãÈ«²¿ÖÃÎªÒÑ·ÃÎÊ£¬·ÀÖ¹Í¬²ãÖ®¼ä»¥ÏàÖ¸Ïò
+			// å…ˆå°†æœ¬å±‚å…¨éƒ¨ç½®ä¸ºå·²è®¿é—®ï¼Œé˜²æ­¢åŒå±‚ä¹‹é—´äº’ç›¸æŒ‡å‘
 #if __cplusplus < 201103L
 			for (auto it = current.begin(); it != current.end(); ++it)
 			{
@@ -95,13 +95,13 @@ public:
 				}
 			}
 			current.clear();
-			swap (next, current);	// °ÑËùÓĞÏÂÒ»²ãµÄ´Ê·ÅÈëµ±Ç°´Ê
+			swap (next, current);	// æŠŠæ‰€æœ‰ä¸‹ä¸€å±‚çš„è¯æ”¾å…¥å½“å‰è¯
 		}
 		vector<vector<string> > result;
 		if (found)
 		{
 			vector<string> path;
-			generate_path(father, path, start, end, result);	// ÓÃÉî¶ÈÓÅÏÈÉú³ÉÂ·¾¶
+			generate_path(father, path, start, end, result);	// ç”¨æ·±åº¦ä¼˜å…ˆç”Ÿæˆè·¯å¾„
 		}
 		return result;
 	}

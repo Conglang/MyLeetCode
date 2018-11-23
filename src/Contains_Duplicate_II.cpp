@@ -12,7 +12,7 @@
 #include "../include/include.h"
 // Time complexity O(n), Space complexity O(n).
 // hash table
-#define W1
+#define W2
 
 #ifdef W1
 class Solution {
@@ -34,6 +34,7 @@ public:
 #endif
 
 #ifdef W2
+// hash table，记录此数据是否出现过。遍历时添加，超过k时删去再之前已经不再限制区间的值。
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
@@ -41,6 +42,7 @@ public:
         for (int i = 0; i < nums.size(); ++i)
         {
             if (i > k)
+                // 把超出范围区间的计数信息删掉
                 counts.erase(nums[i-k-1]);
             if (counts.count(nums[i]))
                 return true;
@@ -53,7 +55,7 @@ public:
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Contains_Duplicate_II", "[Arrays]"){
 	Solution s;
-	SECTION("Normal Input"){
+	SECTION("Normal Input") {
 		int a1[5] = {5,4,3,1,2};
 		int a2[5] = {5,1,2,4,5};
 		REQUIRE(s.containsNearbyDuplicate(vector<int>(),10) == false);

@@ -38,7 +38,7 @@ public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {
         vector<vector<int> > result;
         if (!root) {return result;}
-        vector<int> layer;	// 中间结果
+        vector<int> layer;	// 涓棿缁撴灉
         tranverse(root, result, layer, sum);
         return result;
     }

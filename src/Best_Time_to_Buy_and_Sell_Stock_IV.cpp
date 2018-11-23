@@ -15,6 +15,7 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/8984/a-concise-dp-solution-in-java/8
+// DP。如果次数很多，仍然贪婪计算，有利就卖；如果次数少，就每个次数，每天，当天要不要买或卖。
 class Solution {
 public:
 	int maxProfitInf(vector<int> &prices) {

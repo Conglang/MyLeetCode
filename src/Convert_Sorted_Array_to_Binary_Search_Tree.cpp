@@ -17,12 +17,12 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// ·ÖÖÎ·¨£¬Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
-// ÔÚÖ¸¶¨Çø¼äÄÚ£¬ÒÔÖĞ¼ä½ÚµãÎª¸¸½Úµã£¬È»ºó·Ö±ğ¹¹Ôì×óÓÒÇø¼ä¡£
+// åˆ†æ²»æ³•ï¼Œæ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
+// åœ¨æŒ‡å®šåŒºé—´å†…ï¼Œä»¥ä¸­é—´èŠ‚ç‚¹ä¸ºçˆ¶èŠ‚ç‚¹ï¼Œç„¶ååˆ†åˆ«æ„é€ å·¦å³åŒºé—´ã€‚
 class Solution {
 public:
     TreeNode *sortedArrayToBST(vector<int> &num) {
-        if (num.empty()) return NULL;
+        if (num.empty()) return nullptr;
         vector<int>::iterator it = num.begin() + num.size() / 2;
         TreeNode* node = new TreeNode(*it);
         vector<int>lt(num.begin(), it);
@@ -37,7 +37,7 @@ TEST_CASE("Convert_Sorted_Array_to_Binary_Search_Tree", "[Binary Search Tree]"){
 	Solution sln;
 	vector<int> num;
 	SECTION("Empty Input") {
-		REQUIRE(sln.sortedArrayToBST(num) == NULL);
+		REQUIRE(sln.sortedArrayToBST(num) == nullptr);
 	}
 	SECTION("Normal Input") {
 		int temp[3] = {1,2,3};

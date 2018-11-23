@@ -13,6 +13,7 @@
 // Bit Manipulations
 // Ref: https://discuss.leetcode.com/topic/15568/detailed-explained-8ms-c-solution
 /*
+可用的操作有 - 和 <<。
 Let's do an example and see how bit manipulations work.
 
 Suppose we want to divide 15 by 3, so 15 is dividend and 3 is divisor. 

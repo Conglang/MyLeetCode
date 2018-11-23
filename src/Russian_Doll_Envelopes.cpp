@@ -19,7 +19,7 @@
 #define W1
 // Ref: https://discuss.leetcode.com/topic/54643/two-solutions-in-c-well-explained/2
 #ifdef W1
-// ÊÇÌâÄ¿Longest_Increasing_SubsequenceµÄÑÓÐø
+// æ˜¯é¢˜ç›®Longest_Increasing_Subsequenceçš„å»¶ç»­
 /*
 Actually here we are counting the longest increasing sequence as well except there are two dimensions
 we need to consider. And also we should remember the o(nlogn) solution in LIS,

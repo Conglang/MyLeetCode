@@ -17,8 +17,8 @@
 * The vowels does not include the letter "y".
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// Two Pointers£¬ÀàËÆ¿ìÅÅµÄ·½·¨¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// Two Pointersï¼Œç±»ä¼¼å¿«æ’çš„æ–¹æ³•ã€‚
 class Solution {
 public:
     string reverseVowels(string s) {

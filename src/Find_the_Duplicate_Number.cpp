@@ -16,9 +16,9 @@
 * There is only one duplicate number in the array, but it could be repeated more than once.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(nlogn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// ÀûÓÃ¶þ·Ö²éÕÒµÄË¼Ïë¡£´ÓÊý×éÖÐÑ¡Ò»¸öÎ»ÖÃ£¬È»ºó±éÀúÒ»±é¿´¿´±ÈÕâ¸öÎ»ÖÃË÷ÒýÊýÐ¡µÄÓÐ¶àÉÙ¸ö¡£Èç¹û´óÓÚË÷ÒýÊý£¬
-// ¸ù¾ÝÌâÄ¿¶¨Òå£¬ÖØ¸´µÄÒ»¶¨ÔÚ×ó±ßÇø¼ä£¬·´Ö®ÔòÔÚÓÒ±ßÇø¼ä¡£×îÖÕÍ£ÏÂÀ´µÄÄÇ¸öË÷Òý£¬²»Õý³£µÄË÷Òý£¬¾ÍÊÇ±»ÖØ¸´µÄÄÇ¸ö¡£
+// æ—¶é—´å¤æ‚åº¦O(nlogn)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// åˆ©ç”¨äºŒåˆ†æŸ¥æ‰¾çš„æ€æƒ³ã€‚ä»Žæ•°ç»„ä¸­é€‰ä¸€ä¸ªä½ç½®ï¼Œç„¶åŽéåŽ†ä¸€éçœ‹çœ‹æ¯”è¿™ä¸ªä½ç½®ç´¢å¼•æ•°å°çš„æœ‰å¤šå°‘ä¸ªã€‚å¦‚æžœå¤§äºŽç´¢å¼•æ•°ï¼Œ
+// æ ¹æ®é¢˜ç›®å®šä¹‰ï¼Œé‡å¤çš„ä¸€å®šåœ¨å·¦è¾¹åŒºé—´ï¼Œåä¹‹åˆ™åœ¨å³è¾¹åŒºé—´ã€‚æœ€ç»ˆåœä¸‹æ¥çš„é‚£ä¸ªç´¢å¼•ï¼Œä¸æ­£å¸¸çš„ç´¢å¼•ï¼Œå°±æ˜¯è¢«é‡å¤çš„é‚£ä¸ªã€‚
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {

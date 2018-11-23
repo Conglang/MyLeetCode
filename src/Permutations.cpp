@@ -13,9 +13,9 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 
-// ±ê×¼¿âÌá¹©ÁË·½·¨next_permutation()£¬´Ë´¦×Ô¼ºÊµÏÖ¡£
-// ×Ô¼ºÊµÏÖnext_permutation()£¬²Î¿´Next_Permutation¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n!)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ ‡å‡†åº“æä¾›äº†æ–¹æ³•next_permutation()ï¼Œæ­¤å¤„è‡ªå·±å®ç°ã€‚
+// è‡ªå·±å®ç°next_permutation()ï¼Œå‚çœ‹Next_Permutationã€‚
+// æ—¶é—´å¤æ‚åº¦O(n!)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
 	vector<vector<int> > permute(vector<int> &num) {

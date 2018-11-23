@@ -20,12 +20,13 @@
 * 
 * return 13.
 * Note: 
-* You may assume k is always valid, 1 �� k �� n^2.
+* You may assume k is always valid, 1 ≤ k ≤ n^2.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/52865/my-solution-using-binary-search-in-c/18
 // Because the loop invariant is left<=Solution<=right. The moment it quits the loop, we also know another condition is true: left>=right.
 // left<=Solution<=right and left>=right means left==Solution==right.
+// 求一个全局中间值，找到其在每行中比几个大，数量和与 k 比较。大说明这个中间值大了，小说明中间值小了。二分思路移动 l 和 r。
 class Solution {
 public:
 	int kthSmallest(vector<vector<int>>& matrix, int k) {

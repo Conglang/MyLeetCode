@@ -20,7 +20,7 @@
  * };
  */
 
-// DFS，时间复杂度O(n)，空间复杂度O(logn).
+// DFS锛屾椂闂村鏉傚害O(n)锛岀┖闂村鏉傚害O(logn).
 class Solution {
 public:
     int minDepth(TreeNode *root) {
@@ -30,7 +30,7 @@ public:
         return 1+min(minDepth(root->left),minDepth(root->right));
     }
 };
-// 另一种方法是BFS
+// 鍙︿竴绉嶆柟娉曟槸BFS
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Minimum_Depth_of_Binary_Tree", "[Tree_Recursion]"){
 	Solution sln;

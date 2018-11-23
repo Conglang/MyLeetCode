@@ -16,44 +16,31 @@
 * bool isMatch(const char *s, const char *p)
 * 
 * Some examples:
-* isMatch("aa","a") ¡ú false
-* isMatch("aa","aa") ¡ú true
-* isMatch("aaa","aa") ¡ú false
-* isMatch("aa", "a*") ¡ú true
-* isMatch("aa", ".*") ¡ú true
-* isMatch("ab", ".*") ¡ú true
-* isMatch("aab", "c*a*b") ¡ú true
+* isMatch("aa","a") â†’ false
+* isMatch("aa","aa") â†’ true
+* isMatch("aaa","aa") â†’ false
+* isMatch("aa", "a*") â†’ true
+* isMatch("aa", ".*") â†’ true
+* isMatch("ab", ".*") â†’ true
+* isMatch("aab", "c*a*b") â†’ true
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÓÃµİ¹éµÄ·½·¨¡£
-// Èç¹ûºóÒ»Î»²»ÊÇ*µÄ»°£¬Õı³£±È½Ï£¬Ë«Ë«½øĞĞµ½ÏÂÒ»¸ö¡£
-// Èç¹ûºóÒ»Î»ÊÇ*£¬ÒªºÄ¾¡sÀïËùÓĞºÍp*Ö®Ç°×Ö·ûÒ»ÑùµÄËùÓĞ×Ö·û£¬È»ºóÔÙ½«ÏÂÒ»¸ö²»Ò»ÑùµÄºÍp*Ö®ºóµÄ×Ö·û±È½Ï¡£
-// ÒòÎª*±íÊ¾ÈÎÒâ¸ö£¬ËùÒÔÒ²¿ÉÒÔÊÇ0¸ö¡£ËùÒÔÏÂÒ»¸öÊÇ*µÄÊ±ºò£¬µ±Ç°p×Ö·ûÓës×Ö·û²»Ò»Ñù²»ÊÇ·ñ¶¨Ìõ¼ş¡£
+// ç”¨é€’å½’çš„æ–¹æ³•ã€‚
 class Solution {
 public:
-	bool isMatch(const char *s, const char *p) {
-		if (*p == '\0') {return *s == '\0';}
-
-		// next char is not '*', then must match current character
-		if (*(p+1) != '*')
-		{
-			if (*p == *s || (*p == '.' && *s != '\0'))
-			{
-				return isMatch(s+1, p+1);
-			}else {return false;}
-		}else // next char is '*'
-		{
-			while (*p == *s || (*p == '.' && *s != '\0'))
-			{
-				if (isMatch(s, p+2))	// È¥µôµ±Ç°Õâ¸öÖØ¸´s£¬Ê£ÏÂµÄsºÍpÖĞ*Ö®ºóµÄ×Ö·û´®Èç¹ûÆ¥Åä£¬ÄÇ¾ÍÊÇÆ¥ÅäÁË¡£
-				{
-					return true;
-				}
-				++s;	// Ã»Æ¥ÅäÉÏ£¬ÔÙÈ¥Ò»¸öÖØ¸´s¡£
-			}
-			return isMatch(s, p+2);	// ÖØ¸´µÄ¶¼È¥ÁË£¬ÔÙ±È½ÏÊ£ÏÂµÄsºÍpÖĞ*Ö®ºóµÄ×Ö·û´®¡£
-		}
-	}
+    bool isMatch(string s, string p) {
+        if (p.empty())
+            return s.empty();
+        bool current_match = (!s.empty() && (s[0] == p[0] || p[0] == '.'));
+		// x*ç»“æ„ã€‚
+        // å½“å‰å­—ç¬¦åŒ¹é…ä¸Šä¸”åç»­ä¸x*èƒ½åŒ¹é…ä¸Šï¼Œæˆ–æ²¡å½“å‰x*ä»€ä¹ˆäº‹
+        if (p.size() >= 2 && p[1] == '*') {
+            return (current_match && isMatch(s.substr(1), p)) ||
+                isMatch(s, p.substr(2));
+        }
+		// æ²¡æœ‰*çš„äº‹å°±èµ°ä¹‹åæµç¨‹
+        return current_match && isMatch(s.substr(1), p.substr(1));
+    }
 };
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Regular_Expression_Matching", "[Strings]"){

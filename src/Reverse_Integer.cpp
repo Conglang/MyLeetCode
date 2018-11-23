@@ -22,7 +22,7 @@
 * Throw an exception? Good, but what if throwing an exception is not an option? You would then have to re-design the function (ie, add an extra parameter).
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(logn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(logn)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
 	int reverse (int x) {

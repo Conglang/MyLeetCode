@@ -26,17 +26,17 @@
 #define W1
 
 #ifdef W1
-// Ğ´·¨¼òÁ·¡£Ê±¼ä¸´ÔÓ¶ÈO(2^n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// å†™æ³•ç®€ç»ƒã€‚æ—¶é—´å¤æ‚åº¦O(2^n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	vector<vector<int> > subsetsWithDup(vector<int> &S) {
-		sort(S.begin(), S.end()); // ±ØĞëÅÅĞò
+		sort(S.begin(), S.end()); // å¿…é¡»æ’åº
 		vector<vector<int> > result(1);
 		size_t previous_size = 0;
 		for (size_t i = 0; i < S.size(); ++i) {
 			const size_t size = result.size();
 			for (size_t j = 0; j < size; ++j) {
-				// ÒªÃ´ÊÇ³õÊ¼×´Ì¬£¬ÒªÃ´ÓëÇ°Ò»¸öÔªËØ²»ÖØ¸´£¬ÒªÃ´ÅÅ³ıµôÉÏÒ»¸öÔªËØÉú³ÉÖ®Ç°µÄ²¿·Ö¡£
+				// è¦ä¹ˆæ˜¯åˆå§‹çŠ¶æ€ï¼Œè¦ä¹ˆä¸å‰ä¸€ä¸ªå…ƒç´ ä¸é‡å¤ï¼Œè¦ä¹ˆæ’é™¤æ‰ä¸Šä¸€ä¸ªå…ƒç´ ç”Ÿæˆä¹‹å‰çš„éƒ¨åˆ†ã€‚
 				if (i == 0 || S[i] != S[i-1] || j >= previous_size) {
 					result.push_back(result[j]);
 					result.back().push_back(S[i]);
@@ -50,13 +50,13 @@ public:
 #endif
 
 #ifdef W2
-// ¶ş½øÖÆ·¨¡£Ê±¼ä¸´ÔÓ¶È O(2^n) £¬¿Õ¼ä¸´ÔÓ¶È O(1)
-// ÓÃsetÈ¥ÖØ¾Í±È½ÏÃ»ÒâË¼ÁË¡£
+// äºŒè¿›åˆ¶æ³•ã€‚æ—¶é—´å¤æ‚åº¦ O(2^n) ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
+// ç”¨setå»é‡å°±æ¯”è¾ƒæ²¡æ„æ€äº†ã€‚
 class Solution {
 public:
 	vector<vector<int> > subsetsWithDup(vector<int> &S) {
-		sort(S.begin(), S.end()); // ±ØĞëÅÅĞò
-		// ÓÃ set È¥ÖØ£¬²»ÄÜÓÃ unordered_set£¬ÒòÎªÊä³öÒªÇóÓĞĞò
+		sort(S.begin(), S.end()); // å¿…é¡»æ’åº
+		// ç”¨ set å»é‡ï¼Œä¸èƒ½ç”¨ unordered_setï¼Œå› ä¸ºè¾“å‡ºè¦æ±‚æœ‰åº
 		set<vector<int> > result;
 		const size_t n = S.size();
 		vector<int> v;

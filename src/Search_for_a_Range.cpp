@@ -19,8 +19,8 @@
 #define  W3
 
 #ifdef W1
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// ¸Ä½ø¿Õ¼ä£º¶ş·Ö¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// æ”¹è¿›ç©ºé—´ï¼šäºŒåˆ†ã€‚
 class Solution {
 public:
 	vector<int> searchRange(int A[], int n, int target) {
@@ -46,8 +46,8 @@ public:
 #endif
 
 #ifdef W2
-// ÍµÀÁµÄ×ö·¨£¬Ê¹ÓÃ STL
-// Ê±¼ä¸´ÔÓ¶È O(logn)£¬¿Õ¼ä¸´ÔÓ¶È O(1)
+// å·æ‡’çš„åšæ³•ï¼Œä½¿ç”¨ STL
+// æ—¶é—´å¤æ‚åº¦ O(logn)ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
 class Solution {
 public:
 	vector<int> searchRange(int A[], int n, int target) {
@@ -62,8 +62,8 @@ public:
 #endif
 
 #ifdef W3
-// ÖØĞÂÊµÏÖlower_boundºÍupper_bound
-// Ê±¼ä¸´ÔÓ¶ÈO(logn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// é‡æ–°å®ç°lower_boundå’Œupper_bound
+// æ—¶é—´å¤æ‚åº¦O(logn)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
 	vector<int> searchRange (int A[], int n, int target) {
@@ -104,7 +104,7 @@ public:
 			while (first != last)
 			{
 				auto mid = next(first, distance (first, last) / 2);
-				if (value >= *mid) first = ++mid; // Óë lower_bound ½ö´Ë²»Í¬
+				if (value >= *mid) first = ++mid; // ä¸ lower_bound ä»…æ­¤ä¸åŒ
 				else last = mid;
 			}
 			return first;

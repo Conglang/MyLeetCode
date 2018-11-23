@@ -10,8 +10,8 @@
 * The digits are stored such that the most significant digit is at the head of the list.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// ²»Ö¹1£¬¼Ó¶àÉÙÊı¶¼¿ÉÒÔµÄ·½·¨¡£¸ß¾«¶È¼Ó·¨¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// ä¸æ­¢1ï¼ŒåŠ å¤šå°‘æ•°éƒ½å¯ä»¥çš„æ–¹æ³•ã€‚é«˜ç²¾åº¦åŠ æ³•ã€‚
 class Solution {
 public:
 	vector<int> add_num(vector<int>& digits, int num)

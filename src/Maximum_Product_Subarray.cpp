@@ -11,7 +11,7 @@
 * the contiguous subarray [2,3] has the largest product = 6.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 //min can turn max when encountering another negative number
 //so we have to record all the min and max values;
 class Solution {

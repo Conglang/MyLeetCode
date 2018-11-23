@@ -13,26 +13,39 @@
 * 
 * Given a list of non-negative integers representing the amount of money of each house, 
 * determine the maximum amount of money you can rob tonight without alerting the police.
+* 
+* Example 1:
+* 
+* Input: [1,2,3,1]
+* Output: 4
+* Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+*              Total amount you can rob = 1 + 3 = 4.
+* Example 2:
+* 
+* Input: [2,7,9,3,1]
+* Output: 12
+* Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
+*              Total amount you can rob = 2 + 9 + 1 = 12.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// dp[0][n]ÊÇn-2µÄ×îÓÅÑ¡Ôñ¼ÓÉÏ½ñÌìµÄ£¬dp[1][n]ÊÇn-1µÄ×îÓÅÑ¡Ôñ¡£
+// åŠ¨æ€è§„åˆ’
+// temp[house_index] = max(temp[house_index - 1], temp[house_index - 2] + this_house)
 class Solution {
 public:
-	int rob(vector<int>& nums) {
-		vector<vector<int>> dp(2, vector<int>(nums.size()+1, 0));
-		for (int i = 0; i < nums.size(); ++i)
-		{
-			dp[0][i+1] = dp[1][i] + nums[i];
-			dp[1][i+1] = max(dp[0][i], dp[1][i]);
-		}
-		return max(dp[0][nums.size()], dp[1][nums.size()]);
-	}
+    int rob(vector<int>& nums) {
+        vector<int> temp(nums.size()+1, 0);
+        for (int i = 0; i < nums.size(); ++i) {
+            temp[i+1] = max(temp[i], (!i ? 0 : temp[i-1]) + nums[i]);
+        }
+        return temp[nums.size()];
+    }
 };
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("House_Robber", "[Dynamic_Programming]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int t[7] = {3,8,1,5,10,7,12};
-		REQUIRE(s.rob(vector<int>(t,t+7)) == 30);
+		vector<int> nums(t,t+7);
+		REQUIRE(s.rob(nums) == 30);
 	}
 }

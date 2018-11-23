@@ -22,39 +22,39 @@
 * where n is the total number of rows in the triangle.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¶¯Ì¬¹æ»®¡£Ê±¼ä¸´ÔÓ¶ÈO(nlogn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// åŠ¨æ€è§„åˆ’ã€‚æ—¶é—´å¤æ‚åº¦O(nlogn)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 /*
 *	0
 *	0 1
 *	0 1 2
 *	0 1 2 3
-*	µÃµ½µİÍÆ¹ØÏµf(row,column) = min( f(row-1,column), f(row-1,column-1) ) + T[row][column]¡£
-*	ÆğÊ¼f(0,0) = T[0][0]¡£
-*	ÎªÖ»ÓÃrow´óĞ¡¶îÍâ¿Õ¼ä¡£Ã¿´Î¼ÆËãÊ±´ÓÓÒÏò×ó¼ÆËã¡£
+*	å¾—åˆ°é€’æ¨å…³ç³»f(row,column) = min( f(row-1,column), f(row-1,column-1) ) + T[row][column]ã€‚
+*	èµ·å§‹f(0,0) = T[0][0]ã€‚
+*	ä¸ºåªç”¨rowå¤§å°é¢å¤–ç©ºé—´ã€‚æ¯æ¬¡è®¡ç®—æ—¶ä»å³å‘å·¦è®¡ç®—ã€‚
 */
 class Solution {
 public:
 	int minimumTotal(vector<vector<int> > &triangle) {
 		if (triangle.empty()) return 0;
-		const int n = triangle.size();	// n¾ÍÊÇ×ÜĞĞÊı
+		const int n = triangle.size();	// nå°±æ˜¯æ€»è¡Œæ•°
 #if __cplusplus < 201103L
 		vector<int> f(n,0);
 #else
 		int f[n];
-		fill_n(f,n,0);	// ÓÃÓÚ¶¯Ì¬¹æ»®¼ÆËãµÄÊı×é¡£
+		fill_n(f,n,0);	// ç”¨äºåŠ¨æ€è§„åˆ’è®¡ç®—çš„æ•°ç»„ã€‚
 #endif
-		f[0] = triangle[0][0];	// ÆğÊ¼Ìõ¼şf[0]¡£
-		for (int row = 1; row < n; ++row)	// ¶ÔÓÚÃ¿ĞĞ£¬´ÓÓÒÏò×óÒÀ´Î¼ÆËã¾àÀë¡£
+		f[0] = triangle[0][0];	// èµ·å§‹æ¡ä»¶f[0]ã€‚
+		for (int row = 1; row < n; ++row)	// å¯¹äºæ¯è¡Œï¼Œä»å³å‘å·¦ä¾æ¬¡è®¡ç®—è·ç¦»ã€‚
 		{
-			f[row] = f[row-1] + triangle[row][row];	// Ã¿ĞĞ×îÓÒ¶ËµÄ¡£
-			for (int i = row-1; i > 0; --i)	// Ã¿ĞĞÖĞ¼äµÄ¡£
+			f[row] = f[row-1] + triangle[row][row];	// æ¯è¡Œæœ€å³ç«¯çš„ã€‚
+			for (int i = row-1; i > 0; --i)	// æ¯è¡Œä¸­é—´çš„ã€‚
 			{
 				f[i] = min(f[i],f[i-1])+triangle[row][i];
 			}
-			f[0] = f[0] + triangle[row][0];	// Ã¿ĞĞ×î×ó¶ËµÄ¡£
+			f[0] = f[0] + triangle[row][0];	// æ¯è¡Œæœ€å·¦ç«¯çš„ã€‚
 		}
 		int result(f[n-1]);
-		for (int last_row_index = 0; last_row_index < n; ++last_row_index)	// µÃµ½×îºóÒ»ĞĞÖĞ£¬×îĞ¡µÄÖµ¡£
+		for (int last_row_index = 0; last_row_index < n; ++last_row_index)	// å¾—åˆ°æœ€åä¸€è¡Œä¸­ï¼Œæœ€å°çš„å€¼ã€‚
 		{
 			result = min(result, f[last_row_index]);
 		}

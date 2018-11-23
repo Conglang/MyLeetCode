@@ -22,8 +22,8 @@
 #define W2
 
 #ifdef W1
-// һ�ֵ���������
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(n)
+// 一种迭代方法。
+// 时间复杂度O(n)，空间复杂度O(n)
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -66,8 +66,8 @@ public:
 #endif
 
 #ifdef W2
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(n)��
-// ֱ���ߵ���ڵ㣬�Ѹ��ڵ����ջ�����û����ڵ��ˣ���ջ�������ҽڵ㡣
+// 时间复杂度O(n)，空间复杂度O(n)。
+// 直接走到左节点，把父节点放入栈。如果没有左节点了，出栈，到其右节点。指针和栈都有特别的作用。
 class Solution {
 public:
 	vector<int> inorderTraversal(TreeNode *root) {

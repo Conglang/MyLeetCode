@@ -20,8 +20,8 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(logn)��
-// �ݹ鷨����ÿ���ڵ���������������Ĳ������粻ƽ��ͷ���-1��
+// 时间复杂度O(n)，空间复杂度O(logn)。
+// 递归法，在每个节点计算其左右子树的层数，如不平衡就返回-1。
 class Solution {
 public:
     int cal_balance(TreeNode* node)

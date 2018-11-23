@@ -16,20 +16,20 @@
 * bool isMatch(const char *s, const char *p)
 * 
 * Some examples:
-* isMatch("aa","a") ¡ú false
-* isMatch("aa","aa") ¡ú true
-* isMatch("aaa","aa") ¡ú false
-* isMatch("aa", "*") ¡ú true
-* isMatch("aa", "a*") ¡ú true
-* isMatch("ab", "?*") ¡ú true
-* isMatch("aab", "c*a*b") ¡ú false
+* isMatch("aa","a") â†’ false
+* isMatch("aa","aa") â†’ true
+* isMatch("aaa","aa") â†’ false
+* isMatch("aa", "*") â†’ true
+* isMatch("aa", "a*") â†’ true
+* isMatch("ab", "?*") â†’ true
+* isMatch("aab", "c*a*b") â†’ false
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 #define W2
 
 #ifdef W1
-// Ê±¼ä¸´ÔÓ¶ÈO(n!*m!)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
-// µİ¹é·¨£¬»á³¬Ê±£¬ÓĞÖúÓÚÀí½âÌâÒâ¡£
+// æ—¶é—´å¤æ‚åº¦O(n!*m!)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
+// é€’å½’æ³•ï¼Œä¼šè¶…æ—¶ï¼Œæœ‰åŠ©äºç†è§£é¢˜æ„ã€‚
 class Solution {
 public:
 	bool isMatch2(const char *s, const char *p) {
@@ -39,7 +39,7 @@ public:
 			if (*p == '\0') {return true;}
 			while (*s != '\0' && !isMatch2(s, p)) {++s;}
 
-			return *s != '\0';	// ¿ÉÖª*pÔÚÕâÀï²»ÊÇ*Ò²²»ÊÇ\0£¬ÒªÇóÍêÈ«Æ¥Åä£¬sÒ²²»ÄÜÊÇ\0¡£
+			return *s != '\0';	// å¯çŸ¥*påœ¨è¿™é‡Œä¸æ˜¯*ä¹Ÿä¸æ˜¯\0ï¼Œè¦æ±‚å®Œå…¨åŒ¹é…ï¼Œsä¹Ÿä¸èƒ½æ˜¯\0ã€‚
 		}
 		else if (*p == '\0' || *s == '\0') {return *p == *s;}
 		else if (*p == '?' || *p == *s) {return isMatch2(++s, ++p);}
@@ -49,7 +49,7 @@ public:
 #endif
 
 #ifdef W2
-// µü´ú·¨£¬Ê±¼ä¸´ÔÓ¶ÈO(m*n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// è¿­ä»£æ³•ï¼Œæ—¶é—´å¤æ‚åº¦O(m*n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	bool isMatch2(const char *s, const char *p) {

@@ -17,9 +17,9 @@
 * n = 5
 * 
 * The coins can form the following rows:
-* ก่
-* ก่ ก่
-* ก่ ก่
+* **
+* ** **
+* ** **
 * 
 * Because the 3rd row is incomplete, we return 2.
 * Example 2:
@@ -27,10 +27,10 @@
 * n = 8
 * 
 * The coins can form the following rows:
-* ก่
-* ก่ ก่
-* ก่ ก่ ก่
-* ก่ ก่
+* **
+* ** **
+* ** ** **
+* ** **
 * 
 * Because the 4th row is incomplete, we return 3.
 //--------------------------------------------------------------------------------------------------------------*/

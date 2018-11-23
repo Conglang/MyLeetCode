@@ -9,7 +9,7 @@
 * Find all unique quadruplets in the array which gives the sum of target.
 * 
 * Note:
-* Elements in a quadruplet (a,b,c,d) must be in non-descending order. (ie, a ¡Ü b ¡Ü c ¡Ü d)
+* Elements in a quadruplet (a,b,c,d) must be in non-descending order. (ie, a â‰¤ b â‰¤ c â‰¤ d)
 * The solution set must not contain duplicate quadruplets.
 * For example, given array S = {1 0 -1 0 -2 2}, and target = 0.
 * 
@@ -19,8 +19,8 @@
 * (-2,  0, 0, 2)
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^3)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
-// ÏÈÅÅĞò£¬Í¨¹ıÁ½´Î±éÀúÈÃËÄ¸öÊıÇóºÍ±ä³ÉÁ½¸öÊıÇóºÍ£¬È»ºó´ÓÁ½²à±Æ½ü¡£
+// æ—¶é—´å¤æ‚åº¦O(n^3)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
+// å…ˆæ’åºï¼Œé€šè¿‡ä¸¤æ¬¡éå†è®©å››ä¸ªæ•°æ±‚å’Œå˜æˆä¸¤ä¸ªæ•°æ±‚å’Œï¼Œç„¶åä»ä¸¤ä¾§é€¼è¿‘ã€‚
 class Solution {
 public:
 	vector<vector<int> > fourSum(vector<int> &num, int target) {

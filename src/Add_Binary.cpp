@@ -13,14 +13,14 @@
 * Return "100".
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	string addBinary(string a, string b) {
 		string result;
-		// È¡×î³¤´®µÄ³¤¶È
+		// å–æœ€é•¿ä¸²çš„é•¿åº¦
 		size_t n = a.size() > b.size() ? a.size() : b.size();
-		// Ê×ÏÈ·´×ª£¬ÕâÑù²ÅÊÇ´ÓÊ××Ö·û¿ªÊ¼¼Ó
+		// é¦–å…ˆåè½¬ï¼Œè¿™æ ·æ‰æ˜¯ä»é¦–å­—ç¬¦å¼€å§‹åŠ 
 		reverse(a.begin(), a.end());
 		reverse(b.begin(), b.end());
 		int plus = 0;
@@ -29,10 +29,10 @@ public:
 			int a_num = i < a.size() ? a[i] - '0' : 0;
 			int b_num = i < b.size() ? b[i] - '0' : 0;
 			int cur_num = a_num + b_num + plus;
-			result.insert(result.begin(), cur_num % 2 + '0');	// ÔÚĞĞÊ×²åÈëµ±Ç°Î»
-			plus = cur_num / 2;	// µÃµ½½øÎ»
+			result.insert(result.begin(), cur_num % 2 + '0');	// åœ¨è¡Œé¦–æ’å…¥å½“å‰ä½
+			plus = cur_num / 2;	// å¾—åˆ°è¿›ä½
 		}
-		if (plus == 1) {result.insert(result.begin(), '1');}	// ÊÇ·ñĞèÒªÔÚ¾äÊ×½øÎ»
+		if (plus == 1) {result.insert(result.begin(), '1');}	// æ˜¯å¦éœ€è¦åœ¨å¥é¦–è¿›ä½
 		return result;
 	}
 };

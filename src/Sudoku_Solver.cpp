@@ -35,7 +35,7 @@
 * ...and its solution numbers marked in red.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(9^4)£¬¿Õ¼ä¸´ÔÓ¶È O(1)
+// æ—¶é—´å¤æ‚åº¦O(9^4)ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
 class Solution {
 public:
 	bool solveSudoku(vector<vector<char> > &board) {
@@ -59,13 +59,13 @@ public:
 			return true;
 	}
 private:
-	// ¼ì²é(x, y)ÊÇ·ñºÏ·¨
+	// æ£€æŸ¥(x, y)æ˜¯å¦åˆæ³•
 	bool isValid(const vector<vector<char> > &board, int x, int y) {
 		int i, j;
-		for (i = 0; i < 9; i++) // ¼ì²éyÁĞ
+		for (i = 0; i < 9; i++) // æ£€æŸ¥yåˆ—
 			if (i != x && board[i][y] == board[x][y])
 				return false;
-		for (j = 0; j < 9; j++) // ¼ì²éxĞĞ
+		for (j = 0; j < 9; j++) // æ£€æŸ¥xè¡Œ
 			if (j != y && board[x][j] == board[x][y])
 				return false;
 		for (i = 3 * (x / 3); i < 3 * (x / 3 + 1); i++)

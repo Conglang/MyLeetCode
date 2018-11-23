@@ -19,10 +19,10 @@
 * Note: Recursive solution is trivial, could you do it iteratively?
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
-// ÓĞ×ó½ÚµãÊ±³ÖĞø·ÃÎÊ×ó½áµã£¬²¢½«¸¸½ÚµãÈëÕ»¡£
-// µ±Ã»ÓĞ×ó½ÚµãÊ±£¬È¡³öÕ»¶¥Ò»¸öÔªËØ£¬Èç¹ûÆäÓÒ½ÚµãÒÑ±»·ÃÎÊ£¬·ÃÎÊ¸ÃÕ»¶¥ÔªËØ¡£
-// Èç¹ûÓÒ½ÚµãÎ´±»·ÃÎÊ£¬Õ»¶¥ÔªËØÖØĞÂÈëÕ»¡£´ÓÆäÓÒ½Úµã¿ªÊ¼ÖØ¸´½øĞĞÉÏÊö¹ı³Ì¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
+// æœ‰å·¦èŠ‚ç‚¹æ—¶æŒç»­è®¿é—®å·¦ç»“ç‚¹ï¼Œå¹¶å°†çˆ¶èŠ‚ç‚¹å…¥æ ˆã€‚
+// å½“æ²¡æœ‰å·¦èŠ‚ç‚¹æ—¶ï¼Œå–å‡ºæ ˆé¡¶ä¸€ä¸ªå…ƒç´ ï¼Œå¦‚æœå…¶å³èŠ‚ç‚¹å·²è¢«è®¿é—®ï¼Œè®¿é—®è¯¥æ ˆé¡¶å…ƒç´ ã€‚
+// å¦‚æœå³èŠ‚ç‚¹æœªè¢«è®¿é—®ï¼Œæ ˆé¡¶å…ƒç´ é‡æ–°å…¥æ ˆã€‚ä»å…¶å³èŠ‚ç‚¹å¼€å§‹é‡å¤è¿›è¡Œä¸Šè¿°è¿‡ç¨‹ã€‚
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -32,6 +32,10 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+#define W2
+
+
+#ifdef W1
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode *root) {
@@ -44,23 +48,23 @@ public:
             while (p != NULL)
             {
                 s.push(p);
-                p = p->left;	// Íù×óÏÂ×ß
+                p = p->left;	// å¾€å·¦ä¸‹èµ°
             }
             q = NULL;
             while (!s.empty())
             {
                 p = s.top();
                 s.pop();
-				// ÓÒº¢×Ó²»´æÔÚ»òÒÑ±»·ÃÎÊ£¬·ÃÎÊÖ®
+				// å³å­©å­ä¸å­˜åœ¨æˆ–å·²è¢«è®¿é—®ï¼Œè®¿é—®ä¹‹
                 if (p->right == q)
                 {
                     result.push_back(p->val);
-                    q = p;	// ±£´æ¸Õ·ÃÎÊ¹ıµÄ½áµã
+                    q = p;	// ä¿å­˜åˆšè®¿é—®è¿‡çš„ç»“ç‚¹
                 }else
                 {
-                    s.push(p);	// µ±Ç°½áµã²»ÄÜ·ÃÎÊ£¬Ğè¶ş´Î½øÕ»
-                    p = p->right;	// ´¦ÀíÓÒ×ÓÊ÷
-                    break;	// ÖØĞÂ¿ªÊ¼Ñ­»·£¬ÒÔ´Ó´Ë½Úµã¿ªÊ¼£¬ÖØĞÂ×óÏÂµÈµÈÄÇÒ»ÂÖ
+                    s.push(p);	// å½“å‰ç»“ç‚¹ä¸èƒ½è®¿é—®ï¼Œéœ€äºŒæ¬¡è¿›æ ˆ
+                    p = p->right;	// å¤„ç†å³å­æ ‘
+                    break;	// é‡æ–°å¼€å§‹å¾ªç¯ï¼Œä»¥ä»æ­¤èŠ‚ç‚¹å¼€å§‹ï¼Œé‡æ–°å·¦ä¸‹ç­‰ç­‰é‚£ä¸€è½®
                 }
             }
         }while (!s.empty());
@@ -68,6 +72,48 @@ public:
         return result;
     }
 };
+#endif
+
+#ifdef W2
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+// æ€è·¯å®Œå…¨ä¸€æ ·ï¼Œå†™æ³•ä¸Šæ›´å¥½ã€‚
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> result;
+        if (!root)
+            return result;
+        TreeNode* last_visited = nullptr;
+        stack<TreeNode*> st;
+        TreeNode* p = root;
+        while (!st.empty() || p) {
+            if (p) {
+                st.push(p);
+                p = p->left;
+            } else {
+                p = st.top();
+                if (p->right == nullptr || last_visited == p->right) {
+                    result.push_back(p->val);
+                    last_visited = p;
+                    st.pop();
+                    p = nullptr;
+                } else {
+                    p = p->right;
+                }
+            }
+        }
+        return result;
+    }
+};
+#endif
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Binary_Tree_Postorder_Traversal", "[Tree_Traverse]"){
 	Solution sln;

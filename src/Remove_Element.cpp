@@ -13,7 +13,7 @@
 #define W1
 
 #ifdef W1
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
 	int removeElement(int A[], int n, int elem) {
@@ -31,7 +31,7 @@ public:
 #endif
 
 #ifdef W2
-// Ê¹ÓÃ remove()£¬Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// ä½¿ç”¨ remove()ï¼Œæ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	int removeElement(int A[], int n, int elem) {

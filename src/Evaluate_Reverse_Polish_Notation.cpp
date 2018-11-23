@@ -15,12 +15,12 @@
 * ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
 class Solution {
 public:
 	int evalRPN(vector<string> &tokens) {
 		if (tokens.empty()) return 0;
-		stack<string> cal_stack;	// Õ»ÖĞ´æ×Ö·û´®
+		stack<string> cal_stack;	// æ ˆä¸­å­˜å­—ç¬¦ä¸²
 #if __cplusplus < 201103L
 		for (auto it = tokens.begin(); it != tokens.end(); ++it)
 		{
@@ -38,7 +38,7 @@ public:
 				cal_stack.pop();
 				int x = stoi(cal_stack.top());
 				cal_stack.pop();
-				if (token[0] == '+') { x += y;}	// ÓÃ×ÔÔö²Ù×÷£¬ÉÙÒ»¸ö±äÁ¿
+				if (token[0] == '+') { x += y;}	// ç”¨è‡ªå¢æ“ä½œï¼Œå°‘ä¸€ä¸ªå˜é‡
 				else if (token[0] == '-') { x -= y;}
 				else if (token[0] == '*') { x *= y;}
 				else if (token[0] == '/') { x /= y;}
@@ -50,7 +50,7 @@ public:
 private:
 	bool is_operator(const string& op)
 	{
-		return op.size() == 1 && string("+-*/").find(op) != string::npos;	// ÕâÖÖĞ´·¨ºÜºÃ£¬ÅĞ¶ÏÄ³stringÔÚ²»ÔÚÈô¸ÉÑ¡ÔñÖ®ÖĞ
+		return op.size() == 1 && string("+-*/").find(op) != string::npos;	// è¿™ç§å†™æ³•å¾ˆå¥½ï¼Œåˆ¤æ–­æŸstringåœ¨ä¸åœ¨è‹¥å¹²é€‰æ‹©ä¹‹ä¸­
 	}
 };
 //--------------------------------------------------------------------------------------------------------------

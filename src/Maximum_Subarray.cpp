@@ -19,15 +19,15 @@
 #include "../include/include.h"
 #define W1
 #ifdef W1
-// ��̬�滮��ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 动态规划，时间复杂度O(n)，空间复杂度O(1)。
 /*
-*	��ͷ��β���������ʱ�򣬶����������һ��������������ѡ��
-*	1. ����֮ǰ��SubArray����֮ǰ��SubArray����ʹ���0��ʱ����Ժ�������й��ס�
-*	2. �Լ�����һ��SubArray����֮ǰ��SubArray�����С�ڻ����0ʱ�����Ϻ��ȡ�
-*	����״̬ת�Ʒ���Ϊ��
-*	��״̬Ϊf[i]����ʾ��Array[i]��β��������������к͡�
+*	从头到尾遍历数组的时候，对于数组里的一个整数，有两种选择：
+*	1. 加入之前的SubArray。当之前的SubArray总体和大于0的时候，其对后续结果有贡献。
+*	2. 自己另起一个SubArray。当之前的SubArray总体和小于或等于0时，会拖后腿。
+*	所以状态转移方程为：
+*	设状态为f[i]，表示以Array[i]结尾的最大连续子序列和。
 *	f[i] = max( f[i-1]+Array[i], Array[i] )
-*	Ŀ������������f[i]��
+*	目标就是求得最大的f[i]。
 */
 class Solution {
 public:

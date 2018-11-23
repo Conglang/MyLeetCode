@@ -15,18 +15,18 @@
 * Return true because "leetcode" can be segmented as "leet code".
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¶¯Ì¬¹æ»®£¬Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// åŠ¨æ€è§„åˆ’ï¼Œæ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	bool wordBreak(string s, unordered_set<string> &dict) {
 		if(s.empty()) return false;
-		vector<bool> f(s.size()+1, false);	// 0Îª¿ÕÊ±£¬1~size¶ÔÓ¦×Ö·û´®s¡£
-		f[0] = true;	// ³õÊ¼×´Ì¬£¬Ç°·½ÊÇ¿ÉĞĞ´Ê(¿Õ)¡£
+		vector<bool> f(s.size()+1, false);	// 0ä¸ºç©ºæ—¶ï¼Œ1~sizeå¯¹åº”å­—ç¬¦ä¸²sã€‚
+		f[0] = true;	// åˆå§‹çŠ¶æ€ï¼Œå‰æ–¹æ˜¯å¯è¡Œè¯(ç©º)ã€‚
 		for (int i = 1; i <= s.size(); ++i)
 		{
 			for (int j = i - 1; j >= 0; --j)
 			{
-				// jÇ°ÊÇ·ñÊÇ¿ÉĞĞ´Ê£¬j~iÕâ¸ö×Ö·û´®ÊÇ·ñÊÇµ¥´Ê¡£¾ùÊÇ²ÅÄÜ¹¹³ÉÏÂÒ»¸ö¿ÉĞĞ´Ê¡£
+				// jå‰æ˜¯å¦æ˜¯å¯è¡Œè¯ï¼Œj~iè¿™ä¸ªå­—ç¬¦ä¸²æ˜¯å¦æ˜¯å•è¯ã€‚å‡æ˜¯æ‰èƒ½æ„æˆä¸‹ä¸€ä¸ªå¯è¡Œè¯ã€‚
 				if (f[j] && dict.find(s.substr(j, i-j)) != dict.end())
 				{
 					f[i] = true;

@@ -21,7 +21,7 @@
 #define W3
 
 #ifdef W1
-// ûʲô�Ѷȵĵݹ鷽��
+// 没什么难度的递归方法
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -51,7 +51,7 @@ private:
 #endif
 
 #ifdef W2
-// ��������ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(n)
+// 迭代法，时间复杂度O(n)，空间复杂度O(n)
 // My Way
 /**
  * Definition for binary tree
@@ -98,8 +98,8 @@ public:
 #endif
 
 #ifdef W3
-// ��һ�ָ�����ĵ���������
-// ʹ��ջ��ʱ�临�Ӷ� O(n) ���ռ临�Ӷ� O(n)
+// 另一种更整洁的迭代方法。遍历到某个便输出值，其右节点入栈，而后左节点入栈。
+// 使用栈，时间复杂度 O(n) ，空间复杂度 O(n)
 class Solution {
 public:
 	vector<int> preorderTraversal(TreeNode *root) {

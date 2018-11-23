@@ -18,7 +18,7 @@
 * You should return [1,2,3,6,9,8,7,4,5].
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-#define W1
+#define W2
 #ifdef W1
 class Solution {
 public:

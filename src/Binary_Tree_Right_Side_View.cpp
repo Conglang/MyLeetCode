@@ -18,7 +18,7 @@
 * You should return [1, 3, 4].
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// 时间复杂度O(n)，空间复杂度O(n)
+// 鏃堕棿澶嶆潅搴(n)锛岀┖闂村鏉傚害O(n)
 /**
  * Definition for a binary tree node.
  * struct TreeNode {

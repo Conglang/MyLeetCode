@@ -21,17 +21,17 @@
 #include "../include/include.h"
 #define W2
 #ifdef W1
-// �������ң�ÿ�δӿ�����Χ����˵��Ҷ˱������ҵ���������Զ�ľ��룬Ȼ�������Ƶ���һ�ε��Ҷ˺�һλ��
+// 从左向右，每次从可跳范围的左端到右端遍历，找到能跳到最远的距离，然后把左端移到上一次的右端后一位。
 // |----|=======|*******|
-// ÿһ��ε�����һ���ҵ���Զ����������һ��Σ���һ���������һ�������������Զ��ֱ��������
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 每一层次的人在一起找到最远能跳到的下一层次，下一层次再找下一层次能跳到的最远，直到跳过。
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int jump(int A[], int n) {
 		if (!A || !n) return 0;
 		if (n == 1) return 0;
-		int left(0),right(0);	// [left, right]�ǵ�ǰ�ܸ��ǵ�����
-		int step(0);	// ��С����
+		int left(0),right(0);	// [left, right]是当前能覆盖的区间
+		int step(0);	// 最小步数
 		while (left <= right)
 		{
 			++step;
@@ -50,19 +50,19 @@ public:
 #endif
 
 #ifdef W2
-// �����ң�ÿ�γ�����һ��������Զ���룬�ͰѲ�����1��
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 从左到右，每次超过上一层计算的最远距离，就把步数加1。
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int jump(int A[], int n) {
 		int result(0);
-		int last(0);	// �ܴﵽ����Զ���롣
-		int cur(0);	// result+1���ܵ������Զ���롣
+		int last(0);	// 能达到的最远距离。
+		int cur(0);	// result+1步能到达的最远距离。
 		for (int i = 0; i < n; ++i)
 		{
 			if (i > last)
 			{
-				if (cur <= last) return 0;	// ��������߸�Զ��˵���޷��������0��
+				if (cur <= last) return 0;	// 如果不能走更远，说明无法到达，返回0。
 				last = cur;
 				++result;
 			}

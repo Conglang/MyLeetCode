@@ -37,17 +37,17 @@
 #define W1
 
 #ifdef W1
-// µİ¹é·½Ê½£¬Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
+// é€’å½’æ–¹å¼ï¼Œæ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
 class Solution 
 {
 public:
 	bool check_node(TreeNode* left_node, TreeNode* right_node)
 	{
-		if (!left_node && !right_node)				{return true;}	// Á½±ß½Úµã¾ùÎª¿Õ£¬¶Ô³Æ¡£
-		if (!left_node || !right_node)				{return false;}	// Ö»ÓĞÒ»±ß½ÚµãÎª¿Õ£¬²»¶Ô³Æ¡£
-		if (left_node->val != right_node->val)		{return false;}	// Á½±ß½ÚµãÖµ²»Í¬£¬²»¶Ô³Æ¡£
+		if (!left_node && !right_node)				{return true;}	// ä¸¤è¾¹èŠ‚ç‚¹å‡ä¸ºç©ºï¼Œå¯¹ç§°ã€‚
+		if (!left_node || !right_node)				{return false;}	// åªæœ‰ä¸€è¾¹èŠ‚ç‚¹ä¸ºç©ºï¼Œä¸å¯¹ç§°ã€‚
+		if (left_node->val != right_node->val)		{return false;}	// ä¸¤è¾¹èŠ‚ç‚¹å€¼ä¸åŒï¼Œä¸å¯¹ç§°ã€‚
 
-		// ×ó±ßµÄ×ó½ÚµãÊÇ·ñµÈÓÚÓÒ±ßµÄÓÒ½Úµã£¬×ó±ßµÄÓÒ½ÚµãÊÇ·ñµÈÓÚÓÒ±ßµÄ×ó½Úµã¡£
+		// å·¦è¾¹çš„å·¦èŠ‚ç‚¹æ˜¯å¦ç­‰äºå³è¾¹çš„å³èŠ‚ç‚¹ï¼Œå·¦è¾¹çš„å³èŠ‚ç‚¹æ˜¯å¦ç­‰äºå³è¾¹çš„å·¦èŠ‚ç‚¹ã€‚
 		return check_node(left_node->left, right_node->right) && (check_node(left_node->right, right_node->left));
 	}
 
@@ -59,8 +59,8 @@ public:
 #endif
 
 #ifdef W2
-// µü´ú·½Ê½
-// Ê±¼ä¸´ÔÓ¶È O(n)£¬¿Õ¼ä¸´ÔÓ¶È O(logn)
+// è¿­ä»£æ–¹å¼
+// æ—¶é—´å¤æ‚åº¦ O(n)ï¼Œç©ºé—´å¤æ‚åº¦ O(logn)
 class Solution
 {
 public:
@@ -68,23 +68,23 @@ public:
 	{
 		if (!root)   {return true;}
 
-		std::list<TreeNode*> this_queue;	// ´¦Àí¶ÓÁĞ
+		std::list<TreeNode*> this_queue;	// å¤„ç†é˜Ÿåˆ—
 		this_queue.push_back(root->left);
-		this_queue.push_back(root->right);	// rootµÄ×óÓÒ½Úµã¼ÓÈë¶ÓÎ²
+		this_queue.push_back(root->right);	// rootçš„å·¦å³èŠ‚ç‚¹åŠ å…¥é˜Ÿå°¾
 
-		while (!this_queue.empty())	// ¶ÓÁĞÖĞ»¹ÓĞ´ı´¦ÀíµÄ½ÚµãÊ±
+		while (!this_queue.empty())	// é˜Ÿåˆ—ä¸­è¿˜æœ‰å¾…å¤„ç†çš„èŠ‚ç‚¹æ—¶
 		{
 			TreeNode* left_side = this_queue.front();
 			this_queue.pop_front();
 			TreeNode* right_side = this_queue.front();
-			this_queue.pop_front();	// µÃµ½¶ÓÊ×Á½¸ö½Úµã
+			this_queue.pop_front();	// å¾—åˆ°é˜Ÿé¦–ä¸¤ä¸ªèŠ‚ç‚¹
 
-			// ±È½ÏÁ½½Úµã
+			// æ¯”è¾ƒä¸¤èŠ‚ç‚¹
 			if (!left_side && !right_side)			{continue;}
 			if (!left_side || !right_side)			{return false;}
 			if(left_side->val != right_side->val)   {return false;}
 
-			// °´×ó×ó¡¢ÓÒÓÒ£»×óÓÒ¡¢ÓÒ×óµÄË³Ğò¼ÓÈë¶ÓÎ²
+			// æŒ‰å·¦å·¦ã€å³å³ï¼›å·¦å³ã€å³å·¦çš„é¡ºåºåŠ å…¥é˜Ÿå°¾
 			this_queue.push_back(left_side->left);
 			this_queue.push_back(right_side->right);
 			this_queue.push_back(left_side->right);

@@ -20,13 +20,13 @@
  * };
  */
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
-// ÏÈ±éÀúÒ»±é£¬µÃµ½Á´±í³¤¶Èlen¡£Î²½ÚµãnextÖ¸ÏòÊ×½Úµã£¬ÐÎ³É»·£¬½Ó×ÅÅÜlen-k%len²½¡£ÕâÖ®ºó¾ÍÊÇÐÂµÄÊ×½Úµã¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
+// å…ˆéåŽ†ä¸€éï¼Œå¾—åˆ°é“¾è¡¨é•¿åº¦lenã€‚å°¾èŠ‚ç‚¹nextæŒ‡å‘é¦–èŠ‚ç‚¹ï¼Œå½¢æˆçŽ¯ï¼ŒæŽ¥ç€è·‘len-k%lenæ­¥ã€‚è¿™ä¹‹åŽå°±æ˜¯æ–°çš„é¦–èŠ‚ç‚¹ã€‚
 class Solution {
 public:
     ListNode *rotateRight(ListNode *head, int k) {
         if (!head || !k) {return head;}
-		// µÃµ½³¤¶È
+		// å¾—åˆ°é•¿åº¦
 		int len(1);
 		ListNode* temp(head);
 		while (temp->next)
@@ -34,15 +34,15 @@ public:
 			++len;
 			temp = temp->next;
 		}
-		// °Ñ´ÓÓÒÏò×óÊýµÄk±ä³É´Ó×óÏòÓÒÊý£¬×¢ÒâkÓÐ¿ÉÄÜ±ÈÁ´±í³¤¶È´ó
+		// æŠŠä»Žå³å‘å·¦æ•°çš„kå˜æˆä»Žå·¦å‘å³æ•°ï¼Œæ³¨æ„kæœ‰å¯èƒ½æ¯”é“¾è¡¨é•¿åº¦å¤§
 		k = len - k % len;
-		temp->next = head;	// Ê×Î²ÏàÁ¬
+		temp->next = head;	// é¦–å°¾ç›¸è¿ž
 		for (int step = 0; step < k; ++step)
 		{
-			temp = temp->next;	// ½Ó×ÅÏòºóÅÜ£¬¾ÍÊÇµ½ÁËÔ­À´Á´±íµÄÇ°¶Ë
+			temp = temp->next;	// æŽ¥ç€å‘åŽè·‘ï¼Œå°±æ˜¯åˆ°äº†åŽŸæ¥é“¾è¡¨çš„å‰ç«¯
 		}
 		head = temp->next;
-		temp->next = nullptr;	// ¶Ï¿ª»·
+		temp->next = nullptr;	// æ–­å¼€çŽ¯
 		return head;
     }
 };

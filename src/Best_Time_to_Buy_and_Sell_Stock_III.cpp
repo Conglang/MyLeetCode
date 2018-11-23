@@ -14,8 +14,8 @@
 * (ie, you must sell the stock before you buy again).
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¶¯Ì¬¹æ»®¡£Ïàµ±ÓÚÇóÁ½¸öÇø¼ä¸÷×Ô×î´óÀûÈóµÄ×î´óºÍ¡£¼´ÒªÈ·¶¨Çø¼äÈçºÎ»®·ÖÊ¹Á½²¿·ÖµÄ×î´óÀûÈóµÄºÍ×î´ó¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// åŠ¨æ€è§„åˆ’ã€‚ç›¸å½“äºæ±‚ä¸¤ä¸ªåŒºé—´å„è‡ªæœ€å¤§åˆ©æ¶¦çš„æœ€å¤§å’Œã€‚å³è¦ç¡®å®šåŒºé—´å¦‚ä½•åˆ’åˆ†ä½¿ä¸¤éƒ¨åˆ†çš„æœ€å¤§åˆ©æ¶¦çš„å’Œæœ€å¤§ã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	int maxProfit3(vector<int> &prices) {
@@ -23,19 +23,19 @@ public:
 		const int n = prices.size();
 		vector<int> firstpart(n,0);
 		vector<int> secondpart(n,0);
-		// ´Ó×óÏòÓÒÇóÇ°°ë²¿·ÖµÄ×î´óÀûÈó¡£
+		// ä»å·¦å‘å³æ±‚å‰åŠéƒ¨åˆ†çš„æœ€å¤§åˆ©æ¶¦ã€‚
 		for (int i = 1, least = prices[0]; i < n; ++i)
 		{
 			least = min(least, prices[i]);
 			firstpart[i] = max(firstpart[i-1], prices[i]-least);
 		}
-		// ´ÓÓÒÏò×óÇóºó°ë²¿·ÖµÄ×î´óÀûÈó¡£
+		// ä»å³å‘å·¦æ±‚ååŠéƒ¨åˆ†çš„æœ€å¤§åˆ©æ¶¦ã€‚
 		for (int i = n-2, most = prices[n-1]; i >=0; --i)
 		{
 			most = max(most, prices[i]);
 			secondpart[i] = max(secondpart[i+1], most-prices[i]);
 		}
-		// ÇóËüÃÇºÍµÄ×î´óÖµ¡£
+		// æ±‚å®ƒä»¬å’Œçš„æœ€å¤§å€¼ã€‚
 		int result(0);
 		for (int i = 0; i < n; ++i)
 		{

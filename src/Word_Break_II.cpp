@@ -17,15 +17,15 @@
 * A solution is ["cats and dog", "cat sand dog"].
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÔÚÇ°Ò»ÌâWord_BreakµÄ»ù´¡ÉÏ£¬Ôö¼Ó¼ÇÂ¼ËùÓĞ¿ÉĞĞÇø¼äµÄÊı×é¡£
+// åœ¨å‰ä¸€é¢˜Word_Breakçš„åŸºç¡€ä¸Šï¼Œå¢åŠ è®°å½•æ‰€æœ‰å¯è¡ŒåŒºé—´çš„æ•°ç»„ã€‚
 class Solution {
 public:
 	vector<string> wordBreak2(string s, unordered_set<string> &dict) {
 		vector<string> result;
 		if(s.empty()) return result;
-		vector<bool> f(s.size()+1, false);	// 0Îª¿ÕÊ±£¬1~size¶ÔÓ¦×Ö·û´®s¡£
-		// valid_range[j][i]Îªtrue£¬±íÊ¾s[j,i)ÊÇÒ»¸öºÏ·¨µ¥´Ê£¬¿ÉÒÔ´Ój´¦ÇĞ¿ª¡£
-		// µÚÒ»ÁĞÃ»ÓĞÓÃ¡£
+		vector<bool> f(s.size()+1, false);	// 0ä¸ºç©ºæ—¶ï¼Œ1~sizeå¯¹åº”å­—ç¬¦ä¸²sã€‚
+		// valid_range[j][i]ä¸ºtrueï¼Œè¡¨ç¤ºs[j,i)æ˜¯ä¸€ä¸ªåˆæ³•å•è¯ï¼Œå¯ä»¥ä»jå¤„åˆ‡å¼€ã€‚
+		// ç¬¬ä¸€åˆ—æ²¡æœ‰ç”¨ã€‚
 		vector<vector<bool> > valid_range(s.size(), vector<bool>(s.size()+1));
 
 		f[0] = true;
@@ -36,7 +36,7 @@ public:
 				if (f[j] && dict.find(s.substr(j, i-j)) != dict.end())
 				{
 					f[i] = true;
-					valid_range[j][i] = true;	// ¼ÇÂ¼¿ÉĞĞÇø¼ä¡£
+					valid_range[j][i] = true;	// è®°å½•å¯è¡ŒåŒºé—´ã€‚
 				}
 			}
 		}
@@ -45,10 +45,10 @@ public:
 		return result;
 	}
 private:
-	// DFS±éÀúÉú³ÉÂ·¾¶¡£
+	// DFSéå†ç”Ÿæˆè·¯å¾„ã€‚
 	void generate_path(string s, const vector<vector<bool> >& valid_range, int cur, vector<string>& path, vector<string>& result)
 	{
-		// ´Ó×Ö·û´®Ä©Î²±éÀúµ½ÁË×Ö·û´®Ê×¡£
+		// ä»å­—ç¬¦ä¸²æœ«å°¾éå†åˆ°äº†å­—ç¬¦ä¸²é¦–ã€‚
 		if (cur == 0)
 		{
 			string temp;
@@ -61,7 +61,7 @@ private:
 			if (valid_range[i][cur])
 			{
 				path.push_back(s.substr(i, cur-i));
-				generate_path(s, valid_range, i, path, result);	// µİ¹éÈ¥Ç°Ò»¸ö¿ÉĞĞµ¥´Ê¡£
+				generate_path(s, valid_range, i, path, result);	// é€’å½’å»å‰ä¸€ä¸ªå¯è¡Œå•è¯ã€‚
 				path.pop_back();
 			}
 		}

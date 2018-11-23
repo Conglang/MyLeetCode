@@ -24,8 +24,8 @@
 * word = "ABCB", -> returns false.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÉîËÑ£¬µİ¹é
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2*m^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n^2)¡£
+// æ·±æœï¼Œé€’å½’
+// æ—¶é—´å¤æ‚åº¦O(n^2*m^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n^2)ã€‚
 class Solution {
 public:
 	bool exist(vector<vector<char> > &board, string word) {
@@ -43,16 +43,16 @@ public:
 private:
 	bool dfs(const vector<vector<char> > &board, const string &word, int index, int x, int y, vector<vector<bool> > &visited) {
 		if (index == word.size())
-			return true; // ÊÕÁ²Ìõ¼ş
+			return true; // æ”¶æ•›æ¡ä»¶
 		if (x < 0 || y < 0 || x >= board.size() || y >= board[0].size())
-			return false; // Ô½½ç£¬ÖÕÖ¹Ìõ¼ş
-		if (visited[x][y]) return false; // ÒÑ¾­·ÃÎÊ¹ı£¬¼ôÖ¦
-		if (board[x][y] != word[index]) return false; // ²»ÏàµÈ£¬¼ôÖ¦
+			return false; // è¶Šç•Œï¼Œç»ˆæ­¢æ¡ä»¶
+		if (visited[x][y]) return false; // å·²ç»è®¿é—®è¿‡ï¼Œå‰ªæ
+		if (board[x][y] != word[index]) return false; // ä¸ç›¸ç­‰ï¼Œå‰ªæ
 		visited[x][y] = true;
-		bool ret = dfs(board, word, index + 1, x - 1, y, visited) || // ÉÏ
-			dfs(board, word, index + 1, x + 1, y, visited) || // ÏÂ
-			dfs(board, word, index + 1, x, y - 1, visited) || // ×ó
-			dfs(board, word, index + 1, x, y + 1, visited); // ÓÒ
+		bool ret = dfs(board, word, index + 1, x - 1, y, visited) || // ä¸Š
+			dfs(board, word, index + 1, x + 1, y, visited) || // ä¸‹
+			dfs(board, word, index + 1, x, y - 1, visited) || // å·¦
+			dfs(board, word, index + 1, x, y + 1, visited); // å³
 		visited[x][y] = false;
 		return ret;
 	}

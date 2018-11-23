@@ -10,7 +10,7 @@
 * Write an algorithm to minimize the largest sum among these m subarrays.
 * 
 * Note:
-* Given m satisfies the following constraint: 1 ¡Ü m ¡Ü length(nums) ¡Ü 14,000.
+* Given m satisfies the following constraint: 1 â‰¤ m â‰¤ length(nums) â‰¤ 14,000.
 * 
 * Examples:
 * 
@@ -28,7 +28,7 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/61395/c-fast-very-clear-explanation-clean-code-solution-with-greedy-algorithm-and-binary-search
-// Õâ¸öÖµÔÚ×î´óµÄÊıºÍÊı¾İºÍÖ®¼ä£¬¶ş·Ö²éÕÒ¡£È»ºóÓÃÌ°À·Ëã·¨¼ÆËãÕâ¸öÊıÄÜ·ñÓÃ¸ÃcutÊıÇĞ¸î¡£
+// è¿™ä¸ªå€¼åœ¨æœ€å¤§çš„æ•°å’Œæ•°æ®å’Œä¹‹é—´ï¼ŒäºŒåˆ†æŸ¥æ‰¾ã€‚ç„¶åç”¨è´ªå©ªç®—æ³•è®¡ç®—è¿™ä¸ªæ•°èƒ½å¦ç”¨è¯¥cutæ•°åˆ‡å‰²ã€‚
 class Solution {
 private:
     /* 

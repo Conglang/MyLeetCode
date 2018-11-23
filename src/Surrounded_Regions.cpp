@@ -22,7 +22,7 @@
 * X O X X
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¹ã¶ÈÓÅÏÈËÑË÷¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// å¹¿åº¦ä¼˜å…ˆæœç´¢ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 /*
 1. Find all O on the edge of the grid
 2. For each of the above, do BFS traversal (note, recursion will give for large tests) replacing 'O' with 'o' - marking free 'O' cells

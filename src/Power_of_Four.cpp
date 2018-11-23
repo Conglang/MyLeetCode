@@ -13,7 +13,7 @@
 #include "../include/include.h"
 #define W2
 #ifdef W1
-// Ê±¼ä¸´ÔÓ¶ÈO(n/4), ¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(n/4), ç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
     bool isPowerOfFour(int num) {
@@ -29,14 +29,16 @@ public:
 };
 #endif
 #ifdef W2
-// Ê±¼ä¸´ÔÓ¶ÈO(1)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// æ—¶é—´å¤æ‚åº¦O(1)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
     bool isPowerOfFour(int num) {
 		if (!num) return false;
 		bitset<32> binary_num(num);
         bitset<32> mask("01010101010101010101010101010101");
-		if (num & mask.flip().to_ulong() || binary_num.count() != 1) {return false;}
+		if (num & mask.flip().to_ulong() || binary_num.count() != 1) {
+			return false;
+		}
         return true;
     }
 };

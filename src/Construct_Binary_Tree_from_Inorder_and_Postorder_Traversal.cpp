@@ -11,7 +11,7 @@
 * You may assume that duplicates do not exist in the tree.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// µİ¹é¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)
+// é€’å½’ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -21,8 +21,8 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// ºóĞò±éÀú»á×îºó·ÃÎÊ¸¸½Úµã£¬ÖĞĞò±éÀú»á½«×óÓÒÁ½±ß×ÓÊ÷ÔÚ¸¸½Úµã×óÓÒ·Ö¿ª¡£
-// ËùÒÔÖ»ÒªÒÀ´Î·´ÏòÈ¡³öºóĞò±éÀúµÄ½Úµã×÷Îª¸¸½Úµã£¬µİ¹é¹¹ÔìÖĞĞò±éÀúÖĞ¸Ã½Úµã×óÓÒÁ½±ßµÄÁ½¿Å×ÓÊ÷¼´¿É¡£
+// ååºéå†ä¼šæœ€åè®¿é—®çˆ¶èŠ‚ç‚¹ï¼Œä¸­åºéå†ä¼šå°†å·¦å³ä¸¤è¾¹å­æ ‘åœ¨çˆ¶èŠ‚ç‚¹å·¦å³åˆ†å¼€ã€‚
+// æ‰€ä»¥åªè¦ä¾æ¬¡åå‘å–å‡ºååºéå†çš„èŠ‚ç‚¹ä½œä¸ºçˆ¶èŠ‚ç‚¹ï¼Œé€’å½’æ„é€ ä¸­åºéå†ä¸­è¯¥èŠ‚ç‚¹å·¦å³ä¸¤è¾¹çš„ä¸¤é¢—å­æ ‘å³å¯ã€‚
 class Solution {
 public:
     TreeNode *buildTree2(vector<int> &inorder, vector<int> &postorder) {
@@ -37,8 +37,8 @@ private:
         int parent = parents.back();
         parents.pop_back();
         TreeNode* node = new TreeNode(parent);
-        node->right = build2(parents, find(lit, rit, parent)+1, rit);	// ÏÈÓÒ×ÓÊ÷
-        node->left = build2(parents, lit, find(lit, rit, parent));	// ºó×ó×ÓÊ÷
+        node->right = build2(parents, find(lit, rit, parent)+1, rit);	// å…ˆå³å­æ ‘
+        node->left = build2(parents, lit, find(lit, rit, parent));	// åå·¦å­æ ‘
         return node;
     }
 };

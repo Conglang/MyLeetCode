@@ -11,8 +11,8 @@
 * Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Òì»ò²Ù×÷¿ÉÒÔÇå³ıÅ¼Êı´Î³öÏÖµÄÇé¿ö
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// å¼‚æˆ–æ“ä½œå¯ä»¥æ¸…é™¤å¶æ•°æ¬¡å‡ºç°çš„æƒ…å†µ
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 #define W2
 #ifdef W1
 // Use STL

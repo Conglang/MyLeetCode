@@ -7,9 +7,9 @@
 /*--------------------------------------------------------------------------------------------------------------
 * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 * 
-* According to the definition of LCA on Wikipedia: ¡°The lowest common ancestor is defined between two nodes
+* According to the definition of LCA on Wikipedia: â€œThe lowest common ancestor is defined between two nodes
 * v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be
-* a descendant of itself).¡±
+* a descendant of itself).â€
 * 
 *         _______3______
 *        /              \
@@ -23,7 +23,7 @@
 * according to the LCA definition.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// µİ¹é¡£Èç¹û×óÓÒ×ÓÊ÷¶¼Ã»ÓĞÄÇ¾ÍÊÇµ±Ç°root£¬Èç¹ûÆäÖĞÒ»¸öÓĞÄÇ¾ÍÊÇÄÇÒ»¸ö¡£
+// é€’å½’ã€‚å¦‚æœå·¦å³å­æ ‘éƒ½æ²¡æœ‰é‚£å°±æ˜¯å½“å‰rootï¼Œå¦‚æœå…¶ä¸­ä¸€ä¸ªæœ‰é‚£å°±æ˜¯é‚£ä¸€ä¸ªã€‚
 /**
  * Definition for a binary tree node.
  * struct TreeNode {

@@ -13,17 +13,17 @@
 * Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¹Ø¼üÊÇ×¢Òâµ½Ê§°Ü·½Ê½ÓĞÁ½ÖÖ£¬Ò»ÖÖÊÇ(¶à£¬Ò»ÖÖÊÇ)¶à¡£
+// å…³é”®æ˜¯æ³¨æ„åˆ°å¤±è´¥æ–¹å¼æœ‰ä¸¤ç§ï¼Œä¸€ç§æ˜¯(å¤šï¼Œä¸€ç§æ˜¯)å¤šã€‚
 #define W3
 
 #ifdef W1
-// ÓÃÕ»£¬Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
+// ç”¨æ ˆï¼Œæ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
 class Solution {
 public:
 	int longestValidParentheses(string s) {
 		if (s.size() < 2) {return 0;}
-		int max_len(0), last(-1);	// lastÊÇÉÏÒ»´Î)³öÏÖµÄÎ»ÖÃ
-		stack<int> lefts;	// ¼ÇÂ¼(Î»ÖÃµÄÕ»
+		int max_len(0), last(-1);	// lastæ˜¯ä¸Šä¸€æ¬¡)å‡ºç°çš„ä½ç½®
+		stack<int> lefts;	// è®°å½•(ä½ç½®çš„æ ˆ
 		for (int i = 0; i < s.size(); ++i)
 		{
 			if (s[i] == '(')
@@ -31,16 +31,16 @@ public:
 				lefts.push(i);
 			}else
 			{
-				if (lefts.empty())	// ÊÇ¶àÓàµÄ)ÆÆ»µÁËÁ¬¹áĞÔ
+				if (lefts.empty())	// æ˜¯å¤šä½™çš„)ç ´åäº†è¿è´¯æ€§
 				{
-					last = i;	// ¼ÇÏÂ´Ëµã£¬ÒÔºóÓÃËü×ö¿ªÍ·
+					last = i;	// è®°ä¸‹æ­¤ç‚¹ï¼Œä»¥åç”¨å®ƒåšå¼€å¤´
 				}else
 				{
 					lefts.pop();
-					if (lefts.empty())	// Èç¹ûÃ»ÓĞ¶àÓàµÄ(£¬¾Í²»¹Ö(£¬´Óµ±Ç°Î»ÖÃµ½¿ªÍ·µÄ¾àÀë
+					if (lefts.empty())	// å¦‚æœæ²¡æœ‰å¤šä½™çš„(ï¼Œå°±ä¸æ€ª(ï¼Œä»å½“å‰ä½ç½®åˆ°å¼€å¤´çš„è·ç¦»
 					{
 						max_len = max(max_len, i - last);
-					}else	// ÓĞ¶àÓàµÄ(£¬ÄÇ¾Í¹ÖËü£¬´Óµ±Ç°Î»ÖÃµ½Õ»¶¥×î½üµÄÄÇ¸ö(µÄ¾àÀë
+					}else	// æœ‰å¤šä½™çš„(ï¼Œé‚£å°±æ€ªå®ƒï¼Œä»å½“å‰ä½ç½®åˆ°æ ˆé¡¶æœ€è¿‘çš„é‚£ä¸ª(çš„è·ç¦»
 					{
 						max_len = max(max_len, i - lefts.top());
 					}
@@ -53,7 +53,7 @@ public:
 #endif
 
 #ifdef W2
-// Á½±éÉ¨Ãè£¬Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// ä¸¤éæ‰«æï¼Œæ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	int longestValidParentheses(string s) {
@@ -105,8 +105,8 @@ public:
 #endif
 
 #ifdef W3
-// ÑØÓÃValid_ParenthesesµÄ·½·¨£¬Ö»²»¹ıÓöµ½´íÎóÊ±²»ÊÇÖ±½Ó·µ»Ø£¬¶øÊÇ½«¼ÆÊıÇåÁã¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// æ²¿ç”¨Valid_Parenthesesçš„æ–¹æ³•ï¼Œåªä¸è¿‡é‡åˆ°é”™è¯¯æ—¶ä¸æ˜¯ç›´æ¥è¿”å›ï¼Œè€Œæ˜¯å°†è®¡æ•°æ¸…é›¶ã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	int longestValidParentheses(string s) {

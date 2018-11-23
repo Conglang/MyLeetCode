@@ -16,13 +16,13 @@
 * Note: The sequence of integers will be represented as a string.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
 class Solution {
 public:
 	string countAndSay(int n) {
 		if(n < 1) {return "";}
 		string s("1");
-		while (--n)	// Éú³É³¤ÎªnµÄĞòÁĞ
+		while (--n)	// ç”Ÿæˆé•¿ä¸ºnçš„åºåˆ—
 			s = getNext(s);
 		return s;
 	}
@@ -30,7 +30,7 @@ public:
 		stringstream ss;
 		for (auto i = s.begin(); i != s.end(); ) {
 			auto j = find_if(i, s.end(), bind1st(not_equal_to<char>(), *i));
-			ss << distance(i, j) << *i;	// µ½ÏÂ´Î²»Í¬Ö®¼äµÄ¾àÀëºÍ±¾Öµ
+			ss << distance(i, j) << *i;	// åˆ°ä¸‹æ¬¡ä¸åŒä¹‹é—´çš„è·ç¦»å’Œæœ¬å€¼
 			i = j;
 		}
 		return ss.str();

@@ -25,56 +25,56 @@
 * 	All words contain only lowercase alphabetic characters.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¹ã¶È±éÀúËã·¨¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// å¹¿åº¦éå†ç®—æ³•ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	int ladderLength(string start, string end, unordered_set<string> &dict) {
-		queue<string> current, next;	// µ±Ç°²ã£¬ÏÂÒ»²ã
-		unordered_set<string> visited;	// ÅĞÖØ
+		queue<string> current, next;	// å½“å‰å±‚ï¼Œä¸‹ä¸€å±‚
+		unordered_set<string> visited;	// åˆ¤é‡
 
-		int level(0);	// ²ã´Î
-		bool found(false);	// ÊÇ·ñ×ßµ½Ä¿±êµ¥´Ê
+		int level(0);	// å±‚æ¬¡
+		bool found(false);	// æ˜¯å¦èµ°åˆ°ç›®æ ‡å•è¯
 
-		auto state_is_target = [&](const string &s) {return s == end;};	// ÅĞ¶ÏÊÇ·ñÊÇÄ¿±êµ¥´ÊµÄlambdaº¯Êı
-		auto state_extend = [&](const string &s)->vector<string> {	// ´Óµ±Ç°´ÊÕÒµ½ÏÂÒ»¸öËùÓĞ¿ÉĞĞ´ÊµÄlambdaº¯Êı
+		auto state_is_target = [&](const string &s) {return s == end;};	// åˆ¤æ–­æ˜¯å¦æ˜¯ç›®æ ‡å•è¯çš„lambdaå‡½æ•°
+		auto state_extend = [&](const string &s)->vector<string> {	// ä»å½“å‰è¯æ‰¾åˆ°ä¸‹ä¸€ä¸ªæ‰€æœ‰å¯è¡Œè¯çš„lambdaå‡½æ•°
 			vector<string> result;
 
-			for (size_t i = 0; i < s.size(); ++i)	// ¶ÔÓÚµ±Ç°´ÊµÄÃ¿Ò»¸ö×Ö·û
+			for (size_t i = 0; i < s.size(); ++i)	// å¯¹äºå½“å‰è¯çš„æ¯ä¸€ä¸ªå­—ç¬¦
 			{
 				string new_word(s);
 				for (char c = 'a'; c <= 'z'; ++c)
 				{
 					if (c == new_word[i]) continue;
-					swap(c, new_word[i]);	// ´Óaµ½c£¬Èç¹ûÓëµ±Ç°×Ö·û²»Ò»Ñù£¬¾Í·Åµ½ĞÂ´Ê¸ÃÎ»ÖÃ
+					swap(c, new_word[i]);	// ä»aåˆ°cï¼Œå¦‚æœä¸å½“å‰å­—ç¬¦ä¸ä¸€æ ·ï¼Œå°±æ”¾åˆ°æ–°è¯è¯¥ä½ç½®
 
-					if ((dict.count(new_word) > 0 || new_word == end) && !visited.count(new_word))	// ĞÂÉú³ÉµÄÕâ¸ö´ÊÊÇ·ñÔÚdictÖĞ£¬²¢ÇÒÃ»ÓĞ·ÃÎÊ¹ı
+					if ((dict.count(new_word) > 0 || new_word == end) && !visited.count(new_word))	// æ–°ç”Ÿæˆçš„è¿™ä¸ªè¯æ˜¯å¦åœ¨dictä¸­ï¼Œå¹¶ä¸”æ²¡æœ‰è®¿é—®è¿‡
 					{
-						result.push_back(new_word);	// ¼ÇÂ¼¸ÃĞÂ´Êµ½ĞÂ´Ê±í
-						visited.insert(new_word);	// ¼ÇÂ¼¸ÃĞÂ´ÊÒÑ¾­·ÃÎÊ¹ı
+						result.push_back(new_word);	// è®°å½•è¯¥æ–°è¯åˆ°æ–°è¯è¡¨
+						visited.insert(new_word);	// è®°å½•è¯¥æ–°è¯å·²ç»è®¿é—®è¿‡
 					}
-					swap(c, new_word[i]);	// °ÑÕâ¸ö´Ê»»»ØÈ¥£¬ÒòÎªÒ»´ÎÖ»ÄÜ¸Ä±äÒ»¸ö×ÖÄ¸
+					swap(c, new_word[i]);	// æŠŠè¿™ä¸ªè¯æ¢å›å»ï¼Œå› ä¸ºä¸€æ¬¡åªèƒ½æ”¹å˜ä¸€ä¸ªå­—æ¯
 				}
 			}
-			return result;	// ·µ»Øµ±Ç°´ÊËùÓĞ¿ÉÄÜµÄÏÂÒ»´Ê
+			return result;	// è¿”å›å½“å‰è¯æ‰€æœ‰å¯èƒ½çš„ä¸‹ä¸€è¯
 		};
 
-		current.push(start);	// µÚÒ»²ãÖ»ÓĞÆğÊ¼´Ê
+		current.push(start);	// ç¬¬ä¸€å±‚åªæœ‰èµ·å§‹è¯
 		while (!current.empty() && !found)
 		{
-			while (!next.empty()) next.pop();	// Çå¿ÕÏÂÒ»²ãµÄ¶ÓÁĞ
+			while (!next.empty()) next.pop();	// æ¸…ç©ºä¸‹ä¸€å±‚çš„é˜Ÿåˆ—
 			++level;
 			while (!current.empty() && !found)
 			{
-				const string str = current.front();	// È¡³öµ±Ç°´Ê
+				const string str = current.front();	// å–å‡ºå½“å‰è¯
 				current.pop();
 
-				const auto& new_states = state_extend(str);	// µÃµ½ËùÓĞ¿ÉĞĞÏÂÒ»´Ê
+				const auto& new_states = state_extend(str);	// å¾—åˆ°æ‰€æœ‰å¯è¡Œä¸‹ä¸€è¯
 #if __cplusplus < 201103L
 				for (auto it = new_states.begin(); it != new_states.end(); ++it)
 				{
 					const auto& state = *it;
 #else
-				for (const auto& state : new_states)	// ÔÚÏÂÒ»²ãÖĞ·ÅÈëËùÓĞ¿ÉĞĞ´Ê£¬Èç¹û¸Ã¿ÉĞĞ´Ê¾ÍÊÇÄ¿±ê´Ê¾ÍÌø³ö
+				for (const auto& state : new_states)	// åœ¨ä¸‹ä¸€å±‚ä¸­æ”¾å…¥æ‰€æœ‰å¯è¡Œè¯ï¼Œå¦‚æœè¯¥å¯è¡Œè¯å°±æ˜¯ç›®æ ‡è¯å°±è·³å‡º
 				{
 #endif
 					next.push(state);
@@ -85,8 +85,8 @@ public:
 					}
 				}
 			}
-			swap (next, current);	// °ÑËùÓĞÏÂÒ»²ãµÄ´Ê·ÅÈëµ±Ç°´Ê
-		}	// ÕâÑù¾ÍĞÎ³ÉÁËÒ»²ã¡¢ÓÖÒ»²ã¡¢ÔÙÒ»²ãµÄ¹ã¶ÈËÑË÷£¬Ö±µ½ÕÒµ½Ä¿±ê´Ê£¬²¢ÇÒ×îÏÈÕÒµ½µÄ´ÊÒ»¶¨ÊÇ×îĞ¡²½Êı
+			swap (next, current);	// æŠŠæ‰€æœ‰ä¸‹ä¸€å±‚çš„è¯æ”¾å…¥å½“å‰è¯
+		}	// è¿™æ ·å°±å½¢æˆäº†ä¸€å±‚ã€åˆä¸€å±‚ã€å†ä¸€å±‚çš„å¹¿åº¦æœç´¢ï¼Œç›´åˆ°æ‰¾åˆ°ç›®æ ‡è¯ï¼Œå¹¶ä¸”æœ€å…ˆæ‰¾åˆ°çš„è¯ä¸€å®šæ˜¯æœ€å°æ­¥æ•°
 		if (found) return level + 1;
 		else return 0;
 	}

@@ -14,12 +14,12 @@
 #define W2
 #ifdef W1
 /*
-*	����һ������Ϊsizeof(int)������count[sizeof(int)], 
-*	count[i]��ʾ����iλ���ֵ�1�Ĵ�����
-*	���count[i]��3��������������ԣ�
-*	����ͰѸ�λȡ������ɴ𰸡�
+*	创建一个长度为sizeof(int)的数组count[sizeof(int)], 
+*	count[i]表示在在i位出现的1的次数。
+*	如果count[i]是3的整数倍，则忽略；
+*	否则就把该位取出来组成答案。
 */
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int singleNumber(int A[], int n) {
@@ -45,12 +45,12 @@ public:
 #endif
 
 #ifdef W2
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 时间复杂度O(n)，空间复杂度O(1)。
 /*
-��one��¼����ǰ������Ԫ��Ϊֹ��������1����"1��"��mod 3֮���1��������Щ������λ��
-��two��¼����ǰ����ı���Ϊֹ��������1����"2��"��mod 3֮���2��������Щ������λ��
-��one��two�е�ĳһλͬʱΪ1ʱ��ʾ�ö�����λ��1������3�Σ���ʱ��Ҫ���㡣
-���ö�����ģ�����������㡣����one��¼�������ս����
+用one记录到当前处理的元素为止，二进制1出现"1次"（mod 3之后的1）的有哪些二进制位；
+用two记录到当前计算的变量为止，二进制1出现"2次"（mod 3之后的2）的有哪些二进制位。
+当one和two中的某一位同时为1时表示该二进制位上1出现了3次，此时需要清零。
+即用二进制模拟三进制运算。最终one记录的是最终结果。
 */
 class Solution {
 public:

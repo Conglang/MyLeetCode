@@ -17,9 +17,9 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// ʱ�临�Ӷ�O(min(m,n))���ռ临�Ӷ�O(1)
-// ����һ��dummy����ǰ�棬������ָ��ֱ��������������
-// �ѱȽ�С�Ĺ���dummyΪͷ���������档����ʣ��Ҳ���ں��档
+// 时间复杂度O(min(m,n))，空间复杂度O(1)
+// 设置一个dummy放在前面，用两个指针分别遍历两个链表，
+// 把比较小的挂在dummy为头的链表后面。最后的剩余也挂在后面。
 class Solution {
 public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {

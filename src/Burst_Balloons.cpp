@@ -15,7 +15,7 @@
 * 
 * Note: 
 * (1) You may imagine nums[-1] = nums[n] = 1. They are not real therefore you can not burst them.
-* (2) 0 ¡Ü n ¡Ü 500, 0 ¡Ü nums[i] ¡Ü 100
+* (2) 0 â‰¤ n â‰¤ 500, 0 â‰¤ nums[i] â‰¤ 100
 * 
 * Example:
 * 
@@ -28,6 +28,14 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/30746/share-some-analysis-and-explanations/2
+/*
+For the first we have nums[i-1]*nums[i]*nums[i+1] for the last we have nums[-1]*nums[i]*nums[n].
+Think about n balloons if i is the last one to burst, what now?
+We can see that the balloons is again separated into 2 sections.
+But this time since the balloon i is the last balloon of all to burst, 
+the left and right section now has well defined boundary and do not affect each other! 
+Therefore we can do either recursive method with memoization or dp.
+*/
 #define W1
 
 #ifdef W1

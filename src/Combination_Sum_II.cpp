@@ -12,7 +12,7 @@
 * 
 * Note:
 * All numbers (including target) will be positive integers.
-* Elements in a combination (a1, a2, ¡­ , ak) must be in non-descending order. (ie, a1 ¡Ü a2 ¡Ü ¡­ ¡Ü ak).
+* Elements in a combination (a1, a2, â€¦ , ak) must be in non-descending order. (ie, a1 â‰¤ a2 â‰¤ â€¦ â‰¤ ak).
 * The solution set must not contain duplicate combinations.
 * For example, given candidate set 10,1,2,7,6,1,5 and target 8, 
 * A solution set is: 
@@ -22,39 +22,37 @@
 * [1, 1, 6] 
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÉîËÑ¡£Ê±¼ä¸´ÔÓ¶ÈO(n!)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ·±æœã€‚æ—¶é—´å¤æ‚åº¦O(n!)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
-	vector<vector<int> > combinationSum2(vector<int> &num, int target) {
-		vector<vector<int> > result;	// ×îÖÕ½á¹û¡£
+    vector<vector<int> > combinationSum2(vector<int> &num, int target) {
+        vector<vector<int> > result;
 		if (num.empty() || target < 1) return result;
-		sort(num.begin(),num.end());	// ÅÅĞò¹ıµÄÊı×é£¬ÏàµÈÔªËØ»áÏàÁÚ¡£
-		vector<int> sequence;	// Ò»¸ö¿ÉĞĞÅÅÁĞ¡£
-		dfs2(result,sequence,0,target,num);
+		sort(num.begin(),num.end(), [](int a, int b){return a > b;});	// æœ€ç»ˆç»“æœã€‚
+		vector<int> sequence;	// ä¸€ä¸ªå¯è¡Œæ’åˆ—ã€‚
+		dfs(result,sequence,0,target,num);
 		return result;
-	}
-	// Ê¹ÓÃnums[start, nums.size())Ö®¼äµÄÔªËØ£¬ÄÜÕÒµ½µÄËùÓĞ¿ÉĞĞ½â¡£
-	void dfs2(vector<vector<int> >& result, vector<int>& sequence, int start, int gap, const vector<int> &candidates)
+    }
+    void dfs(vector<vector<int> >& result, vector<int>& sequence, int start, int gap, const vector<int> &candidates)
 	{
-		if (gap == 0)	// ÕÒµ½Ò»¸öºÏ·¨½â¡£
+		if (gap == 0)	// æ‰¾åˆ°ä¸€ä¸ªåˆæ³•è§£ã€‚
 		{
 			//sort(sequence.begin(),sequence.end());
 			result.push_back(sequence);
 			return;
 		}
 		int previous = -1;
-		for (int i = start; i < candidates.size(); ++i)	// À©Õ¹×´Ì¬¡£
+		for (int i = start; i < candidates.size(); ++i)	// æ‰©å±•çŠ¶æ€ã€‚
 		{
-			// Èç¹ûÉÏÒ»ÂÖÑ­»·Ñ¡ÁËnums[i]£¬Ôò±¾´ÎÑ­»·¾Í²»ÄÜÔÙÑ¡nums[i]£¬
-			// È·±£nums[i]×î¶àÖ»ÓÃÒ»´Î¡£
-			if (previous == candidates[i]) continue;
-			if (gap < candidates[i]) return;	// ¼ôÖ¦¡£
+		    if (previous == candidates[i]) continue;
+			if (gap < candidates[i]) continue;	// å‰ªæã€‚
 			previous = candidates[i];
 			sequence.push_back(candidates[i]);
-			dfs2(result,sequence,i+1,gap-candidates[i],candidates);	// À©Õ¹¡£
-			sequence.pop_back();	// ³·Ïú¶¯×÷¡£
+			dfs(result,sequence,i+1,gap-candidates[i],candidates);	// æ‰©å±•ã€‚
+			sequence.pop_back();	// æ’¤é”€åŠ¨ä½œã€‚
 		}
 	}
+
 };
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Combination_Sum_II", "[Depth-First Search]"){

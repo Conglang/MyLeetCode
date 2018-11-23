@@ -31,13 +31,13 @@ buy[i]  = max(rest[i-1]-price, buy[i-1])
 sell[i] = max(buy[i-1]+price, sell[i-1])
 rest[i] = max(sell[i-1], buy[i-1], rest[i-1])
 
-”…”⁄buy[i] <= rest[i], rest[i] <= sell[i]£¨À˘“‘◊Ó∫Û“ª––µ»º€Œ™rest[i] = sell[i-1]
+Áî±‰∫ébuy[i] <= rest[i], rest[i] <= sell[i]ÔºåÊâÄ‰ª•ÊúÄÂêé‰∏ÄË°åÁ≠â‰ª∑‰∏∫rest[i] = sell[i-1]
 
-ªØºÚŒ™£∫
+ÂåñÁÆÄ‰∏∫Ôºö
 buy[i] = max(sell[i-2]-price, buy[i-1])
 sell[i] = max(buy[i-1]+price, sell[i-1])
 
-”…”⁄day i÷ª∫Õi-1∫Õi-2”–πÿœµ£¨À˘“‘ø…“‘÷ª π”√O(1) Space°£
+Áî±‰∫éday iÂè™Âíåi-1Âíåi-2ÊúâÂÖ≥Á≥ªÔºåÊâÄ‰ª•ÂèØ‰ª•Âè™‰ΩøÁî®O(1) Space„ÄÇ
 */
 class Solution {
 public:

@@ -13,7 +13,7 @@
 * A linked list can be reversed either iteratively or recursively. Could you implement both?
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// 时间复杂度O(n)，空间复杂度O(1)
+// 鏃堕棿澶嶆潅搴(n)锛岀┖闂村鏉傚害O(1)
 /**
  * Definition for singly-linked list.
  * struct ListNode {

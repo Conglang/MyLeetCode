@@ -28,11 +28,11 @@
 #define W2
 
 #ifdef W1
-// ¸´ÖÆresultÇ°Ò»°ëÔªËØ£¬È»ºó²åÈëĞÂÊı×Ö¡£Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// å¤åˆ¶resultå‰ä¸€åŠå…ƒç´ ï¼Œç„¶åæ’å…¥æ–°æ•°å­—ã€‚æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	vector<vector<int> > subsets(vector<int> &S) {
-		sort(S.begin(), S.end()); // Êä³öÒªÇóÓĞĞò
+		sort(S.begin(), S.end()); // è¾“å‡ºè¦æ±‚æœ‰åº
 		vector<vector<int> > result(1);
 		for (auto elem : S) {
 			result.reserve(result.size() * 2);
@@ -48,23 +48,24 @@ public:
 #endif
 
 #ifdef W2
-// ¶ş½øÖÆ·¨£¬Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// äºŒè¿›åˆ¶æ³•ï¼Œæ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 /*
-¼¯ºÏµÄÔªËØ²»³¬¹ıintÎ»Êı¡£ÓÃÒ»¸öintÕûÊı±íÊ¾Î»ÏòÁ¿£¬µÚiÎ»Îª1£¬Ôò±íÊ¾
-Ñ¡ÔñS[i]£¬Îª0Ôò²»Ñ¡Ôñ¡£ÀıÈçS={A,B,C,D}£¬Ôò0110=6±íÊ¾×Ó¼¯ {B,C}¡£
+é›†åˆçš„å…ƒç´ ä¸è¶…è¿‡intä½æ•°ã€‚ç”¨ä¸€ä¸ªintæ•´æ•°è¡¨ç¤ºä½å‘é‡ï¼Œç¬¬iä½ä¸º1ï¼Œåˆ™è¡¨ç¤º
+é€‰æ‹©S[i]ï¼Œä¸º0åˆ™ä¸é€‰æ‹©ã€‚ä¾‹å¦‚S={A,B,C,D}ï¼Œåˆ™0110=6è¡¨ç¤ºå­é›† {B,C}ã€‚
 */
 class Solution {
 public:
 	vector<vector<int> > subsets(vector<int> &S) {
-		sort(S.begin(), S.end()); // Êä³öÒªÇóÓĞĞò
+		sort(S.begin(), S.end()); // è¾“å‡ºè¦æ±‚æœ‰åº
 		vector<vector<int> > result;
 		const size_t n = S.size();
 		vector<int> v;
-		for (size_t i = 0; i < 1 << n; i++)		// Éú³ÉËùÓĞĞòÁĞ
+		for (size_t i = 0; i < 1 << n; i++)		// ç”Ÿæˆæ‰€æœ‰åºåˆ—
 		{
-			for (size_t j = 0; j < n; j++)	// ½âÎö¶ş½øÖÆÊı
+			for (size_t j = 0; j < n; j++)	// è§£æäºŒè¿›åˆ¶æ•°
 			{
-				if (i & 1 << j) v.push_back(S[j]);	// ÄÄÒ»Î»ÊÇ1¾Í¼ÓÈëÄÄ¸ö¶ÔÓ¦Êı×Ö
+				if (i & 1 << j)
+					v.push_back(S[j]);	// å“ªä¸€ä½æ˜¯1å°±åŠ å…¥å“ªä¸ªå¯¹åº”æ•°å­—
 			}
 			result.push_back(v);
 			v.clear();

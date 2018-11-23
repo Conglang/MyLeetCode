@@ -15,8 +15,8 @@
 * The result can be in any order.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
-// ÓÃÒ»¸öunordered_set¼ÇÂ¼µÚÒ»¸övectorÖĞÒÑ¾­´æÔÚµÄÊı¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
+// ç”¨ä¸€ä¸ªunordered_setè®°å½•ç¬¬ä¸€ä¸ªvectorä¸­å·²ç»å­˜åœ¨çš„æ•°ã€‚
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {

@@ -37,7 +37,7 @@
 // ref: https://discuss.leetcode.com/topic/51893/two-solutions-one-is-dp-the-other-is-greedy-8-lines/2
 #ifdef W1
 // DP
-// 两个vector分别跟踪以大数结尾和以小数结尾的情况
+// 涓や釜vector鍒嗗埆璺熻釜浠ュぇ鏁扮粨灏惧拰浠ュ皬鏁扮粨灏剧殑鎯呭喌
 class Solution {
 public:
 	int wiggleMaxLength(vector<int>& nums) {

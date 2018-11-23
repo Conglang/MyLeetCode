@@ -14,8 +14,8 @@
 * Could you optimize your algorithm to use only O(k) extra space?
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
-// ´ÓÓÒÏò×óÂÖ»»ÊıÖµ¡£
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
+// ä»å³å‘å·¦è½®æ¢æ•°å€¼ã€‚
 class Solution {
 public:
 	vector<int> getRow(int rowIndex) {

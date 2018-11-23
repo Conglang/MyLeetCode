@@ -40,7 +40,7 @@
 #define W2
 
 #ifdef W1
-// ¿í¶ÈÓÅÏÈ±éÀú£¬²»ºÏ¸ñ£¬ÒòÎª²»ÊÇ³£Êı¿Õ¼ä¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
+// å®½åº¦ä¼˜å…ˆéå†ï¼Œä¸åˆæ ¼ï¼Œå› ä¸ºä¸æ˜¯å¸¸æ•°ç©ºé—´ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
 /**
  * Definition for binary tree with next pointer.
  * struct TreeLinkNode {
@@ -80,8 +80,8 @@ public:
 #endif
 
 #ifdef W2
-// Ö»ÊÊÓÃÓÚÍêÃÀ¶ş²æÊ÷Çé¿ö¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
+// åªé€‚ç”¨äºå®Œç¾äºŒå‰æ ‘æƒ…å†µã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
 /**
  * Definition for binary tree with next pointer.
  * struct TreeLinkNode {

@@ -14,8 +14,8 @@
 * Your algorithm should run in O(n) complexity.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
-// Ò»¿´µ½O(n)£¬¾ÍÏëÆğÀ´¹şÏ£±í¡£Èç¹ûÒªÅÅĞò£¬ÖÁÉÙÒªO(nlogn)£¬ËùÒÔ²»ÄÜÅÅĞò¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
+// ä¸€çœ‹åˆ°O(n)ï¼Œå°±æƒ³èµ·æ¥å“ˆå¸Œè¡¨ã€‚å¦‚æœè¦æ’åºï¼Œè‡³å°‘è¦O(nlogn)ï¼Œæ‰€ä»¥ä¸èƒ½æ’åºã€‚
 class Solution {
 public:
 	int longestConsecutive(vector<int> &num) {
@@ -30,7 +30,7 @@ public:
 		for (auto i : num)
 		{
 #endif
-			used[i] = false;	// Ê×ÏÈ±ê¼ÇÁĞ±íÖĞËùÓĞµÄÔªËØ¶¼Î´·ÃÎÊ
+			used[i] = false;	// é¦–å…ˆæ ‡è®°åˆ—è¡¨ä¸­æ‰€æœ‰çš„å…ƒç´ éƒ½æœªè®¿é—®
 		}
 		int max_len(0);
 #if __cplusplus < 201103L
@@ -38,20 +38,20 @@ public:
 		{
 			int i = *t;
 #else
-		for (auto i : num)	// ±éÀúÔªËØ
+		for (auto i : num)	// éå†å…ƒç´ 
 		{
 #endif
 		
-			if(used[i]) continue;	// Èç¹ûÎ´·ÃÎÊ¹ı
+			if(used[i]) continue;	// å¦‚æœæœªè®¿é—®è¿‡
 			int length = 1;
 			used[i] = true;
-			// ¿´¿´±ÈËü´óµÄÁ¬ĞøÊı×ÖÊÇ·ñ´æÔÚÓÚÁĞ±í
+			// çœ‹çœ‹æ¯”å®ƒå¤§çš„è¿ç»­æ•°å­—æ˜¯å¦å­˜åœ¨äºåˆ—è¡¨
 			for (int j = i + 1; used.find(j) != used.end(); ++j)
 			{
 				used[j] = true;
 				++length;
 			}
-			// ¿´¿´±ÈËüĞ¡µÄÁ¬ĞøÊı×ÖÊÇ·ñ´æÔÚÓÚÁĞ±í
+			// çœ‹çœ‹æ¯”å®ƒå°çš„è¿ç»­æ•°å­—æ˜¯å¦å­˜åœ¨äºåˆ—è¡¨
 			for (int j = i - 1; used.find(j) != used.end(); --j)
 			{
 				used[j] = true;

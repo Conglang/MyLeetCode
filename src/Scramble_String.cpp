@@ -46,8 +46,8 @@
 #define W2
 #ifdef W1
 // LeetCode, Interleaving String
-// µİ¹é£¬»á³¬Ê±£¬½öÓÃÀ´°ïÖúÀí½â
-// Ê±¼ä¸´ÔÓ¶ÈO(n^6)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// é€’å½’ï¼Œä¼šè¶…æ—¶ï¼Œä»…ç”¨æ¥å¸®åŠ©ç†è§£
+// æ—¶é—´å¤æ‚åº¦O(n^6)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
 	bool isScramble(string s1, string s2) {
@@ -60,7 +60,7 @@ private:
 		auto last2 = next(first2, length);
 		if (length == 1) return *first1 == *first2;
 		for (int i = 1; i < length; ++i)
-			// Á½¸ö×Ö·û´®·Ö³ÉA1A2ºÍB1B2Á½²¿·Ö£¬±È½ÏA1B1/A2B2»òA1B2/A2B1×éºÏ¡£
+			// ä¸¤ä¸ªå­—ç¬¦ä¸²åˆ†æˆA1A2å’ŒB1B2ä¸¤éƒ¨åˆ†ï¼Œæ¯”è¾ƒA1B1/A2B2æˆ–A1B2/A2B1ç»„åˆã€‚
 			if ((isScramble(first1, first1 + i, first2)
 				&& isScramble(first1 + i, last1, first2 + i))
 				|| (isScramble(first1, first1 + i, last2 - i)
@@ -72,10 +72,10 @@ private:
 #endif
 
 #ifdef W2
-// ¶¯Ì¬¹æ»®¡£Ê±¼ä¸´ÔÓ¶ÈO(n^3)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n^3)¡£
+// åŠ¨æ€è§„åˆ’ã€‚æ—¶é—´å¤æ‚åº¦O(n^3)ï¼Œç©ºé—´å¤æ‚åº¦O(n^3)ã€‚
 /*
-*	Éè×´Ì¬Îªf[n][i][j]£¬±íÊ¾³¤¶ÈÎªn£¬ÆğµãÎªs1[i]ºÍÆğµãÎªs2[j]Á½¸ö×Ö·û´®ÊÇ·ñ»¥Îªscramble£¬
-*	Ôò×´Ì¬×ªÒÆ·½³ÌÎª£º
+*	è®¾çŠ¶æ€ä¸ºf[n][i][j]ï¼Œè¡¨ç¤ºé•¿åº¦ä¸ºnï¼Œèµ·ç‚¹ä¸ºs1[i]å’Œèµ·ç‚¹ä¸ºs2[j]ä¸¤ä¸ªå­—ç¬¦ä¸²æ˜¯å¦äº’ä¸ºscrambleï¼Œ
+*	åˆ™çŠ¶æ€è½¬ç§»æ–¹ç¨‹ä¸ºï¼š
 *	f[n][i][j] = (f[k][i][j] && f[n-k][i+k][j+k]) || (f[k][i][j+n-k] && f[n-k][i+k][j])
 */
 class Solution {

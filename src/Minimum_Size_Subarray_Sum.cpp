@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
 * Given an array of n positive integers and a positive integer s,
-* find the minimal length of a subarray of which the sum �� s. If there isn't one, return 0 instead.
+* find the minimal length of a subarray of which the sum ≥ s. If there isn't one, return 0 instead.
 * 
 * For example, given the array [2,3,1,2,4,3] and s = 7,
 * the subarray [4,3] has the minimal length under the problem constraint.
@@ -19,7 +19,7 @@
 // Ref: https://discuss.leetcode.com/topic/17063/4ms-o-n-8ms-o-nlogn-c
 #define W1
 #ifdef W1
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)
+// 时间复杂度O(n)，空间复杂度O(1)
 class Solution {
 public:
     int minSubArrayLen(int s, vector<int>& nums) {
@@ -40,7 +40,7 @@ public:
 #endif
 
 #ifdef W2
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)
+// 时间复杂度O(n)，空间复杂度O(1)
 class Solution {
 public:
     int minSubArrayLen(int s, vector<int>& nums) {
@@ -61,7 +61,7 @@ public:
 #endif
 
 #ifdef W3
-// ʱ�临�Ӷ�O(nlogn)���ռ临�Ӷ�O(1)
+// 时间复杂度O(nlogn)，空间复杂度O(1)
 /*
 The idea is to first maintain an array of accumulated summations of elements in nums.
 Specifically, for nums = [2, 3, 1, 2, 4, 3] in the problem statement,sums = [0, 2, 5, 6, 8, 12, 15].

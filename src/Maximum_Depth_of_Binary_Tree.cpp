@@ -19,7 +19,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// �ݹ顣ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(logn)��
+// 递归。时间复杂度O(n)，空间复杂度O(logn)。
 class Solution {
 public:
     int this_depth(TreeNode* root, int depth)

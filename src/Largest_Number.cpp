@@ -12,8 +12,8 @@
 * Note: The result may be very large, so you need to return a string instead of an integer.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)
-// ¹Ø¼üÊÇÏëµ½ÔÚsortingµÄÊ±ºòÓÃs1+s2 > s2+s1Õâ¸ö×ö±ê×¼¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)
+// å…³é”®æ˜¯æƒ³åˆ°åœ¨sortingçš„æ—¶å€™ç”¨s1+s2 > s2+s1è¿™ä¸ªåšæ ‡å‡†ã€‚
 class Solution {
 public:
     string largestNumber(vector<int>& nums) {

@@ -22,7 +22,7 @@
  * };
  */
 #include "../include/include.h"
-// й╠╪Д╦╢тс╤хO(n)ё╛©у╪Д╦╢тс╤хO(1)║ё
+// Ф≈╤И≈╢Е╓█Ф²┌Е╨╕O(n)О╪▄Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(1)Ц─┌
 class Solution {
 public:
     ListNode *swapPairs(ListNode *head) {

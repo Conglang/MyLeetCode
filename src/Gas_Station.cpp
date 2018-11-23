@@ -16,11 +16,11 @@
 * The solution is guaranteed to be unique.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ����O(n^2)�İ취�ᳬʱ��������O(n)�ķ�����
-// ��������޽⣬��ôgas�����ض�С��cost������
-// ��ô���gas��������cost������һ���н⣬gas����ĵ����һ���������㡣
-// sum�����жϵ�ǰ��gas�Ƿ��㹻��total�����ж�ȫ���Ƿ��н⡣
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
+// 采用O(n^2)的办法会超时，以下是O(n)的方法。
+// 如果整个无解，那么gas总量必定小于cost总量。
+// 那么如果gas总量大于cost总量，一定有解，gas不足的点的下一个点就是起点。
+// sum用来判断当前点gas是否足够，total用来判断全局是否有解。
+// 时间复杂度O(n)，空间复杂度O(1)。
 class Solution {
 public:
 	int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {

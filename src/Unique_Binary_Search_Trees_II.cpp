@@ -27,7 +27,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// ·ÖÎö¼ûÇ°Ò»Ìâ¡£
+// åˆ†æè§å‰ä¸€é¢˜ã€‚
 class Solution {
 public:
     vector<TreeNode *> generateTrees(int n) {

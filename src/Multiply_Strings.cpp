@@ -15,62 +15,7 @@
 * You must not use any built-in BigInteger library or convert the inputs to integer directly.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-#define W2
-#ifdef W1
-// ¸ÉÂï±éÀúÁ½±é£¬¿ÉÒÔÏëÇå³ş£¬Ò»±é¾Í¿ÉÒÔ¡£²îÆÀ¡£
-class Solution {
-public:
-	string multiply(string num1, string num2) {
-		// special cases
-		if (num1.empty() || num2.empty()) return "0";
-		if ((num1.size() == 1 && num1 == "0") || (num2.size() == 1 && num2 == "0")) return "0";
-		// get every sub string
-		vector<string> substrings;
-		for (int j = num2.size() - 1; j >= 0; --j)
-		{
-			int n2(num2.at(j) - '0');
-			int plus(0);
-			string cur_num("");
-			for (int i = num1.size() - 1; i >= 0; --i)
-			{
-				int n1(num1.at(i) - '0');
-				int mul_num(n2 * n1 + plus);
-				cur_num.insert(cur_num.begin(), '0' + mul_num % 10);
-				plus = mul_num / 10;
-			}
-			if (plus != 0) {cur_num.insert(cur_num.begin(), '0' + plus);}
-			substrings.push_back(cur_num + string(num2.size() - j - 1, '0'));
-		}
-		// add substring
-		string result;
-		int radix(0), plus(0);
-		while (radix < substrings.size())
-		{
-			int sum(0);
-			radix = 0;
-			for (string& str : substrings)
-			{
-				if (!str.empty())
-				{
-					sum += (str.back() - '0');
-					str.pop_back();
-				}
-				if (str.empty())
-				{
-					++radix;
-				}
-			}
-			sum += plus;
-			result.insert(result.begin(), '0' + sum % 10);
-			plus = sum / 10;
-		}
-		if (plus != 0) {result.insert(result.begin(), '0' + plus);}
-		return result;
-	}
-};
-#endif
 
-#ifdef W2
 /*
 This is the standard manual multiplication algorithm.
 We use two nested for loops, working backward from the end of each input number.
@@ -79,7 +24,7 @@ One special case to note is when our carry requires us to write to our sum strin
 
 At the end, we trim any leading zeros, or return 0 if we computed nothing but zeros.
 
-×¢Òâµ½i + j + 1Õâ¸ö¹ØÏµ¡£
+æ³¨æ„åˆ°i + j + 1è¿™ä¸ªå…³ç³»ã€‚
 */
 class Solution {
 public:
@@ -105,7 +50,7 @@ public:
 		return "0";
 	}
 };
-#endif
+
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Multiply_Strings", "[Strings]"){
 	Solution s;

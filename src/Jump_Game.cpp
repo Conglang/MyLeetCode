@@ -19,32 +19,32 @@
 #include "../include/include.h"
 #define W1
 #ifdef W1
-// ̰�ķ���ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
-// ����һ��һ����������������Զ������Χ��������ܲ��ܳ�����߲㡣
+// 贪心法，时间复杂度O(n)，空间复杂度O(1)。
+// 正向，一层一层往上跳，计算最远可跳范围，看最后能不能超过最高层。
 class Solution {
 public:
 	bool canJump(int A[], int n) {
 		if(!A || !n) {return true;}
-		int reach(1);	// ��1��ʼ�������������������
-		// �������������ķ�Χ������������ľ��롣
+		int reach(1);	// 从1开始计数，最右能跳到哪里。
+		// 遍历可以跳到的范围，逐步扩大可跳的距离。
 		for (int i = 0; i < reach && reach < n; ++i)
 		{
 			reach = max(reach, i + 1 + A[i]);
 		}
-		// �����ҿ����ľ����Ƿ����n��
+		// 看最右可跳的距离是否大于n。
 		return reach >= n;
 	}
 };
 #endif
 
 #ifdef W2
-// ̰�ķ���ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(1)��
-// ���򣬴���߲���¥�ݣ�һ��һ�����½���������Ϳɵ����λ�ã����ܷ�ص���0�㡣
+// 贪心法，时间复杂度O(n)，空间复杂度O(1)。
+// 逆向，从最高层下楼梯，一层一层往下降，计算最低可到达的位置，看能否回到第0层。
 class Solution {
 public:
 	bool canJump (int A[], int n) {
 		if (!A || !n) return true;
-		// ������¥�ݣ��������½����ڼ���
+		// 逆向下楼梯，最左能下降到第几层
 		int left_most = n - 1;
 		for (int i = n - 2; i >= 0; --i)
 			if (i + A[i] >= left_most)
@@ -55,8 +55,8 @@ public:
 #endif
 
 #ifdef W3
-// ��̬�滮��ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(n)��
-// ��״̬Ϊf[i]����ʾ��0�������ߵ�A[i]ʱʣ������������״̬ת�Ʒ���Ϊf[i]=max(f[i-1),A[i-1])-1;
+// 动态规划，时间复杂度O(n)，空间复杂度O(n)。
+// 设状态为f[i]，表示从0出发，走到A[i]时剩余的最大步数，则状态转移方程为f[i]=max(f[i-1),A[i-1])-1;
 class Solution {
 public:
 	bool canJump(int A[], int n) {

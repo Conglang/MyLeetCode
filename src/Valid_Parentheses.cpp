@@ -10,7 +10,7 @@
 * The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	bool isValid(string s) {
@@ -33,7 +33,8 @@ public:
 			{
 				if (stk.empty() || stk.top() != left[right.find(c)])
 				{return false;}
-				else {stk.pop();}
+				else 
+				{stk.pop();}
 			}
 		}
 		return stk.empty();

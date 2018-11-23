@@ -17,8 +17,8 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// �����ռ䣬�ռ临�Ӷ�O(nlogn)���������ʺ��ù鲢����˫�������ʺ��ÿ�������
-// �鲢�������ÿ���ָ���������Ϊ�����֡�Ȼ��ݹ����ù鲢����
+// 常数空间，空间复杂度O(nlogn)，单链表适合用归并排序，双向链表适合用快速排序。
+// 归并排序。利用快慢指针把链表分为两部分。然后递归利用归并排序。
 class Solution {
 public:
     ListNode *sortList(ListNode *head) {

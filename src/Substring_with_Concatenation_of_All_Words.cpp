@@ -94,7 +94,7 @@ public:
 #endif
 
 #ifdef W2
-// ʱ�临�Ӷ�O(max(nW * L.size(), nS)
+// 时间复杂度O(max(nW * L.size(), nS)
 class Solution {
 // The general idea:
 // Construct a hash function f for L, f: vector<string> -> int, 

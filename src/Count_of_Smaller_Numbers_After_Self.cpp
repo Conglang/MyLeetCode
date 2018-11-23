@@ -20,10 +20,10 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 #define W2
-// ������һ��vector�����������������һ��������ݣ�����㵽��߽��ֵ����С�����������������̿����ö��֣��Ϳ�����nlogn�ˡ�
+// 考虑另一个vector，不断向里面插入下一个左边数据，插入点到左边界的值就是小于数。而这个插入过程可以用二分，就可以是nlogn了。
 #ifdef W1
-// ʱ�临�Ӷ�O(n^2)���ռ临�Ӷ�O(n)
-// ����һ��vector�洢�ź���ĵ�ǰ�Ҳ�Ԫ�أ�ÿ�μ���һ�¾���begin�ľ��롣
+// 时间复杂度O(n^2)，空间复杂度O(n)
+// 用另一个vector存储排好序的当前右侧元素，每次计算一下距离begin的距离。
 class Solution {
 public:
     vector<int> countSmaller(vector<int>& nums) {
@@ -44,9 +44,9 @@ public:
 #endif
 
 #ifdef W2
-// ��¼�Ĺ��̲�����vector�����ǹ���һ��BST�������Ǹо��˴����㷨ʵ�ֵ��е㲻��Ȼ�������ǲ����ҽڵ�ʱ��leftCount�Ĵ������������
-// ��������Ҳ������mergesort����֮���ǽ���¼�����������ĳ�ֲ�ѯ�㷨ʵ�֡�
-// ʱ�临�Ӷ�O(nlogn)���ռ临�Ӷ�O(n)
+// 记录的过程不再用vector，而是构造一棵BST树。但是感觉此处的算法实现的有点不自然，尤其是插入右节点时对leftCount的处理，不舒服。
+// 其他方法也可以用mergesort，总之都是将记录的这个过程用某种查询算法实现。
+// 时间复杂度O(nlogn)，空间复杂度O(n)
 // Ref: https://discuss.leetcode.com/topic/43595/c-36ms-bst-solution
 struct SpecificTreeNode {
     int val;

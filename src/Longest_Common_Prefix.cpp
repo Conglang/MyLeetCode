@@ -10,8 +10,8 @@
 #include "../include/include.h"
 #define W1
 #ifdef W1
-// ����ɨ�裬��λ��0��ʼ����ÿһ��λ�ñȽ������ַ�����ֱ������һ����ƥ��
-// ʱ�临�Ӷ�O(n1+n2+n3+...)���ռ临�Ӷ�O(1)��
+// 纵向扫描，从位置0开始，对每一个位置比较所有字符串，直到遇到一个不匹配
+// 时间复杂度O(n1+n2+n3+...)，空间复杂度O(1)。
 class Solution{
 public:
 	string longestCommonPrefix(vector<string> &strs) {
@@ -28,8 +28,8 @@ public:
 };
 #endif
 #ifdef W2
-// ����Ƚϣ�ÿ���ַ������0���ַ����������ұȽϣ�ֱ������һ����ƥ��
-// ʱ�临�Ӷ�O(n1+n2+n3+...)���ռ临�Ӷ�O(1)��
+// 横向比较，每个字符串与第0个字符串，从左到右比较，直到遇到一个不匹配
+// 时间复杂度O(n1+n2+n3+...)，空间复杂度O(1)。
 class Solution
 {
 public:
@@ -39,7 +39,7 @@ public:
 		{
 			for (int idx = 0; idx < strs[0].size(); ++idx)
 			{
-				if (strs[i][idx] != strs[0][idx])	// ԭ������Խ��
+				if (strs[i][idx] != strs[0][idx])	// 原来不会越界
 				{return strs[0].substr(0, idx);}
 			}
 		}

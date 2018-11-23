@@ -23,7 +23,7 @@
 #ifdef W1
 // Ref: https://discuss.leetcode.com/topic/9406/3-lines-of-c-in-one-pass-using-swap/14
 // Time complexity: O(n), Space complexity: O(1)
-// ÓÃswapĞı×ªÇ°k¸ö£¬È»ºóÔÚÊ£ÏÂµÄr¸öÊı×ÖÖĞĞı×ªr-k¸ö£¬Öğ½¥¡£
+// ç”¨swapæ—‹è½¬å‰kä¸ªï¼Œç„¶ååœ¨å‰©ä¸‹çš„rä¸ªæ•°å­—ä¸­æ—‹è½¬r-kä¸ªï¼Œé€æ¸ã€‚
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {

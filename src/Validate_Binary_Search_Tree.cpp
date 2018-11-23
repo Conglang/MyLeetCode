@@ -17,10 +17,10 @@
 #define W2
 
 #ifdef W1
-// ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(n)��
-// ��������Ľ��Ӧ���ǵ����ģ���������жϡ�
-// �����������õݹ��������һ�飬Ȼ���ٱ�������Ƚϣ�����̫�á�
-// ֱ���õ�����ʽ�������Ƚϸ��á�
+// 时间复杂度O(n)，空间复杂度O(n)。
+// 中序遍历的结果应该是递增的，根据这个判断。
+// 本方法是先用递归中序遍历一遍，然后再遍历结果比较，不是太好。
+// 直接用迭代方式遍历并比较更好。
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -58,7 +58,7 @@ private:
 #endif
 
 #ifdef W2
-// �ݹ��жϱ��ڵ�ֵ�Ƿ��ڿ��������ڡ�ʱ�临�Ӷ�O(n) ���ռ临�Ӷ�O(logn)��
+// 递归判断本节点值是否在可行区间内。时间复杂度O(n) ，空间复杂度O(logn)。
 class Solution {
 public:
 	bool isValidBST(TreeNode* root) {

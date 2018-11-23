@@ -31,7 +31,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// �ݹ鴫�ݸ��ڵ�ĺͣ�������������֮�͡�ʱ�临�Ӷ�O(n)���ռ临�Ӷ�O(logn)��
+// 递归传递父节点的和，计算左右子树之和。时间复杂度O(n)，空间复杂度O(logn)。
 class Solution {
 public:
     int sumNumbers(TreeNode *root) {

@@ -14,28 +14,28 @@
 * You may assume no duplicate exists in the array.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(logn)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
-// ¶ş·Ö²éÕÒ
+// æ—¶é—´å¤æ‚åº¦O(logn)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
+// äºŒåˆ†æŸ¥æ‰¾
 class Solution {
 public:
 	int search(int A[], int n, int target) {
-		int l(0),r(n);	// Çø¼ä[l,r)
+		int l(0),r(n);	// åŒºé—´[l,r)
 		while (l != r)
 		{
 			int m = (l + r) / 2;
 			if (A[m] == target) {return m;}
-			if (A[l] < A[m])	// Èç¹û×ó°ë±ß²»°üº¬Ğı×ªµã
+			if (A[l] < A[m])	// å¦‚æœå·¦åŠè¾¹ä¸åŒ…å«æ—‹è½¬ç‚¹
 			{
-				if (target < A[m] && target >= A[l])	// Èç¹ûÔÚÎÈ¶¨µİÔöµÄ×ó°ë±ß
+				if (target < A[m] && target >= A[l])	// å¦‚æœåœ¨ç¨³å®šé€’å¢çš„å·¦åŠè¾¹
 				{
 					r = m;
 				}else
 				{
 					l = m + 1;
 				}
-			}else // Èç¹û×ó°ë±ß°üº¬Ğı×ªµã
+			}else // å¦‚æœå·¦åŠè¾¹åŒ…å«æ—‹è½¬ç‚¹
 			{
-				if (target > A[m] && target <= A[r-1])	// Èç¹ûÔÚÎÈ¶¨µİÔöµÄÓÒ°ë±ß
+				if (target > A[m] && target <= A[r-1])	// å¦‚æœåœ¨ç¨³å®šé€’å¢çš„å³åŠè¾¹
 				{
 					l = m + 1;
 				}else

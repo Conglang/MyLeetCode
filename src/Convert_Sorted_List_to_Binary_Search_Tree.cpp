@@ -8,8 +8,8 @@
 * Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ·ÖÖÎ·¨£¬×Ôµ×ÏòÉÏ¡£(!)
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
+// åˆ†æ²»æ³•ï¼Œè‡ªåº•å‘ä¸Šã€‚(!)
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -44,19 +44,19 @@ private:
     {
         if (start > end) return nullptr;
         int mid = start + (end - start) / 2;
-        TreeNode* leftchild = sortedListToBST(list, start, mid - 1);	// µ±¿ÉÒÔÓĞ×ó×ÓÊ÷µÄÊ±ºò³ÖĞøÏò×ó¡£
-        TreeNode* parent = new TreeNode(list->val);	
+        TreeNode* leftchild = sortedListToBST(list, start, mid - 1);	// å½“å¯ä»¥æœ‰å·¦å­æ ‘çš„æ—¶å€™æŒç»­å‘å·¦ã€‚
+        TreeNode* parent = new TreeNode(list->val);	// list æŒ‡é’ˆå·²ç»èµ°åˆ°äº†ä¸­é—´å¤„
         parent->left = leftchild;
-        list = list->next;	// µ½´ï×ó×ÓÊ÷µÄ¾¡Í·NULLºó²Å´¦Àí×Ô¼º£¬²¢½øĞĞµ½ÏÂÒ»½Úµã£¬ÅÅ³ıÒÑ·ÅÖÃµÄÕâ¸ö¡£
-        parent->right = sortedListToBST(list, mid + 1, end);	// È»ºó´¦ÀíÓÒ×ÓÊ÷¡£ÓÒ×ÓÊ÷Èç¹ûÓĞ×ó×ÓÊ÷Ò²»á³ÖĞøÏò×ó¡£
-        return parent;	// ÓÚÊÇÕâÊÇÖĞĞò±éÀúµÄÑù×Ó£¬Ò²¾ÍÊÇ¹¹ÔìÆ½ºâ¶ş²æÊ÷µÄË³Ğò¡£
+        list = list->next;	// åˆ°è¾¾å·¦å­æ ‘çš„å°½å¤´NULLåæ‰å¤„ç†è‡ªå·±ï¼Œå¹¶è¿›è¡Œåˆ°ä¸‹ä¸€èŠ‚ç‚¹ï¼Œæ’é™¤å·²æ”¾ç½®çš„è¿™ä¸ªã€‚
+        parent->right = sortedListToBST(list, mid + 1, end);	// ç„¶åå¤„ç†å³å­æ ‘ã€‚å³å­æ ‘å¦‚æœæœ‰å·¦å­æ ‘ä¹Ÿä¼šæŒç»­å‘å·¦ã€‚
+        return parent;	// äºæ˜¯è¿™æ˜¯ä¸­åºéå†çš„æ ·å­ï¼Œä¹Ÿå°±æ˜¯æ„é€ å¹³è¡¡äºŒå‰æ ‘çš„é¡ºåºã€‚
     }
 };
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Convert_Sorted_List_to_Binary_Search_Tree", "[Binary Search Tree]"){
 	Solution sln;
 	SECTION("Empty Input") {
-		REQUIRE(sln.sortedListToBST(NULL) == NULL);
+		REQUIRE(sln.sortedListToBST(nullptr) == nullptr);
 	}
 	SECTION("Normal Input") {
 		ListNode a1(1),a2(2),a3(3);

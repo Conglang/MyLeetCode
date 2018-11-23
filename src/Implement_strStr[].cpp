@@ -11,14 +11,14 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 
-// Ê±¼ä¸´ÔÓ¶ÈO(n*m)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// ÂùÁ¦×Ö·û´®Æ¥Åä¡£ÏÈÖªµÀÁ½ÕßµÄ³¤¶È²ÅÄÜÔÚºóÃæ²éÕÒµÄÊ±ºò×öÖÕÖ¹ÓÅ»¯¡£
+// æ—¶é—´å¤æ‚åº¦O(n*m)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// è›®åŠ›å­—ç¬¦ä¸²åŒ¹é…ã€‚å…ˆçŸ¥é“ä¸¤è€…çš„é•¿åº¦æ‰èƒ½åœ¨åé¢æŸ¥æ‰¾çš„æ—¶å€™åšç»ˆæ­¢ä¼˜åŒ–ã€‚
 class Solution {
 public:
 	int strStr(char *haystack, char *needle) {
 		if (!needle)	{return 0;}
 		if (!haystack)	{return -1;}
-		// ÏÈµÃµ½haystackºÍneedleµÄ³¤¶È
+		// å…ˆå¾—åˆ°haystackå’Œneedleçš„é•¿åº¦
 		int haystack_len(0);
 		int needle_len(0);
 		while (needle[needle_len])		{++needle_len;}
@@ -26,7 +26,7 @@ public:
 
 		if (!needle_len)	{return 0;}
 		if (!haystack_len)	{return -1;}
-		// ÂùÁ¦²éÕÒÆ¥Åä
+		// è›®åŠ›æŸ¥æ‰¾åŒ¹é…
 		for (int h_it = 0; h_it < haystack_len - needle_len + 1; ++h_it)
 		{
 			int n_it = 0;

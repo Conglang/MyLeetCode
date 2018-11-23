@@ -18,13 +18,14 @@
 * Output: index1=1, index2=2
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
-// Two Pointers¡£Á½¸öÖ¸ÕëÖğ½¥ÏòÖĞ¼ä±Æ½ü¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
+// Two Pointersã€‚ä¸¤ä¸ªæŒ‡é’ˆé€æ¸å‘ä¸­é—´é€¼è¿‘ã€‚
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
         vector<int> result;
-        if (numbers.size() < 2) return result;
+        if (numbers.size() < 2)
+            return result;
         int left(0), right(numbers.size()-1);
         while(left < right)
         {

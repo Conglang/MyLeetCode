@@ -11,7 +11,7 @@
 * Return a deep copy of the list.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// й╠╪Д╦╢тс╤хO(n)ё╛©у╪Д╦╢тс╤хO(1)║ё
+// Ф≈╤И≈╢Е╓█Ф²┌Е╨╕O(n)О╪▄Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(1)Ц─┌
 /**
  * Definition for singly-linked list with a random pointer.
  * struct RandomListNode {
@@ -26,13 +26,13 @@ struct RandomListNode {
 	RandomListNode *next, *random;
 	RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
 };
-// й╠╪Д╦╢тс╤хO(n)ё╛©у╪Д╦╢тс╤хO(1)
+// Ф≈╤И≈╢Е╓█Ф²┌Е╨╕O(n)О╪▄Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(1)
 /*
  cur			cur->next ...
- ║Щ		╗J		║Щ
+ Б├⌠		Б├≈		Б├⌠
  new_node		another_new_node ...
- охееапЁиуБяЫ╣дкЁпРё╛уБяЫё╛cur->next->random = cur->random->next;
- х╩╨Сты╡П©╙╬м©иртак║ё
+ Е┘┬Ф▌▓Е┬≈Ф┬░Х©≥Ф═╥Г └И║╨Е╨▐О╪▄Х©≥Ф═╥О╪▄cur->next->random = cur->random->next;
+ Г└╤Е░▌Е├█Ф▀├Е╪─Е╟╠Е▐╞Д╩╔Д╨├Ц─┌
 */
 class Solution {
 public:

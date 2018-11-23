@@ -5,7 +5,7 @@
 //		Date:			2015/2/20
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
-* The n-queens puzzle is the problem of placing n queens on an n¡Án chessboard such that
+* The n-queens puzzle is the problem of placing n queens on an nÃ—n chessboard such that
 * no two queens attack each other.
 * 
 *	   a b c d e f g h
@@ -41,22 +41,22 @@
 * ]
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÉîËÑ+¼ôÖ¦¡£Ê±¼ä¸´ÔÓ¶ÈO(n!)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ·±æœ+å‰ªæã€‚æ—¶é—´å¤æ‚åº¦O(n!)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<vector<string> > solveNQueens(int n) {
 		vector<vector<string> > result;
-		// ÌØÊâÇé¿ö¡£
+		// ç‰¹æ®Šæƒ…å†µã€‚
 		if (n == 0) {return result;}
 		if (n == 1) {result.assign(1,vector<string>(1,"Q")); return result;}
-		// ³õÊ¼¼ôÖ¦±äÁ¿¡£
-		columns.assign(n,-1);	// n¸öcolumns£¬Ã¿¸ö¾ùÎ´Õ¼¾İ£¬Îª-1¡£
-		main_diag.assign(n*2-1,-1);	// 2n-1¸öÖ÷¶Ô½ÇÏß£¬Ã¿¸ö¾ùÎ´Õ¼¾İ£¬Îª-1¡£
-		anti_diag.assign(n*2-1,-1);	// 2n-1¸ö¸±¶Ô½ÇÏß£¬Ã¿¸ö¾ùÎ´Õ¼¾İ£¬Îª-1¡£
+		// åˆå§‹å‰ªæå˜é‡ã€‚
+		columns.assign(n,-1);	// nä¸ªcolumnsï¼Œæ¯ä¸ªå‡æœªå æ®ï¼Œä¸º-1ã€‚
+		main_diag.assign(n*2-1,-1);	// 2n-1ä¸ªä¸»å¯¹è§’çº¿ï¼Œæ¯ä¸ªå‡æœªå æ®ï¼Œä¸º-1ã€‚
+		anti_diag.assign(n*2-1,-1);	// 2n-1ä¸ªå‰¯å¯¹è§’çº¿ï¼Œæ¯ä¸ªå‡æœªå æ®ï¼Œä¸º-1ã€‚
 
-		vector<string> oneway;	// Ò»ÖÖ¿ÉÄÜµÄ·½·¨¡£
-		dfs(result, oneway, n, 0);	// ÉîËÑÇó½â¡£
-		// ÏëÀûÓÃ¶Ô³ÆĞÔ»¯¼ò£¬Ã»ÓĞ³É¹¦¡£
+		vector<string> oneway;	// ä¸€ç§å¯èƒ½çš„æ–¹æ³•ã€‚
+		dfs(result, oneway, n, 0);	// æ·±æœæ±‚è§£ã€‚
+		// æƒ³åˆ©ç”¨å¯¹ç§°æ€§åŒ–ç®€ï¼Œæ²¡æœ‰æˆåŠŸã€‚
 		/*if (!result.empty())
 		{
 			copy(result.begin(),result.end(),back_inserter(result));
@@ -70,35 +70,35 @@ public:
 		return result;
 	}
 private:
-	// ÕâÈı¸ö±äÁ¿ÓÃÓÚ¼ôÖ¦¡£
-	vector<int> columns;	// ±íÊ¾ÒÑ¾­·ÅÖÃµÄ»ÊºóÕ¼¾İÁËÄÄĞ©ÁĞ¡£
-	vector<int> main_diag;	// Õ¼¾İÁËÄÄĞ©Ö÷¶Ô½ÇÏß¡£
-	vector<int> anti_diag;	// Õ¼¾İÁËÄÄĞ©¸±¶Ô½ÇÏß¡£
+	// è¿™ä¸‰ä¸ªå˜é‡ç”¨äºå‰ªæã€‚
+	vector<int> columns;	// è¡¨ç¤ºå·²ç»æ”¾ç½®çš„çš‡åå æ®äº†å“ªäº›åˆ—ã€‚
+	vector<int> main_diag;	// å æ®äº†å“ªäº›ä¸»å¯¹è§’çº¿ã€‚
+	vector<int> anti_diag;	// å æ®äº†å“ªäº›å‰¯å¯¹è§’çº¿ã€‚
 
-	// ÉîËÑ¡£
+	// æ·±æœã€‚
 	void dfs(vector<vector<string> >& result, vector<string>& oneway, int n, int r)
 	{
-		int m = /*r==0 ? (n+1)/2 :*/ n;	// ÏëÀûÓÃ¶Ô³ÆĞÔ»¯¼ò£¬Ã»ÓĞ³É¹¦¡£
+		int m = /*r==0 ? (n+1)/2 :*/ n;	// æƒ³åˆ©ç”¨å¯¹ç§°æ€§åŒ–ç®€ï¼Œæ²¡æœ‰æˆåŠŸã€‚
 		for (int j = 0; j < m; ++j)
 		{
-			if (is_valid(oneway, r, j, n))	// ÅĞ¶Ïµ±Ç°·½°¸ÊÇ·ñºÏ·¨¡£
+			if (is_valid(oneway, r, j, n))	// åˆ¤æ–­å½“å‰æ–¹æ¡ˆæ˜¯å¦åˆæ³•ã€‚
 			{
 				string str(n,'.');
 				str[j] = 'Q';
-				oneway.push_back(str);	// µ±Ç°·½°¸¼ÓÈë±¾ĞĞ¡£
-				// ¼ÇÂ¼¼ôÖ¦ÓÃ±äÁ¿¡£
+				oneway.push_back(str);	// å½“å‰æ–¹æ¡ˆåŠ å…¥æœ¬è¡Œã€‚
+				// è®°å½•å‰ªæç”¨å˜é‡ã€‚
 				columns[j] = r;
 				main_diag[j-r+n-1] = r;
 				anti_diag[j+r] = r;
-				// Èç¹ûÒÑµ½×îÄ©ĞĞ£¬¼ÓÈë½á¹û¼¯¡£
+				// å¦‚æœå·²åˆ°æœ€æœ«è¡Œï¼ŒåŠ å…¥ç»“æœé›†ã€‚
 				if (r == n-1)
 				{
 					result.push_back(oneway);
-				}else	// ·ñÔò¼ÌĞø¶ÔÏÂÒ»ĞĞÉîËÑ¡£
+				}else	// å¦åˆ™ç»§ç»­å¯¹ä¸‹ä¸€è¡Œæ·±æœã€‚
 				{
 					dfs(result,oneway,n,r+1);
 				}
-				// »Ö¸´¸÷ÖÖ×´Ì¬¡£
+				// æ¢å¤å„ç§çŠ¶æ€ã€‚
 				oneway.pop_back();
 				columns[j] = -1;
 				main_diag[j-r+n-1] = -1;
@@ -106,7 +106,7 @@ private:
 			}
 		}
 	}
-	// ¸ù¾İ¼ôÖ¦±äÁ¿ÅĞ¶Ïµ±Ç°·½°¸ÊÇ·ñºÏ·¨¡£
+	// æ ¹æ®å‰ªæå˜é‡åˆ¤æ–­å½“å‰æ–¹æ¡ˆæ˜¯å¦åˆæ³•ã€‚
 	bool is_valid(const vector<string>& board, int x, int y, int n)
 	{
 		bool is_column = columns[y] == -1;

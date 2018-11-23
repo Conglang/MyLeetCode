@@ -20,7 +20,7 @@
  * };
  */
 #include "../include/include.h"
-// ╣Э╢З║ёй╠╪Д╦╢тс╤хO(n)ё╛©у╪Д╦╢тс╤хO(1)║ё
+// Х©╜Д╩ёЦ─┌Ф≈╤И≈╢Е╓█Ф²┌Е╨╕O(n)О╪▄Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(1)Ц─┌
 class Solution {
 public:
     ListNode *deleteDuplicates(ListNode *head) {

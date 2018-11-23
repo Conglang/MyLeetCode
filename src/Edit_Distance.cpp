@@ -15,33 +15,33 @@
 * c) Replace a character
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ��̬�滮��ʱ�临�Ӷ�O(n*m)���ռ临�Ӷ�O(n*m)��
+// 动态规划，时间复杂度O(n*m)，空间复杂度O(n*m)。
 /*
-*	��״̬Ϊf[i][j]����ʾword1[0,i]��word2[0,j]֮�����С�༭���롣
-*	��word1��ǰ�������ַ���a��word2��ǰ�������ַ���b��
-*	1. ���a == b����f[i][j] = f[i-1][j-1]
-*	2. ���a != b��
-*		(1)�����a�滻��b����f[i][j] = f[i-1][j-1] + 1
-*		(2)�����a�ĺ�������һ��b����f[i][j] = f[i][j-1] + 1
-*		(3)�����aɾ������f[i][j] = f[i-1][j] + 1
+*	设状态为f[i][j]，表示word1[0,i]和word2[0,j]之间的最小编辑距离。
+*	设word1当前处理的字符是a，word2当前处理的字符是b。
+*	1. 如果a == b，则f[i][j] = f[i-1][j-1]
+*	2. 如果a != b，
+*		(1)如果将a替换成b，则f[i][j] = f[i-1][j-1] + 1
+*		(2)如果在a的后面添加一个b，则f[i][j] = f[i][j-1] + 1
+*		(3)如果将a删除，则f[i][j] = f[i-1][j] + 1
 */
 class Solution {
 public:
 	int minDistance(string word1, string word2) {
 		const int m = word1.length();
 		const int n = word2.length();
-		vector<vector<int> > f(m+1, vector<int>(n+1,0));	// 0λ��ʾ�գ�1λ��ʾ��1λ��mλ��ʾ��mλ��
-		// Ҫ���Ϊ""��״̬����СҪɾ��i���ַ���i����
+		vector<vector<int> > f(m+1, vector<int>(n+1,0));	// 0位表示空，1位表示第1位，m位表示第m位。
+		// 要清空为""的状态，最小要删除i个字符即i步。
 		for (int i = 0; i <= m; ++i)
 		{
 			f[i][0] = i;
 		}
-		// Ҫ��""��״̬����Ϊj�����ַ�������С��Ҫ����j���ַ���j����
+		// 要从""的状态增加为j长的字符串，最小需要添加j个字符即j步。
 		for (int j = 0; j <= n; ++j)
 		{
 			f[0][j] = j;
 		}
-		// ��̬�滮��������λ�á�
+		// 动态规划递推其他位置。
 		for (int i = 1; i <= m; ++i)
 		{
 			for (int j = 1; j <= n; ++j)

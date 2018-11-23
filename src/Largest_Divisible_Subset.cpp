@@ -22,8 +22,8 @@
 * Result: [1,2,4,8]
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// 首先想到的是backtracking
-// 试着用DP
+// 棣栧厛鎯冲埌鐨勬槸backtracking
+// 璇曠潃鐢―P
 // Ref: https://discuss.leetcode.com/topic/58571/c-solution-using-dp
 class Solution {
 public:

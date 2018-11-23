@@ -9,10 +9,13 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 
-// Èç¹û²ÉÓÃ¸´ÓÃmergeTwoListsµÄ·½·¨£¬»á³¬Ê±¡£
+#define W2
 
-// Ê¹ÓÃheap£¬Ê±¼ä¸´ÔÓ¶ÈO(n*logk)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
-// ´ÓÁĞ±íÖĞÃ¿¸öµÄµÚÒ»¸ö¿ªÊ¼ĞÎ³ÉÒ»¸ö¶Ñ£¬²»¶Ï°Ñ×îĞ¡ÔªËØµ¯³ö£¬°ÑÆäÏÂÒ»Î»ÍÆ½øÈ¥£¬³ÖĞøÎ¬»¤Õâ¸ö¶Ñ¡£
+#ifdef W1
+// å¦‚æœé‡‡ç”¨å¤ç”¨mergeTwoListsçš„æ–¹æ³•ï¼Œä¼šè¶…æ—¶ã€‚
+
+// ä½¿ç”¨heapï¼Œæ—¶é—´å¤æ‚åº¦O(n*logk)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
+// ä»åˆ—è¡¨ä¸­æ¯ä¸ªçš„ç¬¬ä¸€ä¸ªå¼€å§‹å½¢æˆä¸€ä¸ªå †ï¼Œä¸æ–­æŠŠæœ€å°å…ƒç´ å¼¹å‡ºï¼ŒæŠŠå…¶ä¸‹ä¸€ä½æ¨è¿›å»ï¼ŒæŒç»­ç»´æŠ¤è¿™ä¸ªå †ã€‚
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -64,6 +67,62 @@ private:
        }
    };
 };
+
+#endif
+
+#ifdef W2
+// devide and conquer
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *mergeKLists(vector<ListNode *> &lists) {
+        if (lists.empty())
+            return nullptr;
+        if (lists.size() == 1) {
+            return lists[0];
+        }
+        return mergeKLists(lists.begin(), lists.end());
+    }
+    
+    ListNode *mergeKLists(vector<ListNode*>::iterator begin, vector<ListNode*>::iterator end) {
+        if (begin == end || begin + 1 == end)
+            return *begin;
+        auto mid = begin + (end - begin) / 2;
+        ListNode* left = mergeKLists(begin, mid);
+        ListNode* right = mergeKLists(mid, end);
+        return mergeTwoLists(left, right);
+    }
+private:
+   ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        ListNode dummy(0);
+        ListNode* result = &dummy;
+        ListNode* node1 = l1;
+        ListNode* node2 = l2;
+        while (node1 && node2)
+        {
+            if (node1->val <= node2->val)
+            {
+                result->next = node1;
+                node1 = node1->next;
+            }else
+            {
+                result->next = node2;
+                node2 = node2->next;
+            }
+            result = result->next;
+        }
+		result->next = node1 ? node1 : node2;
+        return dummy.next;
+    }
+};
+#endif
 //--------------------------------------------------------------------------------------------------------------
 TEST_CASE("Merge_k_Sorted_Lists", "[Sorting]"){
 	Solution sln;

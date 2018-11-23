@@ -14,7 +14,7 @@
 * 
 * Note:
 * Given m, n satisfy the following condition:
-* 1 ¡Ü m ¡Ü n ¡Ü length of list.
+* 1 â‰¤ m â‰¤ n â‰¤ length of list.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // (!)
@@ -26,9 +26,9 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// ÏÈµÃµ½ÆğµãÇ°Ò»¶¥µãhead2£¬²»¶Ïµü´úÏòºó£¬Ã¿Ò»¸ö¶¯Ì¬¶¼ÊÇÆ½ºâµÄ£¬Ê±¿ÌÎ¬»¤head2/prev/curÈı¸ö¶¥µã¼äµÄ¹ØÏµ¡£
-// prevµÄnextÖ¸ÏòcurµÄnext£¬head2µÄnextÖ¸Ïòcur£¬curµÄnextÖ¸Ïòprev£¬curÃ¿´ÎÏòºóÇ°½øÒ»Î»¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
+// å…ˆå¾—åˆ°èµ·ç‚¹å‰ä¸€é¡¶ç‚¹head2ï¼Œä¸æ–­è¿­ä»£å‘åï¼Œæ¯ä¸€ä¸ªåŠ¨æ€éƒ½æ˜¯å¹³è¡¡çš„ï¼Œæ—¶åˆ»ç»´æŠ¤head2/prev/curä¸‰ä¸ªé¡¶ç‚¹é—´çš„å…³ç³»ã€‚
+// prevçš„nextæŒ‡å‘curçš„nextï¼Œhead2çš„nextæŒ‡å‘curï¼Œcurçš„nextæŒ‡å‘prevï¼Œcuræ¯æ¬¡å‘åå‰è¿›ä¸€ä½ã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
 class Solution {
 public:
     ListNode *reverseBetween(ListNode *head, int m, int n) {
@@ -70,7 +70,7 @@ TEST_CASE("Reverse_Linked_List_II", "[Linked Lists]"){
 	SECTION("Empty Input"){
 		REQUIRE(sln.reverseBetween(NULL,1,2) == NULL);
 		REQUIRE(get_nodes_val(sln.reverseBetween(&head,1,0)) == get_nodes_val(&head));
-		// ÎªÍ»³öÖØµã£¬ÔİÎ´¿¼ÂÇm»òn´óÓÚÁ´±í×Ü³¤¶ÈµÄÇé¿ö¡£
+		// ä¸ºçªå‡ºé‡ç‚¹ï¼Œæš‚æœªè€ƒè™‘mæˆ–nå¤§äºé“¾è¡¨æ€»é•¿åº¦çš„æƒ…å†µã€‚
 	}
 	SECTION("Normal Input1"){
 		int temp[5] = {2,1,3,4,5};

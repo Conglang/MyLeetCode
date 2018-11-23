@@ -18,8 +18,8 @@
 * Return 6.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÓÃ×î´óÁ¬Ðø×ÓÐòÁÐºÍ(Maximum Subarray)µÄË¼Â·¡£ÓÃdfs±éÀú¡£
-// ÏÈËã³ö×óÓÒ×ÓÊ÷µÄ½á¹ûLºÍR£¬Èç¹ûL´óÓÚ0£¬ÄÇÃ´¶ÔºóÐø½á¹ûÓÐÀû£¬¼ÓÉÏL£»Èç¹ûR´óÓÚ0£¬¶ÔºóÐø½á¹ûÒ²ÓÐÀû£¬¼ÓÉÏR¡£
+// ç”¨æœ€å¤§è¿žç»­å­åºåˆ—å’Œ(Maximum Subarray)çš„æ€è·¯ã€‚ç”¨dfséåŽ†ã€‚
+// å…ˆç®—å‡ºå·¦å³å­æ ‘çš„ç»“æžœLå’ŒRï¼Œå¦‚æžœLå¤§äºŽ0ï¼Œé‚£ä¹ˆå¯¹åŽç»­ç»“æžœæœ‰åˆ©ï¼ŒåŠ ä¸ŠLï¼›å¦‚æžœRå¤§äºŽ0ï¼Œå¯¹åŽç»­ç»“æžœä¹Ÿæœ‰åˆ©ï¼ŒåŠ ä¸ŠRã€‚
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -47,8 +47,8 @@ private:
         int sum = node->val;
         if (l > 0) sum += l;
         if (r > 0) sum += r;
-        max_sum = max(max_sum, sum);	// ÊÇ¿ÉÄÜ°üº¬×óÓÒµÄµ±Ç°Â·¾¶
-        return max(l, r) > 0 ? max(l, r) + node->val : node->val;	// ·µ»ØµÄÊÇÖ»°üº¬×ó»òÕßÓÒµÄ£¬Á½ÕßÖ®¼ä×î³¤ÄÇ¸öÓë±¾½ÚµãµÄºÍ¡£¼´±¾½ÚµãÊÇÒ»¸ö¶Ëµã¡£
+        max_sum = max(max_sum, sum);	// æ˜¯å¯èƒ½åŒ…å«å·¦å³çš„å½“å‰è·¯å¾„
+        return max(l, r) > 0 ? max(l, r) + node->val : node->val;	// è¿”å›žçš„æ˜¯åªåŒ…å«å·¦æˆ–è€…å³çš„ï¼Œä¸¤è€…ä¹‹é—´æœ€é•¿é‚£ä¸ªä¸Žæœ¬èŠ‚ç‚¹çš„å’Œã€‚å³æœ¬èŠ‚ç‚¹æ˜¯ä¸€ä¸ªç«¯ç‚¹ã€‚
     }
 };
 //--------------------------------------------------------------------------------------------------------------

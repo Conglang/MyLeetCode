@@ -17,20 +17,20 @@
 * Output: index1=1, index2=2
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<int> twoSum(vector<int> &numbers, int target) {
 		vector<int> result;
 		unordered_map<int, int> hash;
-		// Ê×ÏÈÓÃÒ»¸ö¹şÏ£±í¼ÇÂ¼ÏÂÃ¿¸öÔªËØµÄĞòºÅ¡£
+		// é¦–å…ˆç”¨ä¸€ä¸ªå“ˆå¸Œè¡¨è®°å½•ä¸‹æ¯ä¸ªå…ƒç´ çš„åºå·ã€‚
 		for (int i = 0; i < numbers.size(); ++i)
 		{
 			hash[numbers[i]] = i;
 		}
 		for(int i = 0; i < numbers.size(); ++i)
 		{
-			// ±éÀú£¬Èç¹ûtarget¼õÈ¥µ±Ç°ÖµµÄÖµÒ²ÊôÓÚÁĞ±í£¬²¢ÇÒ±¾ÖµÊÇÁ½ÖµÖĞ±È½ÏĞ¡µÄÄÇ¸ö£¬¼ÇÂ¼¡£
+			// éå†ï¼Œå¦‚æœtargetå‡å»å½“å‰å€¼çš„å€¼ä¹Ÿå±äºåˆ—è¡¨ï¼Œå¹¶ä¸”æœ¬å€¼æ˜¯ä¸¤å€¼ä¸­æ¯”è¾ƒå°çš„é‚£ä¸ªï¼Œè®°å½•ã€‚
 			if (hash.find(target - numbers[i]) != hash.end() && hash[target - numbers[i]] > i)
 			{
 				result.push_back(i + 1);

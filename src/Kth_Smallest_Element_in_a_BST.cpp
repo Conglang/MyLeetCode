@@ -8,7 +8,7 @@
 * Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
 * 
 * Note: 
-* You may assume k is always valid, 1 ¡Ü k ¡Ü BST's total elements.
+* You may assume k is always valid, 1 â‰¤ k â‰¤ BST's total elements.
 * 
 * Follow up:
 * What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?
@@ -21,8 +21,8 @@
 * The optimal runtime complexity is O(height of BST).
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÖĞĞò±éÀú
-// ÏÈÈ¥×ó×ÓÊ÷ÕÒ£¬Èç¹ûÓĞ¾Í·µ»Ø¡£Ã»ÓĞµÄ»°¾Í--k£¬´ËÊ±Èç¹ûkÎª0ÁË£¬±íÊ¾µ±Ç°½Úµã¾ÍÊÇ£¬·µ»Ø¡£²»È»¾ÍÈ¥ÓÒ×ÓÊ÷ÕÒ¡£
+// ä¸­åºéå†
+// å…ˆå»å·¦å­æ ‘æ‰¾ï¼Œå¦‚æœæœ‰å°±è¿”å›ã€‚æ²¡æœ‰çš„è¯å°±--kï¼Œæ­¤æ—¶å¦‚æœkä¸º0äº†ï¼Œè¡¨ç¤ºå½“å‰èŠ‚ç‚¹å°±æ˜¯ï¼Œè¿”å›ã€‚ä¸ç„¶å°±å»å³å­æ ‘æ‰¾ã€‚
 /**
  * Definition for a binary tree node.
  * struct TreeNode {

@@ -12,14 +12,14 @@
 * "((()))", "(()())", "(())()", "()(())", "()()()"
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ÉîËÑ¡£Ê±¼ä¸´ÔÓ¶ÈO(2^n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ·±æœã€‚æ—¶é—´å¤æ‚åº¦O(2^n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<string> generateParenthesis(int n) {
 		vector<string> result;
 		if (n==0) {return result;}
 		if (n==1) {result.assign(1,"()"); return result;}
-		int balance_factor = 0;	// ÓÒÀ¨ºÅ¼õÈ¥×óÀ¨ºÅµÄÊıÁ¿¡£
+		int balance_factor = 0;	// å³æ‹¬å·å‡å»å·¦æ‹¬å·çš„æ•°é‡ã€‚
 		string sequence;
 		dfs(result,sequence,n,0,balance_factor);
 		return result;
@@ -27,22 +27,22 @@ public:
 private:
 	void dfs(vector<string>& result,string& sequence, int n, int cur, int balance_factor)
 	{
-		if (balance_factor == 0 && cur == n*2)	// ·ûºÏÒªÇóµÄÇé¿ö¡£
+		if (balance_factor == 0 && cur == n*2)	// ç¬¦åˆè¦æ±‚çš„æƒ…å†µã€‚
 		{
 			result.push_back(sequence);
 			return;
 		}
-		if (balance_factor < 0 || cur >= n*2 || balance_factor > n)	// ¼ôÖ¦¡£ÓÒÀ¨ºÅÌ«¶à¡¢×ßµ½µ×ÁË¡¢×óÀ¨ºÅ¶àÓÚÒ»°ëÁË¡£
+		if (balance_factor < 0 || cur >= n*2 || balance_factor > n)	// å‰ªæã€‚å³æ‹¬å·å¤ªå¤šã€èµ°åˆ°åº•äº†ã€å·¦æ‹¬å·å¤šäºä¸€åŠäº†ã€‚
 		{
 			return;
 		}
-		sequence.push_back('(');	// ³¢ÊÔ×óÀ¨ºÅ¡£
+		sequence.push_back('(');	// å°è¯•å·¦æ‹¬å·ã€‚
 		++balance_factor;
 		dfs(result,sequence,n,cur+1,balance_factor);
 		--balance_factor;
 		sequence.pop_back();
 		
-		sequence.push_back(')');	// ³¢ÊÔÓÒÀ¨ºÅ¡£
+		sequence.push_back(')');	// å°è¯•å³æ‹¬å·ã€‚
 		--balance_factor;
 		dfs(result,sequence,n,cur+1,balance_factor);
 		++balance_factor;

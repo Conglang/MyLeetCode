@@ -11,7 +11,7 @@
 * You may assume that duplicates do not exist in the tree.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// µİ¹é¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)
+// é€’å½’ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -21,25 +21,25 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-// Ç°Ğò±éÀú»áÏÈ·ÃÎÊ¸¸½Úµã£¬ÖĞĞò±éÀú»á½«×óÓÒÁ½±ß×ÓÊ÷ÔÚ¸¸½Úµã×óÓÒ·Ö¿ª¡£
-// ËùÒÔÖ»ÒªÒÀ´ÎÈ¡³öÏÈĞò±éÀúµÄ½Úµã×÷Îª¸¸½Úµã£¬µİ¹é¹¹ÔìÖĞĞò±éÀúÖĞ¸Ã½Úµã×óÓÒÁ½±ßµÄÁ½¿Å×ÓÊ÷¼´¿É¡£
+// å‰åºéå†ä¼šå…ˆè®¿é—®çˆ¶èŠ‚ç‚¹ï¼Œä¸­åºéå†ä¼šå°†å·¦å³ä¸¤è¾¹å­æ ‘åœ¨çˆ¶èŠ‚ç‚¹å·¦å³åˆ†å¼€ã€‚
+// æ‰€ä»¥åªè¦ä¾æ¬¡å–å‡ºå…ˆåºéå†çš„èŠ‚ç‚¹ä½œä¸ºçˆ¶èŠ‚ç‚¹ï¼Œé€’å½’æ„é€ ä¸­åºéå†ä¸­è¯¥èŠ‚ç‚¹å·¦å³ä¸¤è¾¹çš„ä¸¤é¢—å­æ ‘å³å¯ã€‚
 class Solution {
 public:
     TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
-        if (preorder.empty() || inorder.empty()) {return NULL;}
-        if (preorder.size() != inorder.size()) {return NULL;}
+        if (preorder.empty() || inorder.empty()) {return nullptr;}
+        if (preorder.size() != inorder.size()) {return nullptr;}
         reverse(preorder.begin(), preorder.end());
         return build(preorder, inorder.begin(), inorder.end());
     }
 private:
     TreeNode* build(vector<int>& parents, vector<int>::iterator treelit, vector<int>::iterator treerit)
     {
-        if (treelit == treerit || parents.empty()) return NULL;
+        if (treelit == treerit || parents.empty()) return nullptr;
         int parent = parents.back();
         parents.pop_back();
         TreeNode* node = new TreeNode(parent);
-        node->left = build(parents, treelit, find(treelit, treerit, parent));	// ÏÈ×ó×ÓÊ÷
-        node->right = build(parents, find(treelit, treerit, parent)+1, treerit);	// ºóÓÒ×ÓÊ÷
+        node->left = build(parents, treelit, find(treelit, treerit, parent));	// å…ˆå·¦å­æ ‘
+        node->right = build(parents, find(treelit, treerit, parent)+1, treerit);	// åå³å­æ ‘
 		return node;
     }
 };
@@ -48,7 +48,7 @@ TEST_CASE("Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal", "[Tree_Co
 	Solution sln;
 	vector<int> preorder,inorder;
 	SECTION("Empty Input") {
-		REQUIRE(sln.buildTree(preorder,inorder) == NULL);
+		REQUIRE(sln.buildTree(preorder,inorder) == nullptr);
 	}
 	SECTION("Normal Input1") {
 		preorder.assign(1,1);

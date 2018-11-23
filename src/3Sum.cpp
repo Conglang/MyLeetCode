@@ -9,7 +9,7 @@
 * Find all unique triplets in the array which gives the sum of zero.
 * 
 * Note:
-* Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ¡Ü b ¡Ü c)
+* Elements in a triplet (a,b,c) must be in non-descending order. (ie, a â‰¤ b â‰¤ c)
 * The solution set must not contain duplicate triplets.
 * For example, given array S = {-1 0 1 2 -1 -4},
 * 
@@ -18,10 +18,10 @@
 * (-1, -1, 2)
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)¡£
-// ÏÈÅÅĞò£¬È»ºó´ÓÁ½²àÏòÖĞĞÄ±Æ½ü¡£
-// ×¢Òâ·ÀÖ¹ÖØ¸´×öµÄÓÅ»¯£ºÅÅĞòºóÈç¹ûÏÂÒ»¸öºÍ×Ô¼ºµÄÖµÒ»Ñù£¬¾ÍÃ»ÓĞ±ØÒªÔÙ¶ÔÆäÖØ¸´×Ô¼º×ö¹ıµÄÒ»ÇĞÁË¡£
-// Èç¹û²»×öÕâ¸öÓÅ»¯»áTime Limit Exceed.
+// æ—¶é—´å¤æ‚åº¦O(n^2)ï¼Œç©ºé—´å¤æ‚åº¦O(1)ã€‚
+// å…ˆæ’åºï¼Œç„¶åä»ä¸¤ä¾§å‘ä¸­å¿ƒé€¼è¿‘ã€‚
+// æ³¨æ„é˜²æ­¢é‡å¤åšçš„ä¼˜åŒ–ï¼šæ’åºåå¦‚æœä¸‹ä¸€ä¸ªå’Œè‡ªå·±çš„å€¼ä¸€æ ·ï¼Œå°±æ²¡æœ‰å¿…è¦å†å¯¹å…¶é‡å¤è‡ªå·±åšè¿‡çš„ä¸€åˆ‡äº†ã€‚
+// å¦‚æœä¸åšè¿™ä¸ªä¼˜åŒ–ä¼šTime Limit Exceed.
 class Solution {
 public:
 	vector<vector<int> > threeSum(vector<int> &num) {
@@ -32,8 +32,8 @@ public:
 		for (int i = 0; i < num.size() - 2;)
 		{
 			int l = i + 1, r = num.size() - 1;
-			twoSum = 0 - num[i];	// ¼õÈ¥µ±Ç°Êı×ÖÖµ£¬ÇóµÄÊ£ÏÂÁ½ÊıÖ®ºÍ
-			while (l < r)	// Á½±ß±Æ½ü
+			twoSum = 0 - num[i];	// å‡å»å½“å‰æ•°å­—å€¼ï¼Œæ±‚çš„å‰©ä¸‹ä¸¤æ•°ä¹‹å’Œ
+			while (l < r)	// ä¸¤è¾¹é€¼è¿‘
 			{
 				if (num[l] + num[r] < twoSum) {l++;}
 				else if (num[l] + num[r] > twoSum) {r--;}
@@ -45,13 +45,13 @@ public:
 #else
 					res.push_back({num[i], num[l], num[r]}); // Not Supported by VS2010
 #endif
-					do { l++; }while (l < r && num[l - 1] == num[l]);	// ×¢Òâ´Ë´¦ÓÅ»¯¡£ÏÈÓÒÒÆ£¬ÅĞ¶ÏºÍ×Ô¼ºÖ®Ç°µÄÏàÍ¬·ñ¡£
-					do { r--; }while (l < r && num[r + 1] == num[r]);	// ÓÅ»¯¡£
+					do { l++; }while (l < r && num[l - 1] == num[l]);	// æ³¨æ„æ­¤å¤„ä¼˜åŒ–ã€‚å…ˆå³ç§»ï¼Œåˆ¤æ–­å’Œè‡ªå·±ä¹‹å‰çš„ç›¸åŒå¦ã€‚
+					do { r--; }while (l < r && num[r + 1] == num[r]);	// ä¼˜åŒ–ã€‚
 				}
 			}
-			do{ i++; }while (i < num.size() - 1 && num[i - 1] == num[i]);	// ÓÅ»¯¡£
+			do{ i++; }while (i < num.size() - 1 && num[i - 1] == num[i]);	// ä¼˜åŒ–ã€‚
 		}
-		sort(res.begin(),res.end());	// ÕâÑù×îÖÕµÄ½á¹û²»ĞèÒªÉ¾³ıÖØ¸´ÔªËØ¡£
+		sort(res.begin(),res.end());	// è¿™æ ·æœ€ç»ˆçš„ç»“æœä¸éœ€è¦åˆ é™¤é‡å¤å…ƒç´ ã€‚
 		return res;
 	}
 };

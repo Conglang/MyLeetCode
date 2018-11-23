@@ -18,7 +18,7 @@
 * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ����ѧ����
+// 找数学规律
 /*
 *	n = 4:
 *	P     I     N
@@ -33,14 +33,14 @@
 *	P L     I G
 *	A       N
 *	
-*	�кź��кŴ�0��ʼ����һ��ֱ�к�һб�Խ���Ϊһ�С�
+*	行号和列号从0开始，以一垂直列和一斜对角列为一列。
 *	
-*	���ԣ�����ÿһ�㴹ֱԪ�ص�����index = (2 * nRows - 2) * j + i��
-*	����ÿ���㴹ֱԪ��֮��Ĳ���Ԫ��(б�Խ�Ԫ��)��indexD = index + (nRows - i - 1) * 2��
+*	所以，对于每一层垂直元素的坐标index = (2 * nRows - 2) * j + i。
+*	对于每两层垂直元素之间的插入元素(斜对角元素)，indexD = index + (nRows - i - 1) * 2。
 *	
-*	��n=4�У�
-*	index(s) = (2 * 4 - 2) * 1 + 1 = 7����ԭ�ַ���0��ʼ����s��7����
-*	indexD(i) = index(s) + (4 - 1 - 1) * 2 = 11����ԭ�ַ���0��ʼ����i��11����
+*	如n=4中：
+*	index(s) = (2 * 4 - 2) * 1 + 1 = 7，即原字符从0开始数，s在7处。
+*	indexD(i) = index(s) + (4 - 1 - 1) * 2 = 11，即原字符从0开始数，i在11处。
 */
 class Solution {
 public:
@@ -51,8 +51,8 @@ public:
 		{
 			for (int j = 0, index = i; index < s.size(); ++j, index = (2 * nRows - 2) * j + i)
 			{
-				result.append(1, s[index]);	// ��ֱԪ��
-				if (i == 0 || i == nRows - 1) continue;	// б�Խ�Ԫ��
+				result.append(1, s[index]);	// 垂直元素
+				if (i == 0 || i == nRows - 1) continue;	// 斜对角元素
 				if (index + (nRows - i - 1) * 2 < s.size())
 				{
 					result.append(1, s[index + (nRows - i - 1) * 2]);

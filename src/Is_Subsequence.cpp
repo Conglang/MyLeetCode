@@ -31,8 +31,8 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // Ref: https://discuss.leetcode.com/topic/57151/3-lines-c
-// tÿ����ǰһλ�������s��ͬs��Ҳ��ǰһλ��
-// ����t�����ʱ�����s����ĩβ��˵��s��Ķ�ƥ�����ˣ���Ȼ����û�С�
+// t每次向前一位，如果和s相同s就也向前一位。
+// 最终t走完的时候，如果s到了末尾，说明s里的都匹配上了，不然就是没有。
 class Solution {
 public:
 	bool isSubsequence(string s, string t) {

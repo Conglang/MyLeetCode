@@ -14,37 +14,37 @@
 * return ["255.255.11.135", "255.255.111.35"]. (Order does not matter)
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// Ê±¼ä¸´ÔÓ¶ÈO(n^4)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// æ—¶é—´å¤æ‚åº¦O(n^4)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 class Solution {
 public:
 	vector<string> restoreIpAddresses(string s) {
 		vector<string> result;
 		if (s.size() < 4) return result;
-		string ip;	// ´æ·ÅÖĞ¼ä½á¹û¡£
+		string ip;	// å­˜æ”¾ä¸­é—´ç»“æœã€‚
 		dfs(s,0,0,ip,result);
 		return result;
 	}
 	void dfs(string s, int start, int step, string ip, vector<string>& result)
 	{
-		if (start == s.size() && step == 4)	// ÕÒµ½Ò»¸öºÏ·¨½â¡£
+		if (start == s.size() && step == 4)	// æ‰¾åˆ°ä¸€ä¸ªåˆæ³•è§£ã€‚
 		{
 			ip.resize(ip.size()-1);
 			result.push_back(ip);
 			return;
 		}
-		if (s.size() - start > (4-step)*3) return;	// ¼ôÖ¦£¬Ì«³¤¡£
-		if (s.size() - start < (4-step)) return;	// ¼ôÖ¦£¬Ì«¶Ì¡£
+		if (s.size() - start > (4-step)*3) return;	// å‰ªæï¼Œå¤ªé•¿ã€‚
+		if (s.size() - start < (4-step)) return;	// å‰ªæï¼Œå¤ªçŸ­ã€‚
 
 		int num(0);
 		for(int i = start; i < min(int(s.size()),start+3); ++i)
 		{
 			num = num * 10 + (s[i] - '0');
-			if (num <= 255)	// µ±Ç°½ÚµãºÏ·¨£¬¼ÌĞøÍùÏÂµİ¹é¡£
+			if (num <= 255)	// å½“å‰èŠ‚ç‚¹åˆæ³•ï¼Œç»§ç»­å¾€ä¸‹é€’å½’ã€‚
 			{
 				ip += s[i];
 				dfs(s,i+1,step+1,ip+'.',result);
 			}
-			if (num == 0) break;	// ²»ÔÊĞíÇ°×º0£¬Èç¹û012£¬Ö»ÔÊĞíµ¥¸ö0¡£
+			if (num == 0) break;	// ä¸å…è®¸å‰ç¼€0ï¼Œå¦‚æœ012ï¼Œåªå…è®¸å•ä¸ª0ã€‚
 		}
 	}
 };//--------------------------------------------------------------------------------------------------------------

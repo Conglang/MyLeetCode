@@ -26,12 +26,12 @@
 #define W3
 
 #ifdef W1
-// ¼ò½à¡£·ÖÖÎ·¨¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+// ç®€æ´ã€‚åˆ†æ²»æ³•ã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
 class Solution {
 public:
 	void sortColors(int A[], int n) {
-		// Ò»¸öÊÇredµÄindex£¬Ò»¸öÊÇblueµÄindex£¬Á½±ßÍùÖĞ¼ä×ß¡£
+		// ä¸€ä¸ªæ˜¯redçš„indexï¼Œä¸€ä¸ªæ˜¯blueçš„indexï¼Œä¸¤è¾¹å¾€ä¸­é—´èµ°ã€‚
 		int red = 0, blue = n - 1;
 		for (int i = 0; i < blue + 1;) {
 			if (A[i] == 0)
@@ -47,7 +47,7 @@ public:
 
 #ifdef W2
 // use partition()
-// Ê±¼ä¸´ÔÓ¶È O(n) £¬¿Õ¼ä¸´ÔÓ¶È O(1)
+// æ—¶é—´å¤æ‚åº¦ O(n) ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
 class Solution {
 public:
 	void sortColors(int A[], int n) {
@@ -57,8 +57,8 @@ public:
 #endif
 
 #ifdef W3
-// ÖØĞÂÊµÏÖ partition()
-// Ê±¼ä¸´ÔÓ¶È O(n) £¬¿Õ¼ä¸´ÔÓ¶È O(1)
+// é‡æ–°å®ç° partition()
+// æ—¶é—´å¤æ‚åº¦ O(n) ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
 class Solution {
 public:
 	void sortColors(int A[], int n) {

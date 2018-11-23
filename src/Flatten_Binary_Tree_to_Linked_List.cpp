@@ -36,8 +36,8 @@
 #define W1
 
 #ifdef W1
-// µü´ú·¨¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logn)¡£
-// ÓÃÕ»½øÐÐÏÈÐò±éÀú¡£
+// è¿­ä»£æ³•ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(logn)ã€‚
+// ç”¨æ ˆè¿›è¡Œå…ˆåºéåŽ†ã€‚
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -73,17 +73,17 @@ public:
 #endif
 
 #ifdef W2
-// µÝ¹é·¨
+// é€’å½’æ³•
 class Solution {
 public:
 	void flatten(TreeNode *root) {
-		if (root == nullptr) return; // ÖÕÖ¹Ìõ¼þ
+		if (root == nullptr) return; // ç»ˆæ­¢æ¡ä»¶
 		flatten(root->left);
 		flatten(root->right);
 		if (nullptr == root->left) return;
-		// Èý·½ºÏ²¢£¬½«×ó×ÓÊ÷ËùÐÎ³ÉµÄÁ´±í²åÈëµ½ root ºÍ root->right Ö®¼ä
+		// ä¸‰æ–¹åˆå¹¶ï¼Œå°†å·¦å­æ ‘æ‰€å½¢æˆçš„é“¾è¡¨æ’å…¥åˆ° root å’Œ root->right ä¹‹é—´
 		TreeNode *p = root->left;
-		while(p->right) p = p->right; //Ñ°ÕÒ×óÁ´±í×îºóÒ»¸ö½Úµã
+		while(p->right) p = p->right; //å¯»æ‰¾å·¦é“¾è¡¨æœ€åŽä¸€ä¸ªèŠ‚ç‚¹
 		p->right = root->right;
 		root->right = root->left;
 		root->left = nullptr;

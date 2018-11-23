@@ -18,16 +18,16 @@
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 /*
-��̬�滮����״̬Ϊf(i,j)����ʾT[0,j]��S[0,i]����ֵĴ�����
-���ȣ�����S[i]��T[j]�Ƿ���ȣ�����ʹ��S[i]����f(i,j) = f(i-1,j);
-��S[i] == T[j]�������ʹ��S[i]����ʱf(i,j) = f(i-1,j) + f(i-1,j-1)������ʹ�õ��������ʹ�õ������
+动态规划。设状态为f(i,j)，表示T[0,j]在S[0,i]里出现的次数。
+首先，无论S[i]和T[j]是否相等，若不使用S[i]，则f(i,j) = f(i-1,j);
+若S[i] == T[j]，则可以使用S[i]，此时f(i,j) = f(i-1,j) + f(i-1,j-1)，即不使用的情况加上使用的情况。
 */
-//��ά��̬�滮+�������顣
-// ʱ�临�Ӷ�O(mn)���ռ临�Ӷ�O(n)��
+//二维动态规划+滚动数组。
+// 时间复杂度O(mn)，空间复杂度O(n)。
 class Solution {
 public:
 	int numDistinct(string S, string T) {
-		vector<int> f(T.length()+1,0);	// 0Ϊ��ʱ��1~length��Ӧ�ַ���T��
+		vector<int> f(T.length()+1,0);	// 0为空时，1~length对应字符串T。
 		f[0] = 1;
 		for (int i = 0; i < S.size(); ++i)
 		{

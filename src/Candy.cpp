@@ -16,12 +16,12 @@
 #include "../include/include.h"
 #define W1
 
-// Á½ÕßµÄºËĞÄË¼Ïë¶¼ÊÇ´Ó×óµ½ÓÒ£¬´ÓÓÒµ½×ó¸÷É¨ÃèÒ»´Î¡£
-// È¡Á½´ÎÖµ´óµÄÄÇÒ»¸ö¡£
-// Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// ä¸¤è€…çš„æ ¸å¿ƒæ€æƒ³éƒ½æ˜¯ä»å·¦åˆ°å³ï¼Œä»å³åˆ°å·¦å„æ‰«æä¸€æ¬¡ã€‚
+// å–ä¸¤æ¬¡å€¼å¤§çš„é‚£ä¸€ä¸ªã€‚
+// æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 
 #ifdef W1
-// µü´ú·¨
+// è¿­ä»£æ³•
 class Solution {
 public:
 	int candy(vector<int> &ratings) {
@@ -29,7 +29,7 @@ public:
 		if (ratings.size() == 1) {return 1;}
 		const int n = ratings.size();
 		vector<int> increment(n);
-		// ×óÓÒ¸÷É¨Ò»±é
+		// å·¦å³å„æ‰«ä¸€é
 		for (int i = 1, inc = 1; i < n; ++i)
 		{
 			if (ratings[i] > ratings[i-1])
@@ -50,7 +50,7 @@ public:
 				inc = 1;
 			}
 		}
-		// ³õÊ¼ÖµÎªn£¬ÒòÎªÃ¿¸öĞ¡ÅóÓÑÖÁÉÙÒ»¿ÅÌÇ¡£
+		// åˆå§‹å€¼ä¸ºnï¼Œå› ä¸ºæ¯ä¸ªå°æœ‹å‹è‡³å°‘ä¸€é¢—ç³–ã€‚
 #if __cplusplus < 201103L
 		int sum(n);
 		for_each(increment.begin(), increment.end(), [&](int n){sum+=n;});
@@ -62,7 +62,7 @@ public:
 };
 #endif
 #ifdef W2
-// µİ¹é·¨£¬»á³¬Ê±¡£
+// é€’å½’æ³•ï¼Œä¼šè¶…æ—¶ã€‚
 class Solution {
 public:
 	int candy(vector<int> &ratings) {

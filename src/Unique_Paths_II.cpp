@@ -27,7 +27,7 @@
 #define W2
 
 #ifdef W1
-// 备忘录法。时间复杂度O(n^2)，空间复杂度O(n^2)
+// 澶囧繕褰曟硶銆傛椂闂村鏉傚害O(n^2)锛岀┖闂村鏉傚害O(n^2)
 class Solution {
 public:
 	int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {
@@ -58,7 +58,7 @@ private:
 #endif
 
 #ifdef W2
-// 动态规划。时间复杂度O(n^2)，空间复杂度O(n)
+// 鍔ㄦ�佽鍒掋�傛椂闂村鏉傚害O(n^2)锛岀┖闂村鏉傚害O(n)
 class Solution {
 public:
 	int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {

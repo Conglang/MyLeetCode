@@ -11,6 +11,9 @@
 #include <queue>
 #include <cstring>
 #include <cctype>
+#include <iostream>
+#include <cmath>
+#include <string>
 
 using namespace std;
 #define INT_MIN     (-2147483647 - 1) /* minimum (signed) int value */
@@ -21,7 +24,7 @@ using namespace std;
 struct ListNode {
 	int val;
 	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
+	ListNode(int x) : val(x), next(nullptr) {}
 };
 
 vector<int> get_nodes_val(ListNode* head);
@@ -41,7 +44,7 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
 string serialize_tree(TreeNode* node);
@@ -50,5 +53,12 @@ string serialize_tree(TreeNode* node);
 struct TreeLinkNode {
 	int val;
 	TreeLinkNode *left, *right, *next;
-	TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
+	TreeLinkNode(int x) : val(x), left(nullptr), right(nullptr), next(nullptr) {}
 };
+
+struct Interval {
+	int start;
+	int end;
+	Interval(int _start, int _end) : start(_start), end(_end) {}
+	string serialize() {return "[" + to_string(start) + "," + to_string(end) + "]";}
+}

@@ -29,7 +29,7 @@
 *          \_/
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-// ¹ã¶ÈÓÅÏÈ±éÀú¡£Ê±¼ä¸´ÔÓ¶ÈO(n)£¬¿Õ¼ä¸´ÔÓ¶ÈO(n)¡£
+// å¹¿åº¦ä¼˜å…ˆéå†ã€‚æ—¶é—´å¤æ‚åº¦O(n)ï¼Œç©ºé—´å¤æ‚åº¦O(n)ã€‚
 /**
  * Definition for undirected graph.
  * struct UndirectedGraphNode {
@@ -42,12 +42,12 @@ class Solution {
 public:
     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
         if (!node) {return NULL;}
-        unordered_map<int, UndirectedGraphNode*> node_map;	// ¼ÇÂ¼labelºÍĞÂ½ÚµãÖ¸ÕëµÄmap¡£
-        queue<UndirectedGraphNode*> original_nodes;	// ÓÃÀ´¹ã¶È±éÀúÔ­Í¼µÄ¶ÓÁĞ¡£
-		// ·ÅÈëÆğÊ¼µãµ½mapºÍqueue¡£È·±£Ã¿´ÎÔÚqueueÖĞ·ÃÎÊµ½µÄµã¾ùÊÇÔÚmapÖĞÒÑ¾­ĞÂ½¨¹ıµÄ¡£
+        unordered_map<int, UndirectedGraphNode*> node_map;	// è®°å½•labelå’Œæ–°èŠ‚ç‚¹æŒ‡é’ˆçš„mapã€‚
+        queue<UndirectedGraphNode*> original_nodes;	// ç”¨æ¥å¹¿åº¦éå†åŸå›¾çš„é˜Ÿåˆ—ã€‚
+		// æ”¾å…¥èµ·å§‹ç‚¹åˆ°mapå’Œqueueã€‚ç¡®ä¿æ¯æ¬¡åœ¨queueä¸­è®¿é—®åˆ°çš„ç‚¹å‡æ˜¯åœ¨mapä¸­å·²ç»æ–°å»ºè¿‡çš„ã€‚
         node_map.insert(make_pair(node->label, new UndirectedGraphNode(node->label)));
         original_nodes.push(node);	
-        // ¹ã¶È±éÀú¶ÓÁĞ¡£
+        // å¹¿åº¦éå†é˜Ÿåˆ—ã€‚
         while (!original_nodes.empty())
         {
             UndirectedGraphNode* node = original_nodes.front();
@@ -61,7 +61,7 @@ public:
             {
 #endif
                 if (!node_map.count(neighbor->label))
-                {	// ÂíÉÏĞÂ½¨ĞÂ½Úµã£¬È·±£±¾´Î±éÀúÓöµ½µÄneighbour¶¼´´½¨¹ı£¬¿ÉÒÔÒ»´Î±éÀú¸´ÖÆ³É¹¦¡£
+                {	// é©¬ä¸Šæ–°å»ºæ–°èŠ‚ç‚¹ï¼Œç¡®ä¿æœ¬æ¬¡éå†é‡åˆ°çš„neighbouréƒ½åˆ›å»ºè¿‡ï¼Œå¯ä»¥ä¸€æ¬¡éå†å¤åˆ¶æˆåŠŸã€‚
                     node_map.insert(make_pair(neighbor->label, new UndirectedGraphNode(neighbor->label)));
                     original_nodes.push(neighbor);
                 }

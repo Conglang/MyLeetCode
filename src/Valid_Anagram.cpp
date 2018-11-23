@@ -22,7 +22,7 @@
 
 #ifdef W1
 // Sorting
-// 时间复杂度O(nlogn)，空间复杂度O(1)
+// 鏃堕棿澶嶆潅搴(nlogn)锛岀┖闂村鏉傚害O(1)
 class Solution {
 public:
     bool isAnagram(string s, string t) {
@@ -37,8 +37,8 @@ public:
 
 #ifdef W2
 // Hash Table
-// 时间复杂度O(n)，空间复杂度O(1)
-// 为兼顾followup使用unordered_map，不然可以用只有26个字母的数组优化
+// 鏃堕棿澶嶆潅搴(n)锛岀┖闂村鏉傚害O(1)
+// 涓哄吋椤緁ollowup浣跨敤unordered_map锛屼笉鐒跺彲浠ョ敤鍙湁26涓瓧姣嶇殑鏁扮粍浼樺寲
 class Solution {
 public:
     bool isAnagram(string s, string t) {
