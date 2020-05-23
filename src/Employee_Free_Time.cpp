@@ -69,8 +69,8 @@ TEST_CASE("Employee_Free_Time", "[Detail]"){
         vector<Interval> result1 = s.employeeFreeTime(schedule1);
         vector<Interval> result2 = s.employeeFreeTime(schedule2);
         string res1, res2;
-        for_each(result1.begin(), result1.end(), [&res1](auto interval){res1 += interval.serialize();});
-        for_each(result2.begin(), result2.end(), [&res2](auto interval){res2 += interval.serialize();});
+        for_each(result1.begin(), result1.end(), [&res1](Interval interval){res1 += interval.serialize();});
+        for_each(result2.begin(), result2.end(), [&res2](Interval interval){res2 += interval.serialize();});
 		REQUIRE(res1 == "[3,4]");
         REQUIRE(res2 == "[5,6][7,9]");
 	}

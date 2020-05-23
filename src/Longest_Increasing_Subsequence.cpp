@@ -38,6 +38,7 @@ TEST_CASE("Longest_Increasing_Subsequence", "[Binary_Search]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int nums[8] = {10, 9, 2, 5, 3, 7, 101, 18};
-		REQUIRE(s.lengthOfLIS(vector<int>(nums, nums+8)) == 4);
+		vector<int> v(nums, nums+8);
+		REQUIRE(s.lengthOfLIS(v) == 4);
 	}
 }

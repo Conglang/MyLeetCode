@@ -80,7 +80,7 @@ public:
 TEST_CASE("Most_Frequent_Subtre_Sum", "[Tree_Recursion]"){
 	Solution s;
 	SECTION("Normal Input"){
-		int r1[3] = {2, -3, 4};
+		int r1[3] = {4, -3, 2};
 		vector<int> result1(r1, r1+3);
 		TreeNode a1(5), a2(2), a3(-3);
 		a1.left = &a2; a1.right = &a3;

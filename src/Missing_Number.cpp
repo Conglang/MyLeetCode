@@ -55,10 +55,15 @@ TEST_CASE("Missing_Number", "[Arrays]"){
 	SECTION("Normal Input"){
 		int a1[3] = {3,2,0};
 		int a2[3] = {1,2,0};
-		REQUIRE(s.missingNumber(vector<int>()) == 0);
-		REQUIRE(s.missingNumber(vector<int>(a1,a1+3)) == 1);
-		REQUIRE(s.missingNumber(vector<int>(a2,a2+3)) == 3);
-		REQUIRE(s.missingNumber(vector<int>(1,0)) == 1);
-		REQUIRE(s.missingNumber(vector<int>(1,1)) == 0);
+		vector<int> v1;
+		REQUIRE(s.missingNumber(v1) == 0);
+		vector<int> v2(a1,a1+3);
+		REQUIRE(s.missingNumber(v2) == 1);
+		vector<int> v3(a2,a2+3);
+		REQUIRE(s.missingNumber(v3) == 3);
+		vector<int> v4(1,0);
+		REQUIRE(s.missingNumber(v4) == 1);
+		vector<int> v5(1,1);
+		REQUIRE(s.missingNumber(v5) == 0);
 	}
 }

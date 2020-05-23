@@ -46,6 +46,7 @@ TEST_CASE("House_Robber_II", "[Dynamic_Programming]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int t[7] = {3,8,1,5,10,7,12};
-		REQUIRE(s.rob(vector<int>(t,t+7)) == 30);
+		vector<int> v(t,t+7);
+		REQUIRE(s.rob(v) == 30);
 	}
 }

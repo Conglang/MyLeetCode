@@ -83,8 +83,11 @@ TEST_CASE("Wiggle_Subsequence", "[Dynamic Programming]"){
 		int a[6] = {1,7,4,9,2,5};
 		int b[10] = {1,17,5,10,13,15,10,5,16,8};
 		int c[9] = {1,2,3,4,5,6,7,8,9};
-		REQUIRE(s.wiggleMaxLength(vector<int>(a,a+6)) == 6);
-		REQUIRE(s.wiggleMaxLength(vector<int>(b,b+10)) == 7);
-		REQUIRE(s.wiggleMaxLength(vector<int>(c,c+9)) == 2);
+		vector<int> v1(a,a+6);
+		REQUIRE(s.wiggleMaxLength(v1) == 6);
+		vector<int> v2(b,b+10);
+		REQUIRE(s.wiggleMaxLength(v2) == 7);
+		vector<int> v3(c,c+9);
+		REQUIRE(s.wiggleMaxLength(v3) == 2);
 	}
 }

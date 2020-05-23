@@ -55,8 +55,10 @@ TEST_CASE("Best_Time_to_Buy_and_Sell_Stock_IV", "[Dynamic_Programming]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int t1[10] = {3,7,5,9,2,10,13,9,4,10};
-		REQUIRE(s.maxProfit(3, vector<int>(t1, t1+10)) == 23);
+		vector<int> v1(t1, t1+10);
+		REQUIRE(s.maxProfit(3, v1) == 23);
 		int t2[2] = {3,7};
-		REQUIRE(s.maxProfit(10, vector<int>(t2, t2+2)) == 4);
+		vector<int> v2(t2, t2+2);
+		REQUIRE(s.maxProfit(10, v2) == 4);
 	}
 }

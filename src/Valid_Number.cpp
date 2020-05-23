@@ -114,7 +114,7 @@ TEST_CASE("Valid_Number", "[Strings]"){
 	Solution s;
 	SECTION("Empty Input"){
 		REQUIRE(s.isNumber(NULL) == false);
-		REQUIRE(s.isNumber('\0') == false);
+		REQUIRE(s.isNumber("\0") == false);
 	}
 	SECTION("Normal Input"){
 		REQUIRE(s.isNumber("1") == true);

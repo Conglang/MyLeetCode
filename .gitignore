@@ -6,4 +6,5 @@
 *.opensdf
 *.suo
 *.tmp
-
+*.o
+*.DS_Store

@@ -53,7 +53,9 @@ TEST_CASE("Largest_Divisible_Subset", "[Dynamic_Programming]"){
 		int t1[3] = {1,2,3};
 		int r1[2] = {1,2};
 		int t2[4] = {1,2,4,8};
-		REQUIRE(s.largestDivisibleSubset(vector<int>(t1,t1+3)) == vector<int>(r1,r1+2));
-		REQUIRE(s.largestDivisibleSubset(vector<int>(t2,t2+4)) == vector<int>(t2,t2+4));
+		vector<int> v1(t1,t1+3);
+		REQUIRE(s.largestDivisibleSubset(v1) == vector<int>(r1,r1+2));
+		vector<int> v2(t2,t2+4);
+		REQUIRE(s.largestDivisibleSubset(v2) == vector<int>(t2,t2+4));
 	}
 }

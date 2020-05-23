@@ -71,12 +71,15 @@ public:
 TEST_CASE("Roatate_Function", "[Arrays]"){
 	Solution s;
 	SECTION("Empty Input"){
-		REQUIRE(s.maxRotateFunction(vector<int>()) == 0);
+		vector<int> v;
+		REQUIRE(s.maxRotateFunction(v) == 0);
 	}
 	SECTION("Normal Input"){
 		int a[4] = {4,3,2,6};
 		int b[2] = {-2147483648, -2147483648};
-		REQUIRE(s.maxRotateFunction(vector<int>(a,a+4)) == 26);
-		REQUIRE(s.maxRotateFunction(vector<int>(b,b+2)) == -2147483648);
+		vector<int> v1(a,a+4);
+		REQUIRE(s.maxRotateFunction(v1) == 26);
+		vector<int> v2(b,b+2);
+		REQUIRE(s.maxRotateFunction(v2) == -2147483648);
 	}
 }

@@ -12,12 +12,12 @@
 * return [1,6],[8,10],[15,18].
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
-struct Interval {
-	int start;
-	int end;
-	Interval() : start(0), end(0) {}
-	Interval(int s, int e) : start(s), end(e) {}
-};
+// struct Interval {
+// 	int start;
+// 	int end;
+// 	Interval() : start(0), end(0) {}
+// 	Interval(int s, int e) : start(s), end(e) {}
+// };
 
 /**
  * Definition for an interval.

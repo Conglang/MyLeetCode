@@ -12,7 +12,7 @@
 * Given [3,2,1,5,6,4] and k = 2, return 5.
 * 
 * Note: 
-* You may assume k is always valid, 1 ¡Ü k ¡Ü array's length.
+* You may assume k is always valid, 1 ï¿½ï¿½ k ï¿½ï¿½ array's length.
 //--------------------------------------------------------------------------------------------------------------*/
 #include "../include/include.h"
 // quick sort
@@ -52,6 +52,7 @@ TEST_CASE("Kth_Largest_Element_in_an_Array", "[Devide and Conquer]") {
 	Solution s;
 	SECTION("Normal Input") {
 		int a1[7] = {7,6,5,4,3,2,1};
-		REQUIRE(s.findKthLargest(vector<int>(a1,a1+7), 5) == 3);
+        vector<int> v(a1,a1+7);
+		REQUIRE(s.findKthLargest(v, 5) == 3);
 	}
 }

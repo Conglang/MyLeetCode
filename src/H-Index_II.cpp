@@ -37,7 +37,9 @@ TEST_CASE("H-Index_II", "[Binary_Search]"){
 	SECTION("Normal Input"){
 		int c1[5] = {1,3,5,7,9};
 		int c2[6] = {1,3,5,7,9,11};
-		REQUIRE(s.hIndex(vector<int>(c1,c1+5)) == 3);
-		REQUIRE(s.hIndex(vector<int>(c2,c2+6)) == 4);
+		vector<int> v1(c1,c1+5);
+		REQUIRE(s.hIndex(v1) == 3);
+		vector<int> v2(c2,c2+6);
+		REQUIRE(s.hIndex(v2) == 4);
 	}
 }

@@ -129,10 +129,13 @@ TEST_CASE("Minimum_Size_Subarray_Sum", "[Arrays]"){
 	}
 	SECTION("Normal Input"){
 		int n[6] = {2,3,1,2,4,3};
-		REQUIRE(s.minSubArrayLen(7, vector<int>(n,n+6)) == 2);
+        vector<int> v1(n,n+6);
+		REQUIRE(s.minSubArrayLen(7, v1) == 2);
 		int m[5] = {1,2,3,4,5};
-		REQUIRE(s.minSubArrayLen(11, vector<int>(m,m+5)) == 3);
+        vector<int> v2(m,m+5);
+		REQUIRE(s.minSubArrayLen(11, v2) == 3);
 		int l[5] = {1,5,2,3,4};
-		REQUIRE(s.minSubArrayLen(11, vector<int>(l,l+5)) == 4);
+        vector<int> v3(l,l+5);
+		REQUIRE(s.minSubArrayLen(11, v3) == 4);
 	}
 }

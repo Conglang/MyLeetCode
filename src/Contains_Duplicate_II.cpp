@@ -58,9 +58,13 @@ TEST_CASE("Contains_Duplicate_II", "[Arrays]"){
 	SECTION("Normal Input") {
 		int a1[5] = {5,4,3,1,2};
 		int a2[5] = {5,1,2,4,5};
-		REQUIRE(s.containsNearbyDuplicate(vector<int>(),10) == false);
-		REQUIRE(s.containsNearbyDuplicate(vector<int>(a1,a1+5),10) == false);
-		REQUIRE(s.containsNearbyDuplicate(vector<int>(a2,a2+5),10) == true);
-		REQUIRE(s.containsNearbyDuplicate(vector<int>(a2,a2+5),1) == false);
+        vector<int> v1;
+		REQUIRE(s.containsNearbyDuplicate(v1,10) == false);
+        vector<int> v2(a1,a1+5);
+		REQUIRE(s.containsNearbyDuplicate(v2,10) == false);
+        vector<int> v3(a2,a2+5);
+		REQUIRE(s.containsNearbyDuplicate(v3,10) == true);
+        vector<int> v4(a2,a2+5);
+		REQUIRE(s.containsNearbyDuplicate(v4,1) == false);
 	}
 }

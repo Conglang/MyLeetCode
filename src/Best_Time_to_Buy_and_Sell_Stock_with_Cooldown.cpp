@@ -59,6 +59,7 @@ TEST_CASE("Best_Time_to_Buy_and_Sell_Stock_with_Cooldown", "[Dynamic_Programming
 	Solution s;
 	SECTION("Normal Input"){
 		int t[5] = {1,2,3,0,2};
-		REQUIRE(s.maxProfit5(vector<int>(t,t+5)) == 3);
+		vector<int> v(t,t+5);
+		REQUIRE(s.maxProfit5(v) == 3);
 	}
 }

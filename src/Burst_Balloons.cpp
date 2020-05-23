@@ -103,6 +103,7 @@ TEST_CASE("Burst_Balloons", "[Devide and Conquer]") {
 	Solution s;
 	SECTION("Normal Input") {
 		int a[4] = {3,1,5,8};
-		REQUIRE(s.maxCoins(vector<int>(a,a+4)) == 167);
+        vector<int> v(a,a+4);
+		REQUIRE(s.maxCoins(v) == 167);
 	}
 }

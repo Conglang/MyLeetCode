@@ -42,7 +42,9 @@ TEST_CASE("Product_of_Array_Except_Self", "[Arrays]"){
 	SECTION("Normal Input"){
 		int a[4] = {1,2,3,4};
 		int r[4] = {24,12,8,6};
-		REQUIRE(s.productExceptSelf(vector<int>()) == vector<int>());
-		REQUIRE(s.productExceptSelf(vector<int>(a,a+4)) == vector<int>(r,r+4));
+        vector<int> v1;
+		REQUIRE(s.productExceptSelf(v1) == vector<int>());
+        vector<int> v2(a,a+4);
+		REQUIRE(s.productExceptSelf(v2) == vector<int>(r,r+4));
 	}
 }

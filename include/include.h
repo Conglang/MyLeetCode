@@ -14,6 +14,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <numeric>
 
 using namespace std;
 #define INT_MIN     (-2147483647 - 1) /* minimum (signed) int value */
@@ -61,4 +62,4 @@ struct Interval {
 	int end;
 	Interval(int _start, int _end) : start(_start), end(_end) {}
 	string serialize() {return "[" + to_string(start) + "," + to_string(end) + "]";}
-}
+};

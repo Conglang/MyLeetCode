@@ -84,7 +84,7 @@ public:
 			return temp;
 		}	
 #else
-			return vector<int> {distance(A, lower), distance(A, prev(uppper))};
+			return vector<int> {(int)distance(A, lower), (int)distance(A, prev(uppper))};
 #endif
 	}
 	template<typename ForwardIterator, typename T>
@@ -92,7 +92,7 @@ public:
 	{
 			while (first != last)
 			{
-				auto mid = next(first, distance(first, last) / 2);
+				auto mid = next(first, (int)distance(first, last) / 2);
 				if (value > *mid) first = ++mid;
 				else last = mid;
 			}

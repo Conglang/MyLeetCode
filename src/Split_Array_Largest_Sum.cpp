@@ -102,6 +102,7 @@ TEST_CASE("Split_Array_Largest_Sum", "[Binary_Search]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int nums[5] = {7,2,5,10,8};
-		REQUIRE(s.splitArray(vector<int>(nums, nums+5), 2) == 18);
+        vector<int> v(nums, nums+5);
+		REQUIRE(s.splitArray(v, 2) == 18);
 	}
 }

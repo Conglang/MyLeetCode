@@ -67,12 +67,19 @@ TEST_CASE("Next_Greater_Element_II", "[Arrays]"){
 		int r6[5] = {-1,4,4,5,5};
 		int r7[5] = {5,3,3,5,-1};
 
-		REQUIRE(s.nextGreaterElements(vector<int>(t1,t1+3)) == vector<int>(r1,r1+3));
-		REQUIRE(s.nextGreaterElements(vector<int>(t2,t2+5)) == vector<int>(r2,r2+5));
-		REQUIRE(s.nextGreaterElements(vector<int>(t3,t3+5)) == vector<int>(r3,r3+5));
-		REQUIRE(s.nextGreaterElements(vector<int>(t4,t4+5)) == vector<int>(r4,r4+5));
-		REQUIRE(s.nextGreaterElements(vector<int>(t5,t5+5)) == vector<int>(r5,r5+5));
-		REQUIRE(s.nextGreaterElements(vector<int>(t6,t6+5)) == vector<int>(r6,r6+5));
-		REQUIRE(s.nextGreaterElements(vector<int>(t7,t7+5)) == vector<int>(r7,r7+5));
+		vector<int> v1(t1,t1+3);
+		REQUIRE(s.nextGreaterElements(v1) == vector<int>(r1,r1+3));
+		vector<int> v2(t2,t2+5);
+		REQUIRE(s.nextGreaterElements(v2) == vector<int>(r2,r2+5));
+		vector<int> v3(t3,t3+5);
+		REQUIRE(s.nextGreaterElements(v3) == vector<int>(r3,r3+5));
+		vector<int> v4(t4,t4+5);
+		REQUIRE(s.nextGreaterElements(v4) == vector<int>(r4,r4+5));
+		vector<int> v5(t5,t5+5);
+		REQUIRE(s.nextGreaterElements(v5) == vector<int>(r5,r5+5));
+		vector<int> v6(t6,t6+5);
+		REQUIRE(s.nextGreaterElements(v6) == vector<int>(r6,r6+5));
+		vector<int> v7(t7,t7+5);
+		REQUIRE(s.nextGreaterElements(v7) == vector<int>(r7,r7+5));
 	}
 }

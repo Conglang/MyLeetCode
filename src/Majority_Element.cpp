@@ -55,6 +55,7 @@ TEST_CASE("Majority_Element", "[Devide and Conquer]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int a1[9] = {1,5,3,4,5,6,5,5,5};
-		REQUIRE(s.majorityElement(vector<int>(a1,a1+9)) == 5);
+        vector<int> v(a1,a1+9);
+		REQUIRE(s.majorityElement(v) == 5);
 	}
 }

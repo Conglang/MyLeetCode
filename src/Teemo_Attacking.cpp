@@ -62,10 +62,15 @@ TEST_CASE("Teemo_Attacking", "[Arrays]"){
 		int t1[2] = {1,4};
 		int t2[2] = {1,2};
 		int t3[4] = {1,4,5,7};
-		REQUIRE(s.findPoisonedDuration(vector<int>(), 2) == 0);
-		REQUIRE(s.findPoisonedDuration(vector<int>(t1, t1+2), 2) == 4);
-		REQUIRE(s.findPoisonedDuration(vector<int>(t2, t2+2), 2) == 3);
-		REQUIRE(s.findPoisonedDuration(vector<int>(t3, t3+4), 2) == 7);
-		REQUIRE(s.findPoisonedDuration(vector<int>(t3, t3+4), 0) == 0);
+		vector<int> v1;
+		REQUIRE(s.findPoisonedDuration(v1, 2) == 0);
+		vector<int> v2(t1, t1+2);
+		REQUIRE(s.findPoisonedDuration(v2, 2) == 4);
+		vector<int> v3(t2, t2+2);
+		REQUIRE(s.findPoisonedDuration(v3, 2) == 3);
+		vector<int> v4(t3, t3+4);
+		REQUIRE(s.findPoisonedDuration(v4, 2) == 7);
+		vector<int> v5(t3, t3+4);
+		REQUIRE(s.findPoisonedDuration(v5, 0) == 0);
 	}
 }

@@ -117,6 +117,7 @@ TEST_CASE("Combination_Sum_IV", "[Dynamic_Programming]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int a[3] = {1,2,3};
-		REQUIRE(s.combinationSum4(vector<int>(a, a+3), 4) == 7);
+		vector<int> v(a, a+3);
+		REQUIRE(s.combinationSum4(v, 4) == 7);
 	}
 }

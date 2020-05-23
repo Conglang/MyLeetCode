@@ -1,4 +1,4 @@
-#MyLeetCode
+# MyLeetCode
 
 **My practice on leetcode including 208 of 405 problems.**
 
@@ -20,6 +20,8 @@ All codes tested on platform Windows 7/10 (VS2010) and Ubuntu 14.04 (GCC) using 
 |
 /--+ src/			// algorithm and test of problems on leetcode
 ```
+
+gcc usage: `cd ./project/g++`, `make`, `./MyLeetCode`.
 
 **Problems are assorted into 15 groups**:<br>
 (Links lead to my notes on each topic in Simplified Chinese. You can also find the classification in the VS2010 solution.)<br>

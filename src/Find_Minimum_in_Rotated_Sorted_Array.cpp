@@ -46,7 +46,9 @@ TEST_CASE("Find_Minimum_in_Rotated_Sorted_Array", "[Arrays]"){
 	SECTION("Normal Input"){
 		int a[7] = {4,5,6,7,0,1,2};
 		int b[7] = {1,2,3,4,5,6,7};
-		REQUIRE(s.findMin(vector<int>(a,a+7)) == 0);
-		REQUIRE(s.findMin(vector<int>(b,b+7)) == 1);
+        vector<int> v1(a,a+7);
+		REQUIRE(s.findMin(v1) == 0);
+        vector<int> v2(b,b+7);
+		REQUIRE(s.findMin(v2) == 1);
 	}
 }

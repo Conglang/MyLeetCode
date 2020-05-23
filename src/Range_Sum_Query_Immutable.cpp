@@ -42,7 +42,8 @@ private:
 TEST_CASE("Range_Sum_Query_Immutable", "[Dynamic Programming]"){
 	SECTION("Normal Input"){
 		int t[6] = {-2, 0, 3, -5, 2, -1};
-		NumArray numArray(vector<int>(t,t+6));
+		vector<int> v(t,t+6);
+		NumArray numArray(v);
 		REQUIRE(numArray.sumRange(0, 2) == 1);
 		REQUIRE(numArray.sumRange(2, 5) == -1);
 		REQUIRE(numArray.sumRange(0, 5) == -3);

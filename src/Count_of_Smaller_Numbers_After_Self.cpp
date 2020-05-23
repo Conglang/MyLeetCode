@@ -107,9 +107,11 @@ TEST_CASE("Count_of_Smaller_Numbers_After_Self", "[Devide and Conquer]") {
 	SECTION("Normal Input") {
 		int nums[6] = {5,2,6,1,3,4};
 		int result[6] = {4,1,3,0,0,0};
-		REQUIRE(s.countSmaller(vector<int>(nums, nums+6)) == vector<int>(result,result+6));
+        vector<int> v1(nums, nums+6);
+		REQUIRE(s.countSmaller(v1) == vector<int>(result,result+6));
 		int nums1[6] = {1,3,2,4,2,2};
 		int result1[6] = {0,3,0,2,0,0};
-		REQUIRE(s.countSmaller(vector<int>(nums1, nums1+6)) == vector<int>(result1,result1+6));
+        vector<int> v2(nums1, nums1+6);
+		REQUIRE(s.countSmaller(v2) == vector<int>(result1,result1+6));
 	}
 }

@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------------------------
 * Given an integer array nums, return the number of range sums that lie in [lower, upper] inclusive.
-* Range sum S(i, j) is defined as the sum of the elements in nums between indices i and j (i ¡Ü j), inclusive.
+* Range sum S(i, j) is defined as the sum of the elements in nums between indices i and j (i ï¿½ï¿½ j), inclusive.
 * 
 * Note:
 * A naive algorithm of O(n2) is trivial. You MUST do better than that.
@@ -101,6 +101,7 @@ TEST_CASE("Count_of_Range_Sum", "[Devide and Conquer]") {
 	Solution s;
 	SECTION("Normal Input") {
 		int t[3] = {-2,5,-1};
-		REQUIRE(s.countRangeSum(vector<int>(t,t+3), -2, 2) == 3);
+        vector<int> v(t,t+3);
+		REQUIRE(s.countRangeSum(v, -2, 2) == 3);
 	}
 }

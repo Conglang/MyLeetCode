@@ -6,7 +6,7 @@ SOURCES := $(foreach x, ${SRC_DIR},\
 OBJECTS = $(SOURCES:.cpp=.o)
 
 CXX = g++
-CXXFLAGS = -I../../catch -I../../include -I../../src -std=c++11
+CXXFLAGS += -I../../catch -I../../include -I../../src -std=c++11
 
 $(EXEC): $(OBJECTS)
 	$(CXX) -o $@ $^

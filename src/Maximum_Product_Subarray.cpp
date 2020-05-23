@@ -40,11 +40,17 @@ TEST_CASE("Maximum_Product_Subarray", "[Arrays]"){
 		int D[7] = {-2,3,-2,-4,5,2,-3};
 		int E[5] = {-2,-2,-2,-2,-2};
 		int F[31] = {2,5,-1,7,-5,-8,6,-4,1,-1,-1,-1,1,1,-1,-1,-1,-1,-1,-1,1,-1,1,-1,1,-1,-1,1,1,-1,-1};
-		REQUIRE(s.maxProduct(vector<int>(A,A+1)) == -2);
-		REQUIRE(s.maxProduct(vector<int>(B,B+2)) == 1);
-		REQUIRE(s.maxProduct(vector<int>(C,C+4)) == 6);
-		REQUIRE(s.maxProduct(vector<int>(D,D+7)) == 1440);
-		REQUIRE(s.maxProduct(vector<int>(E,E+5)) == 16);
-		REQUIRE(s.maxProduct(vector<int>(F,F+11)) == 67200);
+		vector<int> v1(A,A+1);
+		REQUIRE(s.maxProduct(v1) == -2);
+		vector<int> v2(B,B+2);
+		REQUIRE(s.maxProduct(v2) == 1);
+		vector<int> v3(C,C+4);
+		REQUIRE(s.maxProduct(v3) == 6);
+		vector<int> v4(D,D+7);
+		REQUIRE(s.maxProduct(v4) == 1440);
+		vector<int> v5(E,E+5);
+		REQUIRE(s.maxProduct(v5) == 16);
+		vector<int> v6(F,F+11);
+		REQUIRE(s.maxProduct(v6) == 67200);
 	}
 }

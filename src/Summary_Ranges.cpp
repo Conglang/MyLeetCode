@@ -49,6 +49,7 @@ TEST_CASE("Summary_Ranges", "[Arrays]"){
 	SECTION("Normal Input"){
 		int a[7] = {1,3,4,7,8,9,12};
 		string r[4] = {"1","3->4","7->9","12"};
-		REQUIRE(s.summaryRanges(vector<int>(a,a+7)) == vector<string>(r,r+4));
+        vector<int> v(a,a+7);
+		REQUIRE(s.summaryRanges(v) == vector<string>(r,r+4));
 	}
 }

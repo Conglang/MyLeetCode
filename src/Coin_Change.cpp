@@ -42,10 +42,13 @@ TEST_CASE("Coin_Change", "[Dynamic_Programming]"){
 	Solution s;
 	SECTION("Normal Input"){
 		int t1[4] = {186,419,83,408};
-		REQUIRE(s.coinChange(vector<int>(t1,t1+4), 6249) == 20);
+		vector<int> v1(t1,t1+4);
+		REQUIRE(s.coinChange(v1, 6249) == 20);
 		int t2[1] = {1};
-		REQUIRE(s.coinChange(vector<int>(t2,t2+1), 0) == 0);
+		vector<int> v2(t2,t2+1);
+		REQUIRE(s.coinChange(v2, 0) == 0);
 		int t3[1] = {2};
-		REQUIRE(s.coinChange(vector<int>(t3,t3+1), 3) == -1);
+		vector<int> v3(t3,t3+1);
+		REQUIRE(s.coinChange(v3, 3) == -1);
 	}
 }
